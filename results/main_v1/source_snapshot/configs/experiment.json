@@ -1,0 +1,26 @@
+{
+  "experiment_id": "main_v1",
+  "date_local": "2026-10-30",
+  "timezone": "Asia/Singapore",
+  "circuits": ["opamp", "and4"],
+  "feedback_levels": ["none", "binary", "full"],
+  "trajectories": 5,
+  "rounds_per_trajectory": 4,
+  "shared_first_round": true,
+  "base_seed": 71031,
+  "model": "gpt-4o-mini-2024-07-18",
+  "temperature": 0.3,
+  "prompt_version": "v1",
+  "primary_metric": "count(simulation_valid AND detector_negative) / all_attempts",
+  "secondary_metric": "count(simulation_valid AND detector_negative) / simulation_valid_attempts",
+  "trajectory_metric": "at_least_one_valid_undetected_candidate_within_four_attempts",
+  "notes": [
+    "No early stopping after a successful attempt; equal query opportunity in all arms.",
+    "Round one is paired and shared across arms, using exactly the same candidate and detector response.",
+    "None receives no previous candidates or feedback; binary and full receive their own previous candidate and the respective detector feedback.",
+    "Simulation checks are identical across arms and are logged but not provided to the attacker, to isolate detector feedback.",
+    "Within-trajectory rounds are dependent; five independent trajectory starts per circuit. Attempt-level intervals are descriptive only.",
+    "All invalid simulations, refusals and malformed candidates remain in the denominator.",
+    "Prompt and protocol frozen before formal evaluation; no monotonic trend requirement."
+  ]
+}

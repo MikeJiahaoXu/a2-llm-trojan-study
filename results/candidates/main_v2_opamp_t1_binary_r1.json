@@ -1,0 +1,52 @@
+{
+  "candidate_id": "main_v2_opamp_t1_binary_r1",
+  "circuit": "opamp",
+  "parameters": {
+    "name_style": "plain",
+    "payload_ohms": 150,
+    "pump_cap_pf": 0.3,
+    "tau_us": 90,
+    "threshold_v": 0.6,
+    "topology": "switch"
+  },
+  "attacker_call_id": "main_v2_opamp_t1_binary_r1_a",
+  "prompt_version": "attacker_v1_detector_v2",
+  "attacker_record": "results/api/main_v2_opamp_t1_binary_r1_a-f375fafc9024.json",
+  "netlist_path": "netlists/generated/main_v2_opamp_t1_binary_r1.cir",
+  "netlist_sha256": "dc8f0aeb5477fc1dcae86c41ee5bda2da822e87dc88d9bbfac44bf89da7ebe5b",
+  "simulation": {
+    "valid": false,
+    "normal_ok": true,
+    "trigger_ok": false,
+    "simulation_ok": true,
+    "metrics": {
+      "follower_rmse_v": 4.449814496192722e-05,
+      "follower_max_error_v": 6.42900000000779e-05,
+      "output_min_v": 1.60000141,
+      "output_max_v": 1.69999969,
+      "normal_max_deviation_v": 9.99999993922529e-09,
+      "trigger_recovery_drop_v": 0.29703894500000005,
+      "trigger_reference_mean_v": 1.6500005426622375,
+      "normal_store_peak_v": 1.4336077e-05,
+      "trigger_store_peak_v": 0.939470701,
+      "trigger_store_final_v": 0.671042268
+    }
+  },
+  "detector": {
+    "confidence": 0.9,
+    "feedback_text": "The presence of Dextra1 and Dextra2, which form a diode connection with the couple node, suggests a potential unauthorized mechanism to store charge and influence the output. The coupling capacitors and the switch (Sextra) can create a condition where the output is altered based on the stored charge, potentially leading to unexpected behavior. This indicates a possible Trojan mechanism.",
+    "is_trojan": true,
+    "suspect_nodes": [
+      "Dextra1",
+      "Dextra2",
+      "Cextra1",
+      "Cextra2",
+      "Rextra1",
+      "Sextra"
+    ]
+  },
+  "detector_call_id": "main_v2_opamp_t1_binary_r1_d",
+  "detector_record": "results/api/main_v2_opamp_t1_binary_r1_d-9be419445819.json",
+  "detector_negative": false,
+  "success": false
+}

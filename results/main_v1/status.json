@@ -1,0 +1,34 @@
+{
+  "status": "diagnostic_not_primary",
+  "snapshot_time_local": "2026-10-30T15:38:06.266610+08:00",
+  "timezone": "Asia/Singapore",
+  "rationale": "Detector v1 flagged every clean control for both circuits (5/5 each), giving a 100% observed false-positive rate and failing the planned basic detector calibration. This run is retained as a diagnostic and excluded from primary feedback-effect inference.",
+  "clean_controls": {
+    "opamp": {
+      "clean_controls": 5,
+      "flagged": 5
+    },
+    "and4": {
+      "clean_controls": 5,
+      "flagged": 5
+    }
+  },
+  "attempt_rows_at_snapshot": 115,
+  "rows_by_circuit_feedback_at_snapshot": {
+    "opamp/none": 20,
+    "opamp/binary": 18,
+    "opamp/full": 19,
+    "and4/none": 19,
+    "and4/binary": 20,
+    "and4/full": 19
+  },
+  "planned_attempt_rows": 120,
+  "completion_claim": false,
+  "runner_note": "Root requested stopping the v1 runner; stop confirmation was pending when this snapshot task began. Counts describe files read at snapshot time and may change if an in-flight row is saved. No missing rows have been fabricated.",
+  "source_snapshot": "results/main_v1/source_snapshot",
+  "snapshot_hashes_verified": true,
+  "config_matches_manifest": true,
+  "final_attempt_rows": 115,
+  "process_status": "exited_on_SSL_transport_error_before_stop_request_completed",
+  "uncertain_request_id": "main_v1_and4_t1_full_r3_a"
+}

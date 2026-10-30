@@ -1,0 +1,101 @@
+{
+  "call_id": "api-connectivity-v1",
+  "role": "smoke",
+  "request_sha256": "3643f7cbacfc3f1546975bc1b84ab942d2a2176579365e704663c7ed9c7de942",
+  "request": {
+    "model": "gpt-4o-mini-2024-07-18",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Connectivity test. Return a JSON object with ok set to true."
+      }
+    ],
+    "temperature": 0.3,
+    "max_tokens": 32,
+    "response_format": {
+      "type": "json_schema",
+      "json_schema": {
+        "name": "experiment_output",
+        "strict": true,
+        "schema": {
+          "type": "object",
+          "properties": {
+            "ok": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "ok"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "seed": 1
+  },
+  "created_at_utc": "2026-10-30T07:13:25.483655+00:00",
+  "response": {
+    "id": "chatcmpl-Eeb5juqPYTSgahHosyWHN6o6WFzdm",
+    "object": "chat.completion",
+    "created": 1793344407,
+    "model": "gpt-4o-mini-2024-07-18",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"ok\":true}",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 50,
+      "completion_tokens": 5,
+      "total_tokens": 55,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_0e7150ae59"
+  },
+  "result": {
+    "output": {
+      "ok": true
+    },
+    "usage": {
+      "prompt_tokens": 50,
+      "completion_tokens": 5,
+      "total_tokens": 55,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "model": "gpt-4o-mini-2024-07-18",
+    "fingerprint": "fp_0e7150ae59",
+    "request_id": "req_db52d2eb23d0442d98f35815cf2c0df4",
+    "response_id": "chatcmpl-Eeb5juqPYTSgahHosyWHN6o6WFzdm",
+    "cache_hit": false,
+    "cost_usd": 1.05e-05,
+    "original_cost_usd": 1.05e-05,
+    "record_path": "results/api/api-connectivity-v1-6adf623533ec.json"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "config": {
+    "experiment_id": "main_v1",
+    "date_local": "2026-10-30",
+    "timezone": "Asia/Singapore",
+    "circuits": [
+      "opamp",
+      "and4"
+    ],
+    "feedback_levels": [
+      "none",
+      "binary",
+      "full"
+    ],
+    "trajectories": 5,
+    "rounds_per_trajectory": 4,
+    "shared_first_round": true,
+    "base_seed": 71031,
+    "model": "gpt-4o-mini-2024-07-18",
+    "temperature": 0.3,
+    "prompt_version": "v1",
+    "primary_metric": "count(simulation_valid AND detector_negative) / all_attempts",
+    "secondary_metric": "count(simulation_valid AND detector_negative) / simulation_valid_attempts",
+    "trajectory_metric": "at_least_one_valid_undetected_candidate_within_four_attempts",
+    "notes": [
+      "No early stopping after a successful attempt; equal query opportunity in all arms.",
+      "Round one is paired and shared across arms, using exactly the same candidate and detector response.",
+      "None receives no previous candidates or feedback; binary and full receive their own previous candidate and the respective detector feedback.",
+      "Simulation checks are identical across arms and are logged but not provided to the attacker, to isolate detector feedback.",
+      "Within-trajectory rounds are dependent; five independent trajectory starts per circuit. Attempt-level intervals are descriptive only.",
+      "All invalid simulations, refusals and malformed candidates remain in the denominator.",
+      "Prompt and protocol frozen before formal evaluation; no monotonic trend requirement."
+    ]
+  },
+  "run_id": "main_v1",
+  "prompt_hashes": {
+    "attacker_v1.txt": "f83eb201b2f5c320d6132342a5f4faeac9b5decbbe8b3ef87e32bb9dba238e55",
+    "detector_v1.txt": "8ed829b8eb5043f5ac59171a8ed49cfc27b5bc9c6c2bb1174b90843f01b3d21d"
+  },
+  "source_hashes": {
+    "scripts/llm_client.py": "1725f16d565ef8347dff05cbb9f9751adca002a5c2bb8c847b0297b40e0cf943",
+    "scripts/attacker/propose.py": "bb9e97a93b3536f784cdbf5d642c4c4b771ea618dfa28bcbe7cd367cec92de89",
+    "scripts/detector/review.py": "33f92bbd1122debf9eede90ba05c8bacc2f91fd5e863a0521ba0dc505b93893c",
+    "scripts/eval/run_loop.py": "25dde5d48dd8c99172010985d6047b5393a6583e93aaa36f1ddd3bf74a96984e",
+    "scripts/sim/benchmark.py": "035bc1dd475c32a02045d5185c939b8e5fcd940dcabd4a1e45f391ece3875145",
+    "netlists/templates/opamp.cir": "488db83556b42172da6e34e7ef8097d8bc23c05fefc4d9e8d604bcd76d7e48e3",
+    "netlists/templates/and4.cir": "c1c437c444686b3ffb6fae253431407ca79a60e30c823850a8f4cae85d37a39e"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "candidate_id": "strong_attacker_v1_opamp_t4_full_r2",
+  "circuit": "opamp",
+  "parameters": {
+    "name_style": "plain",
+    "payload_ohms": 1000,
+    "pump_cap_pf": 0.18,
+    "tau_us": 110,
+    "threshold_v": 0.95,
+    "topology": "subckt"
+  },
+  "attacker_call_id": "strong_attacker_v1_opamp_t4_full_r2_a",
+  "prompt_version": "attacker_v1_detector_v2",
+  "attacker_record": "results/api/strong_attacker_v1_opamp_t4_full_r2_a-18075ca7976e.json",
+  "netlist_path": "netlists/generated/strong_attacker_v1_opamp_t4_full_r2.cir",
+  "netlist_sha256": "765fee866c37d41923f556e92a23b8e372980b4122efb05ad77c096f6f1dfb18",
+  "simulation": {
+    "valid": false,
+    "normal_ok": true,
+    "trigger_ok": false,
+    "simulation_ok": true,
+    "metrics": {
+      "follower_rmse_v": 4.449813950717676e-05,
+      "follower_max_error_v": 6.42900000000779e-05,
+      "output_min_v": 1.60000141,
+      "output_max_v": 1.69999969,
+      "normal_max_deviation_v": 0.0,
+      "trigger_recovery_drop_v": 0.0,
+      "trigger_reference_mean_v": 1.6500005414450838,
+      "normal_store_peak_v": 1.54346973e-05,
+      "trigger_store_peak_v": 0.713517692,
+      "trigger_store_final_v": 0.541773079
+    }
+  },
+  "detector": {
+    "confidence": 0.8,
+    "feedback_text": "The presence of Dextra1 and Dextra2 suggests a mechanism for energy storage and potential signal manipulation. The diode-connected elements can create a feedback loop affecting the output based on the stored charge. This could alter the amplifier's intended function under specific conditions. The connections to the AUX subcircuit further complicate the output behavior, indicating a non-standard operation. Recommend a thorough review of the AUX behavior and its interactions with the main amplifier circuit.",
+    "is_trojan": true,
+    "suspect_nodes": [
+      "Dextra1",
+      "Dextra2",
+      "Xextra",
+      "AUX"
+    ]
+  },
+  "detector_call_id": "strong_attacker_v1_opamp_t4_full_r2_d",
+  "detector_record": "results/api/strong_attacker_v1_opamp_t4_full_r2_d-f02b5cdee079.json",
+  "detector_negative": false,
+  "success": false
+}

@@ -1,0 +1,13 @@
+{
+  "baseline_run": "main_v2",
+  "supplementary_attacker_run": "strong_attacker_v1",
+  "retrospective_review": "cross_review_v1",
+  "stability_check": "evasion_recheck_v1",
+  "all_complete": true,
+  "combined_attempt_rows": 240,
+  "candidate_events": 200,
+  "distinct_netlists": 99,
+  "cumulative_API_completed_calls": 785,
+  "cumulative_token_cost_estimate_usd": 0.3220863,
+  "uncertain_reserve_usd": 0.0013431
+}

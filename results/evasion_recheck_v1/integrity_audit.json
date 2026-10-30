@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "fresh_judgments": 10,
+  "same_DUT_and_prompt_verified": true,
+  "actual_models_and_verdicts_verified": true,
+  "selection": "post-hoc, separate from adaptive experiment rates"
+}

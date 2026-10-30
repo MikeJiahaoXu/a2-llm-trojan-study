@@ -1,0 +1,62 @@
+{
+  "config": {
+    "experiment_id": "strong_attacker_v1",
+    "date_local": "2026-10-30",
+    "timezone": "Asia/Singapore",
+    "circuits": [
+      "opamp",
+      "and4"
+    ],
+    "feedback_levels": [
+      "none",
+      "binary",
+      "full"
+    ],
+    "trajectories": 5,
+    "rounds_per_trajectory": 4,
+    "shared_first_round": true,
+    "base_seed": 71031,
+    "model": "gpt-4o-mini-2024-07-18",
+    "temperature": 0.3,
+    "prompt_version": "attacker_v1_detector_v2",
+    "primary_metric": "count(simulation_valid AND detector_negative) / all_attempts",
+    "secondary_metric": "count(simulation_valid AND detector_negative) / simulation_valid_attempts",
+    "trajectory_metric": "at_least_one_valid_undetected_candidate_within_four_attempts",
+    "notes": [
+      "No early stopping after a successful attempt; equal query opportunity in all arms.",
+      "Round one is paired and shared across arms, using exactly the same candidate and detector response.",
+      "None receives no previous candidates or feedback; binary and full receive their own previous candidate and the respective detector feedback.",
+      "Simulation checks are identical across arms and are logged but not provided to the attacker, to isolate detector feedback.",
+      "Within-trajectory rounds are dependent; five independent trajectory starts per circuit. Attempt-level intervals are descriptive only.",
+      "All invalid simulations, refusals and malformed candidates remain in the denominator.",
+      "Prompt and protocol frozen before formal evaluation; no monotonic trend requirement.",
+      "Supplement planned after observing the baseline detection ceiling; not an independently preregistered confirmation.",
+      "Only attacker API model and its required API parameters change; the actual attacker/reviewer messages, template space, and scoring rules remain fixed.",
+      "The stronger attacker uses temperature0.3 and reasoning_effort none to match the baseline non-reasoning profile. No seed is sent to this model; trajectory starts are separate calls, not matched random draws across models.",
+      "Same twenty-opportunity budget per circuit/feedback group and paired first candidate within each model run."
+    ],
+    "attacker_model": "gpt-5.4-mini-2026-03-17",
+    "detector_model": "gpt-4o-mini-2024-07-18",
+    "supplementary": true,
+    "attacker_reasoning_effort": "none",
+    "attacker_seed_sent": false
+  },
+  "run_id": "strong_attacker_v1",
+  "prompt_hashes": {
+    "attacker_v1.txt": "f83eb201b2f5c320d6132342a5f4faeac9b5decbbe8b3ef87e32bb9dba238e55",
+    "detector_v1.txt": "8ed829b8eb5043f5ac59171a8ed49cfc27b5bc9c6c2bb1174b90843f01b3d21d",
+    "detector_v2.txt": "4eb92cd87ca6e1c9f897819abfb4f92b1465b4828db27c5891227376ee8fd5fa"
+  },
+  "source_hashes": {
+    "scripts/llm_client.py": "1725f16d565ef8347dff05cbb9f9751adca002a5c2bb8c847b0297b40e0cf943",
+    "scripts/model_client.py": "a8c1ff4fcf1a319fa84c5a85dd0060f7db7b1be0166d47f55fe815110b777992",
+    "scripts/request_recovery.py": "e8945cac06d2aa7675c75747b6dcd64a7ed79f2ce9b7e262f25ebad1779a83a8",
+    "scripts/attacker/propose.py": "0475e1c47849825a9b8ea192abbbc934b2df89def71013c6036235e62d05d9db",
+    "scripts/detector/review.py": "ba91dfd73362c12b37f18d0acdaff4b5f25c2efeebad381fe4b73092aef1d661",
+    "scripts/eval/run_loop.py": "a5e9d9c0f610fdccfb82f31abf9e2e69d7dc6b1cc694a3451953b39e3f5252b8",
+    "scripts/eval/run_stronger.py": "8cbf4089c435a4a6f55cef062631204b9b2666c961a28a498b667c9e009743fe",
+    "scripts/sim/benchmark.py": "035bc1dd475c32a02045d5185c939b8e5fcd940dcabd4a1e45f391ece3875145",
+    "netlists/templates/opamp.cir": "488db83556b42172da6e34e7ef8097d8bc23c05fefc4d9e8d604bcd76d7e48e3",
+    "netlists/templates/and4.cir": "c1c437c444686b3ffb6fae253431407ca79a60e30c823850a8f4cae85d37a39e"
+  }
+}

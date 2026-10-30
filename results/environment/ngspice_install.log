@@ -1,0 +1,367 @@
+Making install in src
+Making install in include/ngspice
+make[3]: Nothing to be done for `install-exec-am'.
+Making install in include/cppduals/duals
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+Making install in misc
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+Making install in maths
+Making install in cmaths
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+Making install in ni
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+Making install in sparse
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+Making install in poly
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+Making install in deriv
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+Making install in misc
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+Making install in fft
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+Making install in dense
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+Making install in KLU
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+Making install in frontend
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  install-recursive
+Making install in plotting
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in help
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in parser
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in wdisp
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in numparam
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in trannoise
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in spicelib
+Making install in analysis
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+Making install in parser
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  install-am
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in devices
+Making install in asrc
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in bjt
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in bsim1
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in bsim2
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in bsim3
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in bsimsoi
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in bsim4
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in bsim4v5
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in bsim4v6
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in bsim4v7
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in bsim3v0
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in bsim3v1
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in bsim3v32
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in bsim3soi_pd
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in bsim3soi_fd
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in bsim3soi_dd
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in cap
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in cccs
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in ccvs
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in cpl
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in csw
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in dio
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in ind
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in isrc
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in hfet1
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in hfet2
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in hicum2
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in hisim2
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in hisimhv1
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in hisimhv2
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in jfet
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in jfet2
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in ltra
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in mes
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in mesa
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in mos1
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in mos2
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in mos3
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in mos6
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in mos9
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in res
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in soi3
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in sw
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in tra
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in txl
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in urc
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in vbic
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in vccs
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in vcvs
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in vdmos
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in vsrc
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+Making install in xspice
+Making install in mif
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+Making install in cm
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+Making install in enh
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+Making install in evt
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+Making install in idn
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+Making install in cmpp
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  install-am
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+Making install in icm
+for cm in spice2poly digital analog xtradev xtraevt table tlines ; do \
+		/Applications/Xcode.app/Contents/Developer/usr/bin/make cm=$cm $cm/$cm.cm \
+		|| exit 1; \
+	done
+make[4]: `spice2poly/spice2poly.cm' is up to date.
+make[4]: `digital/digital.cm' is up to date.
+make[4]: `analog/analog.cm' is up to date.
+make[4]: `xtradev/xtradev.cm' is up to date.
+make[4]: `xtraevt/xtraevt.cm' is up to date.
+make[4]: `table/table.cm' is up to date.
+make[4]: `tlines/tlines.cm' is up to date.
+../../../../install-sh -c -d "/var/folders/m8/zlq5czbs6_d7qwh_0p1fsqj00000gn/T/a2-ngspice.cRc67F/stage/lib/ngspice"
+../../../../install-sh -c -d "/var/folders/m8/zlq5czbs6_d7qwh_0p1fsqj00000gn/T/a2-ngspice.cRc67F/stage/share/ngspice"
+for cm in spice2poly digital analog xtradev xtraevt table tlines ; do \
+		/usr/bin/install -c $cm/$cm.cm "/var/folders/m8/zlq5czbs6_d7qwh_0p1fsqj00000gn/T/a2-ngspice.cRc67F/stage/lib/ngspice" \
+		|| exit 1; \
+	done
+Making install in verilog
+ ../../../../install-sh -c -d '/var/folders/m8/zlq5czbs6_d7qwh_0p1fsqj00000gn/T/a2-ngspice.cRc67F/stage/lib/ngspice'
+ /bin/sh ../../../libtool   --mode=install /usr/bin/install -c   ivlng.la ivlngvpi.la '/var/folders/m8/zlq5czbs6_d7qwh_0p1fsqj00000gn/T/a2-ngspice.cRc67F/stage/lib/ngspice'
+libtool: install: /usr/bin/install -c .libs/ivlng.so /var/folders/m8/zlq5czbs6_d7qwh_0p1fsqj00000gn/T/a2-ngspice.cRc67F/stage/lib/ngspice/ivlng.so
+libtool: install: /usr/bin/install -c .libs/ivlng.lai /var/folders/m8/zlq5czbs6_d7qwh_0p1fsqj00000gn/T/a2-ngspice.cRc67F/stage/lib/ngspice/ivlng.la
+libtool: install: /usr/bin/install -c .libs/ivlngvpi.so /var/folders/m8/zlq5czbs6_d7qwh_0p1fsqj00000gn/T/a2-ngspice.cRc67F/stage/lib/ngspice/ivlngvpi.so
+libtool: install: /usr/bin/install -c .libs/ivlngvpi.lai /var/folders/m8/zlq5czbs6_d7qwh_0p1fsqj00000gn/T/a2-ngspice.cRc67F/stage/lib/ngspice/ivlngvpi.la
+libtool: warning: remember to run 'libtool --finish /Users/mikexu/Desktop/Info'
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  install-exec-hook
+cd /var/folders/m8/zlq5czbs6_d7qwh_0p1fsqj00000gn/T/a2-ngspice.cRc67F/stage/lib/ngspice; \
+	rm -f ivlng*a libvvp* ; \
+	mv ivlngvpi.* ivlng.vpi
+ ../../../../install-sh -c -d '/var/folders/m8/zlq5czbs6_d7qwh_0p1fsqj00000gn/T/a2-ngspice.cRc67F/stage/share/ngspice/scripts/src'
+ /usr/bin/install -c -m 644 ../../../../src/xspice/verilog/verilator_shim.cpp ../../../../src/xspice/verilog/verilator_main.cpp '/var/folders/m8/zlq5czbs6_d7qwh_0p1fsqj00000gn/T/a2-ngspice.cRc67F/stage/share/ngspice/scripts/src'
+ ../../../../install-sh -c -d '/var/folders/m8/zlq5czbs6_d7qwh_0p1fsqj00000gn/T/a2-ngspice.cRc67F/stage/share/ngspice/scripts/src/ngspice'
+ /usr/bin/install -c -m 644 ../../../../src/xspice/verilog/../../include/ngspice/cosim.h ../../../../src/xspice/verilog/../../include/ngspice/miftypes.h ../../../../src/xspice/verilog/../../include/ngspice/cmtypes.h ../../../../src/xspice/verilog/./coroutine.h ../../../../src/xspice/verilog/./coroutine_cosim.h ../../../../src/xspice/verilog/./coroutine_shim.h '/var/folders/m8/zlq5czbs6_d7qwh_0p1fsqj00000gn/T/a2-ngspice.cRc67F/stage/share/ngspice/scripts/src/ngspice'
+ ../../../../install-sh -c -d '/var/folders/m8/zlq5czbs6_d7qwh_0p1fsqj00000gn/T/a2-ngspice.cRc67F/stage/share/ngspice/scripts'
+ /usr/bin/install -c -m 644 ../../../../src/xspice/verilog/vlnggen '/var/folders/m8/zlq5czbs6_d7qwh_0p1fsqj00000gn/T/a2-ngspice.cRc67F/stage/share/ngspice/scripts'
+Making install in vhdl
+make[4]: Nothing to be done for `install-exec-am'.
+ ../../../../install-sh -c -d '/var/folders/m8/zlq5czbs6_d7qwh_0p1fsqj00000gn/T/a2-ngspice.cRc67F/stage/share/ngspice/scripts/src'
+ /usr/bin/install -c -m 644 ../../../../src/xspice/vhdl/ghdl_shim.h ../../../../src/xspice/vhdl/ghdl_shim.c ../../../../src/xspice/vhdl/ghdl_vpi.c '/var/folders/m8/zlq5czbs6_d7qwh_0p1fsqj00000gn/T/a2-ngspice.cRc67F/stage/share/ngspice/scripts/src'
+ ../../../../install-sh -c -d '/var/folders/m8/zlq5czbs6_d7qwh_0p1fsqj00000gn/T/a2-ngspice.cRc67F/stage/share/ngspice/scripts'
+ /usr/bin/install -c -m 644 ../../../../src/xspice/vhdl/ghnggen '/var/folders/m8/zlq5czbs6_d7qwh_0p1fsqj00000gn/T/a2-ngspice.cRc67F/stage/share/ngspice/scripts'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+ ../../install-sh -c -d '/var/folders/m8/zlq5czbs6_d7qwh_0p1fsqj00000gn/T/a2-ngspice.cRc67F/stage/bin'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c ngspice '/var/folders/m8/zlq5czbs6_d7qwh_0p1fsqj00000gn/T/a2-ngspice.cRc67F/stage/bin'
+libtool: install: /usr/bin/install -c ngspice /var/folders/m8/zlq5czbs6_d7qwh_0p1fsqj00000gn/T/a2-ngspice.cRc67F/stage/bin/ngspice
+ ../../install-sh -c -d '/var/folders/m8/zlq5czbs6_d7qwh_0p1fsqj00000gn/T/a2-ngspice.cRc67F/stage/share/ngspice/scripts'
+ /usr/bin/install -c -m 644 spinit ../../src/setplot ../../src/spectrum '/var/folders/m8/zlq5czbs6_d7qwh_0p1fsqj00000gn/T/a2-ngspice.cRc67F/stage/share/ngspice/scripts'
+Making install in man
+Making install in man1
+make[3]: Nothing to be done for `install-exec-am'.
+ ../../../install-sh -c -d '/var/folders/m8/zlq5czbs6_d7qwh_0p1fsqj00000gn/T/a2-ngspice.cRc67F/stage/share/man/man1'
+ /usr/bin/install -c -m 644 ../../../man/man1/ngspice.1 '/var/folders/m8/zlq5czbs6_d7qwh_0p1fsqj00000gn/T/a2-ngspice.cRc67F/stage/share/man/man1'
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+Making install in tests
+Making install in regression
+Making install in lib-processing
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+Making install in parser
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+Making install in subckt-processing
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+Making install in func
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+Making install in model
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+Making install in misc
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+Making install in sens
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+Making install in temper
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+Making install in pipe
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+Making install in pz
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+Making install in xspice
+Making install in digital
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+Making install in bsim3
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+Making install in bsim4
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+Making install in bsimsoi
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+Making install in hisim
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+Making install in hicum2
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+Making install in hisimhv1
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+Making install in hisimhv2
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+make[2]: Nothing to be done for `install-exec-am'.

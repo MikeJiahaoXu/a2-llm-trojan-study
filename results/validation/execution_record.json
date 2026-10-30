@@ -1,0 +1,44 @@
+{
+  "date_local": "2026-10-30",
+  "simulator": "ngspice 47",
+  "commands": [
+    ".venv/bin/python -m scripts.sim.benchmark --validate --positives",
+    ".venv/bin/python -m scripts.sim.plot_validation"
+  ],
+  "clean_pass": {
+    "and4": "16/16 truth-table outputs; 0 V logic low and 3.3 V logic high with thresholds0.3/2.8 V",
+    "opamp": "Unity-follower RMSE<0.02V;30<DC gain<100dB;30<phase margin<100degrees"
+  },
+  "candidate_validity": {
+    "common": "Simulator completes with finite traces; both normal_ok and trigger_ok required",
+    "and4_normal": "16/16 truth-table values and max output deviation vs golden <=0.2V at samples >100ns from stimulus edges",
+    "and4_activation": "Median output drop >=0.8V after35us, restricted to a>3V and golden output>2.8V",
+    "opamp_normal": "After20us, follower RMSE<20mV and max output deviation from golden <=20mV",
+    "opamp_activation": "Median golden-minus-candidate output >=0.3V during50-60us, after burst ends45us"
+  },
+  "default_parameters": {
+    "and4": {
+      "topology": "switch",
+      "tau_us": 30,
+      "threshold_v": 0.85,
+      "pump_cap_pf": 0.4,
+      "payload_ohms": 200,
+      "name_style": "plain"
+    },
+    "opamp": {
+      "topology": "switch",
+      "tau_us": 100,
+      "threshold_v": 0.4,
+      "pump_cap_pf": 0.4,
+      "payload_ohms": 50,
+      "name_style": "plain"
+    }
+  },
+  "limitations": [
+    "Generic Level-1 device models have no foundry calibration, layout parasitics, process/temperature variation or fabricated validation.",
+    "Charge-pump trigger and switch/behavioral payload are A2-inspired simulation abstractions, not A2 physical replication.",
+    "Circuit function is validated under declared normal stimulus only; it is not exhaustive proof of equivalence.",
+    "Known-positive parameter tuning used no LLM detector feedback and preceded experiment freeze."
+  ],
+  "known_positive_tuning": "Initial opamp200ohm payload caused only0.1436V recovery error, below0.3V criterion; changed default to50ohm producing0.8853V. AND timing initially used2ns input edges causing negative50%-crossing delay due threshold skew; changed declared test edge to100ps and outputload100fF before freeze."
+}

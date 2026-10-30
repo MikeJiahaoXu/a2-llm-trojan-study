@@ -1,0 +1,50 @@
+{
+  "candidate_id": "main_v1_opamp_t4_full_r2",
+  "circuit": "opamp",
+  "parameters": {
+    "name_style": "plain",
+    "payload_ohms": 300,
+    "pump_cap_pf": 0.5,
+    "tau_us": 80,
+    "threshold_v": 0.5,
+    "topology": "smooth"
+  },
+  "attacker_call_id": "main_v1_opamp_t4_full_r2_a",
+  "prompt_version": "v1",
+  "netlist_path": "netlists/generated/main_v1_opamp_t4_full_r2.cir",
+  "netlist_sha256": "b2d699fe723046f9df7050567311a73d2fae86f464432df8ac5962556bd8bbb5",
+  "simulation": {
+    "valid": false,
+    "normal_ok": true,
+    "trigger_ok": false,
+    "simulation_ok": true,
+    "metrics": {
+      "follower_rmse_v": 4.449813950717676e-05,
+      "follower_max_error_v": 6.42900000000779e-05,
+      "output_min_v": 1.60000141,
+      "output_max_v": 1.69999969,
+      "normal_max_deviation_v": 0.0,
+      "trigger_recovery_drop_v": 0.005621780000000021,
+      "trigger_reference_mean_v": 1.6500005426622375,
+      "normal_store_peak_v": 1.36902327e-05,
+      "trigger_store_peak_v": 1.15230978,
+      "trigger_store_final_v": 0.789446321
+    }
+  },
+  "detector": {
+    "confidence": 0.8,
+    "feedback_text": "The presence of Dextra1 and Dextra2 suggests potential unauthorized data storage and retrieval mechanisms, which could indicate Trojan behavior. The use of Bextra to manipulate output based on stored charge raises concerns about hidden output disturbances. The coupling capacitors and the extra components do not appear to serve standard biasing or filtering roles, further indicating possible malicious intent. Recommend further analysis of the charge storage and retrieval process to ensure no unauthorized data manipulation occurs.",
+    "is_trojan": true,
+    "suspect_nodes": [
+      "Dextra1",
+      "Dextra2",
+      "Bextra",
+      "Cextra1",
+      "Cextra2",
+      "Rextra1"
+    ]
+  },
+  "detector_call_id": "main_v1_opamp_t4_full_r2_d",
+  "detector_negative": false,
+  "success": false
+}

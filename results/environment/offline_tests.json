@@ -1,0 +1,47 @@
+{
+  "kind": "Offline implementation tests; no model evaluation data",
+  "command": ".venv/bin/python -m unittest discover -s tests -v",
+  "tests_run": 27,
+  "passed": 27,
+  "failed": 0,
+  "new_budget_tests": 8,
+  "coverage": [
+    "exact cache prevents double billing",
+    "different-request call ID collision rejected",
+    "refusals retain actual charges and never retry",
+    "transport recovery uses one distinct ID and retains original reservation",
+    "resumed successful retry is cached",
+    "second transport failure cannot trigger a third attempt",
+    "budget cap prevents outbound request",
+    "uncertain reservations count against retry budget",
+    "HTTP rejection releases reservation and does not retry"
+  ],
+  "isolation": "Temporary client ROOT/RESULTS and recovery root; _key and urlopen mocked. No live ledger accessed by tests.",
+  "secret_scan": {
+    "scope": "Workspace .json files excluding .venv, .tools, tmp, and .git; .env never read",
+    "files_scanned": 878,
+    "suspect_files": [],
+    "read_errors": [],
+    "status": "pass",
+    "note": "Snapshot during active experiment; repeat when assembling final artifacts."
+  },
+  "new_model_client_tests": 7,
+  "model_client_coverage": [
+    "per-model pricing with cached input and all completion tokens",
+    "model-qualified cache collision rejection",
+    "cache identity compatibility with frozen baseline client",
+    "retained reservation and one model-preserving transport retry",
+    "no retry on HTTP503",
+    "refusal billed once",
+    "prior baseline spending counted toward stronger-model cap"
+  ],
+  "new_cross_review_audit_tests": 6,
+  "audit_test_coverage": [
+    "reject omitted invalid/negative union members",
+    "require deterministic representative",
+    "reject overwritten baseline verdict",
+    "reject missing memberships and inconsistent identical-DUT physics",
+    "verify actual response model independently of result metadata",
+    "detect prompt and seed tampering"
+  ]
+}

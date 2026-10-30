@@ -1,0 +1,168 @@
+{
+  "analysis": "post_hoc_sensitivity_not_primary",
+  "method": "Only the minimum triggered output-drop threshold varies; saved normal-operation validity and detector verdicts are unchanged.",
+  "groups": [
+    {
+      "circuit": "opamp",
+      "feedback": "none",
+      "threshold_v": 0.2,
+      "valid": 20,
+      "attempts": 20,
+      "valid_undetected": 0,
+      "primary_rate": 0.0
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "none",
+      "threshold_v": 0.3,
+      "valid": 20,
+      "attempts": 20,
+      "valid_undetected": 0,
+      "primary_rate": 0.0
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "none",
+      "threshold_v": 0.4,
+      "valid": 20,
+      "attempts": 20,
+      "valid_undetected": 0,
+      "primary_rate": 0.0
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "binary",
+      "threshold_v": 0.2,
+      "valid": 16,
+      "attempts": 20,
+      "valid_undetected": 0,
+      "primary_rate": 0.0
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "binary",
+      "threshold_v": 0.3,
+      "valid": 16,
+      "attempts": 20,
+      "valid_undetected": 0,
+      "primary_rate": 0.0
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "binary",
+      "threshold_v": 0.4,
+      "valid": 16,
+      "attempts": 20,
+      "valid_undetected": 0,
+      "primary_rate": 0.0
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "full",
+      "threshold_v": 0.2,
+      "valid": 5,
+      "attempts": 20,
+      "valid_undetected": 0,
+      "primary_rate": 0.0
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "full",
+      "threshold_v": 0.3,
+      "valid": 5,
+      "attempts": 20,
+      "valid_undetected": 0,
+      "primary_rate": 0.0
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "full",
+      "threshold_v": 0.4,
+      "valid": 5,
+      "attempts": 20,
+      "valid_undetected": 0,
+      "primary_rate": 0.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "none",
+      "threshold_v": 0.5,
+      "valid": 20,
+      "attempts": 20,
+      "valid_undetected": 0,
+      "primary_rate": 0.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "none",
+      "threshold_v": 0.8,
+      "valid": 20,
+      "attempts": 20,
+      "valid_undetected": 0,
+      "primary_rate": 0.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "none",
+      "threshold_v": 1.0,
+      "valid": 20,
+      "attempts": 20,
+      "valid_undetected": 0,
+      "primary_rate": 0.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "binary",
+      "threshold_v": 0.5,
+      "valid": 18,
+      "attempts": 20,
+      "valid_undetected": 1,
+      "primary_rate": 0.05
+    },
+    {
+      "circuit": "and4",
+      "feedback": "binary",
+      "threshold_v": 0.8,
+      "valid": 18,
+      "attempts": 20,
+      "valid_undetected": 1,
+      "primary_rate": 0.05
+    },
+    {
+      "circuit": "and4",
+      "feedback": "binary",
+      "threshold_v": 1.0,
+      "valid": 18,
+      "attempts": 20,
+      "valid_undetected": 1,
+      "primary_rate": 0.05
+    },
+    {
+      "circuit": "and4",
+      "feedback": "full",
+      "threshold_v": 0.5,
+      "valid": 5,
+      "attempts": 20,
+      "valid_undetected": 0,
+      "primary_rate": 0.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "full",
+      "threshold_v": 0.8,
+      "valid": 5,
+      "attempts": 20,
+      "valid_undetected": 0,
+      "primary_rate": 0.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "full",
+      "threshold_v": 1.0,
+      "valid": 5,
+      "attempts": 20,
+      "valid_undetected": 0,
+      "primary_rate": 0.0
+    }
+  ]
+}

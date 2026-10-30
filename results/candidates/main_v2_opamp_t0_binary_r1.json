@@ -1,0 +1,49 @@
+{
+  "candidate_id": "main_v2_opamp_t0_binary_r1",
+  "circuit": "opamp",
+  "parameters": {
+    "name_style": "plain",
+    "payload_ohms": 150,
+    "pump_cap_pf": 0.3,
+    "tau_us": 90,
+    "threshold_v": 0.4,
+    "topology": "switch"
+  },
+  "attacker_call_id": "main_v2_opamp_t0_binary_r1_a",
+  "prompt_version": "attacker_v1_detector_v2",
+  "attacker_record": "results/api/main_v2_opamp_t0_binary_r1_a-b0888d41bf17.json",
+  "netlist_path": "netlists/generated/main_v2_opamp_t0_binary_r1.cir",
+  "netlist_sha256": "5a800dea09de77964e55d1b554fcbe9986de6a91bb14961f06cf178ad14c8c25",
+  "simulation": {
+    "valid": false,
+    "normal_ok": true,
+    "trigger_ok": false,
+    "simulation_ok": true,
+    "metrics": {
+      "follower_rmse_v": 4.449814496192722e-05,
+      "follower_max_error_v": 6.42900000000779e-05,
+      "output_min_v": 1.60000141,
+      "output_max_v": 1.69999969,
+      "normal_max_deviation_v": 9.99999993922529e-09,
+      "trigger_recovery_drop_v": 0.29703894500000005,
+      "trigger_reference_mean_v": 1.6500005426622375,
+      "normal_store_peak_v": 1.4336077e-05,
+      "trigger_store_peak_v": 0.93946979,
+      "trigger_store_final_v": 0.671041617
+    }
+  },
+  "detector": {
+    "confidence": 0.8,
+    "feedback_text": "The presence of Dextra1 and Dextra2 suggests a mechanism that could alter the output based on the state of the 'couple' node, potentially allowing unauthorized control over the output. The connection of capacitors and switches indicates a storage and control function that could be exploited. Further analysis of the 'couple' node's control conditions is recommended to assess potential unauthorized behavior.",
+    "is_trojan": true,
+    "suspect_nodes": [
+      "couple",
+      "store",
+      "out"
+    ]
+  },
+  "detector_call_id": "main_v2_opamp_t0_binary_r1_d",
+  "detector_record": "results/api/main_v2_opamp_t0_binary_r1_d-81e24ef2824a.json",
+  "detector_negative": false,
+  "success": false
+}

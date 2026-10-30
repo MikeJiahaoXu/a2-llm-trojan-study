@@ -1,0 +1,60 @@
+{
+  "review_scope": "Offline code and recorded-waveform review; no API requests or fabricated experiment observations.",
+  "reviewed": [
+    "configs/experiment.json",
+    "configs/prompts/attacker_v1.txt",
+    "configs/prompts/detector_v1.txt",
+    "scripts/llm_client.py",
+    "scripts/attacker/propose.py",
+    "scripts/detector/review.py",
+    "scripts/eval/run_loop.py",
+    "scripts/eval/summarize.py",
+    "scripts/sim/benchmark.py",
+    "scripts/setup_ngspice.sh"
+  ],
+  "checks": {
+    "offline_unit_tests": "6 passed: feedback isolation, detector context, physical-validity scoring, and finite-sample interval.",
+    "detector_isolation": "Detector receives specification and DUT only. No filenames, labels, previous judgments, trial mode, stimulus decks, or simulation metrics are included.",
+    "scoring": "Success requires physical validity AND detector-negative. Generation/refusal failures handled by APIOutputError remain unsuccessful attempts. Invalid physical candidates are still reviewed and remain in all-attempt denominator.",
+    "shared_start": "Exactly identical first candidate and judgment are copied into three arms; analysis validates sharing and avoids independent-attempt inference.",
+    "sampling": "Five trajectory starts per circuit, four attempts per trajectory. Adaptive rounds are dependent; reported paired comparisons are descriptive.",
+    "charge_column_indexing": "Recorded reservoir voltage is final TSV column for modified circuits; simulator removes that column before normal/trigger output scoring. Independent reading confirms correct output indices.",
+    "truth_table_timing": "All 16 AND4 states verified at 30,50,...,330 us. Index 15 is all high at 320 us. Both clean and positive match the expected truth table.",
+    "trace_integrity": "All clean/positive normal and trigger arrays are finite with strictly increasing timestamps.",
+    "source_freeze": "Initial manifest hashed only prompts/config. Root reported adding source hashes for implementation and clean netlists before launching formal run.",
+    "simulator": "ngspice 47 archive SHA256 pinned. Build uses no-space temporary compile tree, disables OpenMP, retains XSPICE, stages install without spaces then copies to configured project prefix. Successful runtime links only macOS libSystem/libc++.",
+    "smoke_rc": "V(tau)=0.632119 versus analytic 0.6321205588; V(5tau)=0.993262 versus 0.9932620530. Passed 1 mV absolute tolerance."
+  },
+  "independent_waveform_recalculations": {
+    "and4_positive_trigger_drop_v": 2.9909576524055,
+    "and4_positive_selected_trigger_samples": 2160,
+    "opamp_positive_trigger_recovery_drop_v": 0.88534935,
+    "opamp_positive_selected_trigger_samples": 500,
+    "opamp_clean_normal_rmse_v": 4.449813950717676e-05,
+    "opamp_positive_normal_rmse_v": 4.449814496192722e-05
+  },
+  "limitations_and_minor_findings": [
+    {
+      "severity": "interpretation",
+      "finding": "None uses independent prompts while binary/full also see previous parameters. Therefore none versus feedback combines previous-candidate memory with feedback; binary versus full more directly isolates feedback detail."
+    },
+    {
+      "severity": "interpretation",
+      "finding": "Opamp activation changes input amplitude as well as transition frequency. This demonstrates conditional analog state activation, not an isolated frequency-only causal effect."
+    },
+    {
+      "severity": "interpretation",
+      "finding": "Five repeated control judgments concern one clean and one positive netlist per circuit; frequencies are not population false-positive or sensitivity estimates."
+    },
+    {
+      "severity": "interpretation",
+      "finding": "Switch hysteresis and smooth tanh payloads are approximate functional variants, not identical electrical transfer functions. Simulation validity is independently checked for every candidate."
+    },
+    {
+      "severity": "minor_robustness",
+      "finding": "Detector confidence schema permits any number; candidate function halts on out-of-range confidence rather than recording invalid verdict. Root notified before formal run. This is only consequential if such output occurs."
+    }
+  ],
+  "blocking_findings": [],
+  "changes_during_review": "No circuit, prompt, API client, loop, or evaluation implementation was modified by reviewer."
+}

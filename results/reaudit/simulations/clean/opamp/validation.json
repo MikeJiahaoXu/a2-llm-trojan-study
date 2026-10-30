@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "metrics": {
+    "follower_rmse_v": 4.449813950717676e-05,
+    "follower_max_error_v": 6.42900000000779e-05,
+    "output_min_v": 1.60000141,
+    "output_max_v": 1.69999969,
+    "dc_gain_db": 95.46661283281287,
+    "bandwidth_3db_hz": 131.89967965413982,
+    "unity_gain_hz": 9208417.085743485,
+    "phase_margin_deg": 50.375035206195804
+  },
+  "specification": "3.3 V, two-stage 7-MOS CMOS amplifier, 100 uA tail/reference currents, 10 pF Miller compensation and 2 pF load. Normal unity-follower input is 1.65 V +/- 50 mV at 10 kHz; activation is a 1 MHz input burst between 0.6 and 2.7 V, followed by recovery at 1.65 V."
+}

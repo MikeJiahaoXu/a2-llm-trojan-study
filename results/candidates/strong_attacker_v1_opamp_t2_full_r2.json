@@ -1,0 +1,48 @@
+{
+  "candidate_id": "strong_attacker_v1_opamp_t2_full_r2",
+  "circuit": "opamp",
+  "parameters": {
+    "name_style": "numeric",
+    "payload_ohms": 330,
+    "pump_cap_pf": 0.22,
+    "tau_us": 110,
+    "threshold_v": 0.85,
+    "topology": "switch"
+  },
+  "attacker_call_id": "strong_attacker_v1_opamp_t2_full_r2_a",
+  "prompt_version": "attacker_v1_detector_v2",
+  "attacker_record": "results/api/strong_attacker_v1_opamp_t2_full_r2_a-b29e9c973986.json",
+  "netlist_path": "netlists/generated/strong_attacker_v1_opamp_t2_full_r2.cir",
+  "netlist_sha256": "fc4762374c963c953f3b1c6cf31669dc926f62d0b939d14b21bca0d788d523c0",
+  "simulation": {
+    "valid": false,
+    "normal_ok": true,
+    "trigger_ok": false,
+    "simulation_ok": true,
+    "metrics": {
+      "follower_rmse_v": 4.449814496192722e-05,
+      "follower_max_error_v": 6.42900000000779e-05,
+      "output_min_v": 1.60000141,
+      "output_max_v": 1.69999969,
+      "normal_max_deviation_v": 9.99999993922529e-09,
+      "trigger_recovery_drop_v": 0.0,
+      "trigger_reference_mean_v": 1.6500005414433043,
+      "normal_store_peak_v": 1.55081226e-05,
+      "trigger_store_peak_v": 0.811558098,
+      "trigger_store_final_v": 0.616272202
+    }
+  },
+  "detector": {
+    "confidence": 0.9,
+    "feedback_text": "The presence of the switch S23, which connects the output to ground under certain conditions (controlled by the state of n21), raises suspicion. If n21 is pulled low, S23 will turn on, shorting the output to ground, which could be a deliberate mechanism to disable the amplifier. This connection alters the intended function of the amplifier. Further investigation is recommended to verify the control conditions of S23 and the behavior of n21.",
+    "is_trojan": true,
+    "suspect_nodes": [
+      "S23",
+      "n21"
+    ]
+  },
+  "detector_call_id": "strong_attacker_v1_opamp_t2_full_r2_d",
+  "detector_record": "results/api/strong_attacker_v1_opamp_t2_full_r2_d-6f2dad89bf54.json",
+  "detector_negative": false,
+  "success": false
+}

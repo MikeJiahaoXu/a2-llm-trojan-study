@@ -1,0 +1,116 @@
+{
+  "call_id": "stronger_connectivity_v1",
+  "role": "smoke",
+  "request_sha256": "840471955010c3c0b325df6a82b2db398c1ba1cd1027c7cb1df20f90bc37f219",
+  "request": {
+    "model": "gpt-5.4-mini-2026-03-17",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Return the JSON object with ok true."
+      }
+    ],
+    "temperature": 0.3,
+    "response_format": {
+      "type": "json_schema",
+      "json_schema": {
+        "name": "experiment_output",
+        "strict": true,
+        "schema": {
+          "type": "object",
+          "properties": {
+            "ok": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "ok"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "max_completion_tokens": 30,
+    "reasoning_effort": "none"
+  },
+  "created_at_utc": "2026-10-30T08:31:22.348287+00:00",
+  "pricing_per_million": {
+    "input": 0.75,
+    "cached_input": 0.075,
+    "output": 4.5
+  },
+  "requested_seed": null,
+  "seed_sent": false,
+  "client": "model_client_v1",
+  "response": {
+    "id": "chatcmpl-EecJEXOyAFfUARu5jKwjmazh041L0",
+    "object": "chat.completion",
+    "created": 1793349088,
+    "model": "gpt-5.4-mini-2026-03-17",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"ok\":true}",
+          "refusal": null,
+          "annotations": []
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 40,
+      "completion_tokens": 12,
+      "total_tokens": 52,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": null
+  },
+  "result": {
+    "output": {
+      "ok": true
+    },
+    "usage": {
+      "prompt_tokens": 40,
+      "completion_tokens": 12,
+      "total_tokens": 52,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "model": "gpt-5.4-mini-2026-03-17",
+    "fingerprint": null,
+    "request_id": "req_1ebbf26ae348492fbf5ce08ffedc3cb4",
+    "response_id": "chatcmpl-EecJEXOyAFfUARu5jKwjmazh041L0",
+    "cache_hit": false,
+    "cost_usd": 8.4e-05,
+    "original_cost_usd": 8.4e-05,
+    "record_path": "results/api/stronger_connectivity_v1-0f8391d59f1f.json",
+    "pricing_per_million": {
+      "input": 0.75,
+      "cached_input": 0.075,
+      "output": 4.5
+    },
+    "requested_seed": null,
+    "seed_sent": false,
+    "reasoning_effort": "none"
+  }
+}

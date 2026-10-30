@@ -1,0 +1,13 @@
+{
+  "selection": "All distinct valid-and-undetected candidates from the two completed experiments; post-hoc selected cohort.",
+  "repeats_per_model": 5,
+  "models": [
+    "gpt-4o-mini-2024-07-18",
+    "gpt-5.4-mini-2026-03-17"
+  ],
+  "selected_ids": [
+    "strong_attacker_v1_and4_t3_binary_r3"
+  ],
+  "code_sha256": "d20a0853323eb1d2f6fa593fa3b2942c276ccde4619da10a0270bbddde4b412b",
+  "prompt_sha256": "4eb92cd87ca6e1c9f897819abfb4f92b1465b4828db27c5891227376ee8fd5fa"
+}

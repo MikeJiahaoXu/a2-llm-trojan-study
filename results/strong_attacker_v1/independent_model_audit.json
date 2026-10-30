@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "run_id": "strong_attacker_v1",
+  "attempt_rows": 120,
+  "candidate_events": 100,
+  "distinct_netlists": 71,
+  "valid_events": 64,
+  "candidate_api_records_checked": 200,
+  "checks": [
+    "source/prompt hashes",
+    "actual returned models",
+    "raw output/schema/usage",
+    "temperature/reasoning/seed policy",
+    "exact frozen prompt builders including prior-candidate feedback",
+    "balanced allocation",
+    "DUT hashes",
+    "simulation/scoring"
+  ]
+}

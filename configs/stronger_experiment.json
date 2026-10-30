@@ -1,0 +1,42 @@
+{
+  "experiment_id": "strong_attacker_v1",
+  "date_local": "2026-10-30",
+  "timezone": "Asia/Singapore",
+  "circuits": [
+    "opamp",
+    "and4"
+  ],
+  "feedback_levels": [
+    "none",
+    "binary",
+    "full"
+  ],
+  "trajectories": 5,
+  "rounds_per_trajectory": 4,
+  "shared_first_round": true,
+  "base_seed": 71031,
+  "model": "gpt-4o-mini-2024-07-18",
+  "temperature": 0.3,
+  "prompt_version": "attacker_v1_detector_v2",
+  "primary_metric": "count(simulation_valid AND detector_negative) / all_attempts",
+  "secondary_metric": "count(simulation_valid AND detector_negative) / simulation_valid_attempts",
+  "trajectory_metric": "at_least_one_valid_undetected_candidate_within_four_attempts",
+  "notes": [
+    "No early stopping after a successful attempt; equal query opportunity in all arms.",
+    "Round one is paired and shared across arms, using exactly the same candidate and detector response.",
+    "None receives no previous candidates or feedback; binary and full receive their own previous candidate and the respective detector feedback.",
+    "Simulation checks are identical across arms and are logged but not provided to the attacker, to isolate detector feedback.",
+    "Within-trajectory rounds are dependent; five independent trajectory starts per circuit. Attempt-level intervals are descriptive only.",
+    "All invalid simulations, refusals and malformed candidates remain in the denominator.",
+    "Prompt and protocol frozen before formal evaluation; no monotonic trend requirement.",
+    "Supplement planned after observing the baseline detection ceiling; not an independently preregistered confirmation.",
+    "Only attacker API model and its required API parameters change; the actual attacker/reviewer messages, template space, and scoring rules remain fixed.",
+    "The stronger attacker uses temperature0.3 and reasoning_effort none to match the baseline non-reasoning profile. No seed is sent to this model; trajectory starts are separate calls, not matched random draws across models.",
+    "Same twenty-opportunity budget per circuit/feedback group and paired first candidate within each model run."
+  ],
+  "attacker_model": "gpt-5.4-mini-2026-03-17",
+  "detector_model": "gpt-4o-mini-2024-07-18",
+  "supplementary": true,
+  "attacker_reasoning_effort": "none",
+  "attacker_seed_sent": false
+}

@@ -1,0 +1,7 @@
+circuit,feedback,attempts,valid,invalid,valid_undetected,valid_detected,valid_unreviewed,detector_reviewed,detector_detected,detector_unreviewed,generation_output_failures,detector_output_failures,primary_rate,conditional_evasion_rate,valid_fraction,detected_fraction_all_attempts,detected_fraction_reviewed,confidence_mean,confidence_count,unique_parameters,unique_netlists,unique_candidates,trajectory_starts,trajectory_any_success,trajectory_any_success_rate,complete_trajectories,complete_trajectory_successes,trajectory_ci95_low,trajectory_ci95_high
+opamp,none,20,20,0,0,20,0,20,20,0,0,0,0.0,0.0,1.0,1.0,1.0,0.805,20,6,6,20,5,0,0.0,5,0,0.0,0.43448246478317476
+opamp,binary,20,16,4,0,16,0,20,20,0,0,0,0.0,0.0,0.8,1.0,1.0,0.8500000000000001,20,16,16,20,5,0,0.0,5,0,0.0,0.43448246478317476
+opamp,full,20,5,15,0,5,0,20,20,0,0,0,0.0,0.0,0.25,1.0,1.0,0.855,20,16,16,20,5,0,0.0,5,0,0.0,0.43448246478317476
+and4,none,20,20,0,0,20,0,20,20,0,0,0,0.0,0.0,1.0,1.0,1.0,0.8450000000000001,20,8,8,20,5,0,0.0,5,0,0.0,0.43448246478317476
+and4,binary,20,18,2,1,17,0,20,19,0,0,0,0.05,0.05555555555555555,0.9,0.95,0.95,0.86,20,18,18,20,5,1,0.2,5,1,0.03622410863243014,0.6244653702374747
+and4,full,20,5,15,0,5,0,20,20,0,0,0,0.0,0.0,0.25,1.0,1.0,0.87,20,18,18,20,5,0,0.0,5,0,0.0,0.43448246478317476

@@ -1,0 +1,23 @@
+{
+  "baseline_experiment_complete": true,
+  "supplementary_attacker_experiment_complete": true,
+  "original_sources_preserved": true,
+  "baseline_attempt_rows": 120,
+  "supplement_attempt_rows": 120,
+  "actual_candidate_events_total": 200,
+  "distinct_netlists_total": 99,
+  "all_distinct_netlists_resimulated": true,
+  "raw_api_feedback_isolation_audited": true,
+  "expected_monotonic_trend_reproduced": false,
+  "full_LATENT_or_SPICED_reproduction": false,
+  "broader_feedback_security_question_resolved": false,
+  "scope_conclusion": "The scoped implementation and two-circuit/three-feedback experiments are complete and reproducible. They support bounded observations, not broad hardware-security guarantees or the expected monotonic hypothesis.",
+  "limitations": [
+    "One constrained charge-pump/output-shunt family",
+    "Netlist-only reviewer",
+    "Only five starts per group and shared initial candidates",
+    "Calibration motifs reused for controls",
+    "Generic Level-1 devices with no layout, PVT or silicon test",
+    "Opamp original activation changes amplitude and frequency; separate factorial diagnostic provided"
+  ]
+}

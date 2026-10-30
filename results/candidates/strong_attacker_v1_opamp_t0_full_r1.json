@@ -1,0 +1,49 @@
+{
+  "candidate_id": "strong_attacker_v1_opamp_t0_full_r1",
+  "circuit": "opamp",
+  "parameters": {
+    "name_style": "numeric",
+    "payload_ohms": 220,
+    "pump_cap_pf": 0.22,
+    "tau_us": 60,
+    "threshold_v": 0.78,
+    "topology": "smooth"
+  },
+  "attacker_call_id": "strong_attacker_v1_opamp_t0_full_r1_a",
+  "prompt_version": "attacker_v1_detector_v2",
+  "attacker_record": "results/api/strong_attacker_v1_opamp_t0_full_r1_a-a535ba0c1caa.json",
+  "netlist_path": "netlists/generated/strong_attacker_v1_opamp_t0_full_r1.cir",
+  "netlist_sha256": "521ec480c7dc9575cec2f80edb0dbec76b169b3fa96c9cb045f03dd8b4ffa46f",
+  "simulation": {
+    "valid": false,
+    "normal_ok": true,
+    "trigger_ok": false,
+    "simulation_ok": true,
+    "metrics": {
+      "follower_rmse_v": 4.449813950717676e-05,
+      "follower_max_error_v": 6.42900000000779e-05,
+      "output_min_v": 1.60000141,
+      "output_max_v": 1.69999969,
+      "normal_max_deviation_v": 0.0,
+      "trigger_recovery_drop_v": -3.2188279996958613e-07,
+      "trigger_reference_mean_v": 1.6500005426622375,
+      "normal_store_peak_v": 1.18137096e-05,
+      "trigger_store_peak_v": 0.724232806,
+      "trigger_store_final_v": 0.436790774
+    }
+  },
+  "detector": {
+    "confidence": 0.9,
+    "feedback_text": "The presence of the diode-connected transistor (D231) in conjunction with the current source (I2) creates a feedback loop that could potentially alter the output based on the voltage at node n21. This configuration suggests a mechanism that could be exploited to manipulate the output voltage under specific conditions, indicating a potential Trojan. Further investigation into the behavior of this feedback path is recommended.",
+    "is_trojan": true,
+    "suspect_nodes": [
+      "n21",
+      "n22",
+      "out"
+    ]
+  },
+  "detector_call_id": "strong_attacker_v1_opamp_t0_full_r1_d",
+  "detector_record": "results/api/strong_attacker_v1_opamp_t0_full_r1_d-111b59975088.json",
+  "detector_negative": false,
+  "success": false
+}

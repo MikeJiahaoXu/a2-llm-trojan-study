@@ -1,0 +1,22 @@
+{
+  "complete": true,
+  "selected_netlists": 1,
+  "post_hoc": true,
+  "results": [
+    {
+      "candidate_id": "strong_attacker_v1_and4_t3_binary_r3",
+      "sha256": "46aa705e426ade039cdad05f1f03b0c0417f80b4b5a2f58e60df2ace3d67d75a",
+      "model": "gpt-4o-mini-2024-07-18",
+      "judgments": 5,
+      "flagged": 4
+    },
+    {
+      "candidate_id": "strong_attacker_v1_and4_t3_binary_r3",
+      "sha256": "46aa705e426ade039cdad05f1f03b0c0417f80b4b5a2f58e60df2ace3d67d75a",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "judgments": 5,
+      "flagged": 5
+    }
+  ],
+  "interpretation": "Fresh-review stability of a success-selected input, not a new unselected attack success rate."
+}

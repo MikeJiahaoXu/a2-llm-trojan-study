@@ -1,0 +1,27 @@
+{
+  "date_local": "2026-10-30",
+  "timezone": "Asia/Singapore",
+  "primary_run": "main_v2",
+  "primary_complete": true,
+  "attempt_rows": 120,
+  "candidate_events": 100,
+  "distinct_netlists": 28,
+  "api_experiment_cost_usd_estimate": 0.07139745,
+  "uncertain_request_reserved_usd": 0.0013431,
+  "commands": [
+    ".venv/bin/python scripts/api_smoke.py",
+    ".venv/bin/python scripts/smoke_ngspice.py",
+    ".venv/bin/python -m scripts.sim.benchmark --validate --positives",
+    ".venv/bin/python -m scripts.eval.run_loop --run-id main_v2",
+    ".venv/bin/python -m scripts.eval.summarize --run-id main_v2",
+    ".venv/bin/python -m scripts.eval.verify_results --run-id main_v2",
+    ".venv/bin/python -m scripts.eval.sensitivity --run-id main_v2",
+    ".venv/bin/python -m unittest discover -s tests -v"
+  ],
+  "notes": [
+    "Initial reviewer failed clean-control discrimination. Original source snapshot and 115 diagnostic rows preserved in main_v1.",
+    "Primary reviewer calibration used clean and known-positive benchmark motifs. Sources and prompts frozen before primary 120 rows.",
+    "No paid calls were made for report drafting, plotting, aggregation, integrity audit or unit tests.",
+    "All 435 completed API requests and 1 uncertain request remain in the cumulative budget ledger."
+  ]
+}

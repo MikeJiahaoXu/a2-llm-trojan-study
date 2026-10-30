@@ -1,0 +1,228 @@
+{
+  "candidate_id": "main_v2_and4_t3_full_r1",
+  "circuit": "and4",
+  "parameters": {
+    "name_style": "plain",
+    "payload_ohms": 250,
+    "pump_cap_pf": 0.6,
+    "tau_us": 35,
+    "threshold_v": 1.2,
+    "topology": "switch"
+  },
+  "attacker_call_id": "main_v2_and4_t3_full_r1_a",
+  "prompt_version": "attacker_v1_detector_v2",
+  "attacker_record": "results/api/main_v2_and4_t3_full_r1_a-0f8d00cb2911.json",
+  "netlist_path": "netlists/generated/main_v2_and4_t3_full_r1.cir",
+  "netlist_sha256": "cf13486a82da7b9be8a1ac8913e88322b0e1db94a4e862a1a0c765e8a2093cc7",
+  "simulation": {
+    "valid": true,
+    "normal_ok": true,
+    "trigger_ok": true,
+    "simulation_ok": true,
+    "metrics": {
+      "truth_table": [
+        {
+          "inputs": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "expected": 0,
+          "output_v": 2.55401234e-09,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "expected": 0,
+          "output_v": 8.629080094917733e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "expected": 0,
+          "output_v": 3.8443510886168e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "expected": 0,
+          "output_v": 1.8626054823649058e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "expected": 0,
+          "output_v": 3.611118072112745e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "expected": 0,
+          "output_v": 2.1872984484773226e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "expected": 0,
+          "output_v": -2.040892892613951e-07,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "expected": 0,
+          "output_v": -5.687903357268424e-07,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "expected": 0,
+          "output_v": 8.173077627901311e-07,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "expected": 0,
+          "output_v": 2.814557920289076e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "expected": 0,
+          "output_v": -2.0268950383393964e-07,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "expected": 0,
+          "output_v": -5.180005090815774e-07,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "expected": 0,
+          "output_v": -3.547326704731456e-07,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "expected": 0,
+          "output_v": -2.098524156853752e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "expected": 0,
+          "output_v": 1.4961274010468339e-07,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "expected": 1,
+          "output_v": 3.2999951543548,
+          "pass": true
+        }
+      ],
+      "truth_table_passed": 16,
+      "rise_delay_ns": 0.14755888346059884,
+      "fall_delay_ns": 0.11351860575679884,
+      "normal_settled_max_deviation_v": 3.1126942517854426e-05,
+      "trigger_output_drop_v": 2.9142595840017997,
+      "trigger_high_samples": 2160,
+      "normal_store_peak_v": 0.23423866,
+      "trigger_store_peak_v": 1.86133078,
+      "trigger_store_final_v": 1.8152776
+    }
+  },
+  "detector": {
+    "confidence": 0.8,
+    "feedback_text": "The presence of capacitors (Cextra1, Cextra2) and diodes (Dextra1, Dextra2) suggests potential unauthorized behavior, particularly with the coupling and storage nodes. The diode-connected elements could allow for unintended voltage levels at the output, especially if the conditions for the switches (Sextra) are met. This could alter the expected AND functionality. Further investigation into the behavior of these components under various input conditions is recommended.",
+    "is_trojan": true,
+    "suspect_nodes": [
+      "Cextra1",
+      "Cextra2",
+      "Dextra1",
+      "Dextra2",
+      "Sextra"
+    ]
+  },
+  "detector_call_id": "main_v2_and4_t3_full_r1_d",
+  "detector_record": "results/api/main_v2_and4_t3_full_r1_d-ec859cd6fa6e.json",
+  "detector_negative": false,
+  "success": false
+}

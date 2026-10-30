@@ -1,0 +1,44 @@
+[
+  {
+    "circuit": "and4",
+    "topology": "switch",
+    "name_style": "plain",
+    "valid": true,
+    "error": null
+  },
+  {
+    "circuit": "and4",
+    "topology": "smooth",
+    "name_style": "bias",
+    "valid": true,
+    "error": null
+  },
+  {
+    "circuit": "and4",
+    "topology": "subckt",
+    "name_style": "numeric",
+    "valid": true,
+    "error": null
+  },
+  {
+    "circuit": "opamp",
+    "topology": "switch",
+    "name_style": "plain",
+    "valid": true,
+    "error": null
+  },
+  {
+    "circuit": "opamp",
+    "topology": "smooth",
+    "name_style": "bias",
+    "valid": true,
+    "error": null
+  },
+  {
+    "circuit": "opamp",
+    "topology": "subckt",
+    "name_style": "numeric",
+    "valid": true,
+    "error": null
+  }
+]

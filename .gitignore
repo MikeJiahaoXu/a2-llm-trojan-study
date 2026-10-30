@@ -1,0 +1,22 @@
+# Local credentials
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+
+# Local environments, build products, and caches
+.venv/
+.tools/
+tmp/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Runtime synchronization
+results/.api.lock
+
+# Generated delivery archives and their checksums
+output/*.zip
+output/*.sha256

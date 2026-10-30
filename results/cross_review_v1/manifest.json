@@ -1,0 +1,31 @@
+{
+  "config": {
+    "run_id": "cross_review_v1",
+    "source_runs": [
+      "main_v2",
+      "strong_attacker_v1"
+    ],
+    "reviewer_model": "gpt-5.4-mini-2026-03-17",
+    "temperature": 0.3,
+    "reasoning_effort": "none",
+    "sample_policy": "Every distinct netlist SHA256 in the union of the two completed adaptive experiments, using the lexicographically first candidate ID as representative.",
+    "controls": "Five fresh judgments of the same clean and known-positive DUT for each circuit.",
+    "interpretation": "Retrospective paired-input classification and valid-variant transfer assessment, not an adaptive stronger-attacker versus stronger-reviewer experiment.",
+    "selection_note": "Deduplication and inclusion rule fixed before the stronger-attacker run; no selection by model verdict, confidence or validity."
+  },
+  "source_attempt_hashes": {
+    "main_v2": "87061fedbea14401a2f5112c240a3fd8112f691763d5aa14a2dcecdf9e71b748",
+    "strong_attacker_v1": "3b66610bfc9d4bafed469295d5319822c42fd23a7ac89618785ec0945a428765"
+  },
+  "unique_netlists": 99,
+  "code_hash": "2ccf5104ddc41938025aa635ad11a6090e04c3437c9b335910e08a74f44aca0b",
+  "dependency_hashes": {
+    "scripts/model_client.py": "a8c1ff4fcf1a319fa84c5a85dd0060f7db7b1be0166d47f55fe815110b777992",
+    "scripts/llm_client.py": "1725f16d565ef8347dff05cbb9f9751adca002a5c2bb8c847b0297b40e0cf943",
+    "scripts/detector/review.py": "ba91dfd73362c12b37f18d0acdaff4b5f25c2efeebad381fe4b73092aef1d661",
+    "scripts/sim/benchmark.py": "035bc1dd475c32a02045d5185c939b8e5fcd940dcabd4a1e45f391ece3875145",
+    "netlists/templates/opamp.cir": "488db83556b42172da6e34e7ef8097d8bc23c05fefc4d9e8d604bcd76d7e48e3",
+    "netlists/templates/and4.cir": "c1c437c444686b3ffb6fae253431407ca79a60e30c823850a8f4cae85d37a39e"
+  },
+  "prompt_hash": "4eb92cd87ca6e1c9f897819abfb4f92b1465b4828db27c5891227376ee8fd5fa"
+}

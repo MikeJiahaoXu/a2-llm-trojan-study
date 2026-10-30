@@ -1,0 +1,151 @@
+{
+  "audit_time_local": "2026-10-30T16:25:13.629275+08:00",
+  "source": "frozen main_v2 source snapshot",
+  "paid_api_calls": 0,
+  "original_files_modified": false,
+  "frozen_source_hash_checks": {
+    "scripts/llm_client.py": true,
+    "scripts/request_recovery.py": true,
+    "scripts/attacker/propose.py": true,
+    "scripts/detector/review.py": true,
+    "scripts/eval/run_loop.py": true,
+    "scripts/sim/benchmark.py": true,
+    "netlists/templates/opamp.cir": true,
+    "netlists/templates/and4.cir": true
+  },
+  "formal_rows": 120,
+  "distinct_netlists_rerun": 28,
+  "clean_saved_comparison": {
+    "matches": true,
+    "max_absolute_numeric_difference": 0.0,
+    "mismatches": []
+  },
+  "independent_clean_metrics": {
+    "opamp_dc_gain_approx_at_1hz_db": 95.46661283281287,
+    "opamp_bandwidth_3db_hz": 131.89967965413996,
+    "opamp_unity_gain_hz": 9208417.085743504,
+    "opamp_phase_margin_deg": 50.375035206195776,
+    "and4_0111_to_1111_rise_delay_ns": 0.14755251718807233,
+    "and4_all_inputs_fall_delay_ns": 0.11471276169629577
+  },
+  "all_netlist_hashes_match": true,
+  "all_saved_simulation_metrics_match": true,
+  "all_independent_verdicts_agree": true,
+  "valid_distinct_by_circuit": {
+    "opamp": 6,
+    "and4": 6
+  },
+  "posthoc_diagnostics": {
+    "stimulus_grid": [
+      {
+        "circuit": "and4",
+        "frequency_hz": 25000.0,
+        "swing_vpp": 3.3,
+        "exposure_us": 40,
+        "nominal_cycles": 1,
+        "peak_reservoir_v": 0.115454286,
+        "recovery_output_drop_v": 9.99999993922529e-09,
+        "parameters": {
+          "topology": "switch",
+          "tau_us": 30,
+          "threshold_v": 0.85,
+          "pump_cap_pf": 0.4,
+          "payload_ohms": 200,
+          "name_style": "plain"
+        },
+        "interpretation": "post-hoc diagnostic; not added to formal denominators"
+      },
+      {
+        "circuit": "and4",
+        "frequency_hz": 1000000.0,
+        "swing_vpp": 3.3,
+        "exposure_us": 40,
+        "nominal_cycles": 40,
+        "peak_reservoir_v": 1.44959495,
+        "recovery_output_drop_v": 2.990956742111,
+        "parameters": {
+          "topology": "switch",
+          "tau_us": 30,
+          "threshold_v": 0.85,
+          "pump_cap_pf": 0.4,
+          "payload_ohms": 200,
+          "name_style": "plain"
+        },
+        "interpretation": "post-hoc diagnostic; not added to formal denominators"
+      },
+      {
+        "circuit": "opamp",
+        "frequency_hz": 25000.0,
+        "swing_vpp": 0.1,
+        "exposure_us": 40,
+        "nominal_cycles": 1,
+        "peak_reservoir_v": 9.53919131e-06,
+        "recovery_output_drop_v": 0.0,
+        "parameters": {
+          "topology": "switch",
+          "tau_us": 100,
+          "threshold_v": 0.4,
+          "pump_cap_pf": 0.4,
+          "payload_ohms": 50,
+          "name_style": "plain"
+        },
+        "interpretation": "post-hoc diagnostic; not added to formal denominators"
+      },
+      {
+        "circuit": "opamp",
+        "frequency_hz": 25000.0,
+        "swing_vpp": 2.1,
+        "exposure_us": 40,
+        "nominal_cycles": 1,
+        "peak_reservoir_v": 0.0648525944,
+        "recovery_output_drop_v": 1.8249000088843559e-09,
+        "parameters": {
+          "topology": "switch",
+          "tau_us": 100,
+          "threshold_v": 0.4,
+          "pump_cap_pf": 0.4,
+          "payload_ohms": 50,
+          "name_style": "plain"
+        },
+        "interpretation": "post-hoc diagnostic; not added to formal denominators"
+      },
+      {
+        "circuit": "opamp",
+        "frequency_hz": 1000000.0,
+        "swing_vpp": 0.1,
+        "exposure_us": 40,
+        "nominal_cycles": 40,
+        "peak_reservoir_v": 8.30615313e-06,
+        "recovery_output_drop_v": 0.0,
+        "parameters": {
+          "topology": "switch",
+          "tau_us": 100,
+          "threshold_v": 0.4,
+          "pump_cap_pf": 0.4,
+          "payload_ohms": 50,
+          "name_style": "plain"
+        },
+        "interpretation": "post-hoc diagnostic; not added to formal denominators"
+      },
+      {
+        "circuit": "opamp",
+        "frequency_hz": 1000000.0,
+        "swing_vpp": 2.1,
+        "exposure_us": 40,
+        "nominal_cycles": 40,
+        "peak_reservoir_v": 1.09216806,
+        "recovery_output_drop_v": 0.8853493517644,
+        "parameters": {
+          "topology": "switch",
+          "tau_us": 100,
+          "threshold_v": 0.4,
+          "pump_cap_pf": 0.4,
+          "payload_ohms": 50,
+          "name_style": "plain"
+        },
+        "interpretation": "post-hoc diagnostic; not added to formal denominators"
+      }
+    ],
+    "and4_single_sensitized_input_fall_delay_ns": 0.14329193263306472
+  }
+}

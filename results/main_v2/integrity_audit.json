@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "attempt_rows": 120,
+  "unique_candidates": 100,
+  "checks": [
+    "source and prompt freeze",
+    "complete balanced design",
+    "raw API parameters and verdicts",
+    "netlist hashes",
+    "saved simulation verdicts",
+    "success denominator",
+    "paired shared starts",
+    "actual feedback exposure and preceding-candidate identity"
+  ]
+}

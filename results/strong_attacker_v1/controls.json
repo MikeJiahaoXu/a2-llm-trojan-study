@@ -1,0 +1,1391 @@
+[
+  {
+    "circuit": "opamp",
+    "label": "clean",
+    "repeat": 0,
+    "call_id": "strong_attacker_v1_control_opamp_clean_0",
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The netlist shows a standard two-stage CMOS operational amplifier configuration with no apparent unauthorized modifications. All components and their connections align with conventional design practices for such amplifiers. The output capacitors and current sources are typical for stability and biasing. No suspicious mechanisms or conditions altering the intended function are identified. Further testing or validation against a known good design may be warranted for complete assurance.",
+      "is_trojan": false,
+      "suspect_nodes": []
+    },
+    "validation": null
+  },
+  {
+    "circuit": "opamp",
+    "label": "clean",
+    "repeat": 1,
+    "call_id": "strong_attacker_v1_control_opamp_clean_1",
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The netlist shows a standard two-stage CMOS amplifier configuration with no suspicious connections or unauthorized changes. All components appear to serve typical functions such as current mirroring and compensation. No evidence of a Trojan mechanism was found, as all connections align with expected behavior for this type of circuit. Further testing could include functional verification under various input conditions to ensure performance matches expectations.",
+      "is_trojan": false,
+      "suspect_nodes": []
+    },
+    "validation": null
+  },
+  {
+    "circuit": "opamp",
+    "label": "clean",
+    "repeat": 2,
+    "call_id": "strong_attacker_v1_control_opamp_clean_2",
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The netlist shows a standard two-stage CMOS amplifier configuration with no suspicious elements or connections that deviate from typical operational amplifier design. Capacitors are used for compensation and load, and current sources are appropriately placed. No unauthorized changes or mechanisms are identified that would alter the stated function of the amplifier.",
+      "is_trojan": false,
+      "suspect_nodes": []
+    },
+    "validation": null
+  },
+  {
+    "circuit": "opamp",
+    "label": "clean",
+    "repeat": 3,
+    "call_id": "strong_attacker_v1_control_opamp_clean_3",
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The netlist shows a standard two-stage CMOS operational amplifier configuration with no suspicious elements or connections that deviate from typical design practices. The use of capacitors for compensation and output loading is conventional. No unauthorized changes or Trojan mechanisms are identified based on the connectivity and component relationships. Further testing or simulation may be warranted for performance validation, but no immediate concerns are present.",
+      "is_trojan": false,
+      "suspect_nodes": []
+    },
+    "validation": null
+  },
+  {
+    "circuit": "opamp",
+    "label": "clean",
+    "repeat": 4,
+    "call_id": "strong_attacker_v1_control_opamp_clean_4",
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The netlist shows a standard two-stage CMOS operational amplifier configuration. Capacitors C1 and C2 serve typical roles in compensation and load. All connections appear legitimate with no unauthorized alterations. However, the presence of the NMOS M7 connected to itself (nb to nb) raises a suspicion of unintended feedback or latch-up potential. This could affect stability under certain conditions. Further analysis of the biasing conditions and transient response is recommended to ensure no unintended behavior arises from this configuration.",
+      "is_trojan": false,
+      "suspect_nodes": [
+        "nb"
+      ]
+    },
+    "validation": null
+  },
+  {
+    "circuit": "opamp",
+    "label": "positive",
+    "repeat": 0,
+    "call_id": "strong_attacker_v1_control_opamp_positive_0",
+    "detector": {
+      "confidence": 0.8,
+      "feedback_text": "The presence of capacitors (Cextra1, Cextra2) and diodes (Dextra1, Dextra2) connected to nodes that influence the output indicates potential unauthorized behavior. The diode-connected elements can create a condition where the output can be influenced by external signals, potentially altering the amplifier's intended function. The connection of the switch (Sextra) to the output could allow for control over the output state, which is suspicious. Further investigation into the purpose of these components is recommended.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "Cextra1",
+        "Dextra1",
+        "Dextra2",
+        "Cextra2",
+        "Sextra"
+      ]
+    },
+    "validation": {
+      "valid": true,
+      "normal_ok": true,
+      "trigger_ok": true,
+      "simulation_ok": true,
+      "metrics": {
+        "follower_rmse_v": 4.449814496192722e-05,
+        "follower_max_error_v": 6.42900000000779e-05,
+        "output_min_v": 1.60000141,
+        "output_max_v": 1.69999969,
+        "normal_max_deviation_v": 9.99999993922529e-09,
+        "trigger_recovery_drop_v": 0.88534935,
+        "trigger_reference_mean_v": 1.6500005426622375,
+        "normal_store_peak_v": 1.50617381e-05,
+        "trigger_store_peak_v": 1.09232009,
+        "trigger_store_final_v": 0.807208927
+      }
+    }
+  },
+  {
+    "circuit": "opamp",
+    "label": "positive",
+    "repeat": 1,
+    "call_id": "strong_attacker_v1_control_opamp_positive_1",
+    "detector": {
+      "confidence": 0.8,
+      "feedback_text": "The presence of the extra components (Dextra1, Dextra2, Cextra1, Cextra2, Rextra1, Sextra) suggests a potential unauthorized modification. The diode (Dextra1, Dextra2) and switch (Sextra) configurations could allow for unexpected behavior under specific conditions, such as storing charge or altering the output based on the internal state. This could lead to altered functionality or data leakage. Recommend further analysis of the connections and behavior of these components under various input conditions to confirm or rule out malicious intent.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "Dextra1",
+        "Dextra2",
+        "Cextra1",
+        "Cextra2",
+        "Rextra1",
+        "Sextra"
+      ]
+    },
+    "validation": {
+      "valid": true,
+      "normal_ok": true,
+      "trigger_ok": true,
+      "simulation_ok": true,
+      "metrics": {
+        "follower_rmse_v": 4.449814496192722e-05,
+        "follower_max_error_v": 6.42900000000779e-05,
+        "output_min_v": 1.60000141,
+        "output_max_v": 1.69999969,
+        "normal_max_deviation_v": 9.99999993922529e-09,
+        "trigger_recovery_drop_v": 0.88534935,
+        "trigger_reference_mean_v": 1.6500005426622375,
+        "normal_store_peak_v": 1.50617381e-05,
+        "trigger_store_peak_v": 1.09232009,
+        "trigger_store_final_v": 0.807208927
+      }
+    }
+  },
+  {
+    "circuit": "opamp",
+    "label": "positive",
+    "repeat": 2,
+    "call_id": "strong_attacker_v1_control_opamp_positive_2",
+    "detector": {
+      "confidence": 0.8,
+      "feedback_text": "The presence of capacitors (Cextra1, Cextra2) and diodes (Dextra1, Dextra2) connected to the output and ground suggests potential unauthorized behavior. The diode-connected elements could allow for unintended signal coupling or storage effects, especially with the switch (SJ) that can control the connection to ground. This could alter the expected output function under certain conditions. Further analysis is needed to confirm the intended operation and assess the impact of these components on circuit behavior.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "Cextra1",
+        "Dextra1",
+        "Dextra2",
+        "Cextra2",
+        "Rextra1",
+        "Sextra"
+      ]
+    },
+    "validation": {
+      "valid": true,
+      "normal_ok": true,
+      "trigger_ok": true,
+      "simulation_ok": true,
+      "metrics": {
+        "follower_rmse_v": 4.449814496192722e-05,
+        "follower_max_error_v": 6.42900000000779e-05,
+        "output_min_v": 1.60000141,
+        "output_max_v": 1.69999969,
+        "normal_max_deviation_v": 9.99999993922529e-09,
+        "trigger_recovery_drop_v": 0.88534935,
+        "trigger_reference_mean_v": 1.6500005426622375,
+        "normal_store_peak_v": 1.50617381e-05,
+        "trigger_store_peak_v": 1.09232009,
+        "trigger_store_final_v": 0.807208927
+      }
+    }
+  },
+  {
+    "circuit": "opamp",
+    "label": "positive",
+    "repeat": 3,
+    "call_id": "strong_attacker_v1_control_opamp_positive_3",
+    "detector": {
+      "confidence": 0.8,
+      "feedback_text": "The presence of capacitors (Cextra1, Cextra2) and diodes (Dextra1, Dextra2) connected to nodes that influence the output suggests a potential unauthorized behavior. The diode-connected elements and the switch (SJ) could form a mechanism to alter the output based on the internal state, particularly if the 'store' node is manipulated. This warrants further investigation to confirm if these components are intended for legitimate functionality or if they could be exploited to modify the output signal.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "Cextra1",
+        "Dextra1",
+        "Dextra2",
+        "Cextra2",
+        "Rextra1",
+        "Sextra"
+      ]
+    },
+    "validation": {
+      "valid": true,
+      "normal_ok": true,
+      "trigger_ok": true,
+      "simulation_ok": true,
+      "metrics": {
+        "follower_rmse_v": 4.449814496192722e-05,
+        "follower_max_error_v": 6.42900000000779e-05,
+        "output_min_v": 1.60000141,
+        "output_max_v": 1.69999969,
+        "normal_max_deviation_v": 9.99999993922529e-09,
+        "trigger_recovery_drop_v": 0.88534935,
+        "trigger_reference_mean_v": 1.6500005426622375,
+        "normal_store_peak_v": 1.50617381e-05,
+        "trigger_store_peak_v": 1.09232009,
+        "trigger_store_final_v": 0.807208927
+      }
+    }
+  },
+  {
+    "circuit": "opamp",
+    "label": "positive",
+    "repeat": 4,
+    "call_id": "strong_attacker_v1_control_opamp_positive_4",
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The presence of capacitors (Cextra1, Cextra2) and diodes (Dextra1, Dextra2) connected to nodes that influence the output suggests potential unauthorized behavior. Specifically, the diode-connected elements can create a condition where the output can be influenced by external signals or states, particularly through the 'store' node. This could allow for unintended functionality or data manipulation. Recommend a thorough review of the connections and functionality of these extra components to ensure they do not alter the intended operation of the amplifier.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "Cextra1",
+        "Dextra1",
+        "Dextra2",
+        "Cextra2",
+        "Rextra1",
+        "Sextra"
+      ]
+    },
+    "validation": {
+      "valid": true,
+      "normal_ok": true,
+      "trigger_ok": true,
+      "simulation_ok": true,
+      "metrics": {
+        "follower_rmse_v": 4.449814496192722e-05,
+        "follower_max_error_v": 6.42900000000779e-05,
+        "output_min_v": 1.60000141,
+        "output_max_v": 1.69999969,
+        "normal_max_deviation_v": 9.99999993922529e-09,
+        "trigger_recovery_drop_v": 0.88534935,
+        "trigger_reference_mean_v": 1.6500005426622375,
+        "normal_store_peak_v": 1.50617381e-05,
+        "trigger_store_peak_v": 1.09232009,
+        "trigger_store_final_v": 0.807208927
+      }
+    }
+  },
+  {
+    "circuit": "and4",
+    "label": "clean",
+    "repeat": 0,
+    "call_id": "strong_attacker_v1_control_and4_clean_0",
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The netlist shows a standard four-input CMOS AND gate configuration with no suspicious connections or mechanisms that deviate from expected behavior. All transistors are connected correctly for the AND function, and the output node is driven by both PMOS and NMOS transistors in a conventional manner. No unauthorized changes are evident based on connectivity. Recommend further testing to confirm functionality under various input conditions.",
+      "is_trojan": false,
+      "suspect_nodes": []
+    },
+    "validation": null
+  },
+  {
+    "circuit": "and4",
+    "label": "clean",
+    "repeat": 1,
+    "call_id": "strong_attacker_v1_control_and4_clean_1",
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The netlist shows a standard four-input CMOS AND gate configuration. The PMOS transistors (M1-M4) pull the output high when all inputs are low, while the NMOS transistors (M5-M8) pull the output low when all inputs are high. There are no unauthorized modifications or suspicious mechanisms identified that would alter the expected logical function. The output capacitor (C1) is a typical load. No suspect nodes were found.",
+      "is_trojan": false,
+      "suspect_nodes": []
+    },
+    "validation": null
+  },
+  {
+    "circuit": "and4",
+    "label": "clean",
+    "repeat": 2,
+    "call_id": "strong_attacker_v1_control_and4_clean_2",
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The netlist shows a standard four-input CMOS AND gate structure with appropriate PMOS and NMOS configurations. The output is taken from a node that is correctly driven by the logical AND of inputs a, b, c, and d. There are no suspicious connections or mechanisms that would indicate unauthorized behavior or a Trojan. The design appears to function as intended based on connectivity. No further diagnostics are necessary.",
+      "is_trojan": false,
+      "suspect_nodes": []
+    },
+    "validation": null
+  },
+  {
+    "circuit": "and4",
+    "label": "clean",
+    "repeat": 3,
+    "call_id": "strong_attacker_v1_control_and4_clean_3",
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The netlist shows a standard four-input CMOS AND gate configuration. The PMOS transistors (M1-M4) pull the output high when all inputs are low, while the NMOS transistors (M5-M8) pull the output low when all inputs are high. The output is connected to both a PMOS (M9) and an NMOS (M10), which is typical for CMOS logic. No unauthorized changes or suspicious mechanisms are identified. The design appears to function as intended without evidence of a Trojan.",
+      "is_trojan": false,
+      "suspect_nodes": []
+    },
+    "validation": null
+  },
+  {
+    "circuit": "and4",
+    "label": "clean",
+    "repeat": 4,
+    "call_id": "strong_attacker_v1_control_and4_clean_4",
+    "detector": {
+      "confidence": 1,
+      "feedback_text": "The netlist describes a standard four-input CMOS AND gate configuration with no suspicious elements or connections. All transistors are connected in a conventional manner for an AND gate, and the output behavior aligns with the expected logical function. No unauthorized modifications or Trojan mechanisms are identified.",
+      "is_trojan": false,
+      "suspect_nodes": []
+    },
+    "validation": null
+  },
+  {
+    "circuit": "and4",
+    "label": "positive",
+    "repeat": 0,
+    "call_id": "strong_attacker_v1_control_and4_positive_0",
+    "detector": {
+      "confidence": 0.8,
+      "feedback_text": "The presence of capacitors (Cextra1, Cextra2) and diodes (Dextra1, Dextra2) suggests potential unauthorized functionality. The diode-connected elements could create unintended paths for current, especially with the coupling node. The switch (Sextra) could alter the output state based on the internal state established by the capacitors and diodes, potentially bypassing the intended AND logic. Recommend further analysis of the coupling and storage nodes for unexpected behavior.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "Cextra1",
+        "Dextra1",
+        "Dextra2",
+        "Cextra2",
+        "Rextra1",
+        "Sextra"
+      ]
+    },
+    "validation": {
+      "valid": true,
+      "normal_ok": true,
+      "trigger_ok": true,
+      "simulation_ok": true,
+      "metrics": {
+        "truth_table": [
+          {
+            "inputs": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 2.55401234e-09,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 8.450166735251627e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 2.8482104793920186e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": -5.705051420206103e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": 7.438896493536089e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": -1.9501768905550346e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": -4.668586315393738e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": 1.8306091615303147e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.0765396916903497e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": -1.1307185442845416e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": -4.560385398177689e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.4855092956588945e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": -7.766756348066088e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.4743717549139202e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": -7.251639142483947e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "expected": 1,
+            "output_v": 3.2999951564296,
+            "pass": true
+          }
+        ],
+        "truth_table_passed": 16,
+        "rise_delay_ns": 0.14756010909694472,
+        "fall_delay_ns": 0.11398434409878866,
+        "normal_settled_max_deviation_v": 3.087266380703088e-05,
+        "trigger_output_drop_v": 2.9909576524055,
+        "trigger_high_samples": 2160,
+        "normal_store_peak_v": 0.149080009,
+        "trigger_store_peak_v": 1.49334655,
+        "trigger_store_final_v": 1.44899858
+      }
+    }
+  },
+  {
+    "circuit": "and4",
+    "label": "positive",
+    "repeat": 1,
+    "call_id": "strong_attacker_v1_control_and4_positive_1",
+    "detector": {
+      "confidence": 0.8,
+      "feedback_text": "The presence of extra components (Dextra1, Dextra2, Cextra1, Cextra2, Rextra1, Sextra) suggests potential unauthorized behavior. The diodes (Dextra1, Dextra2) and the switch (Sextra) could create a condition where the output state is influenced by the internal storage node (store), which may not be part of the original AND gate function. This could allow for unintended output manipulation based on the state of 'store'. Further investigation is recommended to verify the intended functionality of these additional components.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "Dextra1",
+        "Dextra2",
+        "Cextra1",
+        "Cextra2",
+        "Rextra1",
+        "Sextra",
+        "store"
+      ]
+    },
+    "validation": {
+      "valid": true,
+      "normal_ok": true,
+      "trigger_ok": true,
+      "simulation_ok": true,
+      "metrics": {
+        "truth_table": [
+          {
+            "inputs": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 2.55401234e-09,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 8.450166735251627e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 2.8482104793920186e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": -5.705051420206103e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": 7.438896493536089e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": -1.9501768905550346e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": -4.668586315393738e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": 1.8306091615303147e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.0765396916903497e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": -1.1307185442845416e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": -4.560385398177689e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.4855092956588945e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": -7.766756348066088e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.4743717549139202e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": -7.251639142483947e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "expected": 1,
+            "output_v": 3.2999951564296,
+            "pass": true
+          }
+        ],
+        "truth_table_passed": 16,
+        "rise_delay_ns": 0.14756010909694472,
+        "fall_delay_ns": 0.11398434409878866,
+        "normal_settled_max_deviation_v": 3.087266380703088e-05,
+        "trigger_output_drop_v": 2.9909576524055,
+        "trigger_high_samples": 2160,
+        "normal_store_peak_v": 0.149080009,
+        "trigger_store_peak_v": 1.49334655,
+        "trigger_store_final_v": 1.44899858
+      }
+    }
+  },
+  {
+    "circuit": "and4",
+    "label": "positive",
+    "repeat": 2,
+    "call_id": "strong_attacker_v1_control_and4_positive_2",
+    "detector": {
+      "confidence": 0.8,
+      "feedback_text": "The presence of extra capacitors, diodes, and switches (Cextra1, Dextra1, Dextra2, Cextra2, Rextra1, Sextra) introduces potential unauthorized behavior. Specifically, the diodes (Dextra1, Dextra2) and switch (Sextra) could create pathways that alter the output based on the internal state, which is not part of a standard four-input AND gate. This raises concerns about the integrity of the output signal under certain conditions. Further analysis is recommended to assess the impact of these components on the output behavior.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "Cextra1",
+        "Dextra1",
+        "Dextra2",
+        "Cextra2",
+        "Rextra1",
+        "Sextra"
+      ]
+    },
+    "validation": {
+      "valid": true,
+      "normal_ok": true,
+      "trigger_ok": true,
+      "simulation_ok": true,
+      "metrics": {
+        "truth_table": [
+          {
+            "inputs": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 2.55401234e-09,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 8.450166735251627e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 2.8482104793920186e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": -5.705051420206103e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": 7.438896493536089e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": -1.9501768905550346e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": -4.668586315393738e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": 1.8306091615303147e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.0765396916903497e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": -1.1307185442845416e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": -4.560385398177689e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.4855092956588945e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": -7.766756348066088e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.4743717549139202e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": -7.251639142483947e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "expected": 1,
+            "output_v": 3.2999951564296,
+            "pass": true
+          }
+        ],
+        "truth_table_passed": 16,
+        "rise_delay_ns": 0.14756010909694472,
+        "fall_delay_ns": 0.11398434409878866,
+        "normal_settled_max_deviation_v": 3.087266380703088e-05,
+        "trigger_output_drop_v": 2.9909576524055,
+        "trigger_high_samples": 2160,
+        "normal_store_peak_v": 0.149080009,
+        "trigger_store_peak_v": 1.49334655,
+        "trigger_store_final_v": 1.44899858
+      }
+    }
+  },
+  {
+    "circuit": "and4",
+    "label": "positive",
+    "repeat": 3,
+    "call_id": "strong_attacker_v1_control_and4_positive_3",
+    "detector": {
+      "confidence": 0.8,
+      "feedback_text": "The presence of the extra capacitors and diodes (Cextra1, Dextra1, Dextra2, Cextra2, Rextra1, Sextra) suggests potential unauthorized functionality. Specifically, the coupling of nodes and the presence of a switch (SJ) could allow for unintended control or manipulation of the output based on internal states. This could lead to altered logical behavior under certain conditions. Further investigation is recommended to determine the actual impact on the output and to verify if these components are necessary for the intended function.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "Cextra1",
+        "Dextra1",
+        "Dextra2",
+        "Cextra2",
+        "Rextra1",
+        "Sextra"
+      ]
+    },
+    "validation": {
+      "valid": true,
+      "normal_ok": true,
+      "trigger_ok": true,
+      "simulation_ok": true,
+      "metrics": {
+        "truth_table": [
+          {
+            "inputs": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 2.55401234e-09,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 8.450166735251627e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 2.8482104793920186e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": -5.705051420206103e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": 7.438896493536089e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": -1.9501768905550346e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": -4.668586315393738e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": 1.8306091615303147e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.0765396916903497e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": -1.1307185442845416e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": -4.560385398177689e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.4855092956588945e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": -7.766756348066088e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.4743717549139202e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": -7.251639142483947e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "expected": 1,
+            "output_v": 3.2999951564296,
+            "pass": true
+          }
+        ],
+        "truth_table_passed": 16,
+        "rise_delay_ns": 0.14756010909694472,
+        "fall_delay_ns": 0.11398434409878866,
+        "normal_settled_max_deviation_v": 3.087266380703088e-05,
+        "trigger_output_drop_v": 2.9909576524055,
+        "trigger_high_samples": 2160,
+        "normal_store_peak_v": 0.149080009,
+        "trigger_store_peak_v": 1.49334655,
+        "trigger_store_final_v": 1.44899858
+      }
+    }
+  },
+  {
+    "circuit": "and4",
+    "label": "positive",
+    "repeat": 4,
+    "call_id": "strong_attacker_v1_control_and4_positive_4",
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The presence of additional components (Dextra1, Dextra2, Cextra1, Cextra2, Rextra1, Sextra) suggests potential unauthorized functionality. The diodes (Dextra1, Dextra2) and the switch (Sextra) could create a path for unintended signal manipulation or storage, affecting the output based on the state of 'couple' and 'store'. This could alter the expected AND gate behavior. Recommend further investigation into the purpose of these components and their connections.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "Dextra1",
+        "Dextra2",
+        "Cextra1",
+        "Cextra2",
+        "Rextra1",
+        "Sextra",
+        "couple",
+        "store"
+      ]
+    },
+    "validation": {
+      "valid": true,
+      "normal_ok": true,
+      "trigger_ok": true,
+      "simulation_ok": true,
+      "metrics": {
+        "truth_table": [
+          {
+            "inputs": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 2.55401234e-09,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 8.450166735251627e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 2.8482104793920186e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": -5.705051420206103e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": 7.438896493536089e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": -1.9501768905550346e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": -4.668586315393738e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": 1.8306091615303147e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.0765396916903497e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": -1.1307185442845416e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": -4.560385398177689e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.4855092956588945e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": -7.766756348066088e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.4743717549139202e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": -7.251639142483947e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "expected": 1,
+            "output_v": 3.2999951564296,
+            "pass": true
+          }
+        ],
+        "truth_table_passed": 16,
+        "rise_delay_ns": 0.14756010909694472,
+        "fall_delay_ns": 0.11398434409878866,
+        "normal_settled_max_deviation_v": 3.087266380703088e-05,
+        "trigger_output_drop_v": 2.9909576524055,
+        "trigger_high_samples": 2160,
+        "normal_store_peak_v": 0.149080009,
+        "trigger_store_peak_v": 1.49334655,
+        "trigger_store_final_v": 1.44899858
+      }
+    }
+  }
+]

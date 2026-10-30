@@ -1,0 +1,24 @@
+* Four-input CMOS AND, pedagogical Level-1 devices, 3.3 V.
+.subckt dut a b c d out vdd vss
+M1 n1 a vdd vdd PM W=8u L=1u
+M2 n1 b vdd vdd PM W=8u L=1u
+M3 n1 c vdd vdd PM W=8u L=1u
+M4 n1 d vdd vdd PM W=8u L=1u
+M5 n1 a n2 vss NM W=16u L=1u
+M6 n2 b n3 vss NM W=16u L=1u
+M7 n3 c n4 vss NM W=16u L=1u
+M8 n4 d vss vss NM W=16u L=1u
+M9 out n1 vdd vdd PM W=8u L=1u
+M10 out n1 vss vss NM W=4u L=1u
+C1 out vss 100f
+Cbias1 a vbcap 0.22p
+Dbias1 vbcap vbaux DJ
+Dbias2 vss vbcap DJ
+Cbias2 vbaux vss 10p
+Rbias1 vbaux vss 3800000
+Bbias out vss I={v(out,vss)/1200*(1+tanh((v(vbaux,vss)-1.35)/0.025))/2}
+.ends dut
+.model NM NMOS (LEVEL=1 VTO=0.6 KP=120u LAMBDA=0.02 CGSO=100p CGDO=100p)
+.model PM PMOS (LEVEL=1 VTO=-0.6 KP=50u LAMBDA=0.02 CGSO=100p CGDO=100p)
+
+.model DJ D (IS=1e-12 N=1)

@@ -1,0 +1,339 @@
+[
+  {
+    "circuit": "opamp",
+    "label": "clean",
+    "repeat": 0,
+    "detector": {
+      "confidence": 0.98,
+      "feedback_text": "No suspicious unauthorized mechanism is evident. The netlist matches a conventional two-stage CMOS op-amp: NMOS differential pair with tail current source, PMOS current-mirror load, second gain stage, bias mirror, and compensation/load capacitors. The only feedback path is the expected Miller capacitor C1 from the second-stage output to the first-stage node. No conditional control, hidden state, or extra path alters the output/bias beyond normal amplifier operation. Suggested check: simulate DC bias and AC stability to confirm intended compensation and output swing.",
+      "is_trojan": false,
+      "suspect_nodes": []
+    },
+    "api_record": "results/api/cross_review_v1_opamp_clean_0-9a1f1de071f3.json"
+  },
+  {
+    "circuit": "opamp",
+    "label": "clean",
+    "repeat": 1,
+    "detector": {
+      "confidence": 0.96,
+      "feedback_text": "No suspicious mechanism is established. The netlist matches a conventional two-stage CMOS op-amp: NMOS differential pair M1/M2 with tail current I1, PMOS current-mirror load M3/M4, second gain stage M5/M6, and Miller compensation C1 plus output load C2. The diode-connected M7 with I2 forms a standard NMOS bias mirror for M6. No extra control path, hidden state, or output-altering conditional connection is present. If needed, verify bias currents and phase margin by simulation, but the connectivity itself does not indicate a Trojan.",
+      "is_trojan": false,
+      "suspect_nodes": []
+    },
+    "api_record": "results/api/cross_review_v1_opamp_clean_1-b2c1bfa89dc7.json"
+  },
+  {
+    "circuit": "opamp",
+    "label": "clean",
+    "repeat": 2,
+    "detector": {
+      "confidence": 0.97,
+      "feedback_text": "No suspicious mechanism is evident. The netlist matches a conventional two-stage CMOS op-amp: NMOS differential pair M1/M2 with tail current I1, PMOS active load/current mirror M3/M4, second gain stage M5/M6, bias mirror M7 with I2, and compensation/load capacitors C1/C2. I do not see any conditional path, hidden state, or extra element that alters output/bias beyond normal amplifier operation. Suggested check: simulate DC bias and AC stability to confirm expected compensation and output swing.",
+      "is_trojan": false,
+      "suspect_nodes": []
+    },
+    "api_record": "results/api/cross_review_v1_opamp_clean_2-b878abef2974.json"
+  },
+  {
+    "circuit": "opamp",
+    "label": "clean",
+    "repeat": 3,
+    "detector": {
+      "confidence": 0.96,
+      "feedback_text": "No suspicious conditional path or unauthorized output/bias control is present. The netlist matches a conventional two-stage CMOS op-amp: M1/M2 form the differential pair with tail current I1, M3/M4 are the active load/current mirror, and M5/M6 form the second gain/output stage with bias from the NMOS mirror M7/I2. C1 is standard Miller compensation and C2 is an output load capacitor. No extra node or device appears to sense a hidden condition and alter the output or bias.",
+      "is_trojan": false,
+      "suspect_nodes": []
+    },
+    "api_record": "results/api/cross_review_v1_opamp_clean_3-02c7d9fd8451.json"
+  },
+  {
+    "circuit": "opamp",
+    "label": "clean",
+    "repeat": 4,
+    "detector": {
+      "confidence": 0.95,
+      "feedback_text": "No suspicious unauthorized mechanism is evident. The netlist matches a conventional two-stage CMOS op-amp: NMOS differential pair M1/M2 with tail current I1, PMOS current-mirror load M3/M4, second gain stage M5/M6, and Miller compensation C1 plus output load C2. The diode-connected M7 with I2 forms a standard bias mirror for nb. No conditional path or hidden control element is connected to alter the output or bias beyond normal amplifier operation. Suggested check: simulate DC bias and AC loop response to confirm expected gain/phase margin.",
+      "is_trojan": false,
+      "suspect_nodes": []
+    },
+    "api_record": "results/api/cross_review_v1_opamp_clean_4-30e21a141501.json"
+  },
+  {
+    "circuit": "opamp",
+    "label": "positive",
+    "repeat": 0,
+    "detector": {
+      "confidence": 0.97,
+      "feedback_text": "The core op-amp connectivity is ordinary, but the added subcircuit forms a suspicious conditional path: inp couples through Cextra1 into node couple, which is rectified by Dextra1/Dextra2 and stored on node store (Cextra2/Rextra1). That stored state controls Sextra, a voltage-controlled switch between out and vss. This creates a hidden state-dependent shunt that can alter the output only when the input-driven storage node crosses threshold, which is not part of the stated compensated two-stage op-amp function. Recommend removing the extra network or simulating with node probes on couple/store and Sextra control.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "Cextra1",
+        "Dextra1",
+        "Dextra2",
+        "Cextra2",
+        "Rextra1",
+        "Sextra",
+        "couple",
+        "store"
+      ]
+    },
+    "api_record": "results/api/cross_review_v1_opamp_positive_0-2a3bbe945d70.json"
+  },
+  {
+    "circuit": "opamp",
+    "label": "positive",
+    "repeat": 1,
+    "detector": {
+      "confidence": 0.98,
+      "feedback_text": "The core op-amp connectivity is ordinary, but the added subcircuit forms a specific conditional path: inp couples through Cextra1 into node couple, Dextra1/Dextra2 and Cextra2/Rextra1 create a stored bias/state at store, and Sextra is a voltage-controlled switch from out to vss driven by store. This can force or clamp the output when the hidden state exceeds the switch threshold, altering normal amplifier function. Suspect nodes/components: couple, store, Cextra1, Dextra1, Dextra2, Cextra2, Rextra1, Sextra. Recommend removing the extra network or simulating its state-dependent effect on out under input transients.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "couple",
+        "store",
+        "Cextra1",
+        "Dextra1",
+        "Dextra2",
+        "Cextra2",
+        "Rextra1",
+        "Sextra"
+      ]
+    },
+    "api_record": "results/api/cross_review_v1_opamp_positive_1-7ac92dd16134.json"
+  },
+  {
+    "circuit": "opamp",
+    "label": "positive",
+    "repeat": 2,
+    "detector": {
+      "confidence": 0.97,
+      "feedback_text": "The core op-amp connectivity is ordinary: differential pair M1/M2 with current source I1, active load M3/M4, second stage M5/M6, and Miller compensation C1 plus output load C2. However, extra circuitry forms a specific conditional path: Cextra1/Dextra1/Dextra2/Cextra2/Rextra1 create a stored node 'store' biased from input 'inp' via 'couple', and Sextra is a voltage-controlled switch from out to vss driven by 'store'. When 'store' rises above the switch threshold, it can directly clamp the output to ground, altering normal amplifier function. This is a concrete unauthorized output-control mechanism.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "Cextra1",
+        "Dextra1",
+        "Dextra2",
+        "Cextra2",
+        "Rextra1",
+        "Sextra",
+        "couple",
+        "store",
+        "out",
+        "inp",
+        "vss"
+      ]
+    },
+    "api_record": "results/api/cross_review_v1_opamp_positive_2-c077b163ecd0.json"
+  },
+  {
+    "circuit": "opamp",
+    "label": "positive",
+    "repeat": 3,
+    "detector": {
+      "confidence": 0.98,
+      "feedback_text": "The core op-amp connectivity is ordinary: differential pair M1/M2, active load M3/M4, second stage M5/M6, and Miller compensation C1/C2. However, extra circuitry forms a conditional path from inp to out: Cextra1 charges node couple, Dextra1/Dextra2 and Cextra2/Rextra1 create a stored state at node store, and Sextra is a voltage-controlled switch from out to vss driven by store. When store exceeds the switch threshold, out is clamped to vss, altering the amplifier output behavior. This is a specific nonstandard mechanism, not just compensation or biasing.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "Cextra1",
+        "Dextra1",
+        "Dextra2",
+        "Cextra2",
+        "Rextra1",
+        "Sextra",
+        "couple",
+        "store",
+        "out",
+        "inp",
+        "vss"
+      ]
+    },
+    "api_record": "results/api/cross_review_v1_opamp_positive_3-644c640cdd44.json"
+  },
+  {
+    "circuit": "opamp",
+    "label": "positive",
+    "repeat": 4,
+    "detector": {
+      "confidence": 0.97,
+      "feedback_text": "The core op-amp connectivity is ordinary: differential pair M1/M2 with current source I1, active load M3/M4, second stage M5/M6, and Miller compensation C1 plus load C2. However, extra network Cextra1-Dextra1/Dextra2-Cextra2-Rextra1 creates a charge-storage path from inp to node store, and Sextra is a voltage-controlled switch from out to vss controlled by store. When store rises above threshold, the switch can clamp the output to ground, altering normal amplifier function. This is a specific conditional mechanism, not just parasitic capacitance. Verify/remove the inp\u2192store trigger path and the store-controlled output switch.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "Cextra1",
+        "Dextra1",
+        "Dextra2",
+        "Cextra2",
+        "Rextra1",
+        "Sextra",
+        "store",
+        "couple"
+      ]
+    },
+    "api_record": "results/api/cross_review_v1_opamp_positive_4-8b96de6b84a1.json"
+  },
+  {
+    "circuit": "and4",
+    "label": "clean",
+    "repeat": 0,
+    "detector": {
+      "confidence": 0.98,
+      "feedback_text": "No suspicious mechanism is present. The netlist implements a standard CMOS 4-input AND via a NAND-like pull-up/pull-down network and an output inverter (M9/M10), with C1 as a normal output load. There is no extra state, conditional trigger, or hidden path that alters the output beyond AND(a,b,c,d). Suggested check: simulate all 16 input combinations to confirm truth table and static current.",
+      "is_trojan": false,
+      "suspect_nodes": []
+    },
+    "api_record": "results/api/cross_review_v1_and4_clean_0-245fe0e6ae43.json"
+  },
+  {
+    "circuit": "and4",
+    "label": "clean",
+    "repeat": 1,
+    "detector": {
+      "confidence": 0.98,
+      "feedback_text": "No suspicious mechanism is present. The netlist is a conventional CMOS 4-input AND: M1\u2013M4 form a pull-up network, M5\u2013M8 form the complementary pull-down path, and M9/M10 are a standard output inverter/buffer. C1 is only an output load. There is no extra state element, conditional trigger, or hidden path that can alter the output beyond AND(a,b,c,d). If needed, verify by DC truth-table simulation and check that n1 only drives the inverter gate.",
+      "is_trojan": false,
+      "suspect_nodes": []
+    },
+    "api_record": "results/api/cross_review_v1_and4_clean_1-fd8ce22aabed.json"
+  },
+  {
+    "circuit": "and4",
+    "label": "clean",
+    "repeat": 2,
+    "detector": {
+      "confidence": 0.98,
+      "feedback_text": "No suspicious mechanism is present. The netlist is a standard static CMOS 4-input AND: M1\u2013M4 form the pull-up network, M5\u2013M8 form the series pull-down network, and M9/M10 are a normal output inverter to realize AND from the internal NAND node n1. C1 is just an output load/compensation capacitor. No extra state, conditional trigger, or hidden path alters the output or bias. If desired, verify by DC truth-table simulation and check that out = AND(a,b,c,d).",
+      "is_trojan": false,
+      "suspect_nodes": []
+    },
+    "api_record": "results/api/cross_review_v1_and4_clean_2-e160aab4ef28.json"
+  },
+  {
+    "circuit": "and4",
+    "label": "clean",
+    "repeat": 3,
+    "detector": {
+      "confidence": 0.98,
+      "feedback_text": "No suspicious conditional mechanism is present. The netlist implements a standard CMOS 4-input AND via a NAND-like pull network (M1\u2013M8) followed by an inverter (M9\u2013M10); C1 is just an output load. There is no extra state, hidden control path, or output override beyond the stated logic. If needed, verify truth-table behavior by simulating all 16 input combinations and checking that out = a&b&c&d.",
+      "is_trojan": false,
+      "suspect_nodes": []
+    },
+    "api_record": "results/api/cross_review_v1_and4_clean_3-3da883490506.json"
+  },
+  {
+    "circuit": "and4",
+    "label": "clean",
+    "repeat": 4,
+    "detector": {
+      "confidence": 0.98,
+      "feedback_text": "No suspicious mechanism is present. The netlist is a standard static CMOS 4-input AND: M1\u2013M4 form the pull-up network, M5\u2013M8 form the series pull-down network, and M9/M10 are a conventional output inverter/buffer. C1 is just an output load. There is no extra state element, conditional trigger, or hidden path that can alter the output beyond AND(a,b,c,d). If verification is needed, simulate all 16 input combinations and check that out is high only when a=b=c=d=1.",
+      "is_trojan": false,
+      "suspect_nodes": []
+    },
+    "api_record": "results/api/cross_review_v1_and4_clean_4-8a033a210fb5.json"
+  },
+  {
+    "circuit": "and4",
+    "label": "positive",
+    "repeat": 0,
+    "detector": {
+      "confidence": 0.97,
+      "feedback_text": "The core gate is a standard CMOS AND: PM pull-up network in parallel and NM pull-down stack, with a normal output inverter stage. The extra network is suspicious: Cextra1/Dextra1/Dextra2/Cextra2/Rextra1 create a stored internal state at node store/couple, and Sextra uses that state to switch a path between out and vss. This can force or clamp the output independently of a,b,c,d when the stored voltage crosses the switch threshold. Verify whether Sextra is intended; removing the store/couple branch should restore ordinary AND behavior.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "couple",
+        "store",
+        "Sextra",
+        "Cextra1",
+        "Dextra1",
+        "Dextra2",
+        "Cextra2",
+        "Rextra1"
+      ]
+    },
+    "api_record": "results/api/cross_review_v1_and4_positive_0-c9e962e42974.json"
+  },
+  {
+    "circuit": "and4",
+    "label": "positive",
+    "repeat": 1,
+    "detector": {
+      "confidence": 0.97,
+      "feedback_text": "The core gate is a normal CMOS AND: PM pull-up network in parallel and NM pull-down stack implement AND at out via inverter M9/M10. The extra network is suspicious: Cextra1 couples input a into node couple, Dextra1/Dextra2 rectify and charge store, Cextra2/Rextra1 hold a persistent state, and Sextra is a voltage-controlled switch from out to vss driven by store. This creates a hidden, input-triggered output clamp that can override the intended logic. Recommend removing the couple/store/Sextra branch and rechecking out under all input transitions.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "Cextra1",
+        "Dextra1",
+        "Dextra2",
+        "Cextra2",
+        "Rextra1",
+        "Sextra",
+        "couple",
+        "store"
+      ]
+    },
+    "api_record": "results/api/cross_review_v1_and4_positive_1-59bae71aeb93.json"
+  },
+  {
+    "circuit": "and4",
+    "label": "positive",
+    "repeat": 2,
+    "detector": {
+      "confidence": 0.98,
+      "feedback_text": "The core gate is a normal CMOS AND: PM pull-up network in parallel and NM pull-down stack, with a standard inverter at out. The extra network is suspicious: Cextra1 couples input a into node couple; Dextra1/Dextra2, Cextra2, and Rextra1 create a stored bias/state at node store; Sextra is a voltage-controlled switch from out to vss driven by store. When store charges above VT, the switch can force out low independent of a,b,c,d, altering the stated AND function. Recommend removing the entire couple/store/switch branch or verifying it is disconnected from out.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "Cextra1",
+        "Dextra1",
+        "Dextra2",
+        "Cextra2",
+        "Rextra1",
+        "Sextra",
+        "couple",
+        "store",
+        "out"
+      ]
+    },
+    "api_record": "results/api/cross_review_v1_and4_positive_2-3b59c0b4e0c0.json"
+  },
+  {
+    "circuit": "and4",
+    "label": "positive",
+    "repeat": 3,
+    "detector": {
+      "confidence": 0.98,
+      "feedback_text": "The core gate is a standard CMOS AND implementation: a NAND-like pull network feeding an inverter (M9/M10). The extra network is suspicious because it is not part of normal logic: Cextra1 couples input a into node couple, Dextra1/Dextra2 rectify and charge store, Cextra2/Rextra1 hold that state, and Sextra is a voltage-controlled switch from out to vss driven by store. When a is driven high enough, store can exceed VT and close Sextra, forcing out low regardless of the AND logic. This is a concrete unauthorized output override. Remove the extra RC/diode/switch network and recheck output truth table.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "Cextra1",
+        "Dextra1",
+        "Dextra2",
+        "Cextra2",
+        "Rextra1",
+        "Sextra",
+        "couple",
+        "store"
+      ]
+    },
+    "api_record": "results/api/cross_review_v1_and4_positive_3-f30b2ad7377b.json"
+  },
+  {
+    "circuit": "and4",
+    "label": "positive",
+    "repeat": 4,
+    "detector": {
+      "confidence": 0.97,
+      "feedback_text": "The core gate is a normal CMOS AND: PM pull-up network in parallel and NM pull-down stack, with a standard output inverter. The extra network is suspicious: Cextra1 couples input a into node couple, Dextra1/Dextra2 rectify it into store, Cextra2/Rextra1 hold a stored bias, and Sextra is a voltage-controlled switch from out to vss driven by store. When store exceeds the switch threshold, it can force out low independent of the AND logic, creating a conditional output override. Recommend removing the entire couple/store/switch branch and rechecking output truth table.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "Cextra1",
+        "Dextra1",
+        "Dextra2",
+        "Cextra2",
+        "Rextra1",
+        "Sextra",
+        "couple",
+        "store"
+      ]
+    },
+    "api_record": "results/api/cross_review_v1_and4_positive_4-5c1a579b2fd6.json"
+  }
+]

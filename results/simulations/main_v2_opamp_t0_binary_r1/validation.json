@@ -1,0 +1,18 @@
+{
+  "valid": false,
+  "normal_ok": true,
+  "trigger_ok": false,
+  "simulation_ok": true,
+  "metrics": {
+    "follower_rmse_v": 4.449814496192722e-05,
+    "follower_max_error_v": 6.42900000000779e-05,
+    "output_min_v": 1.60000141,
+    "output_max_v": 1.69999969,
+    "normal_max_deviation_v": 9.99999993922529e-09,
+    "trigger_recovery_drop_v": 0.29703894500000005,
+    "trigger_reference_mean_v": 1.6500005426622375,
+    "normal_store_peak_v": 1.4336077e-05,
+    "trigger_store_peak_v": 0.93946979,
+    "trigger_store_final_v": 0.671041617
+  }
+}

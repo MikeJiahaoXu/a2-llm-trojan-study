@@ -1,0 +1,80 @@
+{
+  "verified_date": "2026-10-30",
+  "references": [
+    {
+      "key": "yang2016a2",
+      "title": "A2: Analog Malicious Hardware",
+      "authors": [
+        "Kaiyuan Yang",
+        "Matthew Hicks",
+        "Qing Dong",
+        "Todd Austin",
+        "Dennis Sylvester"
+      ],
+      "year": 2016,
+      "venue": "2016 IEEE Symposium on Security and Privacy",
+      "pages": "18-37",
+      "doi": "10.1109/SP.2016.10",
+      "url": "https://www.ieee-security.org/TC/SP2016/papers/0824a018.pdf",
+      "notes": [
+        "Fabrication-time attacker modifies an otherwise trusted placed-and-routed design.",
+        "Charge accumulation from unusually frequent toggles of a normally quiet wire crosses a threshold; leakage resets charge between infrequent toggles.",
+        "Demonstrated with fabricated OR1200 processor and privilege-bit payload. A toy RC/behavioral trigger is A2-inspired, not a silicon reproduction."
+      ]
+    },
+    {
+      "key": "chaudhuri2024spiced",
+      "title": "SPICED: Syntactical Bug and Trojan Pattern Identification in A/MS Circuits using LLM-Enhanced Detection",
+      "authors": [
+        "Jayeeta Chaudhuri",
+        "Dhruv Thapar",
+        "Arjun Chaudhuri",
+        "Farshad Firouzi",
+        "Krishnendu Chakrabarty"
+      ],
+      "year": 2024,
+      "venue": "Accepted at PAINE 2024; arXiv version verified",
+      "arxiv": "2408.16018v1",
+      "doi": "10.48550/arXiv.2408.16018",
+      "url": "https://arxiv.org/html/2408.16018v1",
+      "notes": [
+        "Original experiments use GPT-3.5-turbo, HSPICE voltage/current logs, specifications and few-shot anomaly rules.",
+        "Rules inspect output specification violations, intermediate-node voltage deviations and MOSFET current anomalies.",
+        "Reported average Trojan component coverage 93.32% and impacted-node true-positive rate 93.4%. These are not a clean-netlist false-positive rate.",
+        "A netlist-only, zero-shot classifier must be called SPICED-inspired rather than a reproduction."
+      ]
+    },
+    {
+      "key": "chaudhuri2025latent",
+      "title": "LATENT: LLM-Augmented Trojan Insertion and Evaluation Framework for Analog Netlist Topologies",
+      "authors": [
+        "Jayeeta Chaudhuri",
+        "Arjun Chaudhuri",
+        "Krishnendu Chakrabarty"
+      ],
+      "year": 2025,
+      "venue": "Accepted for presentation at IEEE ICLAD 2025; arXiv version verified",
+      "arxiv": "2505.06364v1",
+      "doi": "10.48550/arXiv.2505.06364",
+      "url": "https://arxiv.org/html/2505.06364v1",
+      "notes": [
+        "Uses GPT-4o-mini at temperature 0.3 for both attacker and reimplemented SPICED; HSPICE simulation.",
+        "Table I averages component-level evasion across 15 circuits: one-shot 23.7%, LATENT 94.4%. These are not attempt-level whole-netlist escape rates.",
+        "Sec IV-C printed intersection formula is a detection fraction, conflicting with prose interpreting 100% as evasion; report definition explicitly rather than copying the ambiguous equation.",
+        "Stops after 100% evasion for three consecutive iterations or component cap 0.6 times circuit node count.",
+        "Includes AMSNet circuits, op-amp, bandgap filter and LDO. Original SPICED code was unavailable to LATENT authors; they reimplemented it.",
+        "A binary-feedback condition is an additional ablation; LATENT Table I compares one-shot and its full iterative workflow."
+      ]
+    }
+  ],
+  "analysis_recommendations": [
+    "Freeze prompts, family bounds and validity thresholds before the main experiment; retain all failures.",
+    "Compare equal query budgets and number of attempts across none, binary and full conditions.",
+    "Count simulation failures and ineffective payloads as unsuccessful attempts; report conditional evasion among valid attacks separately.",
+    "Use repeated independent trajectories and describe within-trajectory dependence; do not claim each adaptive round is an independent sample.",
+    "Validate both dormant behavior and triggered malfunction; static truth-table success alone cannot validate a history-dependent trigger.",
+    "Report clean false positives using same detector, input normalization and prompt as attack evaluations.",
+    "Expected none < binary < full is a hypothesis, not an acceptance criterion.",
+    "Do not place LATENT component-level percentages as directly comparable benchmark bars beside whole-netlist attempt success."
+  ]
+}

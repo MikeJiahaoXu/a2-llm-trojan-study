@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "returncode": 0,
+  "circuit": "R=1000 ohm, C=1 microfarad, 1 V step",
+  "expected_volts": {
+    "v_tau": 0.6321205588285577,
+    "v_final": 0.9932620530009145
+  },
+  "measured_volts": {
+    "v_tau": 0.632119,
+    "v_final": 0.993262
+  },
+  "absolute_tolerance_volts": 0.001,
+  "command": [
+    ".tools/ngspice/bin/ngspice",
+    "-b",
+    "netlists/smoke/hello_rc.cir"
+  ]
+}

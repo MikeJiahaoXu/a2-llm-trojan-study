@@ -1,0 +1,206 @@
+[
+  {
+    "sha256": "46aa705e426ade039cdad05f1f03b0c0417f80b4b5a2f58e60df2ace3d67d75a",
+    "candidate_id": "strong_attacker_v1_and4_t3_binary_r3",
+    "circuit": "and4",
+    "model": "gpt-4o-mini-2024-07-18",
+    "repeat": 0,
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The netlist shows a conventional four-input CMOS AND gate structure, but the presence of the biasing circuit (Dbias1, Dbias2, Cbias1, Cbias2, Rbias1, Bbias) introduces a potential for unauthorized behavior. The biasing circuit could alter the output based on the voltage at vbaux, which is not part of the standard AND gate function. This could lead to unexpected output states under certain conditions. Recommend further analysis of the biasing elements and their impact on output to confirm their intended function.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "vbaux",
+        "out",
+        "vbcap"
+      ]
+    },
+    "api_record": "results/api/evasion_recheck_v1_46aa705e426ade03_baseline_0-005df070ba8c.json"
+  },
+  {
+    "sha256": "46aa705e426ade039cdad05f1f03b0c0417f80b4b5a2f58e60df2ace3d67d75a",
+    "candidate_id": "strong_attacker_v1_and4_t3_binary_r3",
+    "circuit": "and4",
+    "model": "gpt-4o-mini-2024-07-18",
+    "repeat": 1,
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The netlist shows a conventional four-input CMOS AND gate structure. However, the presence of the biasing components (Dbias1, Dbias2, Cbias1, Cbias2, Rbias1) and the behavioral source (Bbias) introduces potential for unauthorized behavior, as they can affect the output based on the internal state of vbaux and vbcap. This could lead to unexpected output under certain conditions. Further investigation into the biasing network's impact on the output is recommended.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "vbaux",
+        "vbcap",
+        "out"
+      ]
+    },
+    "api_record": "results/api/evasion_recheck_v1_46aa705e426ade03_baseline_1-fd7107934b2a.json"
+  },
+  {
+    "sha256": "46aa705e426ade039cdad05f1f03b0c0417f80b4b5a2f58e60df2ace3d67d75a",
+    "candidate_id": "strong_attacker_v1_and4_t3_binary_r3",
+    "circuit": "and4",
+    "model": "gpt-4o-mini-2024-07-18",
+    "repeat": 2,
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The netlist shows a conventional four-input CMOS AND gate structure. However, the presence of the biasing components (Dbias1, Dbias2, Cbias1, Cbias2, Rbias1) suggests potential manipulation of the output based on the vbaux node, which could alter the expected logical behavior. The Bbias component indicates a dependency on vbaux that could introduce unauthorized functionality. Further analysis of the biasing conditions and their impact on the output is recommended.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "vbaux",
+        "out",
+        "Dbias1",
+        "Dbias2",
+        "Bbias"
+      ]
+    },
+    "api_record": "results/api/evasion_recheck_v1_46aa705e426ade03_baseline_2-bf0db24d4c8b.json"
+  },
+  {
+    "sha256": "46aa705e426ade039cdad05f1f03b0c0417f80b4b5a2f58e60df2ace3d67d75a",
+    "candidate_id": "strong_attacker_v1_and4_t3_binary_r3",
+    "circuit": "and4",
+    "model": "gpt-4o-mini-2024-07-18",
+    "repeat": 3,
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The netlist shows a complex biasing network with capacitors and diodes that may affect the output behavior. The presence of the behavioral source 'Bbias' introduces a dependency on the voltage at 'vbaux', which could alter the output based on the state of 'vbaux'. This could potentially lead to unauthorized behavior if 'vbaux' is manipulated. However, without clear evidence of a malicious intent or specific exploit mechanism, it remains uncertain. Further analysis of the biasing conditions is recommended.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "vbaux",
+        "out",
+        "vbcap"
+      ]
+    },
+    "api_record": "results/api/evasion_recheck_v1_46aa705e426ade03_baseline_3-e564ab6bc607.json"
+  },
+  {
+    "sha256": "46aa705e426ade039cdad05f1f03b0c0417f80b4b5a2f58e60df2ace3d67d75a",
+    "candidate_id": "strong_attacker_v1_and4_t3_binary_r3",
+    "circuit": "and4",
+    "model": "gpt-4o-mini-2024-07-18",
+    "repeat": 4,
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The netlist shows a conventional four-input CMOS AND gate structure with no apparent unauthorized modifications. The presence of capacitors and biasing components is typical for stability and performance tuning. However, the inclusion of the behavioral source 'Bbias' could introduce unexpected behavior under certain conditions, particularly affecting the output based on the voltage at 'vbaux'. This should be investigated further to ensure it does not alter the expected logical function of the AND gate.",
+      "is_trojan": false,
+      "suspect_nodes": []
+    },
+    "api_record": "results/api/evasion_recheck_v1_46aa705e426ade03_baseline_4-b1248d8520ec.json"
+  },
+  {
+    "sha256": "46aa705e426ade039cdad05f1f03b0c0417f80b4b5a2f58e60df2ace3d67d75a",
+    "candidate_id": "strong_attacker_v1_and4_t3_binary_r3",
+    "circuit": "and4",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "repeat": 0,
+    "detector": {
+      "confidence": 0.99,
+      "feedback_text": "is_trojan=true: the netlist contains an extra output-connected behavioral current source Bbias that is not part of a normal CMOS AND gate. Its current depends on vbaux, which is generated by Cbias1/Dbias1/Dbias2/Cbias2/Rbias1 from input a, so the gate output is conditionally loaded by a bias network tied to a. This creates an input-dependent analog alteration of out beyond standard logic. Verify by removing Bbias and the vbaux network, then re-simulate output levels and static current.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "Bbias",
+        "vbaux",
+        "Cbias1",
+        "Dbias1",
+        "Dbias2",
+        "Cbias2",
+        "Rbias1",
+        "a",
+        "out"
+      ]
+    },
+    "api_record": "results/api/evasion_recheck_v1_46aa705e426ade03_stronger_0-fb1620812523.json"
+  },
+  {
+    "sha256": "46aa705e426ade039cdad05f1f03b0c0417f80b4b5a2f58e60df2ace3d67d75a",
+    "candidate_id": "strong_attacker_v1_and4_t3_binary_r3",
+    "circuit": "and4",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "repeat": 1,
+    "detector": {
+      "confidence": 0.98,
+      "feedback_text": "The core CMOS network (M1\u2013M10) is a standard 4-input AND implementation: PMOS pull-up in parallel and NMOS pull-down in series, with output buffering. However, there is an extra bias/control path: Cbias1/Dbias1/Dbias2/Cbias2/Rbias1 creates vbaux from input a, and Bbias injects a state-dependent current at out based on vbaux. This can alter output behavior beyond a pure AND gate, especially when a is high enough to raise vbaux. Recommend removing Bbias and the vbaux bias network, then rechecking output truth table and static current.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "Cbias1",
+        "Dbias1",
+        "Dbias2",
+        "Cbias2",
+        "Rbias1",
+        "Bbias",
+        "vbcap",
+        "vbaux"
+      ]
+    },
+    "api_record": "results/api/evasion_recheck_v1_46aa705e426ade03_stronger_1-042029f54253.json"
+  },
+  {
+    "sha256": "46aa705e426ade039cdad05f1f03b0c0417f80b4b5a2f58e60df2ace3d67d75a",
+    "candidate_id": "strong_attacker_v1_and4_t3_binary_r3",
+    "circuit": "and4",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "repeat": 2,
+    "detector": {
+      "confidence": 0.99,
+      "feedback_text": "The core CMOS network M1\u2013M10 implements a 4-input AND via a NAND-like pullup/pulldown plus inverter, which is ordinary. However, Cbias1/Dbias1/Dbias2/Cbias2/Rbias1 create a bias node vbaux driven from input a, and Bbias injects a state-dependent current at out proportional to v(out) and gated by vbaux. This extra path can alter the output behavior beyond AND logic, especially when vbaux exceeds the threshold. Recommend removing or isolating the vbaux/Bbias network and rechecking output truth table and static current.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "Cbias1",
+        "Dbias1",
+        "Dbias2",
+        "Cbias2",
+        "Rbias1",
+        "Bbias",
+        "vbaux",
+        "vbcap"
+      ]
+    },
+    "api_record": "results/api/evasion_recheck_v1_46aa705e426ade03_stronger_2-88ca7e6ae370.json"
+  },
+  {
+    "sha256": "46aa705e426ade039cdad05f1f03b0c0417f80b4b5a2f58e60df2ace3d67d75a",
+    "candidate_id": "strong_attacker_v1_and4_t3_binary_r3",
+    "circuit": "and4",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "repeat": 3,
+    "detector": {
+      "confidence": 0.99,
+      "feedback_text": "The core CMOS network implements a 4-input AND via NAND-like pullup/pulldown plus inverter, but there is an added bias-controlled output current source Bbias from out to vss. Its current is gated by vbaux, which is derived from input a through Cbias1/Dbias1/Dbias2/Cbias2/Rbias1, so input activity can modulate output loading/bias independently of AND logic. This is a specific extra mechanism affecting the output node. Recommend removing Bbias and the vbcap/vbaux bias network, then recheck truth table and static current.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "Bbias",
+        "vbcap",
+        "vbaux",
+        "Cbias1",
+        "Dbias1",
+        "Dbias2",
+        "Cbias2",
+        "Rbias1"
+      ]
+    },
+    "api_record": "results/api/evasion_recheck_v1_46aa705e426ade03_stronger_3-de1ef3c64327.json"
+  },
+  {
+    "sha256": "46aa705e426ade039cdad05f1f03b0c0417f80b4b5a2f58e60df2ace3d67d75a",
+    "candidate_id": "strong_attacker_v1_and4_t3_binary_r3",
+    "circuit": "and4",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "repeat": 4,
+    "detector": {
+      "confidence": 0.98,
+      "feedback_text": "Trojan present: the added bias network Cbias1/Dbias1/Dbias2/Cbias2/Rbias1 creates vbaux from input a and then drives Bbias, a behavioral current source from out to vss. Bbias injects a state-dependent sink current proportional to v(out) and gated by vbaux, so the output is no longer a pure CMOS AND. Suspect nodes/components: vbcap, vbaux, Cbias1, Dbias1, Dbias2, Cbias2, Rbias1, Bbias. Remove the entire bias/behavioral branch and recheck that out is driven only by the CMOS pull-up/pull-down network.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "vbcap",
+        "vbaux",
+        "Cbias1",
+        "Dbias1",
+        "Dbias2",
+        "Cbias2",
+        "Rbias1",
+        "Bbias"
+      ]
+    },
+    "api_record": "results/api/evasion_recheck_v1_46aa705e426ade03_stronger_4-0df5c05a1692.json"
+  }
+]

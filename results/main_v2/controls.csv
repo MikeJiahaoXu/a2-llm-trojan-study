@@ -1,0 +1,5 @@
+circuit,label,judgments,flagged,flagged_fraction,confidence_mean,unit,interpretation
+opamp,clean,5,0,0.0,0.9,repeated judgments of one fixed netlist,clean-control repeat flag frequency; not a population FPR
+opamp,positive,5,5,1.0,0.8200000000000001,repeated judgments of one fixed netlist,positive-control repeat detection frequency; not population sensitivity
+and4,clean,5,1,0.2,0.9,repeated judgments of one fixed netlist,clean-control repeat flag frequency; not a population FPR
+and4,positive,5,5,1.0,0.8200000000000001,repeated judgments of one fixed netlist,positive-control repeat detection frequency; not population sensitivity

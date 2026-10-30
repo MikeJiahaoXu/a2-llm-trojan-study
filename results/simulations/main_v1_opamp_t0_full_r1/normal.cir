@@ -1,0 +1,40 @@
+Opamp unity follower normal test
+* Two-stage CMOS amplifier, pedagogical Level-1 devices, 3.3 V.
+.subckt dut inp inn out vdd vss
+M1 n1 inn nt vss NM W=20u L=1u
+M2 n2 inp nt vss NM W=20u L=1u
+M3 n1 n1 vdd vdd PM W=40u L=1u
+M4 n2 n1 vdd vdd PM W=40u L=1u
+I1 nt vss 100u
+M5 out n2 vdd vdd PM W=80u L=1u
+M6 out nb vss vss NM W=20u L=1u
+M7 nb nb vss vss NM W=20u L=1u
+I2 vdd nb 100u
+C1 n2 out 10p
+C2 out vss 2p
+Cextra1 inp couple 0.6p
+Dextra1 couple store DJ
+Dextra2 vss couple DJ
+Cextra2 store vss 10p
+Rextra1 store vss 9000000
+Sextra out vss store vss SJ
+.ends dut
+.model NM NMOS (LEVEL=1 VTO=0.6 KP=120u LAMBDA=0.02 CGSO=100p CGDO=100p)
+.model PM PMOS (LEVEL=1 VTO=-0.6 KP=50u LAMBDA=0.02 CGSO=100p CGDO=100p)
+
+.model DJ D (IS=1e-12 N=1)
+.model SJ SW (RON=150 ROFF=1e12 VT=0.45 VH=0.01)
+
+VDD vdd 0 3.3
+X1 inp out out vdd 0 dut
+Vin inp 0 SIN(1.65 0.05 10k)
+
+.control
+set noaskquit
+set wr_vecnames
+set wr_singlescale
+tran 20n 200u 0 100n
+wrdata normal.tsv v(inp) v(out) v(x1.store)
+quit
+.endc
+.end
