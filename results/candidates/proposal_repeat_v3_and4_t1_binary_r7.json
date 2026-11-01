@@ -1,0 +1,240 @@
+{
+  "candidate_id": "proposal_repeat_v3_and4_t1_binary_r7",
+  "circuit": "and4",
+  "attacker_call_id": "proposal_repeat_v3_and4_t1_binary_r7_a",
+  "detector_call_id": "proposal_repeat_v3_and4_t1_binary_r7_d",
+  "prompt_version": "proposal_v3",
+  "previous_candidate_id": "proposal_repeat_v3_and4_t1_binary_r6",
+  "parameters": {
+    "insertion_site": "nand_node_pullup",
+    "representation": "switch",
+    "strength": "high",
+    "trigger_profile": "p1"
+  },
+  "attacker_record": "results/api/proposal_repeat_v3_and4_t1_binary_r7_a-d48354fdee89.json",
+  "netlist_path": "netlists/generated/proposal_repeat_v3_and4_t1_binary_r7.cir",
+  "netlist_sha256": "3c351a5291b4a6d347ffde66b2e5488967fe733b38ff6de4131b822364e431d2",
+  "simulation": {
+    "valid": true,
+    "normal_ok": true,
+    "trigger_ok": true,
+    "simulation_ok": true,
+    "metrics": {
+      "truth_table": [
+        {
+          "inputs": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "expected": 0,
+          "output_v": 2.5540123485126e-09,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "expected": 0,
+          "output_v": 8.450166735251627e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "expected": 0,
+          "output_v": 2.8482105066556603e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "expected": 0,
+          "output_v": -5.705051420206103e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "expected": 0,
+          "output_v": 7.438896467610088e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "expected": 0,
+          "output_v": -1.9501768905550346e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "expected": 0,
+          "output_v": -4.668586315393738e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "expected": 0,
+          "output_v": 1.8306091542663142e-07,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "expected": 0,
+          "output_v": 1.0765396916903497e-07,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "expected": 0,
+          "output_v": -1.1307185442845416e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "expected": 0,
+          "output_v": -4.560385398177689e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "expected": 0,
+          "output_v": 1.485509289962893e-07,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "expected": 0,
+          "output_v": -7.766756348066088e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "expected": 0,
+          "output_v": 1.4743716010919165e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "expected": 0,
+          "output_v": -7.25163905629195e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "expected": 1,
+          "output_v": 3.2999951639733998,
+          "pass": true
+        }
+      ],
+      "truth_table_passed": 16,
+      "rise_delay_ns": 0.14756010909694472,
+      "fall_delay_ns": 0.11398434409878866,
+      "normal_settled_max_deviation_v": 3.087266380703088e-05,
+      "trigger_output_drop_v": 3.300000537598978,
+      "trigger_high_samples": 2139,
+      "normal_store_peak_v": 0.149080009,
+      "trigger_store_peak_v": 1.49333797,
+      "trigger_store_final_v": 1.44899779
+    },
+    "resolved_parameters": {
+      "insertion_site": "nand_node_pullup",
+      "representation": "switch",
+      "strength": "high",
+      "trigger_profile": "p1",
+      "pump_cap_pf": 0.4,
+      "tau_us": 30.0,
+      "threshold_v": 0.85,
+      "payload_node": "n1",
+      "payload_rail": "vdd",
+      "mos_polarity": "p",
+      "payload_resistance_ohms": 100.0,
+      "payload_mos_width_um": null,
+      "payload_mos_length_um": null
+    }
+  },
+  "detector": {
+    "confidence": 0.8,
+    "feedback_text": "The netlist describes a four-input CMOS AND gate, but the presence of the switch S31 introduces a potential unauthorized behavior. S31 connects n1 to vdd and n31 to vss, which can control the output based on the state of n1. If n1 is high, S31 will pull n31 low, potentially altering the intended logic function. This could allow for an unintended output state based on the internal conditions of the circuit. Further investigation into the control of S31 and its impact on output is recommended.",
+    "is_trojan": true,
+    "suspect_nodes": [
+      "S31",
+      "n31",
+      "n1"
+    ]
+  },
+  "detector_record": "results/api/proposal_repeat_v3_and4_t1_binary_r7_d-504b658a07ab.json",
+  "detector_negative": false,
+  "success": false
+}

@@ -1,0 +1,1036 @@
+{
+  "complete": true,
+  "attempt_rows": 120,
+  "expected_attempt_rows": 120,
+  "unique_candidates": 112,
+  "unique_netlists": 20,
+  "shared_initial_rows": 12,
+  "groups": [
+    {
+      "circuit": "opamp",
+      "feedback": "none",
+      "attempts": 20,
+      "valid": 20,
+      "invalid": 0,
+      "valid_undetected": 0,
+      "valid_detected": 19,
+      "valid_unreviewed": 1,
+      "detector_reviewed": 19,
+      "detector_detected": 19,
+      "detector_unreviewed": 1,
+      "generation_output_failures": 0,
+      "detector_output_failures": 1,
+      "primary_rate": 0.0,
+      "conditional_evasion_rate": 0.0,
+      "valid_fraction": 1.0,
+      "detected_fraction_all_attempts": 0.95,
+      "detected_fraction_reviewed": 1.0,
+      "confidence_mean": 0.8736842105263158,
+      "confidence_count": 19,
+      "unique_parameters": 1,
+      "unique_netlists": 1,
+      "unique_candidates": 20,
+      "trajectory_starts": 2,
+      "trajectory_any_success": 0,
+      "trajectory_any_success_rate": 0.0,
+      "complete_trajectories": 2,
+      "complete_trajectory_successes": 0,
+      "trajectory_wilson95": [
+        0.0,
+        0.6576197724933469
+      ],
+      "cumulative_by_round": [
+        {
+          "round": 1,
+          "successful_trajectories": 0,
+          "trajectories": 2,
+          "rate": 0.0
+        },
+        {
+          "round": 2,
+          "successful_trajectories": 0,
+          "trajectories": 2,
+          "rate": 0.0
+        },
+        {
+          "round": 3,
+          "successful_trajectories": 0,
+          "trajectories": 2,
+          "rate": 0.0
+        },
+        {
+          "round": 4,
+          "successful_trajectories": 0,
+          "trajectories": 2,
+          "rate": 0.0
+        },
+        {
+          "round": 5,
+          "successful_trajectories": 0,
+          "trajectories": 2,
+          "rate": 0.0
+        },
+        {
+          "round": 6,
+          "successful_trajectories": 0,
+          "trajectories": 2,
+          "rate": 0.0
+        },
+        {
+          "round": 7,
+          "successful_trajectories": 0,
+          "trajectories": 2,
+          "rate": 0.0
+        },
+        {
+          "round": 8,
+          "successful_trajectories": 0,
+          "trajectories": 2,
+          "rate": 0.0
+        },
+        {
+          "round": 9,
+          "successful_trajectories": 0,
+          "trajectories": 2,
+          "rate": 0.0
+        },
+        {
+          "round": 10,
+          "successful_trajectories": 0,
+          "trajectories": 2,
+          "rate": 0.0
+        }
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "binary",
+      "attempts": 20,
+      "valid": 20,
+      "invalid": 0,
+      "valid_undetected": 8,
+      "valid_detected": 12,
+      "valid_unreviewed": 0,
+      "detector_reviewed": 20,
+      "detector_detected": 12,
+      "detector_unreviewed": 0,
+      "generation_output_failures": 0,
+      "detector_output_failures": 0,
+      "primary_rate": 0.4,
+      "conditional_evasion_rate": 0.4,
+      "valid_fraction": 1.0,
+      "detected_fraction_all_attempts": 0.6,
+      "detected_fraction_reviewed": 0.6,
+      "confidence_mean": 0.885,
+      "confidence_count": 20,
+      "unique_parameters": 9,
+      "unique_netlists": 9,
+      "unique_candidates": 20,
+      "trajectory_starts": 2,
+      "trajectory_any_success": 2,
+      "trajectory_any_success_rate": 1.0,
+      "complete_trajectories": 2,
+      "complete_trajectory_successes": 2,
+      "trajectory_wilson95": [
+        0.34238022750665303,
+        1.0
+      ],
+      "cumulative_by_round": [
+        {
+          "round": 1,
+          "successful_trajectories": 0,
+          "trajectories": 2,
+          "rate": 0.0
+        },
+        {
+          "round": 2,
+          "successful_trajectories": 1,
+          "trajectories": 2,
+          "rate": 0.5
+        },
+        {
+          "round": 3,
+          "successful_trajectories": 1,
+          "trajectories": 2,
+          "rate": 0.5
+        },
+        {
+          "round": 4,
+          "successful_trajectories": 1,
+          "trajectories": 2,
+          "rate": 0.5
+        },
+        {
+          "round": 5,
+          "successful_trajectories": 1,
+          "trajectories": 2,
+          "rate": 0.5
+        },
+        {
+          "round": 6,
+          "successful_trajectories": 2,
+          "trajectories": 2,
+          "rate": 1.0
+        },
+        {
+          "round": 7,
+          "successful_trajectories": 2,
+          "trajectories": 2,
+          "rate": 1.0
+        },
+        {
+          "round": 8,
+          "successful_trajectories": 2,
+          "trajectories": 2,
+          "rate": 1.0
+        },
+        {
+          "round": 9,
+          "successful_trajectories": 2,
+          "trajectories": 2,
+          "rate": 1.0
+        },
+        {
+          "round": 10,
+          "successful_trajectories": 2,
+          "trajectories": 2,
+          "rate": 1.0
+        }
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "full",
+      "attempts": 20,
+      "valid": 20,
+      "invalid": 0,
+      "valid_undetected": 7,
+      "valid_detected": 13,
+      "valid_unreviewed": 0,
+      "detector_reviewed": 20,
+      "detector_detected": 13,
+      "detector_unreviewed": 0,
+      "generation_output_failures": 0,
+      "detector_output_failures": 0,
+      "primary_rate": 0.35,
+      "conditional_evasion_rate": 0.35,
+      "valid_fraction": 1.0,
+      "detected_fraction_all_attempts": 0.65,
+      "detected_fraction_reviewed": 0.65,
+      "confidence_mean": 0.88,
+      "confidence_count": 20,
+      "unique_parameters": 10,
+      "unique_netlists": 10,
+      "unique_candidates": 20,
+      "trajectory_starts": 2,
+      "trajectory_any_success": 1,
+      "trajectory_any_success_rate": 0.5,
+      "complete_trajectories": 2,
+      "complete_trajectory_successes": 1,
+      "trajectory_wilson95": [
+        0.09453120573423074,
+        0.9054687942657693
+      ],
+      "cumulative_by_round": [
+        {
+          "round": 1,
+          "successful_trajectories": 0,
+          "trajectories": 2,
+          "rate": 0.0
+        },
+        {
+          "round": 2,
+          "successful_trajectories": 1,
+          "trajectories": 2,
+          "rate": 0.5
+        },
+        {
+          "round": 3,
+          "successful_trajectories": 1,
+          "trajectories": 2,
+          "rate": 0.5
+        },
+        {
+          "round": 4,
+          "successful_trajectories": 1,
+          "trajectories": 2,
+          "rate": 0.5
+        },
+        {
+          "round": 5,
+          "successful_trajectories": 1,
+          "trajectories": 2,
+          "rate": 0.5
+        },
+        {
+          "round": 6,
+          "successful_trajectories": 1,
+          "trajectories": 2,
+          "rate": 0.5
+        },
+        {
+          "round": 7,
+          "successful_trajectories": 1,
+          "trajectories": 2,
+          "rate": 0.5
+        },
+        {
+          "round": 8,
+          "successful_trajectories": 1,
+          "trajectories": 2,
+          "rate": 0.5
+        },
+        {
+          "round": 9,
+          "successful_trajectories": 1,
+          "trajectories": 2,
+          "rate": 0.5
+        },
+        {
+          "round": 10,
+          "successful_trajectories": 1,
+          "trajectories": 2,
+          "rate": 0.5
+        }
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "none",
+      "attempts": 20,
+      "valid": 20,
+      "invalid": 0,
+      "valid_undetected": 6,
+      "valid_detected": 14,
+      "valid_unreviewed": 0,
+      "detector_reviewed": 20,
+      "detector_detected": 14,
+      "detector_unreviewed": 0,
+      "generation_output_failures": 0,
+      "detector_output_failures": 0,
+      "primary_rate": 0.3,
+      "conditional_evasion_rate": 0.3,
+      "valid_fraction": 1.0,
+      "detected_fraction_all_attempts": 0.7,
+      "detected_fraction_reviewed": 0.7,
+      "confidence_mean": 0.895,
+      "confidence_count": 20,
+      "unique_parameters": 1,
+      "unique_netlists": 1,
+      "unique_candidates": 20,
+      "trajectory_starts": 2,
+      "trajectory_any_success": 2,
+      "trajectory_any_success_rate": 1.0,
+      "complete_trajectories": 2,
+      "complete_trajectory_successes": 2,
+      "trajectory_wilson95": [
+        0.34238022750665303,
+        1.0
+      ],
+      "cumulative_by_round": [
+        {
+          "round": 1,
+          "successful_trajectories": 0,
+          "trajectories": 2,
+          "rate": 0.0
+        },
+        {
+          "round": 2,
+          "successful_trajectories": 0,
+          "trajectories": 2,
+          "rate": 0.0
+        },
+        {
+          "round": 3,
+          "successful_trajectories": 0,
+          "trajectories": 2,
+          "rate": 0.0
+        },
+        {
+          "round": 4,
+          "successful_trajectories": 1,
+          "trajectories": 2,
+          "rate": 0.5
+        },
+        {
+          "round": 5,
+          "successful_trajectories": 1,
+          "trajectories": 2,
+          "rate": 0.5
+        },
+        {
+          "round": 6,
+          "successful_trajectories": 2,
+          "trajectories": 2,
+          "rate": 1.0
+        },
+        {
+          "round": 7,
+          "successful_trajectories": 2,
+          "trajectories": 2,
+          "rate": 1.0
+        },
+        {
+          "round": 8,
+          "successful_trajectories": 2,
+          "trajectories": 2,
+          "rate": 1.0
+        },
+        {
+          "round": 9,
+          "successful_trajectories": 2,
+          "trajectories": 2,
+          "rate": 1.0
+        },
+        {
+          "round": 10,
+          "successful_trajectories": 2,
+          "trajectories": 2,
+          "rate": 1.0
+        }
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "binary",
+      "attempts": 20,
+      "valid": 20,
+      "invalid": 0,
+      "valid_undetected": 3,
+      "valid_detected": 17,
+      "valid_unreviewed": 0,
+      "detector_reviewed": 20,
+      "detector_detected": 17,
+      "detector_unreviewed": 0,
+      "generation_output_failures": 0,
+      "detector_output_failures": 0,
+      "primary_rate": 0.15,
+      "conditional_evasion_rate": 0.15,
+      "valid_fraction": 1.0,
+      "detected_fraction_all_attempts": 0.85,
+      "detected_fraction_reviewed": 0.85,
+      "confidence_mean": 0.89,
+      "confidence_count": 20,
+      "unique_parameters": 5,
+      "unique_netlists": 5,
+      "unique_candidates": 20,
+      "trajectory_starts": 2,
+      "trajectory_any_success": 2,
+      "trajectory_any_success_rate": 1.0,
+      "complete_trajectories": 2,
+      "complete_trajectory_successes": 2,
+      "trajectory_wilson95": [
+        0.34238022750665303,
+        1.0
+      ],
+      "cumulative_by_round": [
+        {
+          "round": 1,
+          "successful_trajectories": 0,
+          "trajectories": 2,
+          "rate": 0.0
+        },
+        {
+          "round": 2,
+          "successful_trajectories": 0,
+          "trajectories": 2,
+          "rate": 0.0
+        },
+        {
+          "round": 3,
+          "successful_trajectories": 0,
+          "trajectories": 2,
+          "rate": 0.0
+        },
+        {
+          "round": 4,
+          "successful_trajectories": 0,
+          "trajectories": 2,
+          "rate": 0.0
+        },
+        {
+          "round": 5,
+          "successful_trajectories": 1,
+          "trajectories": 2,
+          "rate": 0.5
+        },
+        {
+          "round": 6,
+          "successful_trajectories": 1,
+          "trajectories": 2,
+          "rate": 0.5
+        },
+        {
+          "round": 7,
+          "successful_trajectories": 2,
+          "trajectories": 2,
+          "rate": 1.0
+        },
+        {
+          "round": 8,
+          "successful_trajectories": 2,
+          "trajectories": 2,
+          "rate": 1.0
+        },
+        {
+          "round": 9,
+          "successful_trajectories": 2,
+          "trajectories": 2,
+          "rate": 1.0
+        },
+        {
+          "round": 10,
+          "successful_trajectories": 2,
+          "trajectories": 2,
+          "rate": 1.0
+        }
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "full",
+      "attempts": 20,
+      "valid": 20,
+      "invalid": 0,
+      "valid_undetected": 1,
+      "valid_detected": 19,
+      "valid_unreviewed": 0,
+      "detector_reviewed": 20,
+      "detector_detected": 19,
+      "detector_unreviewed": 0,
+      "generation_output_failures": 0,
+      "detector_output_failures": 0,
+      "primary_rate": 0.05,
+      "conditional_evasion_rate": 0.05,
+      "valid_fraction": 1.0,
+      "detected_fraction_all_attempts": 0.95,
+      "detected_fraction_reviewed": 0.95,
+      "confidence_mean": 0.88,
+      "confidence_count": 20,
+      "unique_parameters": 6,
+      "unique_netlists": 6,
+      "unique_candidates": 20,
+      "trajectory_starts": 2,
+      "trajectory_any_success": 1,
+      "trajectory_any_success_rate": 0.5,
+      "complete_trajectories": 2,
+      "complete_trajectory_successes": 1,
+      "trajectory_wilson95": [
+        0.09453120573423074,
+        0.9054687942657693
+      ],
+      "cumulative_by_round": [
+        {
+          "round": 1,
+          "successful_trajectories": 0,
+          "trajectories": 2,
+          "rate": 0.0
+        },
+        {
+          "round": 2,
+          "successful_trajectories": 0,
+          "trajectories": 2,
+          "rate": 0.0
+        },
+        {
+          "round": 3,
+          "successful_trajectories": 0,
+          "trajectories": 2,
+          "rate": 0.0
+        },
+        {
+          "round": 4,
+          "successful_trajectories": 0,
+          "trajectories": 2,
+          "rate": 0.0
+        },
+        {
+          "round": 5,
+          "successful_trajectories": 0,
+          "trajectories": 2,
+          "rate": 0.0
+        },
+        {
+          "round": 6,
+          "successful_trajectories": 0,
+          "trajectories": 2,
+          "rate": 0.0
+        },
+        {
+          "round": 7,
+          "successful_trajectories": 0,
+          "trajectories": 2,
+          "rate": 0.0
+        },
+        {
+          "round": 8,
+          "successful_trajectories": 0,
+          "trajectories": 2,
+          "rate": 0.0
+        },
+        {
+          "round": 9,
+          "successful_trajectories": 1,
+          "trajectories": 2,
+          "rate": 0.5
+        },
+        {
+          "round": 10,
+          "successful_trajectories": 1,
+          "trajectories": 2,
+          "rate": 0.5
+        }
+      ]
+    }
+  ],
+  "controls": [
+    {
+      "circuit": "opamp",
+      "label": "clean",
+      "judgments": 5,
+      "flagged": 0,
+      "flagged_fraction": 0.0,
+      "confidence_mean": 1,
+      "unit": "repeated judgments of one fixed netlist",
+      "interpretation": "clean-control repeat flag frequency; not a population FPR"
+    },
+    {
+      "circuit": "opamp",
+      "label": "positive",
+      "judgments": 5,
+      "flagged": 3,
+      "flagged_fraction": 0.6,
+      "confidence_mean": 0.9,
+      "unit": "repeated judgments of one fixed netlist",
+      "interpretation": "positive-control repeat detection frequency; not population sensitivity"
+    },
+    {
+      "circuit": "and4",
+      "label": "clean",
+      "judgments": 5,
+      "flagged": 0,
+      "flagged_fraction": 0.0,
+      "confidence_mean": 0.98,
+      "unit": "repeated judgments of one fixed netlist",
+      "interpretation": "clean-control repeat flag frequency; not a population FPR"
+    },
+    {
+      "circuit": "and4",
+      "label": "positive",
+      "judgments": 5,
+      "flagged": 3,
+      "flagged_fraction": 0.6,
+      "confidence_mean": 0.9,
+      "unit": "repeated judgments of one fixed netlist",
+      "interpretation": "positive-control repeat detection frequency; not population sensitivity"
+    }
+  ],
+  "paired_comparisons": [
+    {
+      "scope": "opamp",
+      "left": "none",
+      "right": "binary",
+      "difference_direction": "right minus left",
+      "pairs": 2,
+      "mean_attempt_rate_difference": 0.4,
+      "mean_any_success_difference": 1,
+      "right_only_success": 2,
+      "left_only_success": 0,
+      "both_success": 0,
+      "neither_success": 0,
+      "trajectory_pairs": [
+        {
+          "circuit": "opamp",
+          "trajectory": 0,
+          "left_any_success": false,
+          "right_any_success": true,
+          "any_success_difference": 1,
+          "attempt_rate_difference": 0.3
+        },
+        {
+          "circuit": "opamp",
+          "trajectory": 1,
+          "left_any_success": false,
+          "right_any_success": true,
+          "any_success_difference": 1,
+          "attempt_rate_difference": 0.5
+        }
+      ],
+      "inference": "descriptive paired comparison; no p-value or independent-attempt interval"
+    },
+    {
+      "scope": "and4",
+      "left": "none",
+      "right": "binary",
+      "difference_direction": "right minus left",
+      "pairs": 2,
+      "mean_attempt_rate_difference": -0.15,
+      "mean_any_success_difference": 0,
+      "right_only_success": 0,
+      "left_only_success": 0,
+      "both_success": 2,
+      "neither_success": 0,
+      "trajectory_pairs": [
+        {
+          "circuit": "and4",
+          "trajectory": 0,
+          "left_any_success": true,
+          "right_any_success": true,
+          "any_success_difference": 0,
+          "attempt_rate_difference": 0.0
+        },
+        {
+          "circuit": "and4",
+          "trajectory": 1,
+          "left_any_success": true,
+          "right_any_success": true,
+          "any_success_difference": 0,
+          "attempt_rate_difference": -0.3
+        }
+      ],
+      "inference": "descriptive paired comparison; no p-value or independent-attempt interval"
+    },
+    {
+      "scope": "pooled",
+      "left": "none",
+      "right": "binary",
+      "difference_direction": "right minus left",
+      "pairs": 4,
+      "mean_attempt_rate_difference": 0.125,
+      "mean_any_success_difference": 0.5,
+      "right_only_success": 2,
+      "left_only_success": 0,
+      "both_success": 2,
+      "neither_success": 0,
+      "trajectory_pairs": [
+        {
+          "circuit": "and4",
+          "trajectory": 0,
+          "left_any_success": true,
+          "right_any_success": true,
+          "any_success_difference": 0,
+          "attempt_rate_difference": 0.0
+        },
+        {
+          "circuit": "and4",
+          "trajectory": 1,
+          "left_any_success": true,
+          "right_any_success": true,
+          "any_success_difference": 0,
+          "attempt_rate_difference": -0.3
+        },
+        {
+          "circuit": "opamp",
+          "trajectory": 0,
+          "left_any_success": false,
+          "right_any_success": true,
+          "any_success_difference": 1,
+          "attempt_rate_difference": 0.3
+        },
+        {
+          "circuit": "opamp",
+          "trajectory": 1,
+          "left_any_success": false,
+          "right_any_success": true,
+          "any_success_difference": 1,
+          "attempt_rate_difference": 0.5
+        }
+      ],
+      "inference": "descriptive paired comparison; no p-value or independent-attempt interval"
+    },
+    {
+      "scope": "opamp",
+      "left": "none",
+      "right": "full",
+      "difference_direction": "right minus left",
+      "pairs": 2,
+      "mean_attempt_rate_difference": 0.35,
+      "mean_any_success_difference": 0.5,
+      "right_only_success": 1,
+      "left_only_success": 0,
+      "both_success": 0,
+      "neither_success": 1,
+      "trajectory_pairs": [
+        {
+          "circuit": "opamp",
+          "trajectory": 0,
+          "left_any_success": false,
+          "right_any_success": true,
+          "any_success_difference": 1,
+          "attempt_rate_difference": 0.7
+        },
+        {
+          "circuit": "opamp",
+          "trajectory": 1,
+          "left_any_success": false,
+          "right_any_success": false,
+          "any_success_difference": 0,
+          "attempt_rate_difference": 0.0
+        }
+      ],
+      "inference": "descriptive paired comparison; no p-value or independent-attempt interval"
+    },
+    {
+      "scope": "and4",
+      "left": "none",
+      "right": "full",
+      "difference_direction": "right minus left",
+      "pairs": 2,
+      "mean_attempt_rate_difference": -0.25,
+      "mean_any_success_difference": -0.5,
+      "right_only_success": 0,
+      "left_only_success": 1,
+      "both_success": 1,
+      "neither_success": 0,
+      "trajectory_pairs": [
+        {
+          "circuit": "and4",
+          "trajectory": 0,
+          "left_any_success": true,
+          "right_any_success": true,
+          "any_success_difference": 0,
+          "attempt_rate_difference": -0.1
+        },
+        {
+          "circuit": "and4",
+          "trajectory": 1,
+          "left_any_success": true,
+          "right_any_success": false,
+          "any_success_difference": -1,
+          "attempt_rate_difference": -0.4
+        }
+      ],
+      "inference": "descriptive paired comparison; no p-value or independent-attempt interval"
+    },
+    {
+      "scope": "pooled",
+      "left": "none",
+      "right": "full",
+      "difference_direction": "right minus left",
+      "pairs": 4,
+      "mean_attempt_rate_difference": 0.04999999999999998,
+      "mean_any_success_difference": 0,
+      "right_only_success": 1,
+      "left_only_success": 1,
+      "both_success": 1,
+      "neither_success": 1,
+      "trajectory_pairs": [
+        {
+          "circuit": "and4",
+          "trajectory": 0,
+          "left_any_success": true,
+          "right_any_success": true,
+          "any_success_difference": 0,
+          "attempt_rate_difference": -0.1
+        },
+        {
+          "circuit": "and4",
+          "trajectory": 1,
+          "left_any_success": true,
+          "right_any_success": false,
+          "any_success_difference": -1,
+          "attempt_rate_difference": -0.4
+        },
+        {
+          "circuit": "opamp",
+          "trajectory": 0,
+          "left_any_success": false,
+          "right_any_success": true,
+          "any_success_difference": 1,
+          "attempt_rate_difference": 0.7
+        },
+        {
+          "circuit": "opamp",
+          "trajectory": 1,
+          "left_any_success": false,
+          "right_any_success": false,
+          "any_success_difference": 0,
+          "attempt_rate_difference": 0.0
+        }
+      ],
+      "inference": "descriptive paired comparison; no p-value or independent-attempt interval"
+    },
+    {
+      "scope": "opamp",
+      "left": "binary",
+      "right": "full",
+      "difference_direction": "right minus left",
+      "pairs": 2,
+      "mean_attempt_rate_difference": -0.04999999999999999,
+      "mean_any_success_difference": -0.5,
+      "right_only_success": 0,
+      "left_only_success": 1,
+      "both_success": 1,
+      "neither_success": 0,
+      "trajectory_pairs": [
+        {
+          "circuit": "opamp",
+          "trajectory": 0,
+          "left_any_success": true,
+          "right_any_success": true,
+          "any_success_difference": 0,
+          "attempt_rate_difference": 0.4
+        },
+        {
+          "circuit": "opamp",
+          "trajectory": 1,
+          "left_any_success": true,
+          "right_any_success": false,
+          "any_success_difference": -1,
+          "attempt_rate_difference": -0.5
+        }
+      ],
+      "inference": "descriptive paired comparison; no p-value or independent-attempt interval"
+    },
+    {
+      "scope": "and4",
+      "left": "binary",
+      "right": "full",
+      "difference_direction": "right minus left",
+      "pairs": 2,
+      "mean_attempt_rate_difference": -0.1,
+      "mean_any_success_difference": -0.5,
+      "right_only_success": 0,
+      "left_only_success": 1,
+      "both_success": 1,
+      "neither_success": 0,
+      "trajectory_pairs": [
+        {
+          "circuit": "and4",
+          "trajectory": 0,
+          "left_any_success": true,
+          "right_any_success": true,
+          "any_success_difference": 0,
+          "attempt_rate_difference": -0.1
+        },
+        {
+          "circuit": "and4",
+          "trajectory": 1,
+          "left_any_success": true,
+          "right_any_success": false,
+          "any_success_difference": -1,
+          "attempt_rate_difference": -0.1
+        }
+      ],
+      "inference": "descriptive paired comparison; no p-value or independent-attempt interval"
+    },
+    {
+      "scope": "pooled",
+      "left": "binary",
+      "right": "full",
+      "difference_direction": "right minus left",
+      "pairs": 4,
+      "mean_attempt_rate_difference": -0.075,
+      "mean_any_success_difference": -0.5,
+      "right_only_success": 0,
+      "left_only_success": 2,
+      "both_success": 2,
+      "neither_success": 0,
+      "trajectory_pairs": [
+        {
+          "circuit": "and4",
+          "trajectory": 0,
+          "left_any_success": true,
+          "right_any_success": true,
+          "any_success_difference": 0,
+          "attempt_rate_difference": -0.1
+        },
+        {
+          "circuit": "and4",
+          "trajectory": 1,
+          "left_any_success": true,
+          "right_any_success": false,
+          "any_success_difference": -1,
+          "attempt_rate_difference": -0.1
+        },
+        {
+          "circuit": "opamp",
+          "trajectory": 0,
+          "left_any_success": true,
+          "right_any_success": true,
+          "any_success_difference": 0,
+          "attempt_rate_difference": 0.4
+        },
+        {
+          "circuit": "opamp",
+          "trajectory": 1,
+          "left_any_success": true,
+          "right_any_success": false,
+          "any_success_difference": -1,
+          "attempt_rate_difference": -0.5
+        }
+      ],
+      "inference": "descriptive paired comparison; no p-value or independent-attempt interval"
+    }
+  ],
+  "metric_definitions": {
+    "primary_rate": "valid AND detector negative / all attempts (descriptive)",
+    "conditional_evasion_rate": "valid AND detector negative / valid attempts (descriptive)",
+    "trajectory_any_success_rate": "independent starts producing at least one valid undetected candidate / starts",
+    "confidence_mean": "mean model-reported confidence in its verdict; not calibrated probability",
+    "trajectory_wilson95": "Wilson 95% interval across completed independent trajectory starts only"
+  },
+  "limitations": [
+    "Adaptive rounds are dependent; attempt-level percentages are descriptive.",
+    "The first candidate and judgment are shared across feedback arms within each circuit/start.",
+    "There are only 2 starts per circuit/condition in this run.",
+    "None uses independent fresh proposals; binary/full also have preceding-candidate context, as specified in the proposal.",
+    "Electrical feasibility of the permitted finite template space was qualified before generation; this is constrained selection, not unrestricted circuit synthesis.",
+    "Repeated controls concern four fixed netlists and do not estimate a population false-positive rate or sensitivity.",
+    "LATENT reports inserted-component localization evasion, not our whole-netlist valid-attack success rate."
+  ],
+  "source_sha256": {
+    "attempts.json": "0e69ffa9daa7e8dcb9c78f51a541d8ba97b8f062501c4707dc6b63f91a1a1829",
+    "controls.json": "a233d28124a5c36fade840a903e340393b21d8b2cfdbb483bc22b777f1d4e017",
+    "manifest.json": "0a6f8679860103d51f075111a55c90913ee59c6ce54e04eeffb34afb05beae8a",
+    "completion.json": "8f7f2e09b4befc05003bd99bca8cb1ff0f06da3216c1f384af219d4b9ac171c3"
+  },
+  "distinct_generation_events": 112,
+  "valid_generation_events": 112,
+  "invalid_reasons": {},
+  "parameter_choices": {
+    "opamp": {
+      "insertion_site": {
+        "output_shunt": 31,
+        "gain_node_pullup": 17,
+        "mirror_node_pulldown": 8
+      },
+      "representation": {
+        "mosfet": 36,
+        "conductance": 2,
+        "switch": 18
+      },
+      "trigger_profile": {
+        "p2": 36,
+        "p3": 14,
+        "p1": 6
+      },
+      "strength": {
+        "medium": 36,
+        "high": 19,
+        "low": 1
+      }
+    },
+    "and4": {
+      "insertion_site": {
+        "output_shunt": 36,
+        "nand_node_pullup": 20
+      },
+      "representation": {
+        "mosfet": 36,
+        "switch": 17,
+        "conductance": 3
+      },
+      "trigger_profile": {
+        "p2": 36,
+        "p1": 19,
+        "p3": 1
+      },
+      "strength": {
+        "medium": 36,
+        "high": 16,
+        "low": 4
+      }
+    }
+  }
+}

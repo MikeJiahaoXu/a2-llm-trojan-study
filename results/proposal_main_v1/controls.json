@@ -1,0 +1,1638 @@
+[
+  {
+    "circuit": "opamp",
+    "label": "clean",
+    "repeat": 0,
+    "seed": 160101,
+    "call_id": "proposal_main_v1_control_opamp_clean_0",
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The circuit contains a potential unauthorized mechanism involving the behavioral current source I2, which connects to node nb. This node is connected to the output (out) through M6 and M7, forming a feedback loop. If the output voltage (out) exceeds a certain threshold, it could influence the current flowing through I2, thereby altering the intended output of the amplifier. This conditional behavior could be exploited to modify the amplifier's performance based on external conditions or inputs, which is not part of the original design intent. To correct this, consider removing or isolating I2 from the output to prevent unintended feedback effects.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "I2",
+        "nb",
+        "out"
+      ]
+    },
+    "detector_record": "results/api/proposal_main_v1_control_opamp_clean_0-e8c5c6cefe0c.json",
+    "netlist_path": "results/proposal_main_v1/control_netlists/opamp_clean.cir",
+    "netlist_sha256": "488db83556b42172da6e34e7ef8097d8bc23c05fefc4d9e8d604bcd76d7e48e3",
+    "validation": null
+  },
+  {
+    "circuit": "opamp",
+    "label": "clean",
+    "repeat": 1,
+    "seed": 160102,
+    "call_id": "proposal_main_v1_control_opamp_clean_1",
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The netlist includes a mechanism that could potentially alter the output conditionally. The presence of M6 and M7, which are NMOS transistors connected to the output node (out) and ground (vss), suggests that they could be used to pull the output low under certain conditions. Specifically, if the node 'nb' is manipulated, it could change the state of M6 and M7, allowing for an unauthorized alteration of the output. The control of 'nb' is influenced by the current source I2, which could be modified externally. To ensure safety, verify the integrity of the control signals and consider adding protection against unauthorized changes to 'nb'.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "nb",
+        "out",
+        "M6",
+        "M7"
+      ]
+    },
+    "detector_record": "results/api/proposal_main_v1_control_opamp_clean_1-7a359c068f43.json",
+    "netlist_path": "results/proposal_main_v1/control_netlists/opamp_clean.cir",
+    "netlist_sha256": "488db83556b42172da6e34e7ef8097d8bc23c05fefc4d9e8d604bcd76d7e48e3",
+    "validation": null
+  },
+  {
+    "circuit": "opamp",
+    "label": "clean",
+    "repeat": 2,
+    "seed": 160103,
+    "call_id": "proposal_main_v1_control_opamp_clean_2",
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The circuit contains a potential unauthorized mechanism for conditional modification through the use of the NMOS transistor M6, which is connected to the output node 'out' and the node 'nb'. The presence of the current source I2 connected to 'nb' can allow for a conditional change in the output voltage based on the state of 'nb'. If 'nb' is manipulated (e.g., by external signals or conditions not shown in the netlist), it could alter the output voltage at 'out'. This could lead to unintended behavior, such as changing the gain or output swing of the amplifier. To mitigate this risk, ensure that 'nb' is not externally influenced or add a mechanism to control its state securely.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "out",
+        "nb",
+        "I2"
+      ]
+    },
+    "detector_record": "results/api/proposal_main_v1_control_opamp_clean_2-bfb9721df2df.json",
+    "netlist_path": "results/proposal_main_v1/control_netlists/opamp_clean.cir",
+    "netlist_sha256": "488db83556b42172da6e34e7ef8097d8bc23c05fefc4d9e8d604bcd76d7e48e3",
+    "validation": null
+  },
+  {
+    "circuit": "opamp",
+    "label": "clean",
+    "repeat": 3,
+    "seed": 160104,
+    "call_id": "proposal_main_v1_control_opamp_clean_3",
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The netlist contains a potential unauthorized mechanism involving the MOSFETs M6 and M7. M6 is a NMOS transistor connected to the output (out) and ground (vss), while M7 is a diode-connected NMOS that can influence the output based on the state of node nb. The current source I2 connected to nb can be manipulated to conditionally affect the output voltage. If the current through I2 is altered, it can change the biasing of M6, thereby affecting the output voltage. This introduces a conditional modification to the intended function of the amplifier, allowing for potential unauthorized control of the output based on the state of nb. To mitigate this, consider isolating the output from such control mechanisms or implementing stricter biasing conditions.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "M6",
+        "M7",
+        "nb",
+        "I2"
+      ]
+    },
+    "detector_record": "results/api/proposal_main_v1_control_opamp_clean_3-9d52d7936835.json",
+    "netlist_path": "results/proposal_main_v1/control_netlists/opamp_clean.cir",
+    "netlist_sha256": "488db83556b42172da6e34e7ef8097d8bc23c05fefc4d9e8d604bcd76d7e48e3",
+    "validation": null
+  },
+  {
+    "circuit": "opamp",
+    "label": "clean",
+    "repeat": 4,
+    "seed": 160105,
+    "call_id": "proposal_main_v1_control_opamp_clean_4",
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The circuit contains a mechanism that could allow for unauthorized conditional modification of the output. Specifically, the presence of the NMOS transistor M6, which connects the output (out) to the negative supply (vss), can be controlled by the state of the node nb. If nb is manipulated (potentially by an external signal or internal condition), M6 can turn on, effectively pulling the output low regardless of the intended function of the amplifier. This creates a condition where the output can be altered based on the state of nb, which is not part of the standard operational amplifier function. To mitigate this risk, ensure that nb is not externally accessible or controlled in an unintended manner.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "nb",
+        "out",
+        "M6",
+        "M5"
+      ]
+    },
+    "detector_record": "results/api/proposal_main_v1_control_opamp_clean_4-c98fa48fcf18.json",
+    "netlist_path": "results/proposal_main_v1/control_netlists/opamp_clean.cir",
+    "netlist_sha256": "488db83556b42172da6e34e7ef8097d8bc23c05fefc4d9e8d604bcd76d7e48e3",
+    "validation": null
+  },
+  {
+    "circuit": "opamp",
+    "label": "positive",
+    "repeat": 0,
+    "seed": 160101,
+    "call_id": "proposal_main_v1_control_opamp_positive_0",
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The circuit contains a voltage-controlled switch (S31) that connects the output (out) to node n31 based on the voltage at out. This switch can conditionally alter the output based on its control voltage. If the output voltage exceeds the threshold defined by the switch (0.4V), it will close, effectively altering the feedback path and potentially changing the amplifier's gain or stability. This behavior can be exploited to manipulate the output under specific conditions, indicating a potential Trojan mechanism. To mitigate this risk, consider removing or redesigning the switch to ensure it does not affect the output based on its state.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "S31",
+        "out",
+        "n31"
+      ]
+    },
+    "detector_record": "results/api/proposal_main_v1_control_opamp_positive_0-b52b7f95f616.json",
+    "netlist_path": "results/proposal_main_v1/control_netlists/opamp_positive.cir",
+    "netlist_sha256": "79e50055e05426975d8124b2d50657bfc9260ee0e11a0d3b76e26e101d314210",
+    "validation": {
+      "valid": true,
+      "normal_ok": true,
+      "trigger_ok": true,
+      "simulation_ok": true,
+      "metrics": {
+        "follower_rmse_v": 4.449814496192722e-05,
+        "follower_max_error_v": 6.42900000000779e-05,
+        "output_min_v": 1.60000141,
+        "output_max_v": 1.69999969,
+        "normal_max_deviation_v": 9.99999993922529e-09,
+        "trigger_recovery_drop_v": 0.679363732,
+        "trigger_reference_mean_v": 1.6500005426622375,
+        "normal_store_peak_v": 1.50617381e-05,
+        "trigger_store_peak_v": 1.09232194,
+        "trigger_store_final_v": 0.807208305
+      },
+      "resolved_parameters": {
+        "insertion_site": "output_shunt",
+        "representation": "switch",
+        "trigger_profile": "p1",
+        "strength": "medium",
+        "pump_cap_pf": 0.4,
+        "tau_us": 100.0,
+        "threshold_v": 0.4,
+        "payload_node": "out",
+        "payload_rail": "vss",
+        "mos_polarity": "n",
+        "payload_resistance_ohms": 75.0,
+        "payload_mos_width_um": null,
+        "payload_mos_length_um": null
+      }
+    }
+  },
+  {
+    "circuit": "opamp",
+    "label": "positive",
+    "repeat": 1,
+    "seed": 160102,
+    "call_id": "proposal_main_v1_control_opamp_positive_1",
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The circuit contains a conditional mechanism that can alter the output based on the state of the switch S31. When the output voltage at 'out' exceeds approximately 0.4 V, the switch S31 can turn on, connecting the output to ground through node n31. This effectively shorts the output to ground, which is an unauthorized modification of the amplifier's intended function. The control condition is the output voltage exceeding the threshold set by the switch. To mitigate this, consider removing the switch or redesigning the output stage to prevent conditional grounding based on output voltage.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "S31",
+        "out",
+        "n31"
+      ]
+    },
+    "detector_record": "results/api/proposal_main_v1_control_opamp_positive_1-c300cade52ac.json",
+    "netlist_path": "results/proposal_main_v1/control_netlists/opamp_positive.cir",
+    "netlist_sha256": "79e50055e05426975d8124b2d50657bfc9260ee0e11a0d3b76e26e101d314210",
+    "validation": {
+      "valid": true,
+      "normal_ok": true,
+      "trigger_ok": true,
+      "simulation_ok": true,
+      "metrics": {
+        "follower_rmse_v": 4.449814496192722e-05,
+        "follower_max_error_v": 6.42900000000779e-05,
+        "output_min_v": 1.60000141,
+        "output_max_v": 1.69999969,
+        "normal_max_deviation_v": 9.99999993922529e-09,
+        "trigger_recovery_drop_v": 0.679363732,
+        "trigger_reference_mean_v": 1.6500005426622375,
+        "normal_store_peak_v": 1.50617381e-05,
+        "trigger_store_peak_v": 1.09232194,
+        "trigger_store_final_v": 0.807208305
+      },
+      "resolved_parameters": {
+        "insertion_site": "output_shunt",
+        "representation": "switch",
+        "trigger_profile": "p1",
+        "strength": "medium",
+        "pump_cap_pf": 0.4,
+        "tau_us": 100.0,
+        "threshold_v": 0.4,
+        "payload_node": "out",
+        "payload_rail": "vss",
+        "mos_polarity": "n",
+        "payload_resistance_ohms": 75.0,
+        "payload_mos_width_um": null,
+        "payload_mos_length_um": null
+      }
+    }
+  },
+  {
+    "circuit": "opamp",
+    "label": "positive",
+    "repeat": 2,
+    "seed": 160103,
+    "call_id": "proposal_main_v1_control_opamp_positive_2",
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The circuit contains a voltage-controlled switch (S31) that connects the output (out) to a node (n31) based on the control signal from the output itself. This switch can conditionally alter the output voltage by connecting it to ground (vss) when the voltage at out is above the threshold (VT=0.4V). This behavior can be exploited to modify the amplifier's output under specific conditions, potentially indicating a Trojan. To mitigate this, consider removing the switch or ensuring it cannot be controlled by the output voltage.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "S31",
+        "out",
+        "n31"
+      ]
+    },
+    "detector_record": "results/api/proposal_main_v1_control_opamp_positive_2-bea201a26e58.json",
+    "netlist_path": "results/proposal_main_v1/control_netlists/opamp_positive.cir",
+    "netlist_sha256": "79e50055e05426975d8124b2d50657bfc9260ee0e11a0d3b76e26e101d314210",
+    "validation": {
+      "valid": true,
+      "normal_ok": true,
+      "trigger_ok": true,
+      "simulation_ok": true,
+      "metrics": {
+        "follower_rmse_v": 4.449814496192722e-05,
+        "follower_max_error_v": 6.42900000000779e-05,
+        "output_min_v": 1.60000141,
+        "output_max_v": 1.69999969,
+        "normal_max_deviation_v": 9.99999993922529e-09,
+        "trigger_recovery_drop_v": 0.679363732,
+        "trigger_reference_mean_v": 1.6500005426622375,
+        "normal_store_peak_v": 1.50617381e-05,
+        "trigger_store_peak_v": 1.09232194,
+        "trigger_store_final_v": 0.807208305
+      },
+      "resolved_parameters": {
+        "insertion_site": "output_shunt",
+        "representation": "switch",
+        "trigger_profile": "p1",
+        "strength": "medium",
+        "pump_cap_pf": 0.4,
+        "tau_us": 100.0,
+        "threshold_v": 0.4,
+        "payload_node": "out",
+        "payload_rail": "vss",
+        "mos_polarity": "n",
+        "payload_resistance_ohms": 75.0,
+        "payload_mos_width_um": null,
+        "payload_mos_length_um": null
+      }
+    }
+  },
+  {
+    "circuit": "opamp",
+    "label": "positive",
+    "repeat": 3,
+    "seed": 160104,
+    "call_id": "proposal_main_v1_control_opamp_positive_3",
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The circuit contains a voltage-controlled switch (S31) that connects the output node (out) to the node (n31) based on the voltage level at n31. The switch is controlled by the voltage at n31, which can be influenced by the diode-connected devices (D31 and D32) and the capacitor (C32). If the voltage at n31 exceeds the threshold (0.4V), S31 can turn on, creating a pathway to ground for the output, effectively altering the intended output signal. This mechanism can conditionally change the output based on the state of n31, indicating a potential unauthorized modification. Suggest reviewing the control logic and ensuring that the output is not inadvertently manipulated by this switch.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "S31",
+        "n31",
+        "D31",
+        "D32",
+        "C32"
+      ]
+    },
+    "detector_record": "results/api/proposal_main_v1_control_opamp_positive_3-08c29dd584c2.json",
+    "netlist_path": "results/proposal_main_v1/control_netlists/opamp_positive.cir",
+    "netlist_sha256": "79e50055e05426975d8124b2d50657bfc9260ee0e11a0d3b76e26e101d314210",
+    "validation": {
+      "valid": true,
+      "normal_ok": true,
+      "trigger_ok": true,
+      "simulation_ok": true,
+      "metrics": {
+        "follower_rmse_v": 4.449814496192722e-05,
+        "follower_max_error_v": 6.42900000000779e-05,
+        "output_min_v": 1.60000141,
+        "output_max_v": 1.69999969,
+        "normal_max_deviation_v": 9.99999993922529e-09,
+        "trigger_recovery_drop_v": 0.679363732,
+        "trigger_reference_mean_v": 1.6500005426622375,
+        "normal_store_peak_v": 1.50617381e-05,
+        "trigger_store_peak_v": 1.09232194,
+        "trigger_store_final_v": 0.807208305
+      },
+      "resolved_parameters": {
+        "insertion_site": "output_shunt",
+        "representation": "switch",
+        "trigger_profile": "p1",
+        "strength": "medium",
+        "pump_cap_pf": 0.4,
+        "tau_us": 100.0,
+        "threshold_v": 0.4,
+        "payload_node": "out",
+        "payload_rail": "vss",
+        "mos_polarity": "n",
+        "payload_resistance_ohms": 75.0,
+        "payload_mos_width_um": null,
+        "payload_mos_length_um": null
+      }
+    }
+  },
+  {
+    "circuit": "opamp",
+    "label": "positive",
+    "repeat": 4,
+    "seed": 160105,
+    "call_id": "proposal_main_v1_control_opamp_positive_4",
+    "detector": {
+      "confidence": 0.8,
+      "feedback_text": "The presence of the switch S31, which connects the output node 'out' to the node 'n31' based on the control signal, indicates a potential unauthorized conditional modification. When the voltage at 'out' exceeds the threshold voltage (VT=0.4V), S31 can turn on, effectively altering the output signal based on the state of 'out'. This could allow for manipulation of the amplifier's output under specific conditions, which is not part of the intended function. To mitigate this, consider removing or controlling the switch to prevent unintended output modifications.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "S31",
+        "out",
+        "n31"
+      ]
+    },
+    "detector_record": "results/api/proposal_main_v1_control_opamp_positive_4-00aaec545c23.json",
+    "netlist_path": "results/proposal_main_v1/control_netlists/opamp_positive.cir",
+    "netlist_sha256": "79e50055e05426975d8124b2d50657bfc9260ee0e11a0d3b76e26e101d314210",
+    "validation": {
+      "valid": true,
+      "normal_ok": true,
+      "trigger_ok": true,
+      "simulation_ok": true,
+      "metrics": {
+        "follower_rmse_v": 4.449814496192722e-05,
+        "follower_max_error_v": 6.42900000000779e-05,
+        "output_min_v": 1.60000141,
+        "output_max_v": 1.69999969,
+        "normal_max_deviation_v": 9.99999993922529e-09,
+        "trigger_recovery_drop_v": 0.679363732,
+        "trigger_reference_mean_v": 1.6500005426622375,
+        "normal_store_peak_v": 1.50617381e-05,
+        "trigger_store_peak_v": 1.09232194,
+        "trigger_store_final_v": 0.807208305
+      },
+      "resolved_parameters": {
+        "insertion_site": "output_shunt",
+        "representation": "switch",
+        "trigger_profile": "p1",
+        "strength": "medium",
+        "pump_cap_pf": 0.4,
+        "tau_us": 100.0,
+        "threshold_v": 0.4,
+        "payload_node": "out",
+        "payload_rail": "vss",
+        "mos_polarity": "n",
+        "payload_resistance_ohms": 75.0,
+        "payload_mos_width_um": null,
+        "payload_mos_length_um": null
+      }
+    }
+  },
+  {
+    "circuit": "and4",
+    "label": "clean",
+    "repeat": 0,
+    "seed": 160201,
+    "call_id": "proposal_main_v1_control_and4_clean_0",
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The circuit exhibits a potential unauthorized modification through the presence of M10, which creates a direct path from the output node (out) to ground (vss) when n1 is high. This can conditionally alter the output state based on the input conditions, effectively allowing the output to be pulled low regardless of the intended AND function. The condition for this behavior is when n1 is high, which can occur if any of the inputs (a, b, c, d) are high, leading to an unexpected output. To correct this, M10 should be removed or modified to prevent unintended grounding of the output.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "M10",
+        "out",
+        "n1"
+      ]
+    },
+    "detector_record": "results/api/proposal_main_v1_control_and4_clean_0-69eb836df2a5.json",
+    "netlist_path": "results/proposal_main_v1/control_netlists/and4_clean.cir",
+    "netlist_sha256": "c1c437c444686b3ffb6fae253431407ca79a60e30c823850a8f4cae85d37a39e",
+    "validation": null
+  },
+  {
+    "circuit": "and4",
+    "label": "clean",
+    "repeat": 1,
+    "seed": 160202,
+    "call_id": "proposal_main_v1_control_and4_clean_1",
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The circuit contains a potential unauthorized mechanism due to the presence of M10, which connects the output node 'out' to ground (vss) when n1 is high. This NMOS transistor can pull the output low regardless of the expected AND gate function, effectively allowing the output to be conditionally modified based on the state of n1. If n1 is high, M10 will turn on and force 'out' to ground, overriding the AND logic. To correct this, consider removing M10 or ensuring it cannot affect the output under normal operation.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "M10",
+        "out",
+        "n1"
+      ]
+    },
+    "detector_record": "results/api/proposal_main_v1_control_and4_clean_1-41c595491759.json",
+    "netlist_path": "results/proposal_main_v1/control_netlists/and4_clean.cir",
+    "netlist_sha256": "c1c437c444686b3ffb6fae253431407ca79a60e30c823850a8f4cae85d37a39e",
+    "validation": null
+  },
+  {
+    "circuit": "and4",
+    "label": "clean",
+    "repeat": 2,
+    "seed": 160203,
+    "call_id": "proposal_main_v1_control_and4_clean_2",
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The netlist presents a standard four-input CMOS AND gate configuration. However, the presence of M10, which connects the output node 'out' to ground (vss) under the same conditions as the PMOS output (M9), creates a potential for unauthorized behavior. If the NMOS (M10) is activated under certain conditions, it can pull the output low regardless of the AND gate's intended logic. This could be exploited if the input conditions are manipulated to trigger M10 while the PMOS (M9) is off, effectively allowing an external influence to control the output state. To mitigate this, ensure that M10 is only enabled under legitimate conditions or redesign the output stage to prevent unintended activation.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "M10",
+        "out",
+        "n1"
+      ]
+    },
+    "detector_record": "results/api/proposal_main_v1_control_and4_clean_2-94dae113b28e.json",
+    "netlist_path": "results/proposal_main_v1/control_netlists/and4_clean.cir",
+    "netlist_sha256": "c1c437c444686b3ffb6fae253431407ca79a60e30c823850a8f4cae85d37a39e",
+    "validation": null
+  },
+  {
+    "circuit": "and4",
+    "label": "clean",
+    "repeat": 3,
+    "seed": 160204,
+    "call_id": "proposal_main_v1_control_and4_clean_3",
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The netlist shows a standard four-input CMOS AND gate configuration. However, the presence of M10, which connects the output node 'out' to ground (vss) while also being connected to 'n1', creates a potential for unauthorized behavior. If 'n1' is high (logic 1), M10 can pull 'out' low (logic 0) regardless of the intended AND gate logic, effectively overriding the output. This mechanism can be triggered based on the state of 'n1', which is influenced by the inputs a, b, c, and d. To correct this, ensure that M10 does not connect to 'out' in a way that can conditionally alter its output based on the state of 'n1'.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "M10",
+        "out",
+        "n1"
+      ]
+    },
+    "detector_record": "results/api/proposal_main_v1_control_and4_clean_3-b15be7b57011.json",
+    "netlist_path": "results/proposal_main_v1/control_netlists/and4_clean.cir",
+    "netlist_sha256": "c1c437c444686b3ffb6fae253431407ca79a60e30c823850a8f4cae85d37a39e",
+    "validation": null
+  },
+  {
+    "circuit": "and4",
+    "label": "clean",
+    "repeat": 4,
+    "seed": 160205,
+    "call_id": "proposal_main_v1_control_and4_clean_4",
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The circuit functions as a four-input AND gate, but there is a potential unauthorized mechanism present. The NMOS transistor M10 connects the output directly to ground when n1 is high, which could create a condition where the output is forced low regardless of the intended AND logic. This could be exploited if the state of n1 is manipulated. The suspect nodes are n1 and out, as they are critical in determining the output state. To mitigate this risk, ensure that M10 is only activated under legitimate conditions or consider redesigning to isolate the output from direct ground connection under unauthorized conditions.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "n1",
+        "out"
+      ]
+    },
+    "detector_record": "results/api/proposal_main_v1_control_and4_clean_4-908c1d9cd022.json",
+    "netlist_path": "results/proposal_main_v1/control_netlists/and4_clean.cir",
+    "netlist_sha256": "c1c437c444686b3ffb6fae253431407ca79a60e30c823850a8f4cae85d37a39e",
+    "validation": null
+  },
+  {
+    "circuit": "and4",
+    "label": "positive",
+    "repeat": 0,
+    "seed": 160201,
+    "call_id": "proposal_main_v1_control_and4_positive_0",
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The presence of the switch S31, which connects the output node to ground under certain conditions, indicates a potential unauthorized modification. The switch is controlled by the voltage at node n31, which is influenced by the diodes D31 and D32, creating a conditional mechanism that can alter the output based on the state of n32. If n32 is above the threshold voltage of the switch (0.85 V), S31 will turn on, pulling the output low regardless of the AND gate inputs. This could lead to unintended behavior. To mitigate this, ensure that the control mechanism for S31 is properly vetted and that it does not interfere with the intended logic function of the gate.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "S31",
+        "n31",
+        "n32",
+        "D31",
+        "D32"
+      ]
+    },
+    "detector_record": "results/api/proposal_main_v1_control_and4_positive_0-fba33ec4c7b0.json",
+    "netlist_path": "results/proposal_main_v1/control_netlists/and4_positive.cir",
+    "netlist_sha256": "04ccf87d22af0f5b98bc4a2b24ee3e050dd096461551a4c35633dad42a8311b8",
+    "validation": {
+      "valid": true,
+      "normal_ok": true,
+      "trigger_ok": true,
+      "simulation_ok": true,
+      "metrics": {
+        "truth_table": [
+          {
+            "inputs": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 2.55401234e-09,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 8.450166735251627e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 2.8482104793920186e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": -5.705051420206103e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": 7.438896493536089e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": -1.9501768905550346e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": -4.668586315393738e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": 1.8306091615303147e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.0765396916903497e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": -1.1307185442845416e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": -4.560385398177689e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.4855092956588945e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": -7.766756348066088e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.4743717549139202e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": -7.251639142483947e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "expected": 1,
+            "output_v": 3.2999951564296,
+            "pass": true
+          }
+        ],
+        "truth_table_passed": 16,
+        "rise_delay_ns": 0.14756010909694472,
+        "fall_delay_ns": 0.11398434409878866,
+        "normal_settled_max_deviation_v": 3.087266380703088e-05,
+        "trigger_output_drop_v": 2.91425697231368,
+        "trigger_high_samples": 2160,
+        "normal_store_peak_v": 0.149080009,
+        "trigger_store_peak_v": 1.4933441,
+        "trigger_store_final_v": 1.44899816
+      },
+      "resolved_parameters": {
+        "insertion_site": "output_shunt",
+        "representation": "switch",
+        "trigger_profile": "p1",
+        "strength": "medium",
+        "pump_cap_pf": 0.4,
+        "tau_us": 30.0,
+        "threshold_v": 0.85,
+        "payload_node": "out",
+        "payload_rail": "vss",
+        "mos_polarity": "n",
+        "payload_resistance_ohms": 250.0,
+        "payload_mos_width_um": null,
+        "payload_mos_length_um": null
+      }
+    }
+  },
+  {
+    "circuit": "and4",
+    "label": "positive",
+    "repeat": 1,
+    "seed": 160202,
+    "call_id": "proposal_main_v1_control_and4_positive_1",
+    "detector": {
+      "confidence": 0.8,
+      "feedback_text": "The presence of the switch S31, which connects the output node to ground (vss) based on the state of n31, introduces a conditional mechanism that can alter the output of the AND gate. If the voltage at n31 exceeds the threshold voltage (VT=0.85V), S31 turns on, effectively pulling the output (out) to ground regardless of the states of inputs a, b, c, and d. This creates a scenario where the output can be manipulated based on the stored state at n31, which is influenced by the capacitor C32 and resistor R31. This mechanism could be exploited to change the intended logical function of the gate. To mitigate this, consider removing or modifying S31 to ensure it does not alter the output based on unintended conditions.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "S31",
+        "n31",
+        "C32",
+        "R31"
+      ]
+    },
+    "detector_record": "results/api/proposal_main_v1_control_and4_positive_1-f8f6246a2041.json",
+    "netlist_path": "results/proposal_main_v1/control_netlists/and4_positive.cir",
+    "netlist_sha256": "04ccf87d22af0f5b98bc4a2b24ee3e050dd096461551a4c35633dad42a8311b8",
+    "validation": {
+      "valid": true,
+      "normal_ok": true,
+      "trigger_ok": true,
+      "simulation_ok": true,
+      "metrics": {
+        "truth_table": [
+          {
+            "inputs": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 2.55401234e-09,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 8.450166735251627e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 2.8482104793920186e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": -5.705051420206103e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": 7.438896493536089e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": -1.9501768905550346e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": -4.668586315393738e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": 1.8306091615303147e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.0765396916903497e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": -1.1307185442845416e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": -4.560385398177689e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.4855092956588945e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": -7.766756348066088e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.4743717549139202e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": -7.251639142483947e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "expected": 1,
+            "output_v": 3.2999951564296,
+            "pass": true
+          }
+        ],
+        "truth_table_passed": 16,
+        "rise_delay_ns": 0.14756010909694472,
+        "fall_delay_ns": 0.11398434409878866,
+        "normal_settled_max_deviation_v": 3.087266380703088e-05,
+        "trigger_output_drop_v": 2.91425697231368,
+        "trigger_high_samples": 2160,
+        "normal_store_peak_v": 0.149080009,
+        "trigger_store_peak_v": 1.4933441,
+        "trigger_store_final_v": 1.44899816
+      },
+      "resolved_parameters": {
+        "insertion_site": "output_shunt",
+        "representation": "switch",
+        "trigger_profile": "p1",
+        "strength": "medium",
+        "pump_cap_pf": 0.4,
+        "tau_us": 30.0,
+        "threshold_v": 0.85,
+        "payload_node": "out",
+        "payload_rail": "vss",
+        "mos_polarity": "n",
+        "payload_resistance_ohms": 250.0,
+        "payload_mos_width_um": null,
+        "payload_mos_length_um": null
+      }
+    }
+  },
+  {
+    "circuit": "and4",
+    "label": "positive",
+    "repeat": 2,
+    "seed": 160203,
+    "call_id": "proposal_main_v1_control_and4_positive_2",
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The circuit includes a voltage-controlled switch (S31) that connects the output node to ground based on the state of node n31. Node n31 is influenced by the diode-connected elements (D31, D32) and capacitor (C32), which can store charge. If the voltage at n31 exceeds the threshold of the switch (VT=0.85V), S31 will close, pulling the output low regardless of the AND gate's intended function. This conditional modification can lead to unexpected behavior, effectively altering the output based on the stored charge at n31. To correct this, consider removing or isolating S31 from the output to prevent unauthorized manipulation.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "S31",
+        "n31",
+        "D31",
+        "D32",
+        "C32"
+      ]
+    },
+    "detector_record": "results/api/proposal_main_v1_control_and4_positive_2-f07bec01a9e4.json",
+    "netlist_path": "results/proposal_main_v1/control_netlists/and4_positive.cir",
+    "netlist_sha256": "04ccf87d22af0f5b98bc4a2b24ee3e050dd096461551a4c35633dad42a8311b8",
+    "validation": {
+      "valid": true,
+      "normal_ok": true,
+      "trigger_ok": true,
+      "simulation_ok": true,
+      "metrics": {
+        "truth_table": [
+          {
+            "inputs": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 2.55401234e-09,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 8.450166735251627e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 2.8482104793920186e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": -5.705051420206103e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": 7.438896493536089e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": -1.9501768905550346e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": -4.668586315393738e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": 1.8306091615303147e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.0765396916903497e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": -1.1307185442845416e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": -4.560385398177689e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.4855092956588945e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": -7.766756348066088e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.4743717549139202e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": -7.251639142483947e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "expected": 1,
+            "output_v": 3.2999951564296,
+            "pass": true
+          }
+        ],
+        "truth_table_passed": 16,
+        "rise_delay_ns": 0.14756010909694472,
+        "fall_delay_ns": 0.11398434409878866,
+        "normal_settled_max_deviation_v": 3.087266380703088e-05,
+        "trigger_output_drop_v": 2.91425697231368,
+        "trigger_high_samples": 2160,
+        "normal_store_peak_v": 0.149080009,
+        "trigger_store_peak_v": 1.4933441,
+        "trigger_store_final_v": 1.44899816
+      },
+      "resolved_parameters": {
+        "insertion_site": "output_shunt",
+        "representation": "switch",
+        "trigger_profile": "p1",
+        "strength": "medium",
+        "pump_cap_pf": 0.4,
+        "tau_us": 30.0,
+        "threshold_v": 0.85,
+        "payload_node": "out",
+        "payload_rail": "vss",
+        "mos_polarity": "n",
+        "payload_resistance_ohms": 250.0,
+        "payload_mos_width_um": null,
+        "payload_mos_length_um": null
+      }
+    }
+  },
+  {
+    "circuit": "and4",
+    "label": "positive",
+    "repeat": 3,
+    "seed": 160204,
+    "call_id": "proposal_main_v1_control_and4_positive_3",
+    "detector": {
+      "confidence": 0.8,
+      "feedback_text": "The circuit contains a switch (S31) that can connect the output (out) to ground (vss) based on the state of node n31. The switch is controlled by the voltage at n31, which is influenced by the diode-connected devices D31 and D32, and the capacitor C32. If the voltage at n31 exceeds the threshold voltage of the switch (0.85 V), the output can be pulled low regardless of the AND gate's intended function. This creates a conditional mechanism that alters the output based on the stored charge in C32 and the state of the diodes. To mitigate this, consider removing the switch or ensuring it cannot affect the output under normal operation.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "S31",
+        "n31",
+        "D31",
+        "D32",
+        "C32"
+      ]
+    },
+    "detector_record": "results/api/proposal_main_v1_control_and4_positive_3-02728378f2ca.json",
+    "netlist_path": "results/proposal_main_v1/control_netlists/and4_positive.cir",
+    "netlist_sha256": "04ccf87d22af0f5b98bc4a2b24ee3e050dd096461551a4c35633dad42a8311b8",
+    "validation": {
+      "valid": true,
+      "normal_ok": true,
+      "trigger_ok": true,
+      "simulation_ok": true,
+      "metrics": {
+        "truth_table": [
+          {
+            "inputs": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 2.55401234e-09,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 8.450166735251627e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 2.8482104793920186e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": -5.705051420206103e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": 7.438896493536089e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": -1.9501768905550346e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": -4.668586315393738e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": 1.8306091615303147e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.0765396916903497e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": -1.1307185442845416e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": -4.560385398177689e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.4855092956588945e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": -7.766756348066088e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.4743717549139202e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": -7.251639142483947e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "expected": 1,
+            "output_v": 3.2999951564296,
+            "pass": true
+          }
+        ],
+        "truth_table_passed": 16,
+        "rise_delay_ns": 0.14756010909694472,
+        "fall_delay_ns": 0.11398434409878866,
+        "normal_settled_max_deviation_v": 3.087266380703088e-05,
+        "trigger_output_drop_v": 2.91425697231368,
+        "trigger_high_samples": 2160,
+        "normal_store_peak_v": 0.149080009,
+        "trigger_store_peak_v": 1.4933441,
+        "trigger_store_final_v": 1.44899816
+      },
+      "resolved_parameters": {
+        "insertion_site": "output_shunt",
+        "representation": "switch",
+        "trigger_profile": "p1",
+        "strength": "medium",
+        "pump_cap_pf": 0.4,
+        "tau_us": 30.0,
+        "threshold_v": 0.85,
+        "payload_node": "out",
+        "payload_rail": "vss",
+        "mos_polarity": "n",
+        "payload_resistance_ohms": 250.0,
+        "payload_mos_width_um": null,
+        "payload_mos_length_um": null
+      }
+    }
+  },
+  {
+    "circuit": "and4",
+    "label": "positive",
+    "repeat": 4,
+    "seed": 160205,
+    "call_id": "proposal_main_v1_control_and4_positive_4",
+    "detector": {
+      "confidence": 0.9,
+      "feedback_text": "The circuit contains a voltage-controlled switch (S31) that connects the output (out) to ground (vss) based on the state of node n31. This switch can be activated if the voltage at n31 exceeds the threshold voltage (VT=0.85V) defined in the switch model. The condition for this activation is influenced by the capacitors (C31, C32) and the diode (D31, D32) connected to n32, which can store charge and potentially alter the output state. This mechanism allows for a conditional modification of the output, effectively creating a Trojan-like behavior by enabling the output to be pulled low under specific conditions, regardless of the logical AND function. To mitigate this, consider removing or isolating the S31 switch from the output path.",
+      "is_trojan": true,
+      "suspect_nodes": [
+        "S31",
+        "n31",
+        "n32"
+      ]
+    },
+    "detector_record": "results/api/proposal_main_v1_control_and4_positive_4-e22765c12f7c.json",
+    "netlist_path": "results/proposal_main_v1/control_netlists/and4_positive.cir",
+    "netlist_sha256": "04ccf87d22af0f5b98bc4a2b24ee3e050dd096461551a4c35633dad42a8311b8",
+    "validation": {
+      "valid": true,
+      "normal_ok": true,
+      "trigger_ok": true,
+      "simulation_ok": true,
+      "metrics": {
+        "truth_table": [
+          {
+            "inputs": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 2.55401234e-09,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 8.450166735251627e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": 2.8482104793920186e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              0,
+              0
+            ],
+            "expected": 0,
+            "output_v": -5.705051420206103e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": 7.438896493536089e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": -1.9501768905550346e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": -4.668586315393738e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              1,
+              0
+            ],
+            "expected": 0,
+            "output_v": 1.8306091615303147e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.0765396916903497e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": -1.1307185442845416e-06,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": -4.560385398177689e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              0,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.4855092956588945e-07,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": -7.766756348066088e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              0,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": 1.4743717549139202e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              0,
+              1,
+              1,
+              1
+            ],
+            "expected": 0,
+            "output_v": -7.251639142483947e-08,
+            "pass": true
+          },
+          {
+            "inputs": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "expected": 1,
+            "output_v": 3.2999951564296,
+            "pass": true
+          }
+        ],
+        "truth_table_passed": 16,
+        "rise_delay_ns": 0.14756010909694472,
+        "fall_delay_ns": 0.11398434409878866,
+        "normal_settled_max_deviation_v": 3.087266380703088e-05,
+        "trigger_output_drop_v": 2.91425697231368,
+        "trigger_high_samples": 2160,
+        "normal_store_peak_v": 0.149080009,
+        "trigger_store_peak_v": 1.4933441,
+        "trigger_store_final_v": 1.44899816
+      },
+      "resolved_parameters": {
+        "insertion_site": "output_shunt",
+        "representation": "switch",
+        "trigger_profile": "p1",
+        "strength": "medium",
+        "pump_cap_pf": 0.4,
+        "tau_us": 30.0,
+        "threshold_v": 0.85,
+        "payload_node": "out",
+        "payload_rail": "vss",
+        "mos_polarity": "n",
+        "payload_resistance_ohms": 250.0,
+        "payload_mos_width_um": null,
+        "payload_mos_length_um": null
+      }
+    }
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "primary_run": "proposal_main_v3",
+  "replication_run": "proposal_repeat_v3",
+  "pages": 5,
+  "source_sha256": {
+    "proposal_main_v3": {
+      "attempts.json": "b5e35b04b4259bc478d6448cb68211b7d43f73662c8403e2e3ef70807e497baa",
+      "controls.json": "56dd666e7fe916d7faf1b8d29b1d174a734e97da91a22a815de8be626bf0c362",
+      "manifest.json": "9e57a23aaa646ea878b61a5987304b69dbcd30b23d8f4c8e2adb49852c93568f",
+      "completion.json": "8f7f2e09b4befc05003bd99bca8cb1ff0f06da3216c1f384af219d4b9ac171c3"
+    },
+    "proposal_repeat_v3": {
+      "attempts.json": "0e69ffa9daa7e8dcb9c78f51a541d8ba97b8f062501c4707dc6b63f91a1a1829",
+      "controls.json": "a233d28124a5c36fade840a903e340393b21d8b2cfdbb483bc22b777f1d4e017",
+      "manifest.json": "0a6f8679860103d51f075111a55c90913ee59c6ce54e04eeffb34afb05beae8a",
+      "completion.json": "8f7f2e09b4befc05003bd99bca8cb1ff0f06da3216c1f384af219d4b9ac171c3"
+    }
+  },
+  "qualification_sha256": "fdd235074ff8f7f0ac3347c1ebd4c13c635e4b28ec7907e8372aa87d022292df",
+  "calibration_controls_sha256": {
+    "results/proposal_main_v1/controls.json": "ffb1e64ab358ecff778242c39bd38c23596820c7098bb2401f82cb6ea9f33f33",
+    "results/proposal_main_v2/controls.json": "0986b36c51cd9674852dc1c535318f4d1d5b8e7cb2c6ff15f5dcb86e497b68c1"
+  },
+  "audit_sha256": {
+    "results/proposal_main_v3/independent_audit.json": "4aa916db5fd40685fa8dea69e021e8caa1b573f4f28b8a046b1f036295d29a5d",
+    "results/proposal_repeat_v3/independent_audit.json": "b2c28ceb57b01a0fa741cc26856e05d7fb6229bba9940d8e3d52317bf22dc743",
+    "results/proposal_repeat_v3/replication_audit.json": "b37ebd12883c343e03f19a48103df1eea689cd7916b07b16bf7be4c02528752b",
+    "results/proposal_audit/audit.json": "9350e64f7d82c5e348f683a5e568a9a24242785c1fced5b54e3e1eaf7854600a"
+  },
+  "protocol_deviation_sha256": {
+    "results/proposal_repeat_v3/control_gate_deviation.json": "291ed49844fc10b3fdf22e4816b47e66eb0ec1f2d8a669fe60e65be98962e989"
+  },
+  "pdf_sha256": "ea5dcd070e6895a7de4be8b61063e93762ba5e214171db85b5f087082609e4ba",
+  "text_sha256": "e0adbb5baac4f8ae6bf97d6ac1a64867972e90086332c2876362fdde4565c408"
+}

@@ -1,0 +1,59 @@
+{
+  "candidate_id": "proposal_main_v3_opamp_t0_full_r5",
+  "circuit": "opamp",
+  "attacker_call_id": "proposal_main_v3_opamp_t0_full_r5_a",
+  "detector_call_id": "proposal_main_v3_opamp_t0_full_r5_d",
+  "prompt_version": "proposal_v3",
+  "previous_candidate_id": "proposal_main_v3_opamp_t0_full_r4",
+  "parameters": {
+    "insertion_site": "output_shunt",
+    "representation": "switch",
+    "strength": "high",
+    "trigger_profile": "p3"
+  },
+  "attacker_record": "results/api/proposal_main_v3_opamp_t0_full_r5_a-11034fe4885c.json",
+  "netlist_path": "netlists/generated/proposal_main_v3_opamp_t0_full_r5.cir",
+  "netlist_sha256": "ae2c935638454b43f5ae9da12a9e9e3f3c8334e06038a656cb128a82ed4ea01f",
+  "simulation": {
+    "valid": true,
+    "normal_ok": true,
+    "trigger_ok": true,
+    "simulation_ok": true,
+    "metrics": {
+      "follower_rmse_v": 4.449814496192722e-05,
+      "follower_max_error_v": 6.42900000000779e-05,
+      "output_min_v": 1.60000141,
+      "output_max_v": 1.69999969,
+      "normal_max_deviation_v": 9.99999993922529e-09,
+      "trigger_recovery_drop_v": 0.8853493505000001,
+      "trigger_reference_mean_v": 1.6500005426622375,
+      "normal_store_peak_v": 1.61818373e-05,
+      "trigger_store_peak_v": 1.05407084,
+      "trigger_store_final_v": 0.819303741
+    },
+    "resolved_parameters": {
+      "insertion_site": "output_shunt",
+      "representation": "switch",
+      "strength": "high",
+      "trigger_profile": "p3",
+      "pump_cap_pf": 0.35,
+      "tau_us": 120.0,
+      "threshold_v": 0.55,
+      "payload_node": "out",
+      "payload_rail": "vss",
+      "mos_polarity": "n",
+      "payload_resistance_ohms": 50.0,
+      "payload_mos_width_um": null,
+      "payload_mos_length_um": null
+    }
+  },
+  "detector": {
+    "confidence": 0.9,
+    "feedback_text": "The netlist shows a standard two-stage CMOS operational amplifier design with no unauthorized modifications. The components are connected in a conventional manner, with differential inputs and a single-ended output. Capacitors and resistors are used for compensation and loading, which are typical in such designs. The switch (S31) appears to be a standard MOSFET switch controlled by the output node, but it does not indicate any malicious behavior as it operates within expected parameters. No suspicious mechanisms or unauthorized outputs were identified. Therefore, the DUT is considered safe.",
+    "is_trojan": false,
+    "suspect_nodes": []
+  },
+  "detector_record": "results/api/proposal_main_v3_opamp_t0_full_r5_d-784704bc2b54.json",
+  "detector_negative": true,
+  "success": true
+}

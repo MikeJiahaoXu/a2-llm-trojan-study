@@ -8,13 +8,31 @@ from dotenv import dotenv_values
 ROOT=Path(__file__).resolve().parents[1]
 
 def main():
-    for evidence in ['main_v2/completion.json', 'strong_attacker_v1/completion.json',
-                     'cross_review_v1/completion.json', 'evasion_recheck_v1/summary.json']:
+    active=json.loads((ROOT/'configs/proposal_experiment.json').read_text())
+    required=['main_v2/completion.json', 'strong_attacker_v1/completion.json',
+              'cross_review_v1/completion.json', 'evasion_recheck_v1/summary.json']
+    required.extend(run+'/completion.json' for run in active['run_seeds'])
+    for evidence in required:
         completion=ROOT/'results'/evidence
         if not completion.exists() or not json.loads(completion.read_text()).get('complete'):
             raise RuntimeError('Required experiment is incomplete: '+evidence)
     if not (ROOT/'output/pdf/A2_Trojan_LLM_Informal_Report.pdf').exists():
         raise RuntimeError('Final report missing.')
+    for run in active['run_seeds']:
+        audit=ROOT/'results'/run/'independent_audit.json'
+        if not audit.exists() or not json.loads(audit.read_text()).get('passed'):
+            raise RuntimeError('Final protocol audit missing: '+run)
+    simulation_audit=ROOT/'results/proposal_audit/audit.json'
+    if not simulation_audit.exists() or not json.loads(simulation_audit.read_text()).get('passed'):
+        raise RuntimeError('Final simulation audit missing.')
+    delivery=ROOT/'results/proposal_completion.json'
+    if not delivery.exists() or not json.loads(delivery.read_text()).get('complete'):
+        raise RuntimeError('Final delivery checks have not passed.')
+    report=ROOT/'output/pdf/A2_Trojan_LLM_Informal_Report'
+    provenance=json.loads(report.with_suffix('.provenance.json').read_text())
+    for suffix,field in [('.pdf','pdf_sha256'),('.txt','text_sha256')]:
+        if hashlib.sha256(report.with_suffix(suffix).read_bytes()).hexdigest()!=provenance[field]:
+            raise RuntimeError('Report differs from its verified provenance: '+suffix)
     selected=[ROOT/n for n in ['README.md','LICENSE','requirements.txt','.gitignore','.gitattributes','.env.example','output/阅读说明.txt']]
     for directory in ['scripts','tests','configs','docs','netlists','results','output/pdf']:
         selected.extend(p for p in (ROOT/directory).rglob('*') if p.is_file()

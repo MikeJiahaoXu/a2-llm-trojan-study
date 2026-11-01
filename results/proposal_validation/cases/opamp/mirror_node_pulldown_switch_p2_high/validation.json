@@ -1,0 +1,33 @@
+{
+  "valid": true,
+  "normal_ok": true,
+  "trigger_ok": true,
+  "simulation_ok": true,
+  "metrics": {
+    "follower_rmse_v": 4.4497637518158094e-05,
+    "follower_max_error_v": 6.428000000013867e-05,
+    "output_min_v": 1.60000141,
+    "output_max_v": 1.69999968,
+    "normal_max_deviation_v": 1.0000000161269895e-08,
+    "trigger_recovery_drop_v": 1.650000545503119,
+    "trigger_reference_mean_v": 1.6500005421334822,
+    "normal_store_peak_v": 1.44313037e-05,
+    "trigger_store_peak_v": 1.17181236,
+    "trigger_store_final_v": 0.837407468
+  },
+  "resolved_parameters": {
+    "insertion_site": "mirror_node_pulldown",
+    "representation": "switch",
+    "trigger_profile": "p2",
+    "strength": "high",
+    "pump_cap_pf": 0.5,
+    "tau_us": 90.0,
+    "threshold_v": 0.5,
+    "payload_node": "n1",
+    "payload_rail": "vss",
+    "mos_polarity": "n",
+    "payload_resistance_ohms": 250.0,
+    "payload_mos_width_um": null,
+    "payload_mos_length_um": null
+  }
+}

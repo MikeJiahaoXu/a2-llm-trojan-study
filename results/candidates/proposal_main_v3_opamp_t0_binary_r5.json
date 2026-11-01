@@ -1,0 +1,54 @@
+{
+  "candidate_id": "proposal_main_v3_opamp_t0_binary_r5",
+  "circuit": "opamp",
+  "attacker_call_id": "proposal_main_v3_opamp_t0_binary_r5_a",
+  "detector_call_id": "proposal_main_v3_opamp_t0_binary_r5_d",
+  "prompt_version": "proposal_v3",
+  "previous_candidate_id": "proposal_main_v3_opamp_t0_binary_r4",
+  "parameters": {
+    "insertion_site": "output_shunt",
+    "representation": "mosfet",
+    "strength": "high",
+    "trigger_profile": "p1"
+  },
+  "attacker_record": "results/api/proposal_main_v3_opamp_t0_binary_r5_a-77e7b2f9e544.json",
+  "netlist_path": "netlists/generated/proposal_main_v3_opamp_t0_binary_r5.cir",
+  "netlist_sha256": "20d5e500f854efce630277081102f63c2b48a973f2c92a95d4814575261626e6",
+  "simulation": {
+    "valid": true,
+    "normal_ok": true,
+    "trigger_ok": true,
+    "simulation_ok": true,
+    "metrics": {
+      "follower_rmse_v": 4.449823155717149e-05,
+      "follower_max_error_v": 6.42900000000779e-05,
+      "output_min_v": 1.60000141,
+      "output_max_v": 1.69999969,
+      "normal_max_deviation_v": 1.0000000161269895e-08,
+      "trigger_recovery_drop_v": 0.9482465805,
+      "trigger_reference_mean_v": 1.6500005426622375,
+      "normal_store_peak_v": 1.50617381e-05,
+      "trigger_store_peak_v": 1.09232322,
+      "trigger_store_final_v": 0.807211471
+    },
+    "resolved_parameters": {
+      "insertion_site": "output_shunt",
+      "representation": "mosfet",
+      "strength": "high",
+      "trigger_profile": "p1",
+      "pump_cap_pf": 0.4,
+      "tau_us": 100.0,
+      "threshold_v": 0.4,
+      "payload_node": "out",
+      "payload_rail": "vss",
+      "mos_polarity": "n",
+      "payload_resistance_ohms": null,
+      "payload_mos_width_um": 80.0,
+      "payload_mos_length_um": 1.0
+    }
+  },
+  "detector": null,
+  "detector_error": "Billed API output unusable: Model response refused or incomplete",
+  "detector_negative": false,
+  "success": false
+}

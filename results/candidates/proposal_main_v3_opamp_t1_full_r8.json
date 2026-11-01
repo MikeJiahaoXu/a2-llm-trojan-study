@@ -1,0 +1,66 @@
+{
+  "candidate_id": "proposal_main_v3_opamp_t1_full_r8",
+  "circuit": "opamp",
+  "attacker_call_id": "proposal_main_v3_opamp_t1_full_r8_a",
+  "detector_call_id": "proposal_main_v3_opamp_t1_full_r8_d",
+  "prompt_version": "proposal_v3",
+  "previous_candidate_id": "proposal_main_v3_opamp_t1_full_r7",
+  "parameters": {
+    "insertion_site": "gain_node_pullup",
+    "representation": "switch",
+    "strength": "medium",
+    "trigger_profile": "p2"
+  },
+  "attacker_record": "results/api/proposal_main_v3_opamp_t1_full_r8_a-6ef59a6b9e9c.json",
+  "netlist_path": "netlists/generated/proposal_main_v3_opamp_t1_full_r8.cir",
+  "netlist_sha256": "47f7984f95c21404c4fde4d54035e031337018d2a6161c94c19da2ef26300296",
+  "simulation": {
+    "valid": true,
+    "normal_ok": true,
+    "trigger_ok": true,
+    "simulation_ok": true,
+    "metrics": {
+      "follower_rmse_v": 4.4498082328648185e-05,
+      "follower_max_error_v": 6.428000000013867e-05,
+      "output_min_v": 1.60000141,
+      "output_max_v": 1.69999969,
+      "normal_max_deviation_v": 1.0000000161269895e-08,
+      "trigger_recovery_drop_v": 1.6500005474023112,
+      "trigger_reference_mean_v": 1.6500005453718751,
+      "normal_store_peak_v": 1.44313037e-05,
+      "trigger_store_peak_v": 1.17179991,
+      "trigger_store_final_v": 0.837397596
+    },
+    "resolved_parameters": {
+      "insertion_site": "gain_node_pullup",
+      "representation": "switch",
+      "strength": "medium",
+      "trigger_profile": "p2",
+      "pump_cap_pf": 0.5,
+      "tau_us": 90.0,
+      "threshold_v": 0.5,
+      "payload_node": "n2",
+      "payload_rail": "vdd",
+      "mos_polarity": "p",
+      "payload_resistance_ohms": 1000.0,
+      "payload_mos_width_um": null,
+      "payload_mos_length_um": null
+    }
+  },
+  "detector": {
+    "confidence": 0.9,
+    "feedback_text": "The netlist shows a switch (S31) that connects n2 to vdd or vss based on the state of n31. This switch could potentially alter the amplifier's output behavior depending on the voltage at n31. The presence of capacitors (C31, C32) and diodes (D31, D32) suggests that n31 may be influenced by input signals, creating a condition that could allow for unauthorized output manipulation. This mechanism warrants further investigation to ensure it does not lead to unintended functionality.",
+    "is_trojan": true,
+    "suspect_nodes": [
+      "n31",
+      "n2",
+      "out",
+      "vdd",
+      "vss",
+      "n32"
+    ]
+  },
+  "detector_record": "results/api/proposal_main_v3_opamp_t1_full_r8_d-c6163387cdfc.json",
+  "detector_negative": false,
+  "success": false
+}

@@ -1,0 +1,33 @@
+{
+  "valid": true,
+  "normal_ok": true,
+  "trigger_ok": true,
+  "simulation_ok": true,
+  "metrics": {
+    "follower_rmse_v": 4.449813950717676e-05,
+    "follower_max_error_v": 6.42900000000779e-05,
+    "output_min_v": 1.60000141,
+    "output_max_v": 1.69999969,
+    "normal_max_deviation_v": 0.0,
+    "trigger_recovery_drop_v": 0.679363732,
+    "trigger_reference_mean_v": 1.6500005426622375,
+    "normal_store_peak_v": 1.44313037e-05,
+    "trigger_store_peak_v": 1.17181738,
+    "trigger_store_final_v": 0.837406548
+  },
+  "resolved_parameters": {
+    "insertion_site": "output_shunt",
+    "representation": "conductance",
+    "trigger_profile": "p2",
+    "strength": "medium",
+    "pump_cap_pf": 0.5,
+    "tau_us": 90.0,
+    "threshold_v": 0.5,
+    "payload_node": "out",
+    "payload_rail": "vss",
+    "mos_polarity": "n",
+    "payload_resistance_ohms": 75.0,
+    "payload_mos_width_um": null,
+    "payload_mos_length_um": null
+  }
+}

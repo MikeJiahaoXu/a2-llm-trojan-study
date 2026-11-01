@@ -1,0 +1,26 @@
+{
+  "protocol": "proposal_v3",
+  "date_local": "2026-11-01",
+  "timezone": "Asia/Singapore",
+  "circuits": ["opamp", "and4"],
+  "feedback_levels": ["none", "binary", "full"],
+  "trajectories": 2,
+  "rounds_per_trajectory": 10,
+  "shared_first_round": true,
+  "control_repeats": 5,
+  "model": "gpt-4o-mini-2024-07-18",
+  "temperature": 0.3,
+  "run_seeds": {"proposal_main_v3": 110101, "proposal_repeat_v3": 210101},
+  "primary_metric": "simulation-valid AND reviewer-negative / all attempts",
+  "secondary_metrics": ["simulation-valid / all attempts", "reviewer-negative / simulation-valid attempts", "at least one valid reviewer-negative result within ten attempts"],
+  "notes": [
+    "Exactly two benchmarks and three feedback conditions; no additional experimental arm.",
+    "Twenty attempts per circuit/condition/run, organized as two ten-attempt trajectories. None is fresh independent generation at every attempt.",
+    "Within each circuit/start the first candidate and its review are shared across the three arms. Subsequent binary/full requests see their own immediately preceding candidate.",
+    "Binary receives only the preceding Boolean verdict; full receives the complete preceding reviewer JSON. No simulator results are sent to any attacker.",
+    "The netlist-only reviewer is the explicitly permitted minimal implementation in the execution plan; it is not full SPICED.",
+    "Bounded JSON circuit edits use an offline electrically qualified Cartesian template space. Every generated candidate is simulated again and failures remain in the denominator.",
+    "Both run identifiers and seeds are fixed before the first review. The second run is an independent API replication of the same protocol, not cached reuse.",
+    "No early stopping on success and no tuning to require none < binary < full. Rates are descriptive; adaptive attempts are not IID."
+  ]
+}

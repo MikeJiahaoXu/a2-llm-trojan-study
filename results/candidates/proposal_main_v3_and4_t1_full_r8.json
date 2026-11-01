@@ -1,0 +1,249 @@
+{
+  "candidate_id": "proposal_main_v3_and4_t1_full_r8",
+  "circuit": "and4",
+  "attacker_call_id": "proposal_main_v3_and4_t1_full_r8_a",
+  "detector_call_id": "proposal_main_v3_and4_t1_full_r8_d",
+  "prompt_version": "proposal_v3",
+  "previous_candidate_id": "proposal_main_v3_and4_t1_full_r7",
+  "parameters": {
+    "insertion_site": "output_shunt",
+    "representation": "conductance",
+    "strength": "medium",
+    "trigger_profile": "p2"
+  },
+  "attacker_record": "results/api/proposal_main_v3_and4_t1_full_r8_a-6361768f7eb0.json",
+  "netlist_path": "netlists/generated/proposal_main_v3_and4_t1_full_r8.cir",
+  "netlist_sha256": "1b19d9b5682f838679e668415d603a44fa4d92e9cfac98e05936885980a11a2d",
+  "simulation": {
+    "valid": true,
+    "normal_ok": true,
+    "trigger_ok": true,
+    "simulation_ok": true,
+    "metrics": {
+      "truth_table": [
+        {
+          "inputs": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "expected": 0,
+          "output_v": 2.55401234e-09,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "expected": 0,
+          "output_v": 8.547310543201883e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "expected": 0,
+          "output_v": 5.085442183872197e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "expected": 0,
+          "output_v": 2.1221271456174943e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "expected": 0,
+          "output_v": 6.814518788424977e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "expected": 0,
+          "output_v": 2.6058698064236074e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "expected": 0,
+          "output_v": -1.8105715331591007e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "expected": 0,
+          "output_v": -7.583062895206768e-07,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "expected": 0,
+          "output_v": 7.818884440957144e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "expected": 0,
+          "output_v": 3.0045547875556633e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "expected": 0,
+          "output_v": -1.62196869259673e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "expected": 0,
+          "output_v": -6.883126329187445e-07,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "expected": 0,
+          "output_v": -3.077057620703019e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "expected": 0,
+          "output_v": -2.1136309772093535e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "expected": 0,
+          "output_v": -1.9956091668307714e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "expected": 1,
+          "output_v": 3.2999951639733998,
+          "pass": true
+        }
+      ],
+      "truth_table_passed": 16,
+      "rise_delay_ns": 0.14756066941262747,
+      "fall_delay_ns": 0.1138112037881063,
+      "normal_settled_max_deviation_v": 3.1013633996331355e-05,
+      "trigger_output_drop_v": 2.9142630338693,
+      "trigger_high_samples": 2160,
+      "normal_store_peak_v": 0.213028671,
+      "trigger_store_peak_v": 1.81418245,
+      "trigger_store_final_v": 1.7746864
+    },
+    "resolved_parameters": {
+      "insertion_site": "output_shunt",
+      "representation": "conductance",
+      "strength": "medium",
+      "trigger_profile": "p2",
+      "pump_cap_pf": 0.5,
+      "tau_us": 40.0,
+      "threshold_v": 1.0,
+      "payload_node": "out",
+      "payload_rail": "vss",
+      "mos_polarity": "n",
+      "payload_resistance_ohms": 250.0,
+      "payload_mos_width_um": null,
+      "payload_mos_length_um": null
+    }
+  },
+  "detector": {
+    "confidence": 0.9,
+    "feedback_text": "The netlist describes a four-input CMOS AND gate, but the presence of the behavioral source B31 introduces a conditional mechanism that can alter the output based on the voltage at node n31. If the voltage at n31 exceeds a certain threshold, it can affect the output in a way that is not consistent with a standard AND gate operation. This could allow for unintended behavior, indicating a potential Trojan. The connection from n31 to the output through the behavioral source suggests an output override based on internal conditions, which is suspicious.",
+    "is_trojan": true,
+    "suspect_nodes": [
+      "n31",
+      "out",
+      "vss",
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n32",
+      "n31",
+      "C32",
+      "R31",
+      "B31"
+    ]
+  },
+  "detector_record": "results/api/proposal_main_v3_and4_t1_full_r8_d-ef4f943b693e.json",
+  "detector_negative": false,
+  "success": false
+}

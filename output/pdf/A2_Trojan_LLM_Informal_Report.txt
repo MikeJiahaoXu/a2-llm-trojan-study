@@ -1,140 +1,129 @@
 A2 Trojans in the LLM Era
 
-Does Detection Feedback Help an Attacker?
-An exploratory study of A2-inspired modifications in small circuit netlists
+Do More Detailed Detector Responses Help an Attacker?
 
-Amber Tsao (cctsao)  |  Jiahao Xu (e1583425)
-Information Security course project  |  30 October 2026
-
-No valid candidate escaped in the baseline. A model-swap follow-up produced 1 valid evasion event against the same reviewer. This exploratory exception does not establish that more detailed feedback improves evasion.
+Amber Tsao (cctsao) and Jiahao Xu (e1583425)
+Information Security course project | November 1, 2026
 
 Research question
 
-Diagnostic explanations help a designer locate suspicious circuitry, but the same explanation may tell an attacker what to change. We ask whether increasing access to an LLM reviewer's feedback helps an LLM produce a functioning circuit modification that the reviewer accepts. The distinction between functioning and merely unflagged matters: an attacker can make a circuit less conspicuous by weakening the very behavior it is meant to induce.
+A circuit-security reviewer may explain a suspicious modification so that a designer can investigate it. An attacker who receives the same explanation may instead use it to revise the modification. We study this tension through the proposal's minimal LLM-A2 loop: two compact circuits, a constrained attacker, a fixed detector, and three levels of detector feedback. The question is whether giving the attacker more detailed feedback increases the rate of electrically effective modifications that the detector does not flag.
 
-A2 [1] motivates an analog-state trigger that accumulates charge from signal transitions. SPICED [2] motivates LLM-assisted Trojan detection, and LATENT [3] motivates feedback-guided modification. We study a deliberately narrower setting with a two-stage operational amplifier and a four-input AND gate. Two simplifications define the experiment: the attacker selects parameters for a fixed charge-pump/output-load template, and the reviewer performs netlist-only analysis. This is not a reproduction of the original hardware or complete published frameworks.
+A2 demonstrates malicious hardware using analog charge accumulation [1]. SPICED uses LLMs to identify Trojan components and affected nodes [2], while LATENT iteratively modifies netlists using detector feedback [3]. Our project implements their attacker-detector interaction at course-project scale using ngspice, a two-stage op-amp and a four-input AND gate. It omits syntax-repair evaluation and uses the proposal's permitted JSON-to-verified-template implementation.
 
-Controlled feedback comparison
+Exactly three feedback conditions
 
-In the baseline, attacker and reviewer both use gpt-4o-mini-2024-07-18 at temperature 0.3, without fine-tuning. The attacker receives the clean circuit, parameter bounds, test conditions and one verified starting example. Its objective is to preserve normal behavior while inducing a disturbance. The reviewer receives only the candidate netlist and intended function. Separate stateless reviews keep attacker instructions and condition labels out of its input.
+Condition | Information available when proposing the next candidate
 
-For each circuit, five separately seeded trajectories contain four attempts in each of three conditions. None generates each proposal without prior feedback. Binary receives the preceding parameters and a Boolean detection verdict. Full additionally receives confidence, suspect nodes and diagnostic text. The first candidate and verdict are shared across the three conditions. Later attempts use the same opportunity count and receive no simulation results. The comparison comprises 120 condition-specific rows from 100 generation events.
+None | Circuit, test conditions and permitted edits. Every attempt is a fresh proposal; no previous candidate or review is shown.
 
-Binary versus full isolates feedback detail within the same revision procedure. Comparisons with none also change access to the preceding candidate, so they combine feedback and memory effects. Prompts are fixed during the final experiment, condition order is shuffled reproducibly, and all four attempts are retained. Repeated netlists are counted as repeated generations, not as additional circuit families.
+Binary | The same task information, the preceding candidate's parameters and only the preceding is_trojan verdict.
 
-Evaluation endpoints
+Full | The same task information and preceding parameters, plus the complete reviewer JSON: verdict, confidence, suspicious identifiers and explanation/suggestion.
 
-The primary endpoint is electrically valid AND reviewer-negative candidates / all attempts. Validity requires acceptable behavior under the normal stimulus and a sufficient output disturbance under the activation stimulus. Secondary measures are evasion conditional on validity and at least one valid evasion within a trajectory. Invalid candidates remain failures. Because adaptive rounds are dependent, attempt proportions are descriptive; trajectory-level intervals use five starts and require an independence assumption.
+Both roles use gpt-4o-mini-2024-07-18 at temperature 0.3; no model is fine-tuned. Each circuit/condition has two ten-attempt starts, or 20 recorded opportunities. The first candidate and its review are shared across conditions within a start. Binary and full subsequently revise their own immediately preceding candidate; none continues independent generation. Thus each run has 120 condition rows but 112 actual candidate-generation/review events. A predeclared second run uses new seeds and the same generation/review settings. Its changed control-continuation rule is disclosed on page 4; both run identifiers and seeds were fixed before the first experiment.
 
-
-============================================================
-
-
-Circuit model and electrical validation
-
-Simulation uses ngspice 47, 3.3 V and generic LEVEL=1 MOS models. The op-amp has two gain stages with Miller compensation; AND4 is a NAND4 followed by an inverter. Clean circuits and manually specified positive controls establish the intended normal and disturbed behavior. These are simulation measurements, not device characterization.
-
-Check | Measured result | Meaning / criterion
-
-Op-amp gain / bandwidth | 95.47 dB / 131.9 Hz | Clean small-signal AC response
-
-Unity gain / phase margin | 9.21 MHz / 50.4 degrees | Clean compensated feedback behavior
-
-Follower RMS error | 0.044 mV | 1.65 V +/- 50 mV at 10 kHz
-
-AND truth table / delays | 16/16; rise 0.148 ns; fall 0.115 ns | 50% crossings; fall switches all four inputs
-
-Op-amp positive control | Dormant max deviation <0.001 mV; triggered drop 0.885 V | Pass: dormant <=20 mV; triggered >=0.3 V
-
-AND positive control | 16/16; dormant deviation 0.031 mV; triggered drop 2.991 V | Pass: settled deviation <=0.2 V; triggered >=0.8 V
-
-Figure 1. Clean and positive-control outputs under identical activation stimuli: op-amp recovery after the burst and AND late burst cycles. Both controls pass normal-stimulus checks and exceed the disturbance threshold.
-
-Trigger abstraction and stimulus limits
-
-A diode-capacitor network accumulates charge against resistive leakage. A thresholded switch or smooth behavioral current loads the output. The attacker varies representation, names and bounded component parameters while the core circuit stays fixed. These choices explore one mechanism, rather than unrestricted Trojan topologies.
-
-The op-amp normal stimulus is a 10 kHz sinusoid at 1.65 V +/-50 mV; activation uses a 1 MHz burst between 0.6 and 2.7 V. Both amplitude and frequency change. The burst ends at t=45 us and recovery is evaluated at t=50-60 us. AND4 normal inputs enumerate 16 combinations at 20 us intervals; activation toggles one input at 1 MHz with the others high.
-
-A post-hoc amplitude-by-frequency check over 40 us found no output disturbance at 0.1 V peak-to-peak for either 25 kHz or 1 MHz. At 2.1 V peak-to-peak, 25 kHz produced a 0.065 V reservoir peak and negligible disturbance; 1 MHz produced 1.092 V and a 0.885 V drop. Both sufficient swing and rapid accumulation matter for this positive control. Separately, the AND single-input fall delay was 0.143 ns; it is a different transition from the tabulated all-input fall.
+The detector is stateless and sees only the nominal circuit function and candidate netlist. It receives no clean reference, true label, simulation traces or attack history. No arm receives simulator feedback. All allowed circuit choices are electrically qualified beforehand, and each generated candidate is simulated again. Prompts and circuit code are frozen across both runs; there is no success-based early stopping.
 
 
 ============================================================
 
 
-Baseline results: a detection ceiling
+Circuit verification and permitted edits
 
-Circuit | Feedback | Valid | Primary success | Given valid | Any success; 95% CI
+Clean benchmark | Measured behavior at the nominal operating point
 
-Op-amp | none | 20/20 | 0/20 (0%) | 0% | 0/5 [0.0%, 43.4%]
+Two-stage op-amp | DC gain 95.47 dB; -3 dB bandwidth 131.90 Hz; unity-gain frequency 9.208 MHz; phase margin 50.38 degrees.
 
-Op-amp | binary | 10/20 | 0/20 (0%) | 0% | 0/5 [0.0%, 43.4%]
+Four-input AND | 16/16 truth-table cases pass. Rise delay 0.1476 ns; fall delay 0.1147 ns when all four inputs fall together. Load: 100 fF; input edge: 100 ps.
 
-Op-amp | full | 8/20 | 0/20 (0%) | 0% | 0/5 [0.0%, 43.4%]
+Both circuits operate at 3.3 V with pedagogical transistor models. The inserted trigger uses input transitions, a coupling capacitor, two diodes, a 10 pF charge reservoir and a bleed resistor. When the reservoir crosses a threshold, an added branch disturbs the output or an internal bias/gain node. This is an A2-inspired simulation abstraction, not the fabricated A2 processor or a layout-level attack.
 
-AND4 | none | 20/20 | 0/20 (0%) | 0% | 0/5 [0.0%, 43.4%]
+The attacker selects four categorical JSON fields: insertion site, device representation, trigger profile and loading strength. Op-amp sites are the output, first-stage gain node and PMOS mirror reference node; AND sites are the final output and internal NAND output. Three representations implement a thresholded resistive switch, smooth state-dependent conductance, or an added MOSFET driven by an ideal reservoir comparator. Three fixed RC/threshold profiles and three strengths complete the menu. Identifiers are fixed, and the original circuit core cannot be edited.
 
-AND4 | binary | 20/20 | 0/20 (0%) | 0% | 0/5 [0.0%, 43.4%]
+Electrical acceptance
 
-AND4 | full | 20/20 | 0/20 (0%) | 0% | 0/5 [0.0%, 43.4%]
+The op-amp must remain within 20 mV of the clean follower during normal operation and produce at least 0.3 V output reduction at absolute time 50-60 us. The activating burst lasts from 5 to 45 us. Normal input is 1.65 V +/- 50 mV at 10 kHz; the burst spans 0.6-2.7 V at 1 MHz, so both swing and frequency change. The AND must preserve all 16 truth-table cases and settled output within 0.2 V, then reduce its high output by at least 0.8 V during the late 1 MHz burst with the other inputs high.
 
-Primary = valid and undetected / all attempts. Given valid = valid and undetected / valid attempts. The last column counts trajectories with any success and gives a Wilson interval under independence of starts. The shared first round and adaptive later rounds are not independent attempts.
+All 81/81 op-amp and 54/54 AND menu combinations pass both dormant and activated checks, including an independent uniformly sampled waveform check. The smallest output disturbances are 0.523 V and 1.901 V, respectively. This qualification covers the complete finite menu under the stated nominal stimuli; it does not cover arbitrary component values, process/voltage/temperature variation, or silicon behavior.
 
-Figure 2. Electrical validity and detection outcomes for the six conditions. An invalid circuit is unsuccessful even if its modification appears less suspicious. The first-round candidate is shared across conditions; percentages describe condition-specific attempts.
-
-All 100/100 generation events received a positive detection verdict, including all 78 electrically valid events. These events produced 28 distinct netlist texts (22 op-amp, 6 AND), of which only 12 were valid. The 120 rows include shared first rounds. Thus every condition has zero valid evasion, but the classification endpoint has no variation with which to estimate a feedback advantage.
-
-Feedback revisions and payload effectiveness
-
-In one op-amp trajectory, a full-feedback revision changed the output-load resistance from 100 to 300 ohms along with other parameters. The recovery disturbance fell from 0.523 V to 0.006 V, below the 0.3 V criterion, while normal behavior remained acceptable. Both candidates were detected. This example illustrates a loss of payload effectiveness, not concealment; simultaneous parameter changes prevent attributing the loss to resistance alone.
-
-Post-hoc sensitivity check. With a looser 0.2 V op-amp drop threshold, valid counts become 20/20, 20/20 and 14/20. Validity fractions therefore depend on the cutoff. Successful evasion remains zero under every tested threshold. The primary threshold was not changed. The 0-43.4% interval for zero successes in five trajectories is conditional on this narrow setup, not a bound on all possible analog Trojans.
+Figure 1. Existing ngspice traces for the clean circuit and known-positive control. Left: op-amp recovery after the burst. Right: AND output during late burst activity. These controls illustrate the electrical effect; the LLM reviewer is not given these traces.
 
 
 ============================================================
 
 
-Supplementary model comparison
+Six-group experiment: first run
 
-These supplementary analyses were designed after observing the baseline detection ceiling. Their inclusion and deduplication rules were fixed before the additional generations, but they are exploratory follow-ups rather than independent confirmation. They address two different questions: whether a model change expands the attacker's search, and whether another reviewer reaches the same verdicts on frozen candidate circuits.
+We define successful evasion as a candidate that passes both electrical checks and receives is_trojan=false. The primary rate divides this count by every recorded attempt. The conditional rate divides by physically valid attempts only. A missing or malformed output, failed simulation, or ineffective payload remains an unsuccessful attempt; a negative review alone is insufficient.
 
-Changing the attacker
+Circuit | Feedback | Valid | Evades / all | Evades / valid | Distinct netlists
 
-The first follow-up replaces only the attacker with gpt-5.4-mini-2026-03-17, retaining the GPT-4o mini reviewer, prompts, templates, test stimuli and thresholds. It repeats the six conditions with five starts and four attempts, sharing the first candidate within each model's feedback arms. Temperature remains 0.3 and reasoning effort is set to none. The alternative model receives no seed parameter; comparisons across models therefore do not pair identical random draws.
+Two-stage op-amp | none | 20/20 | 0/20 (0.0%) | 0/20 (0.0%) | 1
 
-Circuit | Feedback | Baseline valid | New model valid | New model success | Successful starts
+Two-stage op-amp | binary | 20/20 | 5/20 (25.0%) | 5/20 (25.0%) | 13
 
-Op-amp | none | 20/20 | 20/20 | 0/20 | 0/5
+Two-stage op-amp | full | 20/20 | 6/20 (30.0%) | 6/20 (30.0%) | 11
 
-Op-amp | binary | 10/20 | 16/20 | 0/20 | 0/5
+Four-input AND | none | 20/20 | 4/20 (20.0%) | 4/20 (20.0%) | 1
 
-Op-amp | full | 8/20 | 5/20 | 0/20 | 0/5
+Four-input AND | binary | 20/20 | 6/20 (30.0%) | 6/20 (30.0%) | 5
 
-AND4 | none | 20/20 | 20/20 | 0/20 | 0/5
+Four-input AND | full | 20/20 | 5/20 (25.0%) | 5/20 (25.0%) | 7
 
-AND4 | binary | 20/20 | 18/20 | 1/20 | 1/5
+Table 1. Every group has 20 opportunities. Distinct-netlist counts use exact netlist hashes; repeated proposals and the shared first attempt remain visible in the experiment counts.
 
-AND4 | full | 20/20 | 5/20 | 0/20 | 0/5
+Two-stage op-amp (none: 0/20, binary: 5/20, full: 6/20). The observed rates follow the proposed increasing order. Four-input AND (none: 4/20, binary: 6/20, full: 5/20). The observed rates do not follow a strictly increasing none-to-binary-to-full order.
 
-Validity and success use the same electrical criteria in both experiments. Baseline valid evasion is zero in every group. New model success counts valid, reviewer-negative candidates, not all negative verdicts.
+Detector controls
 
-Fresh checks of the unchanged reviewer flagged clean controls 0/5 and 0/5, and positive controls 5/5 and 5/5 (op-amp, AND4). These repeat the same control circuits.
+Circuit | Clean design flagged | Known positive flagged
 
-The alternative attacker produced 71 distinct netlist texts from 100 generation events; 64 events met the electrical criteria and 99 were flagged by the unchanged reviewer. It used 3 of three representations and 3 of three naming styles. This measures broader exploration of the permitted template, not independent physical attack mechanisms or an intrinsic model ranking.
+Two-stage op-amp | 0/5 | 4/5
 
-Reviewing frozen candidates with another model
+Four-input AND | 0/5 | 4/5
 
-A separate retrospective check uses gpt-5.4-mini-2026-03-17 with the fixed review prompt. Every distinct netlist text in the union of the two generation experiments is included once, irrespective of its validity or previous verdict. This compares reviewers on fixed inputs; the new reviewer's feedback is never returned to either attacker. It is therefore not an adaptive stronger-attacker/stronger-reviewer experiment.
+During control calibration, 2 prompt refinements used recorded control results to address clean false flags and known-positive misses, clarifying ordinary circuit motifs, SPICE connectivity and internal conditional state. Both preceded every attack in the final experiment. Final controls reuse these benchmark designs and are not held out.
 
-Circuit | Distinct inputs | Valid inputs | New reviewer flags | Valid inputs missed
+The prespecified gate requires at most one clean flag and at least four known-positive flags across five judgments of each circuit. These repetitions assess four specific designs, not general false-positive or recall rates over unseen designs. Reviewer confidence is self-reported and uncalibrated.
 
-Op-amp | 56 | 23 | 55 | 0
+What the comparison can identify
 
-AND4 | 43 | 27 | 43 | 0
+The first run contains 112 actual candidate events and 27 distinct netlist texts. Shared starting candidates improve comparability, but adaptive attempts within a start depend on preceding responses. We therefore treat the rates as descriptive observations and do not attach independent-binomial significance tests to the 20 attempt rows. None versus the feedback conditions also changes access to the preceding candidate; binary versus full more directly compares the amount of reviewer detail.
 
-The new reviewer disagreed with the stored representative verdict on 2/99 distinct inputs. Its clean-control flags were 0/5 and 0/5; positive-control flags were 5/5 and 5/5. Each candidate has one new judgment, and the controls still repeat the same four designs. These denominators differ from the adaptive attempt counts.
+One unflagged AND4 candidate uses output shunt, MOSFET, profile p2 and medium strength. Its output disturbance is 2.634 V; normal deviation is 30.926 microvolts. The review states: "The netlist describes a standard four-input CMOS AND gate with additional components that do not alter its intended function." Across both runs, this exact netlist is flagged in 42/60 recorded candidate reviews. These are repeated judgments of one circuit, not additional circuit families or proof that feedback caused the miss.
 
-Re-simulation reproduced the stored measurements for all 99 distinct candidate netlists; an independent uniform-time calculation agreed with every validity classification. Code, prompts, netlists and measurements are available in the project repository (https://github.com/MikeJiahaoXu/a2-llm-trojan-study).
+
+============================================================
+
+
+Stability of the same three conditions
+
+The second run uses new API requests and seeds with the same model, prompts, finite circuit menu, stimuli, electrical acceptance thresholds and ten-attempt structure. Its clean controls have 0/5 flags for each circuit, but known positives are flagged only 3/5 times each, below the prespecified 4/5 requirement and the first run's 4/5 results. After observing the first-run results and repeat controls, an explicit continuation-rule deviation was recorded before second-run attack trials. No prompt, seed or circuit setting was changed and controls were not rerun. This is a same-settings stability assessment, not confirmation that passed the original control gate.
+
+Circuit | Feedback | First run | Repeat run | Combined | Starts with evasion
+
+Two-stage op-amp | none | 0/20 | 0/20 | 0/40 (0.0%) | 0/4
+
+Two-stage op-amp | binary | 5/20 | 8/20 | 13/40 (32.5%) | 4/4
+
+Two-stage op-amp | full | 6/20 | 7/20 | 13/40 (32.5%) | 3/4
+
+Four-input AND | none | 4/20 | 6/20 | 10/40 (25.0%) | 4/4
+
+Four-input AND | binary | 6/20 | 3/20 | 9/40 (22.5%) | 4/4
+
+Four-input AND | full | 5/20 | 1/20 | 6/40 (15.0%) | 3/4
+
+Table 2. Counts are physically valid, unflagged attempts. The last column counts starts containing at least one such result. For none, a start simply groups ten fresh independent proposals. Shared first attempts create cross-condition dependence; combined rates summarize the observations without making the individual rows independent.
+
+Figure 2. Primary evasion rates in the first and repeat runs, with raw counts. The vertical scale is common to both circuits. The paper's component-localization percentages are not plotted as directly comparable reference bars.
+
+Two-stage op-amp (none: 0/20, binary: 8/20, full: 7/20). The observed rates do not follow a strictly increasing none-to-binary-to-full order. Four-input AND (none: 6/20, binary: 3/20, full: 1/20). The observed rates do not follow a strictly increasing none-to-binary-to-full order.
+
+Before any feedback, 0/4 op-amp and 2/4 AND starting candidates already receive a negative review. These shared initial outcomes contribute to all three conditions and cannot be attributed to feedback.
+
+Across both runs there are 240 condition rows, 224 actual candidate events and 29 distinct netlists. Electrical validity is 240/240. High validity reflects selection from a qualified menu, not evidence that an LLM can reliably synthesize arbitrary malicious transistor circuits.
 
 
 ============================================================
@@ -142,36 +131,26 @@ Re-simulation reproduced the stored measurements for all 99 distinct candidate n
 
 Interpretation and limitations
 
-Detector calibration
+The combined observations are Two-stage op-amp: none 0/40, binary 13/40, full 13/40; Four-input AND: none 10/40, binary 9/40, full 6/40. Full feedback has no consistent observed advantage over binary feedback. Four starts per circuit/condition across two runs provide limited evidence about stability, and cannot establish general statistical superiority or a universal ordering of none, binary and full feedback. The repeat's positive-control failure weakens any claim of confirmation and shows that reviewer sensitivity varies even for fixed known-positive designs.
 
-During exploratory testing, the initial prompt mislabeled both clean circuits in every repeat (10/10 false flags). Before the final comparison, it was refined to recognize ordinary bias and compensation motifs and require trigger-to-payload evidence. Final clean-control flags were 0/5 and 1/5; positive-control flags were 5/5 and 5/5, for op-amp and AND4 respectively. These same circuits informed prompt development, so controls are not held out. Repeated judgments of four fixed netlists cannot estimate population false-positive rates or sensitivity.
+An effective circuit receiving a negative review demonstrates a detector miss within this experiment. A greater count in an adaptive condition is consistent with feedback helping selection, but small samples, repeated netlists and stochastic judgments limit that interpretation. A single miss does not demonstrate reliable concealment. We retain the complete condition results rather than selecting only trajectories that support the proposed trend.
 
-Identifiability at the observed ceiling
+Relationship to SPICED and LATENT
 
-The baseline is a bounded exploratory negative result: every allowed variant retains a recognizable charge-storage-to-output path, and every generated candidate is flagged. This ceiling prevents identifying a benefit from more detailed feedback. Validity differences show changed electrical behavior, not a general evasion effect. Neither the ceiling nor confidence scores establish broad reviewer robustness.
+SPICED's detector uses voltage/current simulation logs, specifications and anomaly rules with few-shot examples [2, Sec. IV and Table III]. Our netlist-only reviewer follows the minimal detector specified in the project plan, so it tests structural reasoning rather than reproducing SPICED's complete detection pipeline. Its explanations may contain errors even when its Boolean label is correct; explanation quality is not independently scored here.
 
-The model-swap follow-up yielded 1 valid evasion event. This is an exception within the permitted template, not a monotonic feedback effect or a reliable model ranking. The comparison is exploratory, and a single negative judgment does not show stable evasion across repeated reviews.
+LATENT permits component-type and insertion-node changes, uses simulation-informed diagnosis and reversion, and reports 6-12 iterations in Table I [3]. It describes DC-activated Trojans, whereas our tests use transient charge accumulation. Most importantly, its 23.7% one-shot and 94.4% iterative figures average the proportion of inserted Trojan components escaping localization in resulting designs, not successful whole-candidate attempts. Those figures motivate the feedback question but are not numerical targets or acceptance criteria for this project.
 
-In the observed AND binary-feedback case, all 16 normal logic cases passed, settled deviation was 0.031 mV, and the activated high-output drop was 3.022 V. The original reviewer treated the extra network as potentially ordinary biasing and requested simulation. The alternative reviewer flagged this same netlist. This case separates real simulated payload behavior from a model's interpretation; it does not isolate the causal role of naming, feedback or reviewer randomness.
+Scope of the conclusion
 
-A post-hoc check kept that netlist and prompt fixed for five fresh judgments per reviewer: GPT-4o mini flagged it 4/5 times and GPT-5.4 mini 5/5. The observed miss is therefore intermittent rather than stable concealment. This success-selected case is not pooled into the original rates and cannot estimate general reviewer error.
+The finite menu improves electrical interpretability while limiting attack diversity. Qualification covers the exact nominal tests, not rare-input coverage, process variation or fabricated hardware. Op-amp activation changes amplitude and frequency together, so it is not a frequency-only causal experiment. The same model family supplies both roles, and control examples are specific to the two benchmarks. These choices support a reproducible course-scale comparison of feedback detail, not a general evaluation of LLM hardware-security assurance.
 
-Relation to earlier work
+References and availability
 
-LATENT reports mean component-level evasion of 23.7% with one-shot prompting and 94.4% with iterative refinement across 15 circuits [3]. That localization-oriented endpoint differs from our requirement that an entire valid candidate receive a negative verdict; these percentages are not directly comparable.
+[1] K. Yang, M. Hicks, Q. Dong, T. Austin and D. Sylvester. "A2: Analog Malicious Hardware." IEEE S&P, 2016, pp. 18-37. doi:10.1109/SP.2016.10 (https://doi.org/10.1109/SP.2016.10).
 
-SPICED uses specifications, simulation-derived voltage/current information and few-shot rules [2]. Our netlist-only review omits this evidence, and our fixed template is much narrower than LATENT's insertion strategy. In the baseline, all generations retained plain names and none selected the offered subcircuit form; the verified starting example and low sampling temperature may anchor exploration. Generic devices and an abstract behavioral payload also preclude claims about the area, power, stealth or manufacturability of original A2 hardware [1].
+[2] J. Chaudhuri, D. Thapar, A. Chaudhuri, F. Firouzi and K. Chakrabarty. "SPICED: Syntactical Bug and Trojan Pattern Identification in A/MS Circuits using LLM-Enhanced Detection." 2024. arXiv:2408.16018 (https://arxiv.org/abs/2408.16018).
 
-Next experiment
+[3] J. Chaudhuri, A. Chaudhuri and K. Chakrabarty. "LATENT: LLM-Augmented Trojan Insertion and Evaluation Framework for Analog Netlist Topologies." 2025. arXiv:2505.06364 (https://arxiv.org/abs/2505.06364).
 
-A more discriminating evaluation would use independently designed attack families, benign look-alike modifications and held-out circuits, seeking a reviewer with neither universal acceptance nor universal rejection. Matched-amplitude frequency sweeps would separate trigger mechanisms. Comparing netlist-only review with simulation-informed review would then test whether detailed diagnostics improve defense, assist valid evasion, or both.
-
-References
-
-[1] K. Yang, M. Hicks, Q. Dong, T. Austin and D. Sylvester. A2: Analog Malicious Hardware. IEEE Symposium on Security and Privacy, 2016, pp. 18-37. DOI: 10.1109/SP.2016.10. Original paper (https://www.ieee-security.org/TC/SP2016/papers/0824a018.pdf).
-
-[2] J. Chaudhuri, D. Thapar, A. Chaudhuri, F. Firouzi and K. Chakrabarty. SPICED: Syntactical Bug and Trojan Pattern Identification in A/MS Circuits using LLM-Enhanced Detection. PAINE 2024; arXiv:2408.16018 (https://arxiv.org/abs/2408.16018).
-
-[3] J. Chaudhuri, A. Chaudhuri and K. Chakrabarty. LATENT: LLM-Augmented Trojan Insertion and Evaluation Framework for Analog Netlist Topologies. ICLAD 2025; arXiv:2505.06364 (https://arxiv.org/abs/2505.06364).
-
-Acknowledgement: an AI coding assistant supported implementation and drafting. All numerical results were computed from recorded model outputs and circuit simulations.
+Code, prompts, netlists and recorded evidence: github.com/MikeJiahaoXu/a2-llm-trojan-study (https://github.com/MikeJiahaoXu/a2-llm-trojan-study). AI tools assisted implementation and report preparation; experimental quantities are computed from recorded API responses and simulator outputs.

@@ -1,0 +1,61 @@
+{
+  "run_id": "proposal_main_v1",
+  "config": {
+    "protocol": "proposal_v1",
+    "date_local": "2026-11-01",
+    "timezone": "Asia/Singapore",
+    "circuits": [
+      "opamp",
+      "and4"
+    ],
+    "feedback_levels": [
+      "none",
+      "binary",
+      "full"
+    ],
+    "trajectories": 2,
+    "rounds_per_trajectory": 10,
+    "shared_first_round": true,
+    "control_repeats": 5,
+    "model": "gpt-4o-mini-2024-07-18",
+    "temperature": 0.3,
+    "run_seeds": {
+      "proposal_main_v1": 110101,
+      "proposal_repeat_v1": 210101
+    },
+    "primary_metric": "simulation-valid AND reviewer-negative / all attempts",
+    "secondary_metrics": [
+      "simulation-valid / all attempts",
+      "reviewer-negative / simulation-valid attempts",
+      "at least one valid reviewer-negative result within ten attempts"
+    ],
+    "notes": [
+      "Exactly two benchmarks and three feedback conditions; no additional experimental arm.",
+      "Twenty attempts per circuit/condition/run, organized as two ten-attempt trajectories. None is fresh independent generation at every attempt.",
+      "Within each circuit/start the first candidate and its review are shared across the three arms. Subsequent binary/full requests see their own immediately preceding candidate.",
+      "Binary receives only the preceding Boolean verdict; full receives the complete preceding reviewer JSON. No simulator results are sent to any attacker.",
+      "The netlist-only reviewer is the explicitly permitted minimal implementation in the execution plan; it is not full SPICED.",
+      "Bounded JSON circuit edits use an offline electrically qualified Cartesian template space. Every generated candidate is simulated again and failures remain in the denominator.",
+      "Both run identifiers and seeds are fixed before the first review. The second run is an independent API replication of the same protocol, not cached reuse.",
+      "No early stopping on success and no tuning to require none < binary < full. Rates are descriptive; adaptive attempts are not IID."
+    ]
+  },
+  "base_seed": 110101,
+  "source_hashes": {
+    "configs/proposal_experiment.json": "c81c43acf2807f354cba558828a521dc267f12cc69887f8a4c24254e0bcfbd07",
+    "configs/proposal_prompts/attacker.txt": "8a1b098741f3a03fd8563cf4185f3719786f2c3324f0a1e656bdc03344196d58",
+    "configs/proposal_prompts/detector.txt": "b9308348f07dd7309cd05d55e09011ed869dcd7c34e922c05978b736fe547ab6",
+    "netlists/templates/and4.cir": "c1c437c444686b3ffb6fae253431407ca79a60e30c823850a8f4cae85d37a39e",
+    "netlists/templates/opamp.cir": "488db83556b42172da6e34e7ef8097d8bc23c05fefc4d9e8d604bcd76d7e48e3",
+    "results/proposal_validation/qualification_summary.json": "fdd235074ff8f7f0ac3347c1ebd4c13c635e4b28ec7907e8372aa87d022292df",
+    "scripts/detector/review.py": "ba91dfd73362c12b37f18d0acdaff4b5f25c2efeebad381fe4b73092aef1d661",
+    "scripts/llm_client.py": "1725f16d565ef8347dff05cbb9f9751adca002a5c2bb8c847b0297b40e0cf943",
+    "scripts/model_client.py": "a8c1ff4fcf1a319fa84c5a85dd0060f7db7b1be0166d47f55fe815110b777992",
+    "scripts/proposal/circuits.py": "5c9ed579321bcd9fbfcc5d79e47161122ba57650b8e5f993bdefd07393cb6a27",
+    "scripts/proposal/experiment.py": "1bfaaf0c6fc47aef40de6ad6dd5d06f2d7747c6e458c2367550309780f72a87d",
+    "scripts/proposal/prompts.py": "1b378d6fcb922230b558b58be276e403bcbfef13c07be5019c19470d66b6bbe7",
+    "scripts/proposal/qualify_circuits.py": "f9e7274c8c53e718e9e102a4aa66e2f799ab5b733cc67499cb2351728be4a1fb",
+    "scripts/sim/benchmark.py": "035bc1dd475c32a02045d5185c939b8e5fcd940dcabd4a1e45f391ece3875145"
+  },
+  "design": "proposal-defined six-condition comparison"
+}

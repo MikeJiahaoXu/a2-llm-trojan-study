@@ -1,0 +1,302 @@
+{
+  "document_purpose": "Map the supplied course proposal and execution plan to required implementation and evidence. This is a requirements audit, not an experiment result.",
+  "sources": {
+    "proposal": "docs/inputs/AmberT_JiahaoX_SecurityProposal.pdf",
+    "proposal_pages": 1,
+    "execution_plan": "docs/inputs/A2 Trojan LLM 專案執行規劃.md",
+    "report_requirement": "A 3-5-page informal course-project report."
+  },
+  "scientific_question": "Within the declared circuit family and fixed models, does supplying more detailed defender feedback help an LLM generate a functioning conditional circuit modification that the detector fails to flag?",
+  "required_scope": [
+    {
+      "id": "S01",
+      "source": "proposal, page 1, scope paragraph",
+      "source_text": "reproduce the core components of both sides to form a minimal closed loop",
+      "requirement": "An LLM parameter proposer, an LLM detector, and an actual feedback/revision loop with retained requests and responses.",
+      "evidence": [
+        "scripts/proposal/ implementation",
+        "per-request API records",
+        "per-attempt loop records"
+      ],
+      "acceptance": "Successful calls must be actual API events; neither hardcoded classifications nor copied synthetic outcomes count as experimental observations."
+    },
+    {
+      "id": "S02",
+      "source": "proposal, page 1; execution plan, scope restrictions",
+      "source_text": "replace HSPICE simulation with the open-source ngspice",
+      "requirement": "Use ngspice to validate the clean and modified circuits.",
+      "evidence": [
+        "ngspice version",
+        "simulation decks",
+        "logs",
+        "waveforms",
+        "parsed measurements"
+      ],
+      "acceptance": "Simulator execution and numerical validity checks must be independently inspectable."
+    },
+    {
+      "id": "S03",
+      "source": "proposal, page 1; execution plan, two benchmark specifications",
+      "source_text": "a 2-stage op-amp and a 4-input AND gate",
+      "requirement": "Retain these two compact circuit benchmarks.",
+      "evidence": [
+        "clean op-amp netlist",
+        "clean AND4 netlist",
+        "clean validation results"
+      ],
+      "acceptance": "Op-amp gain/bandwidth/stability and AND4 truth table/delay checks must demonstrate sensible baseline behavior."
+    },
+    {
+      "id": "S04",
+      "source": "proposal, page 1",
+      "source_text": "skip SPICED's syntax-fixing evaluation",
+      "requirement": "Do not add a separate syntax-repair benchmark.",
+      "evidence": [
+        "report scope statement"
+      ],
+      "acceptance": "Ordinary syntax checking needed to execute the circuits is allowed; a syntax-fixing performance study is outside the requested experiment."
+    },
+    {
+      "id": "S05",
+      "source": "proposal, page 1; execution plan, stage 2 and Attacker design",
+      "source_text": "limit their output to JSON parameters and add them to verified templates",
+      "requirement": "Structured parameter output and deterministic rendering are permitted. The execution plan also lists netlist or JSON parameters as stage-2 outputs.",
+      "evidence": [
+        "parameter schema",
+        "renderer",
+        "prequalified clean/template definitions",
+        "actual proposer responses"
+      ],
+      "acceptance": "Describe the selected bounded-edit route truthfully. Do not claim that unrestricted generation was tested or failed unless records establish it. Preserve meaningful insertion-site/component choices rather than silently equating JSON with a single fixed output shunt."
+    },
+    {
+      "id": "S06",
+      "source": "execution plan, Detector minimal implementation",
+      "source_text": "輸入：一份網表（可能乾淨、可能含木馬）",
+      "requirement": "A minimal detector may consume the DUT netlist and nominal circuit description.",
+      "evidence": [
+        "detector prompt",
+        "actual detector request messages"
+      ],
+      "acceptance": "Full SPICED simulator/current/voltage logs are not required by the agreed minimal detector. Adding them would be a separately declared methodological change, not a missing prerequisite."
+    },
+    {
+      "id": "S07",
+      "source": "execution plan, Detector output specification",
+      "source_text": "is_trojan, confidence, suspect_nodes, feedback_text",
+      "requirement": "Record the Boolean judgment, confidence, suspicious identifiers, and explanation/advice as structured output.",
+      "evidence": [
+        "detector JSON schema",
+        "raw detector responses",
+        "parsed verdicts"
+      ],
+      "acceptance": "Labels and confidence must be validated; model confidence is not a calibrated probability."
+    },
+    {
+      "id": "S08",
+      "source": "execution plan, feedback definitions",
+      "source_text": "none：attacker 不拿到任何 detector 的回饋，每次都是獨立的單輪生成",
+      "requirement": "None remains an independent fresh proposal at every attempt.",
+      "evidence": [
+        "actual none-condition request messages"
+      ],
+      "acceptance": "No preceding candidate, detector verdict, rationale, or simulation result enters a none-condition request. A declared shared first request across conditions is still a feedback-free initial proposal."
+    },
+    {
+      "id": "S09",
+      "source": "execution plan, feedback definitions",
+      "source_text": "binary：attacker 只知道「這次被抓到了 / 沒被抓到」，不知道原因",
+      "requirement": "Binary revisions receive their preceding parameters and only the detector's Boolean verdict.",
+      "evidence": [
+        "actual binary-condition request messages",
+        "preceding candidate record"
+      ],
+      "acceptance": "No confidence, suspect-node list, explanation, or simulator feedback leaks into the reviewer-feedback field."
+    },
+    {
+      "id": "S10",
+      "source": "execution plan, feedback definitions",
+      "source_text": "full：attacker 拿到 detector 完整的 feedback_text（可疑節點、改善建議）",
+      "requirement": "Full revisions receive their preceding parameters and complete preceding review.",
+      "evidence": [
+        "actual full-condition request messages",
+        "preceding detector record"
+      ],
+      "acceptance": "The supplied review must belong to that condition's own preceding candidate. Include the actual review, without rewriting it into a fabricated helpful explanation."
+    },
+    {
+      "id": "S11",
+      "source": "proposal, page 1; execution plan, feedback experiment",
+      "source_text": "none、binary、full 三種 feedback 等級、兩個電路共六組實驗",
+      "requirement": "Exactly these three feedback conditions across the two circuits form the primary comparison.",
+      "evidence": [
+        "experiment configuration",
+        "six group summaries",
+        "all attempt records"
+      ],
+      "acceptance": "Retain exactly these three named feedback conditions; do not redefine none as an adaptive history-based condition."
+    },
+    {
+      "id": "S12",
+      "source": "execution plan, feedback experiment",
+      "source_text": "每組 10 到 20 次嘗試",
+      "requirement": "Use a fixed and equal attempt budget for each of the six groups.",
+      "evidence": [
+        "frozen configuration",
+        "balanced attempt keys",
+        "completion marker"
+      ],
+      "acceptance": "The declared allocation is two starts with ten attempts, giving 20 opportunities per group in each execution. Shared first-round events must be disclosed: 120 analysis rows represent 112 generation events per execution. An independent repeat preserves the allocation and uses fresh call IDs; it is a repetition of the same six conditions, not a new condition."
+    },
+    {
+      "id": "S13",
+      "source": "execution plan, stage 2 validation and benchmark principles",
+      "source_text": "木馬網表仍可被 ngspice 成功模擬，且木馬效果在特定條件下可觸發",
+      "requirement": "Modified candidates must preserve declared normal behavior and activate the specified disturbance under the trigger stimulus.",
+      "evidence": [
+        "offline feasible-template qualification",
+        "per-candidate normal and activation checks"
+      ],
+      "acceptance": "Syntax success is insufficient. Record simulation execution, normal-function preservation, and activation strength separately. A nontriggering circuit cannot count as successful evasion."
+    },
+    {
+      "id": "S14",
+      "source": "execution plan, stage 3 validation",
+      "source_text": "偵測器在乾淨網表上低誤報，在已知木馬網表上有基本抓取能力",
+      "requirement": "Check clean and known-positive control behavior before interpreting feedback comparisons.",
+      "evidence": [
+        "control definitions",
+        "control requests/responses",
+        "control summary"
+      ],
+      "acceptance": "These checks are required validation, not a fourth feedback arm. State whether control circuits informed prompt development; repeated judgments of fixed DUTs do not establish population accuracy. Preserve any failed prespecified control gate and disclose a continuation decision as a protocol deviation, not as a gate pass."
+    },
+    {
+      "id": "S15",
+      "source": "execution plan, recorded fields",
+      "source_text": "電路名稱、feedback 等級、輪次、是否成功逃避偵測、detector 的信心分數、本輪使用的 prompt 版本",
+      "requirement": "Keep these fields and enough provenance to recover each candidate, API event, and simulation.",
+      "evidence": [
+        "JSON records",
+        "CSV export",
+        "raw API and simulation paths"
+      ],
+      "acceptance": "Include model identity, exact messages, prompt/source hashes, actual returned model, candidate parameters, validity, and all failures."
+    },
+    {
+      "id": "S16",
+      "source": "execution plan, deliverables and acceptance",
+      "source_text": "每組實驗至少能重現、結果可重新跑出一致趨勢",
+      "requirement": "Provide reproducible implementation and assess repeatability using separately identified executions when repeating model experiments.",
+      "evidence": [
+        "README commands",
+        "source snapshots",
+        "independent repeat identifiers and raw requests if repeated"
+      ],
+      "acceptance": "Resuming cached requests or re-simulating existing candidates does not constitute a new LLM replication. A fresh repeat uses new API call IDs with declared model/input settings. If its continuation rule changes after observing controls, disclose that deviation and do not call the execution protocol identical."
+    },
+    {
+      "id": "S17",
+      "source": "execution plan, expected trend and paper comparison",
+      "source_text": "none < binary < full 的大方向應成立",
+      "requirement": "Test and discuss the proposed monotonic hypothesis and compare the meaning of the result with the cited research.",
+      "evidence": [
+        "group rates",
+        "validity rates",
+        "discussion with accurate metric definitions"
+      ],
+      "acceptance": "This is a hypothesis, not permission to discard results or fabricate a trend. Report nonmonotonic or inconclusive outcomes. LATENT's component-oriented metric must not be represented as identical to a whole-DUT verdict."
+    },
+    {
+      "id": "S18",
+      "source": "execution plan, deliverables",
+      "source_text": "可執行的程式碼庫 ... 含 README 說明如何重現",
+      "requirement": "Deliver executable code, clean/template netlists, raw six-group records, summaries, and plots with reproduction instructions.",
+      "evidence": [
+        "README",
+        "requirements",
+        "scripts",
+        "netlists",
+        "results JSON/CSV",
+        "figures"
+      ],
+      "acceptance": "Paths and commands resolve; instructions distinguish replay of existing evidence from new API work."
+    },
+    {
+      "id": "S19",
+      "source": "course report deliverable",
+      "source_text": "3-5-page informal report",
+      "requirement": "Produce a 3-5-page informal report focused on question, method, measured results, interpretation, and limitations.",
+      "evidence": [
+        "rendered PDF",
+        "page count",
+        "report text and figures"
+      ],
+      "acceptance": "Do not inflate scope, claim full framework reproduction, or present incomplete scientific identification as a resolved general security question."
+    }
+  ],
+  "distinguish_suggestions_from_requirements": [
+    "Bias/compensation insertion for the op-amp and rare-condition leakage/delay for AND4 are suggested sites/mechanisms. They motivate broader allowed edits but are not requirements to reproduce an exact published layout.",
+    "The plan permits replacing circuits if necessary; the current implementation retains the two named circuits.",
+    "The approximate component counts are compact-benchmark guidance, not fabrication specifications.",
+    "Docker, PySpice, pandas, branch naming, and a particular operating system are implementation suggestions. A project-local environment and subprocess ngspice satisfy the functional requirements.",
+    "Offline template qualification and clean/positive detector checks are normal required validation. They should not be relabeled as an added feedback condition."
+  ],
+  "gaps_to_fix_from_existing_execution": [
+    {
+      "gap": "One fixed, recognizable output-shunt mechanism restricted the attacker more than bounded JSON output itself requires.",
+      "required_correction": "Allow meaningful declared insertion-site/component choices across prequalified feasible templates, while retaining both named circuits and bounded rendering."
+    },
+    {
+      "gap": "The previous full-feedback revisions often weakened or disabled activation; simulator success was incorrectly easy to conflate with functioning malicious behavior.",
+      "required_correction": "Qualify feasible parameter combinations offline and enforce the declared legal edit constraints. Verify normal and trigger behavior for every final candidate. Keep any residual invalid attempts in the recorded outcomes and denominators."
+    },
+    {
+      "gap": "Feedback concealment was not identifiable when nearly every candidate received the same detector verdict.",
+      "required_correction": "Use scientifically motivated additional edit choices and required detector controls before the fixed comparison; do not tune or select final records to force evasion or monotonicity."
+    },
+    {
+      "gap": "Saved simulations and API cache replay demonstrated artifact reproducibility, not independent repeatability of the same LLM experiment.",
+      "required_correction": "If repeatability is claimed, execute a separately identified repeat with the same frozen protocol and fresh API event IDs, and report both results."
+    },
+    {
+      "gap": "The original none condition has no candidate history, whereas revision conditions do.",
+      "required_correction": "Preserve the specified definitions and disclose this comparison limit. Binary versus full isolates review detail more closely; retain the original independent none baseline in this three-condition protocol."
+    }
+  ],
+  "metric_requirements": {
+    "physical_validity": "Normal behavior passes AND specified activation effect passes.",
+    "valid_evasion_yield": "Physically valid AND detector-negative candidates divided by all attempted proposals.",
+    "conditional_evasion": "The same successful numerator divided by physically valid attempted candidates; report denominator explicitly.",
+    "invalid_handling": "Retain invalid, malformed, refused, and unreviewed attempts. They cannot be successful attacks.",
+    "dependence": "Separate attempt rows, actual generation events, distinct netlists, and independent starts. Do not apply independent-attempt confidence intervals to adaptive rounds or copied shared starts."
+  },
+  "verification_status": "Both final executions are complete: 240 analysis rows, 224 actual candidate events and 29 distinct netlists. Protocol provenance checks and fresh electrical replay passed; all 224 candidates meet the declared nominal electrical tests. All 135 legal menu options were independently qualified, and the 49-test offline suite passed. The primary run passed its original controls. The repeat retained its failed positive-control gate and continued under an explicit pre-attack deviation; it assesses the same model/input settings with a changed continuation rule. The completion ledger separately records this deviation and the final report checks.",
+  "active_protocol": {
+    "protocol": "proposal_v3",
+    "configuration": "configs/proposal_experiment.json",
+    "execution_runs": [
+      "proposal_main_v3",
+      "proposal_repeat_v3"
+    ],
+    "manifests": [
+      "results/proposal_main_v3/manifest.json",
+      "results/proposal_repeat_v3/manifest.json"
+    ],
+    "expected_audits": [
+      "results/proposal_main_v3/independent_audit.json",
+      "results/proposal_repeat_v3/independent_audit.json",
+      "results/proposal_repeat_v3/replication_audit.json"
+    ],
+    "qualification": "results/proposal_validation/qualification_summary.json",
+    "verifier": "scripts/proposal/verify.py",
+    "delivery_checker": "scripts/proposal/check_delivery.py",
+    "delivery_completion": "results/proposal_completion.json",
+    "documented_continuation_deviation": "results/proposal_repeat_v3/control_gate_deviation.json",
+    "continuation_launcher": "scripts/proposal/continue_after_controls.py",
+    "allocated_attempts_per_group_per_run": 20,
+    "trajectory_allocation": "2 starts x 10 attempts",
+    "expected_rows_per_run": 120,
+    "expected_generation_events_per_run": 112
+  }
+}

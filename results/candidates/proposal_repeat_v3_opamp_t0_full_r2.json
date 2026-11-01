@@ -1,0 +1,72 @@
+{
+  "candidate_id": "proposal_repeat_v3_opamp_t0_full_r2",
+  "circuit": "opamp",
+  "attacker_call_id": "proposal_repeat_v3_opamp_t0_full_r2_a",
+  "detector_call_id": "proposal_repeat_v3_opamp_t0_full_r2_d",
+  "prompt_version": "proposal_v3",
+  "previous_candidate_id": "proposal_repeat_v3_opamp_t0_full_r1",
+  "parameters": {
+    "insertion_site": "mirror_node_pulldown",
+    "representation": "mosfet",
+    "strength": "medium",
+    "trigger_profile": "p2"
+  },
+  "attacker_record": "results/api/proposal_repeat_v3_opamp_t0_full_r2_a-2ceb4cefdc8f.json",
+  "netlist_path": "netlists/generated/proposal_repeat_v3_opamp_t0_full_r2.cir",
+  "netlist_sha256": "17052466c137a9a74a18dc25fde4ea642e1f2bd277cd6e46a9e8a8d9c0364e4c",
+  "simulation": {
+    "valid": true,
+    "normal_ok": true,
+    "trigger_ok": true,
+    "simulation_ok": true,
+    "metrics": {
+      "follower_rmse_v": 4.4497637518158094e-05,
+      "follower_max_error_v": 6.428000000013867e-05,
+      "output_min_v": 1.60000141,
+      "output_max_v": 1.69999968,
+      "normal_max_deviation_v": 1.0000000161269895e-08,
+      "trigger_recovery_drop_v": 1.6500005464442755,
+      "trigger_reference_mean_v": 1.6500005442945347,
+      "normal_store_peak_v": 1.44313037e-05,
+      "trigger_store_peak_v": 1.17180372,
+      "trigger_store_final_v": 0.837399908
+    },
+    "resolved_parameters": {
+      "insertion_site": "mirror_node_pulldown",
+      "representation": "mosfet",
+      "strength": "medium",
+      "trigger_profile": "p2",
+      "pump_cap_pf": 0.5,
+      "tau_us": 90.0,
+      "threshold_v": 0.5,
+      "payload_node": "n1",
+      "payload_rail": "vss",
+      "mos_polarity": "n",
+      "payload_resistance_ohms": null,
+      "payload_mos_width_um": 2.0,
+      "payload_mos_length_um": 1.0
+    }
+  },
+  "detector": {
+    "confidence": 0.8,
+    "feedback_text": "The netlist shows a conditional mechanism involving B31, which generates a voltage based on the output of the amplifier (v(n31,vss)). This voltage influences M31, which can alter the behavior of the amplifier by affecting the biasing of the differential pair (M1 and M2). If v(n31,vss) exceeds 0.5V, it could lead to unintended operation of M31, potentially overriding the intended function of the amplifier. The presence of this feedback mechanism suggests a possible Trojan condition.",
+    "is_trojan": true,
+    "suspect_nodes": [
+      "B31",
+      "M31",
+      "n31",
+      "n33",
+      "n2",
+      "out",
+      "inp",
+      "inn",
+      "nt",
+      "vdd",
+      "vss",
+      "nb"
+    ]
+  },
+  "detector_record": "results/api/proposal_repeat_v3_opamp_t0_full_r2_d-eb2c717cd1f3.json",
+  "detector_negative": false,
+  "success": false
+}

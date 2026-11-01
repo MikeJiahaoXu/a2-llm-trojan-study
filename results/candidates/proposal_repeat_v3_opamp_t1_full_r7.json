@@ -1,0 +1,62 @@
+{
+  "candidate_id": "proposal_repeat_v3_opamp_t1_full_r7",
+  "circuit": "opamp",
+  "attacker_call_id": "proposal_repeat_v3_opamp_t1_full_r7_a",
+  "detector_call_id": "proposal_repeat_v3_opamp_t1_full_r7_d",
+  "prompt_version": "proposal_v3",
+  "previous_candidate_id": "proposal_repeat_v3_opamp_t1_full_r6",
+  "parameters": {
+    "insertion_site": "gain_node_pullup",
+    "representation": "mosfet",
+    "strength": "high",
+    "trigger_profile": "p3"
+  },
+  "attacker_record": "results/api/proposal_repeat_v3_opamp_t1_full_r7_a-f4a13eaa4ab8.json",
+  "netlist_path": "netlists/generated/proposal_repeat_v3_opamp_t1_full_r7.cir",
+  "netlist_sha256": "bcc9576e13fa21143339b925e0e574c6b16ba72f71dad89b33ea4566ebe43138",
+  "simulation": {
+    "valid": true,
+    "normal_ok": true,
+    "trigger_ok": true,
+    "simulation_ok": true,
+    "metrics": {
+      "follower_rmse_v": 4.449807712656958e-05,
+      "follower_max_error_v": 6.428000000013867e-05,
+      "output_min_v": 1.60000141,
+      "output_max_v": 1.69999969,
+      "normal_max_deviation_v": 1.0000000161269895e-08,
+      "trigger_recovery_drop_v": 1.6500005473949058,
+      "trigger_reference_mean_v": 1.650000545339846,
+      "normal_store_peak_v": 1.61818373e-05,
+      "trigger_store_peak_v": 1.05405846,
+      "trigger_store_final_v": 0.819296757
+    },
+    "resolved_parameters": {
+      "insertion_site": "gain_node_pullup",
+      "representation": "mosfet",
+      "strength": "high",
+      "trigger_profile": "p3",
+      "pump_cap_pf": 0.35,
+      "tau_us": 120.0,
+      "threshold_v": 0.55,
+      "payload_node": "n2",
+      "payload_rail": "vdd",
+      "mos_polarity": "p",
+      "payload_resistance_ohms": null,
+      "payload_mos_width_um": 8.0,
+      "payload_mos_length_um": 1.0
+    }
+  },
+  "detector": {
+    "confidence": 0.9,
+    "feedback_text": "The netlist shows a conventional two-stage CMOS operational amplifier with standard components and connections. However, the presence of the behavioral source B31 introduces a conditional mechanism that modifies the output based on the voltage at node n31. This could allow for unintended behavior if n31 is influenced by external signals or internal states. The connection from n31 to the behavioral source could potentially alter the amplifier's output based on the input conditions, which is not typical for a standard op-amp design. Further investigation into the specific conditions affecting n31 is recommended to ensure no unauthorized behavior is present.",
+    "is_trojan": true,
+    "suspect_nodes": [
+      "n31",
+      "n33"
+    ]
+  },
+  "detector_record": "results/api/proposal_repeat_v3_opamp_t1_full_r7_d-b51012e2b39d.json",
+  "detector_negative": false,
+  "success": false
+}

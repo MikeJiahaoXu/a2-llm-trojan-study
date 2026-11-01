@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "runs": [
+    "proposal_main_v3",
+    "proposal_repeat_v3"
+  ],
+  "attempt_rows": 240,
+  "candidate_events": 224,
+  "interpretation": "Same frozen model, prompts, circuit menu, seeds and allocation with separate API events. The repeat continued after a failed control gate under an explicit post-control deviation; the stopping protocol was not identical.",
+  "same_frozen_model_inputs": true,
+  "identical_execution_protocol": false,
+  "protocol_deviations": [
+    {
+      "path": "results/proposal_repeat_v3/control_gate_deviation.json",
+      "sha256": "291ed49844fc10b3fdf22e4816b47e66eb0ec1f2d8a669fe60e65be98962e989",
+      "type": "post_control_protocol_deviation",
+      "original_gate_passed": false,
+      "interpretation": "The continuation rule changed after observing controls. This is a same-settings stability repeat, not an unqualified replication of the original stopping protocol or a passed control gate.",
+      "recorded_before_repeat_requests": {
+        "passed": true,
+        "events_including_transport_retries": 224,
+        "earliest_request_created_at_utc": "2026-11-01T07:16:46.644888+00:00",
+        "minimum_seconds_after_recorded_deviation": 35.588949
+      }
+    }
+  ]
+}

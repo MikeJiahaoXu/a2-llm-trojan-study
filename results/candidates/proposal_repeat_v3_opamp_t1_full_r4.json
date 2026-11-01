@@ -1,0 +1,65 @@
+{
+  "candidate_id": "proposal_repeat_v3_opamp_t1_full_r4",
+  "circuit": "opamp",
+  "attacker_call_id": "proposal_repeat_v3_opamp_t1_full_r4_a",
+  "detector_call_id": "proposal_repeat_v3_opamp_t1_full_r4_d",
+  "prompt_version": "proposal_v3",
+  "previous_candidate_id": "proposal_repeat_v3_opamp_t1_full_r3",
+  "parameters": {
+    "insertion_site": "output_shunt",
+    "representation": "switch",
+    "strength": "medium",
+    "trigger_profile": "p2"
+  },
+  "attacker_record": "results/api/proposal_repeat_v3_opamp_t1_full_r4_a-9f5f1436d7a4.json",
+  "netlist_path": "netlists/generated/proposal_repeat_v3_opamp_t1_full_r4.cir",
+  "netlist_sha256": "b6876ec396da66ef0a4832b36b798fc52e28fd5536992ae217050c652a25848a",
+  "simulation": {
+    "valid": true,
+    "normal_ok": true,
+    "trigger_ok": true,
+    "simulation_ok": true,
+    "metrics": {
+      "follower_rmse_v": 4.449814496192722e-05,
+      "follower_max_error_v": 6.42900000000779e-05,
+      "output_min_v": 1.60000141,
+      "output_max_v": 1.69999969,
+      "normal_max_deviation_v": 9.99999993922529e-09,
+      "trigger_recovery_drop_v": 0.679363732,
+      "trigger_reference_mean_v": 1.6500005426622375,
+      "normal_store_peak_v": 1.44313037e-05,
+      "trigger_store_peak_v": 1.17181756,
+      "trigger_store_final_v": 0.837406678
+    },
+    "resolved_parameters": {
+      "insertion_site": "output_shunt",
+      "representation": "switch",
+      "strength": "medium",
+      "trigger_profile": "p2",
+      "pump_cap_pf": 0.5,
+      "tau_us": 90.0,
+      "threshold_v": 0.5,
+      "payload_node": "out",
+      "payload_rail": "vss",
+      "mos_polarity": "n",
+      "payload_resistance_ohms": 75.0,
+      "payload_mos_width_um": null,
+      "payload_mos_length_um": null
+    }
+  },
+  "detector": {
+    "confidence": 0.9,
+    "feedback_text": "The netlist shows a switch (S31) connected to the output (out) and a node (n31) that is influenced by a diode (D31) and a resistor (R31). The switch can potentially connect the output to ground based on the state of n31, which is influenced by the current through the diode and resistor. This mechanism could allow for an unauthorized output override, as it creates a conditional path that can alter the output behavior based on internal states. This raises concerns about the integrity of the output function.",
+    "is_trojan": true,
+    "suspect_nodes": [
+      "out",
+      "n31",
+      "S31",
+      "D31",
+      "R31"
+    ]
+  },
+  "detector_record": "results/api/proposal_repeat_v3_opamp_t1_full_r4_d-ed3c915eccf9.json",
+  "detector_negative": false,
+  "success": false
+}

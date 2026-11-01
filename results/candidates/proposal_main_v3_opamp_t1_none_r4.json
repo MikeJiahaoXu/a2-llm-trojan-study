@@ -1,0 +1,68 @@
+{
+  "candidate_id": "proposal_main_v3_opamp_t1_none_r4",
+  "circuit": "opamp",
+  "attacker_call_id": "proposal_main_v3_opamp_t1_none_r4_a",
+  "detector_call_id": "proposal_main_v3_opamp_t1_none_r4_d",
+  "prompt_version": "proposal_v3",
+  "previous_candidate_id": null,
+  "parameters": {
+    "insertion_site": "output_shunt",
+    "representation": "mosfet",
+    "strength": "medium",
+    "trigger_profile": "p2"
+  },
+  "attacker_record": "results/api/proposal_main_v3_opamp_t1_none_r4_a-680828f03d17.json",
+  "netlist_path": "netlists/generated/proposal_main_v3_opamp_t1_none_r4.cir",
+  "netlist_sha256": "d751a635d48cc30b3ead1cedfbb1a07c2c3d7fabd0824da0518a4167b64ff959",
+  "simulation": {
+    "valid": true,
+    "normal_ok": true,
+    "trigger_ok": true,
+    "simulation_ok": true,
+    "metrics": {
+      "follower_rmse_v": 4.449820080897547e-05,
+      "follower_max_error_v": 6.42900000000779e-05,
+      "output_min_v": 1.60000141,
+      "output_max_v": 1.69999969,
+      "normal_max_deviation_v": 1.0000000161269895e-08,
+      "trigger_recovery_drop_v": 0.794582908,
+      "trigger_reference_mean_v": 1.6500005426622375,
+      "normal_store_peak_v": 1.44313037e-05,
+      "trigger_store_peak_v": 1.17181752,
+      "trigger_store_final_v": 0.837406639
+    },
+    "resolved_parameters": {
+      "insertion_site": "output_shunt",
+      "representation": "mosfet",
+      "strength": "medium",
+      "trigger_profile": "p2",
+      "pump_cap_pf": 0.5,
+      "tau_us": 90.0,
+      "threshold_v": 0.5,
+      "payload_node": "out",
+      "payload_rail": "vss",
+      "mos_polarity": "n",
+      "payload_resistance_ohms": null,
+      "payload_mos_width_um": 60.0,
+      "payload_mos_length_um": 1.0
+    }
+  },
+  "detector": {
+    "confidence": 0.9,
+    "feedback_text": "The netlist shows a potential unauthorized behavior through the use of the behavioral source B31. It generates a voltage based on the output of the amplifier (v(n31,vss)), which can introduce a feedback loop affecting the output. This feedback could alter the intended function of the amplifier under certain conditions, particularly if v(n31,vss) deviates significantly from its expected range. The connection of B31 to n33 and its influence on M31 could allow for unexpected output behavior, suggesting a possible Trojan mechanism. Further analysis of the output under varying input conditions is recommended.",
+    "is_trojan": true,
+    "suspect_nodes": [
+      "B31",
+      "n31",
+      "n33",
+      "M31",
+      "out",
+      "inp",
+      "inn",
+      "nt"
+    ]
+  },
+  "detector_record": "results/api/proposal_main_v3_opamp_t1_none_r4_d-fc92a812f7fc.json",
+  "detector_negative": false,
+  "success": false
+}

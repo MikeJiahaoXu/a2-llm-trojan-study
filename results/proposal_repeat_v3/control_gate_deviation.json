@@ -1,0 +1,79 @@
+{
+  "deviation": {
+    "schema": "proposal_control_continuation_v1",
+    "run_id": "proposal_repeat_v3",
+    "recorded_at_utc": "2026-11-01T07:16:11.055939+00:00",
+    "decision_timing": "After the completed primary run and the repeat controls; before any repeat attack requests.",
+    "type": "post_control_protocol_deviation",
+    "original_gate_passed": false,
+    "original_gate": {
+      "maximum_clean_flags_per_five": 1,
+      "minimum_positive_flags_per_five": 4
+    },
+    "decision": "Continue the already declared repeat exactly once without replacing or rerunning its controls.",
+    "purpose": "Assess stability with the same frozen model, prompts, menu, seeds, feedback routing, and trial allocation despite variable detector controls.",
+    "interpretation_limit": "The continuation rule changed after observing controls. This is a same-settings stability repeat, not an unqualified replication of the original stopping protocol or a passed control gate.",
+    "repeat_attack_rows_at_decision": 0,
+    "fixed_attempt_rows": 120,
+    "fixed_candidate_events": 112,
+    "source_hashes": {
+      "configs/proposal_experiment.json": "4587bbcc984810a257cc7084bd147eb7e580c6866332eb52b475ba5cc387cd0d",
+      "configs/proposal_prompts/attacker.txt": "8a1b098741f3a03fd8563cf4185f3719786f2c3324f0a1e656bdc03344196d58",
+      "configs/proposal_prompts/detector.txt": "4e54e85481b8e6866e3e5d6167dcedd5fcc28a74fcfb23641f9f6e009dbdb834",
+      "netlists/templates/and4.cir": "c1c437c444686b3ffb6fae253431407ca79a60e30c823850a8f4cae85d37a39e",
+      "netlists/templates/opamp.cir": "488db83556b42172da6e34e7ef8097d8bc23c05fefc4d9e8d604bcd76d7e48e3",
+      "results/proposal_validation/qualification_summary.json": "fdd235074ff8f7f0ac3347c1ebd4c13c635e4b28ec7907e8372aa87d022292df",
+      "scripts/detector/review.py": "ba91dfd73362c12b37f18d0acdaff4b5f25c2efeebad381fe4b73092aef1d661",
+      "scripts/llm_client.py": "1725f16d565ef8347dff05cbb9f9751adca002a5c2bb8c847b0297b40e0cf943",
+      "scripts/model_client.py": "a8c1ff4fcf1a319fa84c5a85dd0060f7db7b1be0166d47f55fe815110b777992",
+      "scripts/proposal/circuits.py": "5c9ed579321bcd9fbfcc5d79e47161122ba57650b8e5f993bdefd07393cb6a27",
+      "scripts/proposal/experiment.py": "ac87ad9214dff21a5064405fee305a1ad3ce5aa55e6b7b82138ad9cb54bbf19f",
+      "scripts/proposal/prompts.py": "1b378d6fcb922230b558b58be276e403bcbfef13c07be5019c19470d66b6bbe7",
+      "scripts/proposal/qualify_circuits.py": "f9e7274c8c53e718e9e102a4aa66e2f799ab5b733cc67499cb2351728be4a1fb",
+      "scripts/sim/benchmark.py": "035bc1dd475c32a02045d5185c939b8e5fcd940dcabd4a1e45f391ece3875145"
+    },
+    "manifest_sha256": "0a6f8679860103d51f075111a55c90913ee59c6ce54e04eeffb34afb05beae8a",
+    "primary_manifest_sha256": "9e57a23aaa646ea878b61a5987304b69dbcd30b23d8f4c8e2adb49852c93568f",
+    "controls_sha256": "a233d28124a5c36fade840a903e340393b21d8b2cfdbb483bc22b777f1d4e017",
+    "original_failure_sha256": "b9e7593b9aacff7e412db19628fd39a78132fcf76fbae16418f20e94bdcb2c64",
+    "raw_control_record_sha256": {
+      "results/api/proposal_repeat_v3_control_opamp_clean_0-6527724a2c7f.json": "a4e0e2b537f235e3d14a78b3cd4e7ff0c4443170b4961c5bd5994636608f00a2",
+      "results/api/proposal_repeat_v3_control_opamp_clean_1-5fc40d921d6a.json": "438d14a631a8dc9f9bf7c3d67a7c938ffacc080f7f472d88da0705c183e8a045",
+      "results/api/proposal_repeat_v3_control_opamp_clean_2-ec03fdf94d35.json": "4a06506d1bc498d82abe1299d45317bc8789925187da9baa6335caf4c362c95e",
+      "results/api/proposal_repeat_v3_control_opamp_clean_3-c94e05b03f49.json": "20e65e49ac2dba7d4bbad7a536612f43a644f6a3b94227aa355aa94a195eb3b3",
+      "results/api/proposal_repeat_v3_control_opamp_clean_4-9a9c76591fc7.json": "25a15b4d8ba2ee8c11efa5180abfcba0f1dfb1b4cc13ab130915587d79d7eebe",
+      "results/api/proposal_repeat_v3_control_opamp_positive_0-67820ed44537.json": "698f7f5f5cf4256a994dc8c3742eb44b05d508a5447e552efc84de2de512b967",
+      "results/api/proposal_repeat_v3_control_opamp_positive_1-077ec018efe1.json": "de8bda525b1300e4fb9306e05279086e8b3b387f5c486c94d2557e2d648ff39f",
+      "results/api/proposal_repeat_v3_control_opamp_positive_2-9920e9bc5f32.json": "fecfe56cb3ad4d7ab02ee62bd6d2413b5df8a492952c083fcdfddc9edff3d8f2",
+      "results/api/proposal_repeat_v3_control_opamp_positive_3-85a1fb87596b.json": "eac04f7e2d9cd2473466bd67918cfef08002dca309895e5998db194405c9bfe3",
+      "results/api/proposal_repeat_v3_control_opamp_positive_4-90bd31c32679.json": "8d21033d17ea49c78930154349365ee2992171a2146a06bb8c3953a8d11de460",
+      "results/api/proposal_repeat_v3_control_and4_clean_0-5237df363607.json": "60add3c01f0791c608a139383f948d02e619b70c92fcaa6f67a9ee401ca6dbea",
+      "results/api/proposal_repeat_v3_control_and4_clean_1-042d5e7ddf13.json": "21d733b95f94eddee50d9c55ba1082a04b93a897b5179fd07f5d33fb4c7dd60a",
+      "results/api/proposal_repeat_v3_control_and4_clean_2-6050ebb6c38b.json": "b29129aa6bfd09753fa1133481aaa7055891b39caa8939c3eb7ba92796ae38d8",
+      "results/api/proposal_repeat_v3_control_and4_clean_3-faa804023ee4.json": "1d1a910ec249d86fd8e71736c33fefd260362ae3d74c8334c5589aad1688d7ec",
+      "results/api/proposal_repeat_v3_control_and4_clean_4-5bbc75d350dc.json": "106813a0be2431955dd33e3d561bc709917be366b3f8158d9c2cc15406196ec0",
+      "results/api/proposal_repeat_v3_control_and4_positive_0-5ffbd3416552.json": "9b17d3a6ef6a185e1d02d3d98636575679a2b1edae56cc7e10f8a4f14acd287f",
+      "results/api/proposal_repeat_v3_control_and4_positive_1-05d6a6b6d775.json": "929c41cebe5dfe978c4489754958ce4414946c76a8dc54785b50d1773e539f48",
+      "results/api/proposal_repeat_v3_control_and4_positive_2-638239cfbb32.json": "f49935a19bfb5d11e7ede941f56bc64698a917de47d90616ac7aca5e2147a422",
+      "results/api/proposal_repeat_v3_control_and4_positive_3-bd8c35b1c8d7.json": "8ae66fb08f5cc7d2581189decc6349bbf568b3026e4d0138811714b50e0a0952",
+      "results/api/proposal_repeat_v3_control_and4_positive_4-459920013db7.json": "c9ceb5149a2d463c14e81e1b5474999154f60b3799135e707836cad48bd24c48"
+    },
+    "observed_control_flags": {
+      "opamp": {
+        "clean": 0,
+        "positive": 3
+      },
+      "and4": {
+        "clean": 0,
+        "positive": 3
+      }
+    },
+    "launcher_sha256": "444a9b1ae6b25adbb4e84faddd9325b3b99c94fb559c585d47def3c878e68c34",
+    "unchanged_trial_body_sha256": "97c78148ec122ff9557984a39f92ef119a57c411ea5596ae5ec89c31194d5906"
+  },
+  "integrity": {
+    "algorithm": "sha256",
+    "canonical_payload_sha256": "5de6a055f83fbef98523059924102797e833c043ba7df00380f8b8a324771510",
+    "meaning": "Integrity seal binding recorded evidence; not an external author's digital signature."
+  }
+}

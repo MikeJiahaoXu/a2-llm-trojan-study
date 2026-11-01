@@ -1,0 +1,66 @@
+{
+  "candidate_id": "proposal_repeat_v3_opamp_t1_binary_r7",
+  "circuit": "opamp",
+  "attacker_call_id": "proposal_repeat_v3_opamp_t1_binary_r7_a",
+  "detector_call_id": "proposal_repeat_v3_opamp_t1_binary_r7_d",
+  "prompt_version": "proposal_v3",
+  "previous_candidate_id": "proposal_repeat_v3_opamp_t1_binary_r6",
+  "parameters": {
+    "insertion_site": "output_shunt",
+    "representation": "switch",
+    "strength": "high",
+    "trigger_profile": "p3"
+  },
+  "attacker_record": "results/api/proposal_repeat_v3_opamp_t1_binary_r7_a-767e636b783a.json",
+  "netlist_path": "netlists/generated/proposal_repeat_v3_opamp_t1_binary_r7.cir",
+  "netlist_sha256": "ae2c935638454b43f5ae9da12a9e9e3f3c8334e06038a656cb128a82ed4ea01f",
+  "simulation": {
+    "valid": true,
+    "normal_ok": true,
+    "trigger_ok": true,
+    "simulation_ok": true,
+    "metrics": {
+      "follower_rmse_v": 4.449814496192722e-05,
+      "follower_max_error_v": 6.42900000000779e-05,
+      "output_min_v": 1.60000141,
+      "output_max_v": 1.69999969,
+      "normal_max_deviation_v": 9.99999993922529e-09,
+      "trigger_recovery_drop_v": 0.8853493505000001,
+      "trigger_reference_mean_v": 1.6500005426622375,
+      "normal_store_peak_v": 1.61818373e-05,
+      "trigger_store_peak_v": 1.05407084,
+      "trigger_store_final_v": 0.819303741
+    },
+    "resolved_parameters": {
+      "insertion_site": "output_shunt",
+      "representation": "switch",
+      "strength": "high",
+      "trigger_profile": "p3",
+      "pump_cap_pf": 0.35,
+      "tau_us": 120.0,
+      "threshold_v": 0.55,
+      "payload_node": "out",
+      "payload_rail": "vss",
+      "mos_polarity": "n",
+      "payload_resistance_ohms": 50.0,
+      "payload_mos_width_um": null,
+      "payload_mos_length_um": null
+    }
+  },
+  "detector": {
+    "confidence": 0.9,
+    "feedback_text": "The circuit contains a switch (S31) that connects the output (out) to ground (vss) through node n31. The switch is controlled by the state of n31, which is influenced by the diode-connected MOSFETs (D31 and D32) and the resistor (R31). This configuration allows the output to be overridden based on the voltage at n31, which can change depending on the input signals. This introduces a conditional mechanism that alters the intended output behavior, indicating potential unauthorized functionality.",
+    "is_trojan": true,
+    "suspect_nodes": [
+      "out",
+      "n31",
+      "vss",
+      "n32",
+      "nb",
+      "nt"
+    ]
+  },
+  "detector_record": "results/api/proposal_repeat_v3_opamp_t1_binary_r7_d-9c217dbf6de4.json",
+  "detector_negative": false,
+  "success": false
+}

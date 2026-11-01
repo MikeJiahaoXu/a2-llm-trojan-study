@@ -1,0 +1,63 @@
+{
+  "candidate_id": "proposal_main_v3_opamp_t1_full_r3",
+  "circuit": "opamp",
+  "attacker_call_id": "proposal_main_v3_opamp_t1_full_r3_a",
+  "detector_call_id": "proposal_main_v3_opamp_t1_full_r3_d",
+  "prompt_version": "proposal_v3",
+  "previous_candidate_id": "proposal_main_v3_opamp_t1_full_r2",
+  "parameters": {
+    "insertion_site": "gain_node_pullup",
+    "representation": "switch",
+    "strength": "high",
+    "trigger_profile": "p3"
+  },
+  "attacker_record": "results/api/proposal_main_v3_opamp_t1_full_r3_a-ac849157fa0b.json",
+  "netlist_path": "netlists/generated/proposal_main_v3_opamp_t1_full_r3.cir",
+  "netlist_sha256": "9d815f034603dc72af07d9349a62c09e6cc73ed106f1520925a64edef45dec06",
+  "simulation": {
+    "valid": true,
+    "normal_ok": true,
+    "trigger_ok": true,
+    "simulation_ok": true,
+    "metrics": {
+      "follower_rmse_v": 4.4498082328648185e-05,
+      "follower_max_error_v": 6.428000000013867e-05,
+      "output_min_v": 1.60000141,
+      "output_max_v": 1.69999969,
+      "normal_max_deviation_v": 1.0000000161269895e-08,
+      "trigger_recovery_drop_v": 1.65000054652184,
+      "trigger_reference_mean_v": 1.6500005433360694,
+      "normal_store_peak_v": 1.61818373e-05,
+      "trigger_store_peak_v": 1.05406699,
+      "trigger_store_final_v": 0.8193017
+    },
+    "resolved_parameters": {
+      "insertion_site": "gain_node_pullup",
+      "representation": "switch",
+      "strength": "high",
+      "trigger_profile": "p3",
+      "pump_cap_pf": 0.35,
+      "tau_us": 120.0,
+      "threshold_v": 0.55,
+      "payload_node": "n2",
+      "payload_rail": "vdd",
+      "mos_polarity": "p",
+      "payload_resistance_ohms": 500.0,
+      "payload_mos_width_um": null,
+      "payload_mos_length_um": null
+    }
+  },
+  "detector": {
+    "confidence": 0.9,
+    "feedback_text": "The netlist shows a standard two-stage CMOS op-amp configuration with differential inputs and a single-ended output. However, the presence of the switch S31, which connects n2 to n31, introduces a conditional mechanism. If the voltage at n2 exceeds the threshold defined by SJ31, it can enable current flow from vdd to n31, influencing the output at out. This could potentially alter the amplifier's behavior under certain conditions, suggesting a possible unauthorized function. Further analysis of the switch's control conditions and its impact on the output is recommended.",
+    "is_trojan": true,
+    "suspect_nodes": [
+      "S31",
+      "n31",
+      "n2"
+    ]
+  },
+  "detector_record": "results/api/proposal_main_v3_opamp_t1_full_r3_d-e4c163371288.json",
+  "detector_negative": false,
+  "success": false
+}

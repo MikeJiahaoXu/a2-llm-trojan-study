@@ -1,0 +1,65 @@
+{
+  "candidate_id": "proposal_main_v3_opamp_t1_binary_r2",
+  "circuit": "opamp",
+  "attacker_call_id": "proposal_main_v3_opamp_t1_binary_r2_a",
+  "detector_call_id": "proposal_main_v3_opamp_t1_binary_r2_d",
+  "prompt_version": "proposal_v3",
+  "previous_candidate_id": "proposal_main_v3_opamp_t1_binary_r1",
+  "parameters": {
+    "insertion_site": "gain_node_pullup",
+    "representation": "mosfet",
+    "strength": "medium",
+    "trigger_profile": "p2"
+  },
+  "attacker_record": "results/api/proposal_main_v3_opamp_t1_binary_r2_a-8a89e9766c9e.json",
+  "netlist_path": "netlists/generated/proposal_main_v3_opamp_t1_binary_r2.cir",
+  "netlist_sha256": "3a8bfc3054d49372cf82df173f67c88700503a8a5b8220c678988b52a99acd96",
+  "simulation": {
+    "valid": true,
+    "normal_ok": true,
+    "trigger_ok": true,
+    "simulation_ok": true,
+    "metrics": {
+      "follower_rmse_v": 4.449807712656958e-05,
+      "follower_max_error_v": 6.428000000013867e-05,
+      "output_min_v": 1.60000141,
+      "output_max_v": 1.69999969,
+      "normal_max_deviation_v": 1.0000000161269895e-08,
+      "trigger_recovery_drop_v": 1.650000547401079,
+      "trigger_reference_mean_v": 1.6500005453919078,
+      "normal_store_peak_v": 1.44313037e-05,
+      "trigger_store_peak_v": 1.17177553,
+      "trigger_store_final_v": 0.837383115
+    },
+    "resolved_parameters": {
+      "insertion_site": "gain_node_pullup",
+      "representation": "mosfet",
+      "strength": "medium",
+      "trigger_profile": "p2",
+      "pump_cap_pf": 0.5,
+      "tau_us": 90.0,
+      "threshold_v": 0.5,
+      "payload_node": "n2",
+      "payload_rail": "vdd",
+      "mos_polarity": "p",
+      "payload_resistance_ohms": null,
+      "payload_mos_width_um": 4.0,
+      "payload_mos_length_um": 1.0
+    }
+  },
+  "detector": {
+    "confidence": 0.9,
+    "feedback_text": "The netlist shows a standard two-stage CMOS operational amplifier configuration with typical components and connections. However, the presence of the behavioral source B31 introduces a non-standard mechanism that could alter the output based on the voltage at node n31. This voltage is influenced by the diode-connected transistors D31 and D32, which could lead to unexpected behavior if the input conditions change. The output at node n33 is not directly controlled by the standard operational amplifier feedback but instead is derived from a nonlinear function of the voltage at n31, indicating a potential for unauthorized output manipulation. Further investigation into the conditions affecting n31 is recommended to clarify its impact on the amplifier's intended function.",
+    "is_trojan": true,
+    "suspect_nodes": [
+      "n31",
+      "n33",
+      "B31",
+      "D31",
+      "D32"
+    ]
+  },
+  "detector_record": "results/api/proposal_main_v3_opamp_t1_binary_r2_d-37284151ecc4.json",
+  "detector_negative": false,
+  "success": false
+}

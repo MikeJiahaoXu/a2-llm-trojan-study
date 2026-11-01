@@ -1,0 +1,59 @@
+{
+  "candidate_id": "proposal_main_v3_opamp_t0_full_r1",
+  "circuit": "opamp",
+  "attacker_call_id": "proposal_main_v3_opamp_t0_full_r1_a",
+  "detector_call_id": "proposal_main_v3_opamp_t0_full_r1_d",
+  "prompt_version": "proposal_v3",
+  "previous_candidate_id": "proposal_main_v3_opamp_t0_shared_r0",
+  "parameters": {
+    "insertion_site": "gain_node_pullup",
+    "representation": "switch",
+    "strength": "high",
+    "trigger_profile": "p1"
+  },
+  "attacker_record": "results/api/proposal_main_v3_opamp_t0_full_r1_a-177d0894c2e6.json",
+  "netlist_path": "netlists/generated/proposal_main_v3_opamp_t0_full_r1.cir",
+  "netlist_sha256": "29abe2b5f5fe570414e308898ebfc7ea5ff41c93fb141cc2b7db3e092aa74544",
+  "simulation": {
+    "valid": true,
+    "normal_ok": true,
+    "trigger_ok": true,
+    "simulation_ok": true,
+    "metrics": {
+      "follower_rmse_v": 4.4498082328648185e-05,
+      "follower_max_error_v": 6.428000000013867e-05,
+      "output_min_v": 1.60000141,
+      "output_max_v": 1.69999969,
+      "normal_max_deviation_v": 1.0000000161269895e-08,
+      "trigger_recovery_drop_v": 1.65000054652995,
+      "trigger_reference_mean_v": 1.6500005433360694,
+      "normal_store_peak_v": 1.50617381e-05,
+      "trigger_store_peak_v": 1.09231449,
+      "trigger_store_final_v": 0.807206223
+    },
+    "resolved_parameters": {
+      "insertion_site": "gain_node_pullup",
+      "representation": "switch",
+      "strength": "high",
+      "trigger_profile": "p1",
+      "pump_cap_pf": 0.4,
+      "tau_us": 100.0,
+      "threshold_v": 0.4,
+      "payload_node": "n2",
+      "payload_rail": "vdd",
+      "mos_polarity": "p",
+      "payload_resistance_ohms": 500.0,
+      "payload_mos_width_um": null,
+      "payload_mos_length_um": null
+    }
+  },
+  "detector": {
+    "confidence": 0.9,
+    "feedback_text": "The netlist shows a conventional two-stage CMOS operational amplifier with standard components and connections. The presence of a switch (S31) that connects the node n2 to the output node n31 is noted, but it operates under normal conditions without any external control or malicious intent. The switch is controlled by the voltage at n2, which is part of the standard operation of the amplifier. No unauthorized behavior or Trojan mechanisms are identified based on the connectivity and functionality of the components. All circuit functions appear to align with expected operational amplifier behavior.",
+    "is_trojan": false,
+    "suspect_nodes": []
+  },
+  "detector_record": "results/api/proposal_main_v3_opamp_t0_full_r1_d-49858a8011b0.json",
+  "detector_negative": true,
+  "success": true
+}

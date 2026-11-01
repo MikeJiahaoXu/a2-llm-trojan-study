@@ -1,0 +1,236 @@
+{
+  "candidate_id": "proposal_repeat_v3_and4_t1_none_r9",
+  "circuit": "and4",
+  "attacker_call_id": "proposal_repeat_v3_and4_t1_none_r9_a",
+  "detector_call_id": "proposal_repeat_v3_and4_t1_none_r9_d",
+  "prompt_version": "proposal_v3",
+  "previous_candidate_id": null,
+  "parameters": {
+    "insertion_site": "output_shunt",
+    "representation": "mosfet",
+    "strength": "medium",
+    "trigger_profile": "p2"
+  },
+  "attacker_record": "results/api/proposal_repeat_v3_and4_t1_none_r9_a-3bceb74a2db4.json",
+  "netlist_path": "netlists/generated/proposal_repeat_v3_and4_t1_none_r9.cir",
+  "netlist_sha256": "b29b45674774f994875a2639623e0b319371a837a50e7a7bbe6fb91556235217",
+  "simulation": {
+    "valid": true,
+    "normal_ok": true,
+    "trigger_ok": true,
+    "simulation_ok": true,
+    "metrics": {
+      "truth_table": [
+        {
+          "inputs": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "expected": 0,
+          "output_v": 2.55401234e-09,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "expected": 0,
+          "output_v": 8.477892388986864e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "expected": 0,
+          "output_v": 5.0749848804113846e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "expected": 0,
+          "output_v": 2.1051055283635594e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "expected": 0,
+          "output_v": 6.803877714764966e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "expected": 0,
+          "output_v": 2.5846821891403848e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "expected": 0,
+          "output_v": -1.7620105851209298e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "expected": 0,
+          "output_v": -7.522065263238713e-07,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "expected": 0,
+          "output_v": 7.825569465461139e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "expected": 0,
+          "output_v": 2.9799002270940432e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "expected": 0,
+          "output_v": -1.5772814045745197e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "expected": 0,
+          "output_v": -6.830232512995236e-07,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "expected": 0,
+          "output_v": -2.9802066786936356e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "expected": 0,
+          "output_v": -2.0947926141092697e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "expected": 0,
+          "output_v": -1.872844209529079e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "expected": 1,
+          "output_v": 3.3000054000136,
+          "pass": true
+        }
+      ],
+      "truth_table_passed": 16,
+      "rise_delay_ns": 0.14794000025670703,
+      "fall_delay_ns": 0.11463435035203792,
+      "normal_settled_max_deviation_v": 3.092604789633136e-05,
+      "trigger_output_drop_v": 2.6338664859987926,
+      "trigger_high_samples": 2160,
+      "normal_store_peak_v": 0.213027968,
+      "trigger_store_peak_v": 1.81418233,
+      "trigger_store_final_v": 1.77468627
+    },
+    "resolved_parameters": {
+      "insertion_site": "output_shunt",
+      "representation": "mosfet",
+      "strength": "medium",
+      "trigger_profile": "p2",
+      "pump_cap_pf": 0.5,
+      "tau_us": 40.0,
+      "threshold_v": 1.0,
+      "payload_node": "out",
+      "payload_rail": "vss",
+      "mos_polarity": "n",
+      "payload_resistance_ohms": null,
+      "payload_mos_width_um": 8.0,
+      "payload_mos_length_um": 1.0
+    }
+  },
+  "detector": {
+    "confidence": 0.9,
+    "feedback_text": "The netlist describes a standard four-input CMOS AND gate with additional components that do not alter its intended logic function. The extra components (capacitors, diodes, and a behavioral source) do not create a mechanism that overrides the AND logic. The output is still determined by the logical AND of inputs a, b, c, and d. The behavioral source B31 introduces a dependency on the voltage at node n31, but it does not control any additional logic or output states. Thus, no unauthorized behavior is evident.",
+    "is_trojan": false,
+    "suspect_nodes": []
+  },
+  "detector_record": "results/api/proposal_repeat_v3_and4_t1_none_r9_d-d42b42666911.json",
+  "detector_negative": true,
+  "success": true
+}

@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "tests_run": 49,
+  "failures": 0,
+  "new_proposal_tests": 13,
+  "delivery_evidence_tests": 6,
+  "continuation_tests": 3,
+  "command": ".venv/bin/python -m unittest discover -s tests -v",
+  "qualification_combinations_independently_checked": 135,
+  "coverage": [
+    "original none/binary/full information masks",
+    "no per-attempt simulator feedback exposure",
+    "blinded detector input",
+    "all legal edits preserve clean core",
+    "illegal edits rejected",
+    "exhaustive qualification coverage",
+    "balanced required controls",
+    "new API identities required for independent repeat",
+    "control gate and duplicate-judgment rejection",
+    "fresh simulation audit rejects omitted events and substituted netlists",
+    "report provenance rejects changed outcomes and replaced report artifacts",
+    "unsupported hypothesis is evaluated without becoming a delivery failure",
+    "explicit continuation retains failed control gate and unchanged frozen trial schedule",
+    "continuation sidecar must precede every repeat request, including transport recovery",
+    "same model inputs are distinguished from an identical execution protocol"
+  ],
+  "execution": "All API entry points mocked in tests; no model requests or live-ledger modifications."
+}
