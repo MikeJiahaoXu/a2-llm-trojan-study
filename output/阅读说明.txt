@@ -2,6 +2,7 @@ A2 Trojans in the LLM Era — 项目阅读说明
 
 提交报告：output/pdf/A2_Trojan_LLM_Informal_Report.pdf
 可编辑报告：output/pdf/A2_Trojan_LLM_Informal_Report.txt
+5分钟汇报：output/slides/a2_feedback/output.pptx（6页英文slides，逐页演讲稿及时间分配在PowerPoint备注中）
 项目仓库：https://github.com/MikeJiahaoXu/a2-llm-trojan-study
 复现方法：README.md
 
@@ -14,6 +15,8 @@ A2 Trojans in the LLM Era — 项目阅读说明
 AND 首轮：none=4，binary=6，full=5；复跑：6，3，1。
 
 研究范围是预先完成电气验证的有限模板选择与修改，不是任意电路合成。结果显示反馈在运放上的观察效果与 AND 不同，不能得出反馈越详细越容易逃避检测的普遍结论。
+
+11月2日修订补充了单次候选从JSON选择、生成网表、电气检查、检测判断到下一次反馈修改的具体流程，并集中解释AND结果。相同输出端MOSFET网表在60次实际评审中被检出42次；binary/full每组各有10/20次内部节点插入，这40次全部被检出。这些是实际观察，不是“电路太简单”或“新模型进步”的因果证明。未新增API实验。
 
 首轮检测器控制检查通过；复跑的已知木马识别为3/5，低于原4/5门槛。该结果完整保留，并在复跑攻击开始前记录继续执行的规则变更。模型、提示、种子、模板和尝试次数不变。报告明确将复跑作为稳定性观察，不声称其完全满足原停止规则。
 

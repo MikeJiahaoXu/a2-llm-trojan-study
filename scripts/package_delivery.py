@@ -33,10 +33,16 @@ def main():
     for suffix,field in [('.pdf','pdf_sha256'),('.txt','text_sha256')]:
         if hashlib.sha256(report.with_suffix(suffix).read_bytes()).hexdigest()!=provenance[field]:
             raise RuntimeError('Report differs from its verified provenance: '+suffix)
+    deck=ROOT/'output/slides/a2_feedback/output.pptx'
+    deck_provenance=deck.with_name('provenance.json')
+    deck_meta=json.loads(deck_provenance.read_text())
+    if hashlib.sha256(deck.read_bytes()).hexdigest()!=deck_meta['pptx_sha256']:
+        raise RuntimeError('Presentation differs from its verified provenance.')
     selected=[ROOT/n for n in ['README.md','LICENSE','requirements.txt','.gitignore','.gitattributes','.env.example','output/阅读说明.txt']]
+    selected.extend([deck,deck_provenance])
     for directory in ['scripts','tests','configs','docs','netlists','results','output/pdf']:
         selected.extend(p for p in (ROOT/directory).rglob('*') if p.is_file()
-                        and '__pycache__' not in p.parts and p.suffix!='.pyc'
+                        and '__pycache__' not in p.parts and 'node_modules' not in p.parts and p.suffix!='.pyc'
                         and p.name!='.api.lock')
     selected=sorted(set(selected))
     secret=(dotenv_values(ROOT/'.env').get('OPENAI_API_KEY') or '').encode()

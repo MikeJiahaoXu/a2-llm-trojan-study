@@ -5,6 +5,7 @@ An Information Security course project studying whether more detailed circuit-de
 ## Read the results
 
 - [Five-page informal report](output/pdf/A2_Trojan_LLM_Informal_Report.pdf)
+- [Five-minute presentation](output/slides/a2_feedback/output.pptx): six editable slides with English speaker notes and timings.
 - [First-run group results](results/proposal_main_v3/groups.csv) and [repeat results](results/proposal_repeat_v3/groups.csv)
 - [Frozen protocol](configs/proposal_experiment.json) and [proposal requirements map](docs/proposal_requirements.json)
 - [Electrical qualification](results/proposal_validation/qualification_summary.json)
@@ -24,6 +25,8 @@ Counts below are electrically valid, reviewer-negative attempts divided by all a
 All 240 analysis rows pass the unchanged electrical requirements. They represent 224 actual candidate events and **29 distinct netlists**, all independently re-simulated. The allowed menu was prequalified, so electrical validity is enforced by the constrained design space rather than evidence of unrestricted LLM synthesis ability.
 
 Feedback conditions produce more observed op-amp escapes than fresh independent generation in both runs, while full feedback does not consistently outperform binary feedback. The AND results do not support a consistent benefit from increasing feedback detail. Each no-feedback arm repeatedly selects one netlist, so repeated reviews and limited exploration matter. The repeat's weaker control results and its disclosed continuation exception further limit confirmation claims.
+
+The revised report explains a single candidate from its four JSON choices through electrical checks and detector feedback. Its AND case analysis separates observed evidence from possible causes. Both no-feedback groups repeat the same output-shunt MOSFET netlist; across all actual reviews this exact netlist is flagged 42/60 times. Each binary/full group uses the internal NAND-node insertion in 10/20 attempts, and all 40 of those actual events are flagged. The [descriptive diagnostic](results/proposal_analysis/and_diagnostics.json) retains source hashes and shared-start deduplication. This is evidence of reviewer variability and different candidate selection, not a controlled test showing that circuit simplicity caused the result or that a newer model improved.
 
 ## Experimental design
 
@@ -82,6 +85,7 @@ The setup script builds ngspice under `.tools/`. The smoke check and archived re
 .venv/bin/python -m scripts.proposal.analyze --run-id proposal_repeat_v3
 .venv/bin/python -m scripts.proposal.verify --run-id proposal_main_v3 --run-id proposal_repeat_v3
 .venv/bin/python -m scripts.proposal.audit_simulations --run-ids proposal_main_v3 proposal_repeat_v3
+.venv/bin/python -m scripts.proposal.diagnose_and
 .venv/bin/python scripts/build_proposal_report.py --run-id proposal_main_v3 --replication-id proposal_repeat_v3
 .venv/bin/python -m scripts.proposal.check_delivery
 .venv/bin/python -m unittest discover -s tests -v

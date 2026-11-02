@@ -1,6 +1,6 @@
 {
   "complete": true,
-  "checked_at_utc": "2026-11-01T07:28:32.503561+00:00",
+  "checked_at_utc": "2026-11-02T01:35:47.416227+00:00",
   "protocol": "proposal_v3",
   "execution_runs": [
     "proposal_main_v3",
@@ -483,8 +483,8 @@
       ],
       "details": {
         "pages": 5,
-        "pdf_sha256": "ea5dcd070e6895a7de4be8b61063e93762ba5e214171db85b5f087082609e4ba",
-        "text_sha256": "e0adbb5baac4f8ae6bf97d6ac1a64867972e90086332c2876362fdde4565c408",
+        "pdf_sha256": "b18dbe1e95d3709280b46684f7d7edcc8620ef275a643dd882e658766ed8270a",
+        "text_sha256": "7d805459872140a66f8f8f0877b1b897ad7205aff02daceded5b86f56ec532d1",
         "provenance_bound_to_configured_runs": true
       }
     },

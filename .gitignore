@@ -11,6 +11,7 @@ secrets/
 .tools/
 tmp/
 __pycache__/
+node_modules/
 *.pyc
 .DS_Store
 
@@ -20,3 +21,4 @@ results/.api.lock
 # Generated delivery archives and their checksums
 output/*.zip
 output/*.sha256
+output/slides/**/narrative_plan.md

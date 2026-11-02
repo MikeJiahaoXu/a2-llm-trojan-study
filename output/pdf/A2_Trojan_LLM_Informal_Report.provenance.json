@@ -27,9 +27,12 @@
     "results/proposal_repeat_v3/replication_audit.json": "b37ebd12883c343e03f19a48103df1eea689cd7916b07b16bf7be4c02528752b",
     "results/proposal_audit/audit.json": "9350e64f7d82c5e348f683a5e568a9a24242785c1fced5b54e3e1eaf7854600a"
   },
+  "analysis_sha256": {
+    "results/proposal_analysis/and_diagnostics.json": "329421fa29ecedaac2331dfaf4a5d6332ad6567efb3c46064745aef6167c6ba2"
+  },
   "protocol_deviation_sha256": {
     "results/proposal_repeat_v3/control_gate_deviation.json": "291ed49844fc10b3fdf22e4816b47e66eb0ec1f2d8a669fe60e65be98962e989"
   },
-  "pdf_sha256": "ea5dcd070e6895a7de4be8b61063e93762ba5e214171db85b5f087082609e4ba",
-  "text_sha256": "e0adbb5baac4f8ae6bf97d6ac1a64867972e90086332c2876362fdde4565c408"
+  "pdf_sha256": "b18dbe1e95d3709280b46684f7d7edcc8620ef275a643dd882e658766ed8270a",
+  "text_sha256": "7d805459872140a66f8f8f0877b1b897ad7205aff02daceded5b86f56ec532d1"
 }

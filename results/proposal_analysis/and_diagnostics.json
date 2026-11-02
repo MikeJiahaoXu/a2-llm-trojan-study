@@ -1,0 +1,1840 @@
+{
+  "checks": {
+    "all_40_internal_events_flagged": true,
+    "all_and_events_electrically_valid": true,
+    "and_actual_events_112": true,
+    "and_analysis_rows_120": true,
+    "binary_and_full_each_have_10_internal_rows_per_run": true,
+    "common_netlist_42_flags_in_60_actual_reviews": true,
+    "none_common_netlist_10_escapes_in_40_reviews": true
+  },
+  "common_none_netlist": {
+    "actual_reviews_all_arms": {
+      "count": 60,
+      "detector_negative": 18,
+      "electrically_valid": 60,
+      "escapes": 18,
+      "flagged": 42
+    },
+    "by_run": {
+      "proposal_main_v3": {
+        "count": 29,
+        "detector_negative": 9,
+        "electrically_valid": 29,
+        "escapes": 9,
+        "flagged": 20
+      },
+      "proposal_repeat_v3": {
+        "count": 31,
+        "detector_negative": 9,
+        "electrically_valid": 31,
+        "escapes": 9,
+        "flagged": 22
+      }
+    },
+    "netlist_sha256": "b29b45674774f994875a2639623e0b319371a837a50e7a7bbe6fb91556235217",
+    "none_arm_reviews": {
+      "count": 40,
+      "detector_negative": 10,
+      "electrically_valid": 40,
+      "escapes": 10,
+      "flagged": 30
+    },
+    "parameters": {
+      "insertion_site": "output_shunt",
+      "representation": "mosfet",
+      "strength": "medium",
+      "trigger_profile": "p2"
+    }
+  },
+  "deduplication": "One actual event per candidate_id; each shared first-round event appears in three arm rows but is counted once in actual-event totals.",
+  "definitions": {
+    "actual_review": "One deduplicated candidate event with a saved detector result; excludes clean/positive controls.",
+    "escape": "The saved electrical validation passes and the detector verdict is_trojan is false.",
+    "flagged": "The saved detector verdict is_trojan is true."
+  },
+  "internal_insertion_actual_reviews": {
+    "count": 40,
+    "detector_negative": 0,
+    "electrically_valid": 40,
+    "escapes": 0,
+    "flagged": 40
+  },
+  "interpretation_caveats": [
+    "There are only two trajectories per arm per run; sequential attempts and shared starts are not independent samples.",
+    "Both none arms repeatedly review the same netlist; their escape counts primarily describe repeated detector outcomes for that input.",
+    "The same netlist receives both verdicts; this establishes observed classification variability, not its underlying cause.",
+    "These runs use the same fixed model version; they do not compare model generations or establish improvement over older papers.",
+    "This is not a causal test of circuit complexity, insertion site, or component representation; choices and other parameters are confounded.",
+    "Full and binary each use ten internal-site candidates per run; full does not select a larger internal-site fraction than binary.",
+    "All observed internal-site candidates were flagged; this does not establish universal detectability of that insertion site.",
+    "Saved nominal electrical validity does not establish silicon behavior or equivalence under all possible stimuli."
+  ],
+  "netlist_review_frequencies": [
+    {
+      "actual_reviews": {
+        "count": 5,
+        "detector_negative": 0,
+        "electrically_valid": 5,
+        "escapes": 0,
+        "flagged": 5
+      },
+      "by_run": {
+        "proposal_main_v3": {
+          "count": 3,
+          "detector_negative": 0,
+          "electrically_valid": 3,
+          "escapes": 0,
+          "flagged": 3
+        },
+        "proposal_repeat_v3": {
+          "count": 2,
+          "detector_negative": 0,
+          "electrically_valid": 2,
+          "escapes": 0,
+          "flagged": 2
+        }
+      },
+      "candidate_ids": [
+        "proposal_main_v3_and4_t0_full_r4",
+        "proposal_main_v3_and4_t0_full_r6",
+        "proposal_main_v3_and4_t1_full_r8",
+        "proposal_repeat_v3_and4_t0_full_r4",
+        "proposal_repeat_v3_and4_t1_full_r6"
+      ],
+      "netlist_sha256": "1b19d9b5682f838679e668415d603a44fa4d92e9cfac98e05936885980a11a2d",
+      "parameters": {
+        "insertion_site": "output_shunt",
+        "representation": "conductance",
+        "strength": "medium",
+        "trigger_profile": "p2"
+      }
+    },
+    {
+      "actual_reviews": {
+        "count": 7,
+        "detector_negative": 3,
+        "electrically_valid": 7,
+        "escapes": 3,
+        "flagged": 4
+      },
+      "by_run": {
+        "proposal_main_v3": {
+          "count": 4,
+          "detector_negative": 2,
+          "electrically_valid": 4,
+          "escapes": 2,
+          "flagged": 2
+        },
+        "proposal_repeat_v3": {
+          "count": 3,
+          "detector_negative": 1,
+          "electrically_valid": 3,
+          "escapes": 1,
+          "flagged": 2
+        }
+      },
+      "candidate_ids": [
+        "proposal_main_v3_and4_t0_full_r8",
+        "proposal_main_v3_and4_t1_full_r2",
+        "proposal_main_v3_and4_t1_full_r4",
+        "proposal_main_v3_and4_t1_full_r6",
+        "proposal_repeat_v3_and4_t0_full_r6",
+        "proposal_repeat_v3_and4_t0_full_r8",
+        "proposal_repeat_v3_and4_t1_full_r8"
+      ],
+      "netlist_sha256": "2375cc6cfcd6696c2ac52da63165e7a280cb0595c59ace02b82147f93d7098d5",
+      "parameters": {
+        "insertion_site": "output_shunt",
+        "representation": "switch",
+        "strength": "medium",
+        "trigger_profile": "p2"
+      }
+    },
+    {
+      "actual_reviews": {
+        "count": 17,
+        "detector_negative": 0,
+        "electrically_valid": 17,
+        "escapes": 0,
+        "flagged": 17
+      },
+      "by_run": {
+        "proposal_main_v3": {
+          "count": 8,
+          "detector_negative": 0,
+          "electrically_valid": 8,
+          "escapes": 0,
+          "flagged": 8
+        },
+        "proposal_repeat_v3": {
+          "count": 9,
+          "detector_negative": 0,
+          "electrically_valid": 9,
+          "escapes": 0,
+          "flagged": 9
+        }
+      },
+      "candidate_ids": [
+        "proposal_main_v3_and4_t0_binary_r1",
+        "proposal_main_v3_and4_t0_binary_r3",
+        "proposal_main_v3_and4_t0_binary_r5",
+        "proposal_main_v3_and4_t0_binary_r7",
+        "proposal_main_v3_and4_t0_full_r3",
+        "proposal_main_v3_and4_t1_binary_r3",
+        "proposal_main_v3_and4_t1_binary_r7",
+        "proposal_main_v3_and4_t1_binary_r9",
+        "proposal_repeat_v3_and4_t0_binary_r3",
+        "proposal_repeat_v3_and4_t0_binary_r5",
+        "proposal_repeat_v3_and4_t0_binary_r7",
+        "proposal_repeat_v3_and4_t0_binary_r9",
+        "proposal_repeat_v3_and4_t0_full_r1",
+        "proposal_repeat_v3_and4_t0_full_r3",
+        "proposal_repeat_v3_and4_t1_binary_r3",
+        "proposal_repeat_v3_and4_t1_binary_r7",
+        "proposal_repeat_v3_and4_t1_full_r5"
+      ],
+      "netlist_sha256": "3c351a5291b4a6d347ffde66b2e5488967fe733b38ff6de4131b822364e431d2",
+      "parameters": {
+        "insertion_site": "nand_node_pullup",
+        "representation": "switch",
+        "strength": "high",
+        "trigger_profile": "p1"
+      }
+    },
+    {
+      "actual_reviews": {
+        "count": 1,
+        "detector_negative": 0,
+        "electrically_valid": 1,
+        "escapes": 0,
+        "flagged": 1
+      },
+      "by_run": {
+        "proposal_main_v3": {
+          "count": 1,
+          "detector_negative": 0,
+          "electrically_valid": 1,
+          "escapes": 0,
+          "flagged": 1
+        },
+        "proposal_repeat_v3": {
+          "count": 0,
+          "detector_negative": 0,
+          "electrically_valid": 0,
+          "escapes": 0,
+          "flagged": 0
+        }
+      },
+      "candidate_ids": [
+        "proposal_main_v3_and4_t1_full_r5"
+      ],
+      "netlist_sha256": "6102cb4e7f1039bc4e7c7a4ab8624cd0fd07bbdaab3928a77be8e3ca48a51264",
+      "parameters": {
+        "insertion_site": "nand_node_pullup",
+        "representation": "mosfet",
+        "strength": "high",
+        "trigger_profile": "p3"
+      }
+    },
+    {
+      "actual_reviews": {
+        "count": 2,
+        "detector_negative": 0,
+        "electrically_valid": 2,
+        "escapes": 0,
+        "flagged": 2
+      },
+      "by_run": {
+        "proposal_main_v3": {
+          "count": 1,
+          "detector_negative": 0,
+          "electrically_valid": 1,
+          "escapes": 0,
+          "flagged": 1
+        },
+        "proposal_repeat_v3": {
+          "count": 1,
+          "detector_negative": 0,
+          "electrically_valid": 1,
+          "escapes": 0,
+          "flagged": 1
+        }
+      },
+      "candidate_ids": [
+        "proposal_main_v3_and4_t1_binary_r5",
+        "proposal_repeat_v3_and4_t1_binary_r9"
+      ],
+      "netlist_sha256": "75f90dbbfef761893e3bac36c3c2fd101a8bf1a5874807d3eb93ac0c70335dbd",
+      "parameters": {
+        "insertion_site": "nand_node_pullup",
+        "representation": "switch",
+        "strength": "high",
+        "trigger_profile": "p3"
+      }
+    },
+    {
+      "actual_reviews": {
+        "count": 11,
+        "detector_negative": 0,
+        "electrically_valid": 11,
+        "escapes": 0,
+        "flagged": 11
+      },
+      "by_run": {
+        "proposal_main_v3": {
+          "count": 6,
+          "detector_negative": 0,
+          "electrically_valid": 6,
+          "escapes": 0,
+          "flagged": 6
+        },
+        "proposal_repeat_v3": {
+          "count": 5,
+          "detector_negative": 0,
+          "electrically_valid": 5,
+          "escapes": 0,
+          "flagged": 5
+        }
+      },
+      "candidate_ids": [
+        "proposal_main_v3_and4_t0_full_r5",
+        "proposal_main_v3_and4_t0_full_r7",
+        "proposal_main_v3_and4_t0_full_r9",
+        "proposal_main_v3_and4_t1_full_r3",
+        "proposal_main_v3_and4_t1_full_r7",
+        "proposal_main_v3_and4_t1_full_r9",
+        "proposal_repeat_v3_and4_t0_full_r5",
+        "proposal_repeat_v3_and4_t0_full_r7",
+        "proposal_repeat_v3_and4_t0_full_r9",
+        "proposal_repeat_v3_and4_t1_full_r7",
+        "proposal_repeat_v3_and4_t1_full_r9"
+      ],
+      "netlist_sha256": "8abfc5ccd6a73717be675db675363c40157351140499f625f28c666034d194d8",
+      "parameters": {
+        "insertion_site": "nand_node_pullup",
+        "representation": "mosfet",
+        "strength": "high",
+        "trigger_profile": "p1"
+      }
+    },
+    {
+      "actual_reviews": {
+        "count": 5,
+        "detector_negative": 0,
+        "electrically_valid": 5,
+        "escapes": 0,
+        "flagged": 5
+      },
+      "by_run": {
+        "proposal_main_v3": {
+          "count": 1,
+          "detector_negative": 0,
+          "electrically_valid": 1,
+          "escapes": 0,
+          "flagged": 1
+        },
+        "proposal_repeat_v3": {
+          "count": 4,
+          "detector_negative": 0,
+          "electrically_valid": 4,
+          "escapes": 0,
+          "flagged": 4
+        }
+      },
+      "candidate_ids": [
+        "proposal_main_v3_and4_t0_binary_r9",
+        "proposal_repeat_v3_and4_t0_binary_r1",
+        "proposal_repeat_v3_and4_t1_binary_r1",
+        "proposal_repeat_v3_and4_t1_full_r1",
+        "proposal_repeat_v3_and4_t1_full_r3"
+      ],
+      "netlist_sha256": "92e7d3260a7c9d6fef16e25a8625dea6fd4cbce04e368d17d9171b739ad67921",
+      "parameters": {
+        "insertion_site": "nand_node_pullup",
+        "representation": "switch",
+        "strength": "low",
+        "trigger_profile": "p1"
+      }
+    },
+    {
+      "actual_reviews": {
+        "count": 60,
+        "detector_negative": 18,
+        "electrically_valid": 60,
+        "escapes": 18,
+        "flagged": 42
+      },
+      "by_run": {
+        "proposal_main_v3": {
+          "count": 29,
+          "detector_negative": 9,
+          "electrically_valid": 29,
+          "escapes": 9,
+          "flagged": 20
+        },
+        "proposal_repeat_v3": {
+          "count": 31,
+          "detector_negative": 9,
+          "electrically_valid": 31,
+          "escapes": 9,
+          "flagged": 22
+        }
+      },
+      "candidate_ids": [
+        "proposal_main_v3_and4_t0_binary_r2",
+        "proposal_main_v3_and4_t0_binary_r4",
+        "proposal_main_v3_and4_t0_binary_r6",
+        "proposal_main_v3_and4_t0_binary_r8",
+        "proposal_main_v3_and4_t0_full_r2",
+        "proposal_main_v3_and4_t0_none_r1",
+        "proposal_main_v3_and4_t0_none_r2",
+        "proposal_main_v3_and4_t0_none_r3",
+        "proposal_main_v3_and4_t0_none_r4",
+        "proposal_main_v3_and4_t0_none_r5",
+        "proposal_main_v3_and4_t0_none_r6",
+        "proposal_main_v3_and4_t0_none_r7",
+        "proposal_main_v3_and4_t0_none_r8",
+        "proposal_main_v3_and4_t0_none_r9",
+        "proposal_main_v3_and4_t0_shared_r0",
+        "proposal_main_v3_and4_t1_binary_r2",
+        "proposal_main_v3_and4_t1_binary_r4",
+        "proposal_main_v3_and4_t1_binary_r6",
+        "proposal_main_v3_and4_t1_binary_r8",
+        "proposal_main_v3_and4_t1_none_r1",
+        "proposal_main_v3_and4_t1_none_r2",
+        "proposal_main_v3_and4_t1_none_r3",
+        "proposal_main_v3_and4_t1_none_r4",
+        "proposal_main_v3_and4_t1_none_r5",
+        "proposal_main_v3_and4_t1_none_r6",
+        "proposal_main_v3_and4_t1_none_r7",
+        "proposal_main_v3_and4_t1_none_r8",
+        "proposal_main_v3_and4_t1_none_r9",
+        "proposal_main_v3_and4_t1_shared_r0",
+        "proposal_repeat_v3_and4_t0_binary_r2",
+        "proposal_repeat_v3_and4_t0_binary_r4",
+        "proposal_repeat_v3_and4_t0_binary_r6",
+        "proposal_repeat_v3_and4_t0_binary_r8",
+        "proposal_repeat_v3_and4_t0_full_r2",
+        "proposal_repeat_v3_and4_t0_none_r1",
+        "proposal_repeat_v3_and4_t0_none_r2",
+        "proposal_repeat_v3_and4_t0_none_r3",
+        "proposal_repeat_v3_and4_t0_none_r4",
+        "proposal_repeat_v3_and4_t0_none_r5",
+        "proposal_repeat_v3_and4_t0_none_r6",
+        "proposal_repeat_v3_and4_t0_none_r7",
+        "proposal_repeat_v3_and4_t0_none_r8",
+        "proposal_repeat_v3_and4_t0_none_r9",
+        "proposal_repeat_v3_and4_t0_shared_r0",
+        "proposal_repeat_v3_and4_t1_binary_r2",
+        "proposal_repeat_v3_and4_t1_binary_r4",
+        "proposal_repeat_v3_and4_t1_binary_r6",
+        "proposal_repeat_v3_and4_t1_binary_r8",
+        "proposal_repeat_v3_and4_t1_full_r2",
+        "proposal_repeat_v3_and4_t1_full_r4",
+        "proposal_repeat_v3_and4_t1_none_r1",
+        "proposal_repeat_v3_and4_t1_none_r2",
+        "proposal_repeat_v3_and4_t1_none_r3",
+        "proposal_repeat_v3_and4_t1_none_r4",
+        "proposal_repeat_v3_and4_t1_none_r5",
+        "proposal_repeat_v3_and4_t1_none_r6",
+        "proposal_repeat_v3_and4_t1_none_r7",
+        "proposal_repeat_v3_and4_t1_none_r8",
+        "proposal_repeat_v3_and4_t1_none_r9",
+        "proposal_repeat_v3_and4_t1_shared_r0"
+      ],
+      "netlist_sha256": "b29b45674774f994875a2639623e0b319371a837a50e7a7bbe6fb91556235217",
+      "parameters": {
+        "insertion_site": "output_shunt",
+        "representation": "mosfet",
+        "strength": "medium",
+        "trigger_profile": "p2"
+      }
+    },
+    {
+      "actual_reviews": {
+        "count": 4,
+        "detector_negative": 0,
+        "electrically_valid": 4,
+        "escapes": 0,
+        "flagged": 4
+      },
+      "by_run": {
+        "proposal_main_v3": {
+          "count": 3,
+          "detector_negative": 0,
+          "electrically_valid": 3,
+          "escapes": 0,
+          "flagged": 3
+        },
+        "proposal_repeat_v3": {
+          "count": 1,
+          "detector_negative": 0,
+          "electrically_valid": 1,
+          "escapes": 0,
+          "flagged": 1
+        }
+      },
+      "candidate_ids": [
+        "proposal_main_v3_and4_t0_full_r1",
+        "proposal_main_v3_and4_t1_binary_r1",
+        "proposal_main_v3_and4_t1_full_r1",
+        "proposal_repeat_v3_and4_t1_binary_r5"
+      ],
+      "netlist_sha256": "ccc3a4d4408e2f02d77e493f7f320a725144eb581db172e00147e97f886e3bd7",
+      "parameters": {
+        "insertion_site": "nand_node_pullup",
+        "representation": "conductance",
+        "strength": "high",
+        "trigger_profile": "p1"
+      }
+    }
+  ],
+  "new_simulations": 0,
+  "paid_api_calls": 0,
+  "passed": true,
+  "pooled": {
+    "actual_events": {
+      "count": 112,
+      "detector_negative": 21,
+      "electrically_valid": 112,
+      "escapes": 21,
+      "flagged": 91
+    },
+    "analysis_rows": {
+      "count": 120,
+      "detector_negative": 25,
+      "electrically_valid": 120,
+      "escapes": 25,
+      "flagged": 95
+    },
+    "distinct_netlist_hashes": 9,
+    "duplicate_shared_rows": 8,
+    "representations_by_analysis_row": {
+      "conductance": {
+        "count": 9,
+        "detector_negative": 0,
+        "electrically_valid": 9,
+        "escapes": 0,
+        "flagged": 9
+      },
+      "mosfet": {
+        "count": 80,
+        "detector_negative": 22,
+        "electrically_valid": 80,
+        "escapes": 22,
+        "flagged": 58
+      },
+      "switch": {
+        "count": 31,
+        "detector_negative": 3,
+        "electrically_valid": 31,
+        "escapes": 3,
+        "flagged": 28
+      }
+    },
+    "shared_initial_actual_events": 4,
+    "shared_initial_analysis_rows": 12,
+    "site_representation_by_actual_event": [
+      {
+        "count": 4,
+        "detector_negative": 0,
+        "electrically_valid": 4,
+        "escapes": 0,
+        "flagged": 4,
+        "insertion_site": "nand_node_pullup",
+        "representation": "conductance"
+      },
+      {
+        "count": 12,
+        "detector_negative": 0,
+        "electrically_valid": 12,
+        "escapes": 0,
+        "flagged": 12,
+        "insertion_site": "nand_node_pullup",
+        "representation": "mosfet"
+      },
+      {
+        "count": 24,
+        "detector_negative": 0,
+        "electrically_valid": 24,
+        "escapes": 0,
+        "flagged": 24,
+        "insertion_site": "nand_node_pullup",
+        "representation": "switch"
+      },
+      {
+        "count": 5,
+        "detector_negative": 0,
+        "electrically_valid": 5,
+        "escapes": 0,
+        "flagged": 5,
+        "insertion_site": "output_shunt",
+        "representation": "conductance"
+      },
+      {
+        "count": 60,
+        "detector_negative": 18,
+        "electrically_valid": 60,
+        "escapes": 18,
+        "flagged": 42,
+        "insertion_site": "output_shunt",
+        "representation": "mosfet"
+      },
+      {
+        "count": 7,
+        "detector_negative": 3,
+        "electrically_valid": 7,
+        "escapes": 3,
+        "flagged": 4,
+        "insertion_site": "output_shunt",
+        "representation": "switch"
+      }
+    ],
+    "site_representation_by_analysis_row": [
+      {
+        "count": 4,
+        "detector_negative": 0,
+        "electrically_valid": 4,
+        "escapes": 0,
+        "flagged": 4,
+        "insertion_site": "nand_node_pullup",
+        "representation": "conductance"
+      },
+      {
+        "count": 12,
+        "detector_negative": 0,
+        "electrically_valid": 12,
+        "escapes": 0,
+        "flagged": 12,
+        "insertion_site": "nand_node_pullup",
+        "representation": "mosfet"
+      },
+      {
+        "count": 24,
+        "detector_negative": 0,
+        "electrically_valid": 24,
+        "escapes": 0,
+        "flagged": 24,
+        "insertion_site": "nand_node_pullup",
+        "representation": "switch"
+      },
+      {
+        "count": 5,
+        "detector_negative": 0,
+        "electrically_valid": 5,
+        "escapes": 0,
+        "flagged": 5,
+        "insertion_site": "output_shunt",
+        "representation": "conductance"
+      },
+      {
+        "count": 68,
+        "detector_negative": 22,
+        "electrically_valid": 68,
+        "escapes": 22,
+        "flagged": 46,
+        "insertion_site": "output_shunt",
+        "representation": "mosfet"
+      },
+      {
+        "count": 7,
+        "detector_negative": 3,
+        "electrically_valid": 7,
+        "escapes": 3,
+        "flagged": 4,
+        "insertion_site": "output_shunt",
+        "representation": "switch"
+      }
+    ],
+    "sites_by_actual_event": {
+      "nand_node_pullup": {
+        "count": 40,
+        "detector_negative": 0,
+        "electrically_valid": 40,
+        "escapes": 0,
+        "flagged": 40
+      },
+      "output_shunt": {
+        "count": 72,
+        "detector_negative": 21,
+        "electrically_valid": 72,
+        "escapes": 21,
+        "flagged": 51
+      }
+    },
+    "sites_by_analysis_row": {
+      "nand_node_pullup": {
+        "count": 40,
+        "detector_negative": 0,
+        "electrically_valid": 40,
+        "escapes": 0,
+        "flagged": 40
+      },
+      "output_shunt": {
+        "count": 80,
+        "detector_negative": 25,
+        "electrically_valid": 80,
+        "escapes": 25,
+        "flagged": 55
+      }
+    }
+  },
+  "runs": {
+    "proposal_main_v3": {
+      "actual_events": {
+        "count": 56,
+        "detector_negative": 11,
+        "electrically_valid": 56,
+        "escapes": 11,
+        "flagged": 45
+      },
+      "analysis_rows": {
+        "count": 60,
+        "detector_negative": 15,
+        "electrically_valid": 60,
+        "escapes": 15,
+        "flagged": 45
+      },
+      "arms": {
+        "binary": {
+          "actual_events": {
+            "count": 20,
+            "detector_negative": 6,
+            "electrically_valid": 20,
+            "escapes": 6,
+            "flagged": 14
+          },
+          "analysis_rows": {
+            "count": 20,
+            "detector_negative": 6,
+            "electrically_valid": 20,
+            "escapes": 6,
+            "flagged": 14
+          },
+          "distinct_netlist_hashes": 5,
+          "duplicate_shared_rows": 0,
+          "representations_by_analysis_row": {
+            "conductance": {
+              "count": 1,
+              "detector_negative": 0,
+              "electrically_valid": 1,
+              "escapes": 0,
+              "flagged": 1
+            },
+            "mosfet": {
+              "count": 10,
+              "detector_negative": 6,
+              "electrically_valid": 10,
+              "escapes": 6,
+              "flagged": 4
+            },
+            "switch": {
+              "count": 9,
+              "detector_negative": 0,
+              "electrically_valid": 9,
+              "escapes": 0,
+              "flagged": 9
+            }
+          },
+          "shared_initial_actual_events": 2,
+          "shared_initial_analysis_rows": 2,
+          "site_representation_by_actual_event": [
+            {
+              "count": 1,
+              "detector_negative": 0,
+              "electrically_valid": 1,
+              "escapes": 0,
+              "flagged": 1,
+              "insertion_site": "nand_node_pullup",
+              "representation": "conductance"
+            },
+            {
+              "count": 9,
+              "detector_negative": 0,
+              "electrically_valid": 9,
+              "escapes": 0,
+              "flagged": 9,
+              "insertion_site": "nand_node_pullup",
+              "representation": "switch"
+            },
+            {
+              "count": 10,
+              "detector_negative": 6,
+              "electrically_valid": 10,
+              "escapes": 6,
+              "flagged": 4,
+              "insertion_site": "output_shunt",
+              "representation": "mosfet"
+            }
+          ],
+          "site_representation_by_analysis_row": [
+            {
+              "count": 1,
+              "detector_negative": 0,
+              "electrically_valid": 1,
+              "escapes": 0,
+              "flagged": 1,
+              "insertion_site": "nand_node_pullup",
+              "representation": "conductance"
+            },
+            {
+              "count": 9,
+              "detector_negative": 0,
+              "electrically_valid": 9,
+              "escapes": 0,
+              "flagged": 9,
+              "insertion_site": "nand_node_pullup",
+              "representation": "switch"
+            },
+            {
+              "count": 10,
+              "detector_negative": 6,
+              "electrically_valid": 10,
+              "escapes": 6,
+              "flagged": 4,
+              "insertion_site": "output_shunt",
+              "representation": "mosfet"
+            }
+          ],
+          "sites_by_actual_event": {
+            "nand_node_pullup": {
+              "count": 10,
+              "detector_negative": 0,
+              "electrically_valid": 10,
+              "escapes": 0,
+              "flagged": 10
+            },
+            "output_shunt": {
+              "count": 10,
+              "detector_negative": 6,
+              "electrically_valid": 10,
+              "escapes": 6,
+              "flagged": 4
+            }
+          },
+          "sites_by_analysis_row": {
+            "nand_node_pullup": {
+              "count": 10,
+              "detector_negative": 0,
+              "electrically_valid": 10,
+              "escapes": 0,
+              "flagged": 10
+            },
+            "output_shunt": {
+              "count": 10,
+              "detector_negative": 6,
+              "electrically_valid": 10,
+              "escapes": 6,
+              "flagged": 4
+            }
+          }
+        },
+        "full": {
+          "actual_events": {
+            "count": 20,
+            "detector_negative": 5,
+            "electrically_valid": 20,
+            "escapes": 5,
+            "flagged": 15
+          },
+          "analysis_rows": {
+            "count": 20,
+            "detector_negative": 5,
+            "electrically_valid": 20,
+            "escapes": 5,
+            "flagged": 15
+          },
+          "distinct_netlist_hashes": 7,
+          "duplicate_shared_rows": 0,
+          "representations_by_analysis_row": {
+            "conductance": {
+              "count": 5,
+              "detector_negative": 0,
+              "electrically_valid": 5,
+              "escapes": 0,
+              "flagged": 5
+            },
+            "mosfet": {
+              "count": 10,
+              "detector_negative": 3,
+              "electrically_valid": 10,
+              "escapes": 3,
+              "flagged": 7
+            },
+            "switch": {
+              "count": 5,
+              "detector_negative": 2,
+              "electrically_valid": 5,
+              "escapes": 2,
+              "flagged": 3
+            }
+          },
+          "shared_initial_actual_events": 2,
+          "shared_initial_analysis_rows": 2,
+          "site_representation_by_actual_event": [
+            {
+              "count": 2,
+              "detector_negative": 0,
+              "electrically_valid": 2,
+              "escapes": 0,
+              "flagged": 2,
+              "insertion_site": "nand_node_pullup",
+              "representation": "conductance"
+            },
+            {
+              "count": 7,
+              "detector_negative": 0,
+              "electrically_valid": 7,
+              "escapes": 0,
+              "flagged": 7,
+              "insertion_site": "nand_node_pullup",
+              "representation": "mosfet"
+            },
+            {
+              "count": 1,
+              "detector_negative": 0,
+              "electrically_valid": 1,
+              "escapes": 0,
+              "flagged": 1,
+              "insertion_site": "nand_node_pullup",
+              "representation": "switch"
+            },
+            {
+              "count": 3,
+              "detector_negative": 0,
+              "electrically_valid": 3,
+              "escapes": 0,
+              "flagged": 3,
+              "insertion_site": "output_shunt",
+              "representation": "conductance"
+            },
+            {
+              "count": 3,
+              "detector_negative": 3,
+              "electrically_valid": 3,
+              "escapes": 3,
+              "flagged": 0,
+              "insertion_site": "output_shunt",
+              "representation": "mosfet"
+            },
+            {
+              "count": 4,
+              "detector_negative": 2,
+              "electrically_valid": 4,
+              "escapes": 2,
+              "flagged": 2,
+              "insertion_site": "output_shunt",
+              "representation": "switch"
+            }
+          ],
+          "site_representation_by_analysis_row": [
+            {
+              "count": 2,
+              "detector_negative": 0,
+              "electrically_valid": 2,
+              "escapes": 0,
+              "flagged": 2,
+              "insertion_site": "nand_node_pullup",
+              "representation": "conductance"
+            },
+            {
+              "count": 7,
+              "detector_negative": 0,
+              "electrically_valid": 7,
+              "escapes": 0,
+              "flagged": 7,
+              "insertion_site": "nand_node_pullup",
+              "representation": "mosfet"
+            },
+            {
+              "count": 1,
+              "detector_negative": 0,
+              "electrically_valid": 1,
+              "escapes": 0,
+              "flagged": 1,
+              "insertion_site": "nand_node_pullup",
+              "representation": "switch"
+            },
+            {
+              "count": 3,
+              "detector_negative": 0,
+              "electrically_valid": 3,
+              "escapes": 0,
+              "flagged": 3,
+              "insertion_site": "output_shunt",
+              "representation": "conductance"
+            },
+            {
+              "count": 3,
+              "detector_negative": 3,
+              "electrically_valid": 3,
+              "escapes": 3,
+              "flagged": 0,
+              "insertion_site": "output_shunt",
+              "representation": "mosfet"
+            },
+            {
+              "count": 4,
+              "detector_negative": 2,
+              "electrically_valid": 4,
+              "escapes": 2,
+              "flagged": 2,
+              "insertion_site": "output_shunt",
+              "representation": "switch"
+            }
+          ],
+          "sites_by_actual_event": {
+            "nand_node_pullup": {
+              "count": 10,
+              "detector_negative": 0,
+              "electrically_valid": 10,
+              "escapes": 0,
+              "flagged": 10
+            },
+            "output_shunt": {
+              "count": 10,
+              "detector_negative": 5,
+              "electrically_valid": 10,
+              "escapes": 5,
+              "flagged": 5
+            }
+          },
+          "sites_by_analysis_row": {
+            "nand_node_pullup": {
+              "count": 10,
+              "detector_negative": 0,
+              "electrically_valid": 10,
+              "escapes": 0,
+              "flagged": 10
+            },
+            "output_shunt": {
+              "count": 10,
+              "detector_negative": 5,
+              "electrically_valid": 10,
+              "escapes": 5,
+              "flagged": 5
+            }
+          }
+        },
+        "none": {
+          "actual_events": {
+            "count": 20,
+            "detector_negative": 4,
+            "electrically_valid": 20,
+            "escapes": 4,
+            "flagged": 16
+          },
+          "analysis_rows": {
+            "count": 20,
+            "detector_negative": 4,
+            "electrically_valid": 20,
+            "escapes": 4,
+            "flagged": 16
+          },
+          "distinct_netlist_hashes": 1,
+          "duplicate_shared_rows": 0,
+          "representations_by_analysis_row": {
+            "mosfet": {
+              "count": 20,
+              "detector_negative": 4,
+              "electrically_valid": 20,
+              "escapes": 4,
+              "flagged": 16
+            }
+          },
+          "shared_initial_actual_events": 2,
+          "shared_initial_analysis_rows": 2,
+          "site_representation_by_actual_event": [
+            {
+              "count": 20,
+              "detector_negative": 4,
+              "electrically_valid": 20,
+              "escapes": 4,
+              "flagged": 16,
+              "insertion_site": "output_shunt",
+              "representation": "mosfet"
+            }
+          ],
+          "site_representation_by_analysis_row": [
+            {
+              "count": 20,
+              "detector_negative": 4,
+              "electrically_valid": 20,
+              "escapes": 4,
+              "flagged": 16,
+              "insertion_site": "output_shunt",
+              "representation": "mosfet"
+            }
+          ],
+          "sites_by_actual_event": {
+            "output_shunt": {
+              "count": 20,
+              "detector_negative": 4,
+              "electrically_valid": 20,
+              "escapes": 4,
+              "flagged": 16
+            }
+          },
+          "sites_by_analysis_row": {
+            "output_shunt": {
+              "count": 20,
+              "detector_negative": 4,
+              "electrically_valid": 20,
+              "escapes": 4,
+              "flagged": 16
+            }
+          }
+        }
+      },
+      "distinct_netlist_hashes": 9,
+      "duplicate_shared_rows": 4,
+      "model": "gpt-4o-mini-2024-07-18",
+      "representations_by_analysis_row": {
+        "conductance": {
+          "count": 6,
+          "detector_negative": 0,
+          "electrically_valid": 6,
+          "escapes": 0,
+          "flagged": 6
+        },
+        "mosfet": {
+          "count": 40,
+          "detector_negative": 13,
+          "electrically_valid": 40,
+          "escapes": 13,
+          "flagged": 27
+        },
+        "switch": {
+          "count": 14,
+          "detector_negative": 2,
+          "electrically_valid": 14,
+          "escapes": 2,
+          "flagged": 12
+        }
+      },
+      "rounds_per_trajectory": 10,
+      "shared_first_round": true,
+      "shared_initial_actual_events": 2,
+      "shared_initial_analysis_rows": 6,
+      "site_representation_by_actual_event": [
+        {
+          "count": 3,
+          "detector_negative": 0,
+          "electrically_valid": 3,
+          "escapes": 0,
+          "flagged": 3,
+          "insertion_site": "nand_node_pullup",
+          "representation": "conductance"
+        },
+        {
+          "count": 7,
+          "detector_negative": 0,
+          "electrically_valid": 7,
+          "escapes": 0,
+          "flagged": 7,
+          "insertion_site": "nand_node_pullup",
+          "representation": "mosfet"
+        },
+        {
+          "count": 10,
+          "detector_negative": 0,
+          "electrically_valid": 10,
+          "escapes": 0,
+          "flagged": 10,
+          "insertion_site": "nand_node_pullup",
+          "representation": "switch"
+        },
+        {
+          "count": 3,
+          "detector_negative": 0,
+          "electrically_valid": 3,
+          "escapes": 0,
+          "flagged": 3,
+          "insertion_site": "output_shunt",
+          "representation": "conductance"
+        },
+        {
+          "count": 29,
+          "detector_negative": 9,
+          "electrically_valid": 29,
+          "escapes": 9,
+          "flagged": 20,
+          "insertion_site": "output_shunt",
+          "representation": "mosfet"
+        },
+        {
+          "count": 4,
+          "detector_negative": 2,
+          "electrically_valid": 4,
+          "escapes": 2,
+          "flagged": 2,
+          "insertion_site": "output_shunt",
+          "representation": "switch"
+        }
+      ],
+      "site_representation_by_analysis_row": [
+        {
+          "count": 3,
+          "detector_negative": 0,
+          "electrically_valid": 3,
+          "escapes": 0,
+          "flagged": 3,
+          "insertion_site": "nand_node_pullup",
+          "representation": "conductance"
+        },
+        {
+          "count": 7,
+          "detector_negative": 0,
+          "electrically_valid": 7,
+          "escapes": 0,
+          "flagged": 7,
+          "insertion_site": "nand_node_pullup",
+          "representation": "mosfet"
+        },
+        {
+          "count": 10,
+          "detector_negative": 0,
+          "electrically_valid": 10,
+          "escapes": 0,
+          "flagged": 10,
+          "insertion_site": "nand_node_pullup",
+          "representation": "switch"
+        },
+        {
+          "count": 3,
+          "detector_negative": 0,
+          "electrically_valid": 3,
+          "escapes": 0,
+          "flagged": 3,
+          "insertion_site": "output_shunt",
+          "representation": "conductance"
+        },
+        {
+          "count": 33,
+          "detector_negative": 13,
+          "electrically_valid": 33,
+          "escapes": 13,
+          "flagged": 20,
+          "insertion_site": "output_shunt",
+          "representation": "mosfet"
+        },
+        {
+          "count": 4,
+          "detector_negative": 2,
+          "electrically_valid": 4,
+          "escapes": 2,
+          "flagged": 2,
+          "insertion_site": "output_shunt",
+          "representation": "switch"
+        }
+      ],
+      "sites_by_actual_event": {
+        "nand_node_pullup": {
+          "count": 20,
+          "detector_negative": 0,
+          "electrically_valid": 20,
+          "escapes": 0,
+          "flagged": 20
+        },
+        "output_shunt": {
+          "count": 36,
+          "detector_negative": 11,
+          "electrically_valid": 36,
+          "escapes": 11,
+          "flagged": 25
+        }
+      },
+      "sites_by_analysis_row": {
+        "nand_node_pullup": {
+          "count": 20,
+          "detector_negative": 0,
+          "electrically_valid": 20,
+          "escapes": 0,
+          "flagged": 20
+        },
+        "output_shunt": {
+          "count": 40,
+          "detector_negative": 15,
+          "electrically_valid": 40,
+          "escapes": 15,
+          "flagged": 25
+        }
+      },
+      "trajectories_per_arm": 2
+    },
+    "proposal_repeat_v3": {
+      "actual_events": {
+        "count": 56,
+        "detector_negative": 10,
+        "electrically_valid": 56,
+        "escapes": 10,
+        "flagged": 46
+      },
+      "analysis_rows": {
+        "count": 60,
+        "detector_negative": 10,
+        "electrically_valid": 60,
+        "escapes": 10,
+        "flagged": 50
+      },
+      "arms": {
+        "binary": {
+          "actual_events": {
+            "count": 20,
+            "detector_negative": 3,
+            "electrically_valid": 20,
+            "escapes": 3,
+            "flagged": 17
+          },
+          "analysis_rows": {
+            "count": 20,
+            "detector_negative": 3,
+            "electrically_valid": 20,
+            "escapes": 3,
+            "flagged": 17
+          },
+          "distinct_netlist_hashes": 5,
+          "duplicate_shared_rows": 0,
+          "representations_by_analysis_row": {
+            "conductance": {
+              "count": 1,
+              "detector_negative": 0,
+              "electrically_valid": 1,
+              "escapes": 0,
+              "flagged": 1
+            },
+            "mosfet": {
+              "count": 10,
+              "detector_negative": 3,
+              "electrically_valid": 10,
+              "escapes": 3,
+              "flagged": 7
+            },
+            "switch": {
+              "count": 9,
+              "detector_negative": 0,
+              "electrically_valid": 9,
+              "escapes": 0,
+              "flagged": 9
+            }
+          },
+          "shared_initial_actual_events": 2,
+          "shared_initial_analysis_rows": 2,
+          "site_representation_by_actual_event": [
+            {
+              "count": 1,
+              "detector_negative": 0,
+              "electrically_valid": 1,
+              "escapes": 0,
+              "flagged": 1,
+              "insertion_site": "nand_node_pullup",
+              "representation": "conductance"
+            },
+            {
+              "count": 9,
+              "detector_negative": 0,
+              "electrically_valid": 9,
+              "escapes": 0,
+              "flagged": 9,
+              "insertion_site": "nand_node_pullup",
+              "representation": "switch"
+            },
+            {
+              "count": 10,
+              "detector_negative": 3,
+              "electrically_valid": 10,
+              "escapes": 3,
+              "flagged": 7,
+              "insertion_site": "output_shunt",
+              "representation": "mosfet"
+            }
+          ],
+          "site_representation_by_analysis_row": [
+            {
+              "count": 1,
+              "detector_negative": 0,
+              "electrically_valid": 1,
+              "escapes": 0,
+              "flagged": 1,
+              "insertion_site": "nand_node_pullup",
+              "representation": "conductance"
+            },
+            {
+              "count": 9,
+              "detector_negative": 0,
+              "electrically_valid": 9,
+              "escapes": 0,
+              "flagged": 9,
+              "insertion_site": "nand_node_pullup",
+              "representation": "switch"
+            },
+            {
+              "count": 10,
+              "detector_negative": 3,
+              "electrically_valid": 10,
+              "escapes": 3,
+              "flagged": 7,
+              "insertion_site": "output_shunt",
+              "representation": "mosfet"
+            }
+          ],
+          "sites_by_actual_event": {
+            "nand_node_pullup": {
+              "count": 10,
+              "detector_negative": 0,
+              "electrically_valid": 10,
+              "escapes": 0,
+              "flagged": 10
+            },
+            "output_shunt": {
+              "count": 10,
+              "detector_negative": 3,
+              "electrically_valid": 10,
+              "escapes": 3,
+              "flagged": 7
+            }
+          },
+          "sites_by_analysis_row": {
+            "nand_node_pullup": {
+              "count": 10,
+              "detector_negative": 0,
+              "electrically_valid": 10,
+              "escapes": 0,
+              "flagged": 10
+            },
+            "output_shunt": {
+              "count": 10,
+              "detector_negative": 3,
+              "electrically_valid": 10,
+              "escapes": 3,
+              "flagged": 7
+            }
+          }
+        },
+        "full": {
+          "actual_events": {
+            "count": 20,
+            "detector_negative": 1,
+            "electrically_valid": 20,
+            "escapes": 1,
+            "flagged": 19
+          },
+          "analysis_rows": {
+            "count": 20,
+            "detector_negative": 1,
+            "electrically_valid": 20,
+            "escapes": 1,
+            "flagged": 19
+          },
+          "distinct_netlist_hashes": 6,
+          "duplicate_shared_rows": 0,
+          "representations_by_analysis_row": {
+            "conductance": {
+              "count": 2,
+              "detector_negative": 0,
+              "electrically_valid": 2,
+              "escapes": 0,
+              "flagged": 2
+            },
+            "mosfet": {
+              "count": 10,
+              "detector_negative": 0,
+              "electrically_valid": 10,
+              "escapes": 0,
+              "flagged": 10
+            },
+            "switch": {
+              "count": 8,
+              "detector_negative": 1,
+              "electrically_valid": 8,
+              "escapes": 1,
+              "flagged": 7
+            }
+          },
+          "shared_initial_actual_events": 2,
+          "shared_initial_analysis_rows": 2,
+          "site_representation_by_actual_event": [
+            {
+              "count": 5,
+              "detector_negative": 0,
+              "electrically_valid": 5,
+              "escapes": 0,
+              "flagged": 5,
+              "insertion_site": "nand_node_pullup",
+              "representation": "mosfet"
+            },
+            {
+              "count": 5,
+              "detector_negative": 0,
+              "electrically_valid": 5,
+              "escapes": 0,
+              "flagged": 5,
+              "insertion_site": "nand_node_pullup",
+              "representation": "switch"
+            },
+            {
+              "count": 2,
+              "detector_negative": 0,
+              "electrically_valid": 2,
+              "escapes": 0,
+              "flagged": 2,
+              "insertion_site": "output_shunt",
+              "representation": "conductance"
+            },
+            {
+              "count": 5,
+              "detector_negative": 0,
+              "electrically_valid": 5,
+              "escapes": 0,
+              "flagged": 5,
+              "insertion_site": "output_shunt",
+              "representation": "mosfet"
+            },
+            {
+              "count": 3,
+              "detector_negative": 1,
+              "electrically_valid": 3,
+              "escapes": 1,
+              "flagged": 2,
+              "insertion_site": "output_shunt",
+              "representation": "switch"
+            }
+          ],
+          "site_representation_by_analysis_row": [
+            {
+              "count": 5,
+              "detector_negative": 0,
+              "electrically_valid": 5,
+              "escapes": 0,
+              "flagged": 5,
+              "insertion_site": "nand_node_pullup",
+              "representation": "mosfet"
+            },
+            {
+              "count": 5,
+              "detector_negative": 0,
+              "electrically_valid": 5,
+              "escapes": 0,
+              "flagged": 5,
+              "insertion_site": "nand_node_pullup",
+              "representation": "switch"
+            },
+            {
+              "count": 2,
+              "detector_negative": 0,
+              "electrically_valid": 2,
+              "escapes": 0,
+              "flagged": 2,
+              "insertion_site": "output_shunt",
+              "representation": "conductance"
+            },
+            {
+              "count": 5,
+              "detector_negative": 0,
+              "electrically_valid": 5,
+              "escapes": 0,
+              "flagged": 5,
+              "insertion_site": "output_shunt",
+              "representation": "mosfet"
+            },
+            {
+              "count": 3,
+              "detector_negative": 1,
+              "electrically_valid": 3,
+              "escapes": 1,
+              "flagged": 2,
+              "insertion_site": "output_shunt",
+              "representation": "switch"
+            }
+          ],
+          "sites_by_actual_event": {
+            "nand_node_pullup": {
+              "count": 10,
+              "detector_negative": 0,
+              "electrically_valid": 10,
+              "escapes": 0,
+              "flagged": 10
+            },
+            "output_shunt": {
+              "count": 10,
+              "detector_negative": 1,
+              "electrically_valid": 10,
+              "escapes": 1,
+              "flagged": 9
+            }
+          },
+          "sites_by_analysis_row": {
+            "nand_node_pullup": {
+              "count": 10,
+              "detector_negative": 0,
+              "electrically_valid": 10,
+              "escapes": 0,
+              "flagged": 10
+            },
+            "output_shunt": {
+              "count": 10,
+              "detector_negative": 1,
+              "electrically_valid": 10,
+              "escapes": 1,
+              "flagged": 9
+            }
+          }
+        },
+        "none": {
+          "actual_events": {
+            "count": 20,
+            "detector_negative": 6,
+            "electrically_valid": 20,
+            "escapes": 6,
+            "flagged": 14
+          },
+          "analysis_rows": {
+            "count": 20,
+            "detector_negative": 6,
+            "electrically_valid": 20,
+            "escapes": 6,
+            "flagged": 14
+          },
+          "distinct_netlist_hashes": 1,
+          "duplicate_shared_rows": 0,
+          "representations_by_analysis_row": {
+            "mosfet": {
+              "count": 20,
+              "detector_negative": 6,
+              "electrically_valid": 20,
+              "escapes": 6,
+              "flagged": 14
+            }
+          },
+          "shared_initial_actual_events": 2,
+          "shared_initial_analysis_rows": 2,
+          "site_representation_by_actual_event": [
+            {
+              "count": 20,
+              "detector_negative": 6,
+              "electrically_valid": 20,
+              "escapes": 6,
+              "flagged": 14,
+              "insertion_site": "output_shunt",
+              "representation": "mosfet"
+            }
+          ],
+          "site_representation_by_analysis_row": [
+            {
+              "count": 20,
+              "detector_negative": 6,
+              "electrically_valid": 20,
+              "escapes": 6,
+              "flagged": 14,
+              "insertion_site": "output_shunt",
+              "representation": "mosfet"
+            }
+          ],
+          "sites_by_actual_event": {
+            "output_shunt": {
+              "count": 20,
+              "detector_negative": 6,
+              "electrically_valid": 20,
+              "escapes": 6,
+              "flagged": 14
+            }
+          },
+          "sites_by_analysis_row": {
+            "output_shunt": {
+              "count": 20,
+              "detector_negative": 6,
+              "electrically_valid": 20,
+              "escapes": 6,
+              "flagged": 14
+            }
+          }
+        }
+      },
+      "distinct_netlist_hashes": 8,
+      "duplicate_shared_rows": 4,
+      "model": "gpt-4o-mini-2024-07-18",
+      "representations_by_analysis_row": {
+        "conductance": {
+          "count": 3,
+          "detector_negative": 0,
+          "electrically_valid": 3,
+          "escapes": 0,
+          "flagged": 3
+        },
+        "mosfet": {
+          "count": 40,
+          "detector_negative": 9,
+          "electrically_valid": 40,
+          "escapes": 9,
+          "flagged": 31
+        },
+        "switch": {
+          "count": 17,
+          "detector_negative": 1,
+          "electrically_valid": 17,
+          "escapes": 1,
+          "flagged": 16
+        }
+      },
+      "rounds_per_trajectory": 10,
+      "shared_first_round": true,
+      "shared_initial_actual_events": 2,
+      "shared_initial_analysis_rows": 6,
+      "site_representation_by_actual_event": [
+        {
+          "count": 1,
+          "detector_negative": 0,
+          "electrically_valid": 1,
+          "escapes": 0,
+          "flagged": 1,
+          "insertion_site": "nand_node_pullup",
+          "representation": "conductance"
+        },
+        {
+          "count": 5,
+          "detector_negative": 0,
+          "electrically_valid": 5,
+          "escapes": 0,
+          "flagged": 5,
+          "insertion_site": "nand_node_pullup",
+          "representation": "mosfet"
+        },
+        {
+          "count": 14,
+          "detector_negative": 0,
+          "electrically_valid": 14,
+          "escapes": 0,
+          "flagged": 14,
+          "insertion_site": "nand_node_pullup",
+          "representation": "switch"
+        },
+        {
+          "count": 2,
+          "detector_negative": 0,
+          "electrically_valid": 2,
+          "escapes": 0,
+          "flagged": 2,
+          "insertion_site": "output_shunt",
+          "representation": "conductance"
+        },
+        {
+          "count": 31,
+          "detector_negative": 9,
+          "electrically_valid": 31,
+          "escapes": 9,
+          "flagged": 22,
+          "insertion_site": "output_shunt",
+          "representation": "mosfet"
+        },
+        {
+          "count": 3,
+          "detector_negative": 1,
+          "electrically_valid": 3,
+          "escapes": 1,
+          "flagged": 2,
+          "insertion_site": "output_shunt",
+          "representation": "switch"
+        }
+      ],
+      "site_representation_by_analysis_row": [
+        {
+          "count": 1,
+          "detector_negative": 0,
+          "electrically_valid": 1,
+          "escapes": 0,
+          "flagged": 1,
+          "insertion_site": "nand_node_pullup",
+          "representation": "conductance"
+        },
+        {
+          "count": 5,
+          "detector_negative": 0,
+          "electrically_valid": 5,
+          "escapes": 0,
+          "flagged": 5,
+          "insertion_site": "nand_node_pullup",
+          "representation": "mosfet"
+        },
+        {
+          "count": 14,
+          "detector_negative": 0,
+          "electrically_valid": 14,
+          "escapes": 0,
+          "flagged": 14,
+          "insertion_site": "nand_node_pullup",
+          "representation": "switch"
+        },
+        {
+          "count": 2,
+          "detector_negative": 0,
+          "electrically_valid": 2,
+          "escapes": 0,
+          "flagged": 2,
+          "insertion_site": "output_shunt",
+          "representation": "conductance"
+        },
+        {
+          "count": 35,
+          "detector_negative": 9,
+          "electrically_valid": 35,
+          "escapes": 9,
+          "flagged": 26,
+          "insertion_site": "output_shunt",
+          "representation": "mosfet"
+        },
+        {
+          "count": 3,
+          "detector_negative": 1,
+          "electrically_valid": 3,
+          "escapes": 1,
+          "flagged": 2,
+          "insertion_site": "output_shunt",
+          "representation": "switch"
+        }
+      ],
+      "sites_by_actual_event": {
+        "nand_node_pullup": {
+          "count": 20,
+          "detector_negative": 0,
+          "electrically_valid": 20,
+          "escapes": 0,
+          "flagged": 20
+        },
+        "output_shunt": {
+          "count": 36,
+          "detector_negative": 10,
+          "electrically_valid": 36,
+          "escapes": 10,
+          "flagged": 26
+        }
+      },
+      "sites_by_analysis_row": {
+        "nand_node_pullup": {
+          "count": 20,
+          "detector_negative": 0,
+          "electrically_valid": 20,
+          "escapes": 0,
+          "flagged": 20
+        },
+        "output_shunt": {
+          "count": 40,
+          "detector_negative": 10,
+          "electrically_valid": 40,
+          "escapes": 10,
+          "flagged": 30
+        }
+      },
+      "trajectories_per_arm": 2
+    }
+  },
+  "schema_version": 1,
+  "scope": "Descriptive AND statistics from saved final-run evidence; no new experiment.",
+  "source_sha256": {
+    "results/proposal_main_v3/attempts.json": "b5e35b04b4259bc478d6448cb68211b7d43f73662c8403e2e3ef70807e497baa",
+    "results/proposal_main_v3/manifest.json": "9e57a23aaa646ea878b61a5987304b69dbcd30b23d8f4c8e2adb49852c93568f",
+    "results/proposal_repeat_v3/attempts.json": "0e69ffa9daa7e8dcb9c78f51a541d8ba97b8f062501c4707dc6b63f91a1a1829",
+    "results/proposal_repeat_v3/manifest.json": "0a6f8679860103d51f075111a55c90913ee59c6ce54e04eeffb34afb05beae8a",
+    "scripts/proposal/diagnose_and.py": "2029ded19282fdcb0e1ce443a252a11b90c8a8d230e09c38efab60e43f34324c"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "slides": 6,
+  "planned_seconds": 300,
+  "spoken_words": 587,
+  "model": "gpt-4o-mini-2024-07-18",
+  "counts": {
+    "opamp": [
+      [
+        0,
+        5,
+        6
+      ],
+      [
+        0,
+        8,
+        7
+      ]
+    ],
+    "and4": [
+      [
+        4,
+        6,
+        5
+      ],
+      [
+        6,
+        3,
+        1
+      ]
+    ]
+  },
+  "native_charts": 1,
+  "source_sha256": {
+    "configs/proposal_experiment.json": "4587bbcc984810a257cc7084bd147eb7e580c6866332eb52b475ba5cc387cd0d",
+    "results/proposal_main_v3/attempts.json": "b5e35b04b4259bc478d6448cb68211b7d43f73662c8403e2e3ef70807e497baa",
+    "results/proposal_main_v3/controls.json": "56dd666e7fe916d7faf1b8d29b1d174a734e97da91a22a815de8be626bf0c362",
+    "results/proposal_repeat_v3/attempts.json": "0e69ffa9daa7e8dcb9c78f51a541d8ba97b8f062501c4707dc6b63f91a1a1829",
+    "results/proposal_repeat_v3/controls.json": "a233d28124a5c36fade840a903e340393b21d8b2cfdbb483bc22b777f1d4e017",
+    "results/proposal_analysis/and_diagnostics.json": "329421fa29ecedaac2331dfaf4a5d6332ad6567efb3c46064745aef6167c6ba2",
+    "results/proposal_repeat_v3/control_gate_deviation.json": "291ed49844fc10b3fdf22e4816b47e66eb0ec1f2d8a669fe60e65be98962e989"
+  },
+  "pptx_sha256": "acf5c047c17929b030caba6074c68692fd8518468d8763d42ff1a8963677f2fc"
+}
