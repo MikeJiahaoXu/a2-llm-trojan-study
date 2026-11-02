@@ -91,7 +91,7 @@ def package_current():
         raise RuntimeError('Active experiment, audit, and delivery check must all be complete.')
     if delivery.get('run_id')!=run_id or delivery['audit_sha256']!=hashlib.sha256((run/'audit.json').read_bytes()).hexdigest():
         raise RuntimeError('Current delivery verification is stale.')
-    if delivery['checker_sha256']!=hashlib.sha256((ROOT/'scripts/stopstudy_v5/check_delivery.py').read_bytes()).hexdigest():
+    if delivery['checker_sha256']!=hashlib.sha256((ROOT/'scripts/stopstudy_v6/check_delivery.py').read_bytes()).hexdigest():
         raise RuntimeError('Current delivery checker changed.')
     for suffix,field in [('.pdf','pdf_sha256'),('.txt','text_sha256')]:
         if hashlib.sha256(report.with_suffix(suffix).read_bytes()).hexdigest()!=provenance[field]:
@@ -101,7 +101,7 @@ def package_current():
             raise RuntimeError('Report source evidence changed: '+name)
     selected=[ROOT/name for name in ['README.md','LICENSE','requirements.txt','.gitignore','.gitattributes',
               '.env.example','output/阅读说明.txt','results/cost_ledger.json',active['delivery_check'],
-              'docs/Final_Stop_On_Escape_Protocol_2026-11-02.txt','docs/Final_Report_Revision_Notes_2026-11-02.txt']]
+              'docs/Stratified_Stop_On_Escape_Protocol_2026-11-02.txt','docs/Final_Report_Revision_Notes_2026-11-02.txt']]
     selected.extend(report.with_suffix(suffix) for suffix in ('.pdf','.txt','.provenance.json'))
     for directory in ['scripts','tests','configs','docs/inputs','netlists/templates',
                       'results/proposal_validation','results/'+run_id,'output/pdf/stop_report_figures']:

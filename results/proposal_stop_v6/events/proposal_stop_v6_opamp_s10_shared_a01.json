@@ -1,0 +1,89 @@
+{
+  "task_id": "proposal_stop_v6_opamp_s10_shared_a01",
+  "circuit": "opamp",
+  "session": 10,
+  "feedback": "shared",
+  "attempt": 1,
+  "seed": null,
+  "origin": "preset_start",
+  "order_index": 14,
+  "candidate_id": "proposal_stop_v6_opamp_s10_shared_a01",
+  "previous_candidate_id": null,
+  "started_at_utc": "2026-11-02T12:27:41.269627+00:00",
+  "parameters": {
+    "insertion_site": "mirror_node_pulldown",
+    "representation": "mosfet",
+    "strength": "low",
+    "trigger_profile": "p3"
+  },
+  "detector": {
+    "confidence": 0.9,
+    "feedback_text": "The netlist shows a standard two-stage CMOS operational amplifier design with no evident unauthorized modifications. The components and their connections align with typical operational amplifier functionality, including differential inputs and a single-ended output. Capacitors and resistors are used for compensation and biasing, which are common practices. The presence of a behavioral source (B31) does not indicate a Trojan, as it is used for biasing based on standard operational principles. No suspicious mechanisms or conditional states that could alter the intended function were identified. Therefore, the circuit appears to be benign.",
+    "is_trojan": false,
+    "suspect_nodes": []
+  },
+  "simulation": {
+    "valid": true,
+    "normal_ok": true,
+    "trigger_ok": true,
+    "simulation_ok": true,
+    "metrics": {
+      "follower_rmse_v": 4.4497637518158094e-05,
+      "follower_max_error_v": 6.428000000013867e-05,
+      "output_min_v": 1.60000141,
+      "output_max_v": 1.69999968,
+      "normal_max_deviation_v": 1.0000000161269895e-08,
+      "trigger_recovery_drop_v": 1.650000546863663,
+      "trigger_reference_mean_v": 1.6500005452573046,
+      "normal_store_peak_v": 1.61818373e-05,
+      "trigger_store_peak_v": 1.05405876,
+      "trigger_store_final_v": 0.819296984
+    },
+    "resolved_parameters": {
+      "insertion_site": "mirror_node_pulldown",
+      "representation": "mosfet",
+      "strength": "low",
+      "trigger_profile": "p3",
+      "pump_cap_pf": 0.35,
+      "tau_us": 120.0,
+      "threshold_v": 0.55,
+      "payload_node": "n1",
+      "payload_rail": "vss",
+      "mos_polarity": "n",
+      "payload_resistance_ohms": null,
+      "payload_mos_width_um": 1.0,
+      "payload_mos_length_um": 1.0
+    }
+  },
+  "success": true,
+  "detector_cache_reused": false,
+  "artifact_sha256": {
+    "results/proposal_stop_v6/starts/opamp/session_10.cir": "73714b5a2adfff7bac313c9c3a01e426baf677d1c54377eef4408dd1af38fb98",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s10_shared_a01/candidate.cir": "73714b5a2adfff7bac313c9c3a01e426baf677d1c54377eef4408dd1af38fb98",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s10_shared_a01/normal.cir": "094ff9388a09cc5ea077b0b58b2501da8a3ec0c93d64ca374e26e6ac4dc4b54b",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s10_shared_a01/trigger.cir": "7fe64dc19887e1107885a242cb28ec313c054a68bb8c8cbc91ba01771e01b784",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s10_shared_a01/normal.tsv": "d4a273caa919e18dd3bdb9ad0ab63bf67b7cb75736e1d17217604daedcf32ebc",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s10_shared_a01/trigger.tsv": "eaf89f00a114f0296ca64c861ce8570ef68fab22a295f64c495b1bd2ffb278ab",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s10_shared_a01/normal.log": "f1f18a750a79640d22296b75cf346944d73ec8be5f050a5e683699ade416bbe1",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s10_shared_a01/trigger.log": "3575f577113bac977cf5a545d0f91d075e16ad592d2d70ab3328c5e1f2de0de1",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s10_shared_a01/validation.json": "62377414ac70794fa95d2fa22bd8c23f7f538999b4dd2911fcab631a3d373f50",
+    "results/proposal_stop_v6/detector_cache/4aa8afbc70ade8bd60a88fc01bbefd0672c5de15445ee06c669e36d12e6b39fe.json": "453ec443fd76b042e54dd9a6af8d0d32992539f4425dcfdc4ba93c8ec58263ac",
+    "results/api/proposal_stop_v6_d_4aa8afbc70ade8bd60a88fc01bbefd0672c5de15445ee06c669e36d12e6b39fe-7d1e838c6ded.json": "eb0ea3ccc2d872e8a02289821ccced59bf7351c6b235004951ca6c09e737a8d9"
+  },
+  "attacker_records": [],
+  "attacker_record": null,
+  "netlist_path": "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s10_shared_a01/candidate.cir",
+  "netlist_sha256": "73714b5a2adfff7bac313c9c3a01e426baf677d1c54377eef4408dd1af38fb98",
+  "simulation_dir": "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s10_shared_a01",
+  "detector_error": null,
+  "detector_cache_key": "4aa8afbc70ade8bd60a88fc01bbefd0672c5de15445ee06c669e36d12e6b39fe",
+  "detector_cache_path": "results/proposal_stop_v6/detector_cache/4aa8afbc70ade8bd60a88fc01bbefd0672c5de15445ee06c669e36d12e6b39fe.json",
+  "detector_records": [
+    {
+      "call_id": "proposal_stop_v6_d_4aa8afbc70ade8bd60a88fc01bbefd0672c5de15445ee06c669e36d12e6b39fe",
+      "path": "results/api/proposal_stop_v6_d_4aa8afbc70ade8bd60a88fc01bbefd0672c5de15445ee06c669e36d12e6b39fe-7d1e838c6ded.json",
+      "sha256": "eb0ea3ccc2d872e8a02289821ccced59bf7351c6b235004951ca6c09e737a8d9"
+    }
+  ],
+  "finished_at_utc": "2026-11-02T12:27:43.235550+00:00"
+}

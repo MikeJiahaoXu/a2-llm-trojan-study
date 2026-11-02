@@ -1,7 +1,7 @@
 {
-  "run_id": "proposal_stop_v5",
-  "config": "configs/stopstudy_v5.json",
+  "run_id": "proposal_stop_v6",
+  "config": "configs/stopstudy_v6.json",
   "report": "output/pdf/A2_Trojan_LLM_Informal_Report.pdf",
   "delivery_check": "results/final_delivery.json",
-  "scope": "Only the two-circuit, three-feedback, ten-session stop-on-escape experiment is current. Earlier executions are archived and excluded from current result tables."
+  "scope": "Only the two-circuit, three-feedback, ten-session experiment from distinct prespecified starts is current. Four pre-main controls are setup checks, excluded from session results. Earlier executions are archived."
 }

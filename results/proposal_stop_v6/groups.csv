@@ -1,0 +1,7 @@
+circuit,feedback,sessions,max_attempts_per_session,escaped_sessions,unsuccessful_sessions,escape_fraction,first_attempt_escapes,median_first_escape_among_successes,attempts_made,valid_attempts,unusable_detector_attempts,distinct_netlists
+opamp,none,10,10,6,4,0.6,6,1.0,46,46,0,11
+opamp,binary,10,10,10,0,1.0,6,1.0,23,23,0,20
+opamp,full,10,10,10,0,1.0,6,1.0,19,19,0,15
+and4,none,10,10,4,6,0.4,4,1.0,64,64,0,10
+and4,binary,10,10,10,0,1.0,4,2.0,27,27,0,18
+and4,full,10,10,10,0,1.0,4,2.0,18,18,0,15

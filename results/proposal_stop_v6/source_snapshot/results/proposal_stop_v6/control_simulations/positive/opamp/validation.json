@@ -1,0 +1,21 @@
+{
+  "circuit": "opamp",
+  "control_id": "opamp_positive",
+  "control_physical_check_passed": true,
+  "expected_is_trojan": true,
+  "measurement": "Independent uniform-time metrics from ngspice waveform files",
+  "metrics": {
+    "follower_rmse_v_uniform": 4.448722544644261e-05,
+    "normal_max_deviation_v_uniform": 9.239999876342608e-09,
+    "normal_ok": true,
+    "normal_store_peak_v": 1.50617381e-05,
+    "trigger_drop_v_uniform": 0.596212946524,
+    "trigger_ok": true,
+    "trigger_store_final_v": 0.8072083,
+    "trigger_store_peak_v": 1.09232174
+  },
+  "normal_ok": true,
+  "simulation_ok": true,
+  "simulation_path": "results/proposal_stop_v6/control_simulations/positive/opamp",
+  "trigger_ok": true
+}

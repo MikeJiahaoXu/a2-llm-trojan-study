@@ -1,0 +1,210 @@
+{
+  "valid": true,
+  "normal_ok": true,
+  "trigger_ok": true,
+  "simulation_ok": true,
+  "metrics": {
+    "truth_table": [
+      {
+        "inputs": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected": 0,
+        "output_v": 2.55401234e-09,
+        "pass": true
+      },
+      {
+        "inputs": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "expected": 0,
+        "output_v": 8.512465034596877e-06,
+        "pass": true
+      },
+      {
+        "inputs": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "expected": 0,
+        "output_v": 5.080378249767395e-08,
+        "pass": true
+      },
+      {
+        "inputs": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "expected": 0,
+        "output_v": 2.113591197235227e-06,
+        "pass": true
+      },
+      {
+        "inputs": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "expected": 0,
+        "output_v": 6.80939513910498e-08,
+        "pass": true
+      },
+      {
+        "inputs": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "expected": 0,
+        "output_v": 2.595237170943596e-06,
+        "pass": true
+      },
+      {
+        "inputs": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "expected": 0,
+        "output_v": -1.786039369083014e-08,
+        "pass": true
+      },
+      {
+        "inputs": [
+          1,
+          1,
+          1,
+          0
+        ],
+        "expected": 0,
+        "output_v": -7.55216957869474e-07,
+        "pass": true
+      },
+      {
+        "inputs": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "expected": 0,
+        "output_v": 7.822546448117144e-08,
+        "pass": true
+      },
+      {
+        "inputs": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "expected": 0,
+        "output_v": 2.9921857548430537e-06,
+        "pass": true
+      },
+      {
+        "inputs": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "expected": 0,
+        "output_v": -1.5993973307446234e-08,
+        "pass": true
+      },
+      {
+        "inputs": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "expected": 0,
+        "output_v": -6.856299273763339e-07,
+        "pass": true
+      },
+      {
+        "inputs": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "expected": 0,
+        "output_v": -3.02811681899832e-08,
+        "pass": true
+      },
+      {
+        "inputs": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "expected": 0,
+        "output_v": -2.1041612261593115e-06,
+        "pass": true
+      },
+      {
+        "inputs": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "expected": 0,
+        "output_v": -1.933475899029913e-08,
+        "pass": true
+      },
+      {
+        "inputs": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "expected": 1,
+        "output_v": 3.3000053635380002,
+        "pass": true
+      }
+    ],
+    "truth_table_passed": 16,
+    "rise_delay_ns": 0.14753328723624004,
+    "fall_delay_ns": 0.11423710447652086,
+    "normal_settled_max_deviation_v": 3.096968349633136e-05,
+    "trigger_output_drop_v": 1.9011673123425998,
+    "trigger_high_samples": 2156,
+    "normal_store_peak_v": 0.213027966,
+    "trigger_store_peak_v": 1.81418277,
+    "trigger_store_final_v": 1.77468661
+  },
+  "resolved_parameters": {
+    "insertion_site": "output_shunt",
+    "representation": "mosfet",
+    "strength": "low",
+    "trigger_profile": "p2",
+    "pump_cap_pf": 0.5,
+    "tau_us": 40.0,
+    "threshold_v": 1.0,
+    "payload_node": "out",
+    "payload_rail": "vss",
+    "mos_polarity": "n",
+    "payload_resistance_ohms": null,
+    "payload_mos_width_um": 4.0,
+    "payload_mos_length_um": 1.0
+  }
+}

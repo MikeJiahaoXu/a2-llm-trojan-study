@@ -1,0 +1,46 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: and4 high-frequency activation test
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        3.3
+x1.n1                                      3.3
+a                                            0
+b                                          3.3
+c                                          3.3
+d                                          3.3
+x1.n2                            -5.43534e-132
+x1.n3                            -4.24818e-132
+x1.n4                            -2.26279e-132
+out                                2.55401e-09
+x1.n32                            -2.31029e-20
+x1.n31                            -4.62059e-20
+x1.n33                                       0
+b.x1.b31#branch                              0
+vd#branch                                    0
+vc#branch                                    0
+vb#branch                                    0
+va#branch                                    0
+vdd#branch                           -6.62e-12
+
+
+No. of Data Rows : 12373
+ngspice-47 done
+
+codemodel: too many args.
+codemodel: too many args.
+codemodel: too many args.
+codemodel: too many args.
+codemodel: too many args.
+codemodel: too many args.
+codemodel: too many args.

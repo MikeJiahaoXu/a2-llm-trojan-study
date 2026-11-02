@@ -1,43 +1,51 @@
 {
-  "protocol": "proposal_stop_v5",
-  "run_id": "proposal_stop_v5",
+  "protocol": "proposal_stop_v6",
+  "run_id": "proposal_stop_v6",
   "pages": 4,
-  "generator_sha256": "afd5296629e637b6ef412f638b7d09e8bba2651666a2f2737bb8177b3e6cc96e",
+  "generator_sha256": "5e17ba9e440d8e2b4ac93dedccda69f0c5381214318bf163c4a1c3d6a3718183",
   "primary_unit": "session",
   "sessions_per_condition": 10,
   "source_sha256": {
-    "results/proposal_stop_v5/manifest.json": "4d15e327899bf57c91fc1480053d73e1d140930dbb88bffb2202c2501a65685f",
-    "results/proposal_stop_v5/schedule.json": "809278fac0bde1f9dddaa6bc9dbab8f6e68d9d56b2f2f34307cc3e42d235c376",
-    "results/proposal_stop_v5/attempts.json": "5c9ae5f5062417be90c51f176018bef87cf87cd774d3d886677268020946d9a3",
-    "results/proposal_stop_v5/dispositions.json": "03a9b812f7487802f1007c5b3d8d51826db928ce10ca4820a738211e65085f0b",
-    "results/proposal_stop_v5/completion.json": "1d20262f8589516486b442efaa5d75da909137a98a2a88fc9ccd24a2b24cebd3",
-    "results/proposal_stop_v5/summary.json": "ff6149e689b8101d915ad0fff7643f43528305af3a22998587ffd49f25e697aa",
-    "results/proposal_stop_v5/audit.json": "d3c5735a80a0496c250dd7b484f0b952ff651f5eebc0ccaa29b315dbd829f2f5",
+    "results/proposal_stop_v6/manifest.json": "d13a9eae330a47a5420528643bc5d0d7b9c3b43c1a31df4c7a346beca9b87a83",
+    "results/proposal_stop_v6/schedule.json": "5935cfddff934dba93945fd96711e451c8f69dfb07defa0496baa76d0c292d81",
+    "results/proposal_stop_v6/attempts.json": "0a5559375742298c47bb6fa9bdb872145c2524e1ab59fb7db6cf607545c476ed",
+    "results/proposal_stop_v6/dispositions.json": "00cd3f34eea680aa3c2b127be05fdfbd4a0dfd3af2eb7afd86714392017d8e6c",
+    "results/proposal_stop_v6/completion.json": "5d45d245a2add174cc3ea3127477370ff05781be7fd3b9799042a47946bc0176",
+    "results/proposal_stop_v6/summary.json": "fa590a5bf27b8665db376b45d4b4d526ec805e552920bef16f192ba646b27442",
+    "results/proposal_stop_v6/audit.json": "f9ec5e958ba0a19fca90f9a0260061e510b334dc4d881082315c73334393d0a4",
+    "results/proposal_stop_v6/controls.json": "459591fddea7cc0fc318914497828f1e7a0dc3f50bdcca223316534836d917e1",
+    "results/proposal_stop_v6/controls_gate.json": "228524cc62c2e347f3760df66f93858ff8495956361f625b487590747c4296f5",
+    "results/proposal_stop_v6/design.json": "a2c295704e34a46c9c4b51ab771941cd005f7769d14f16aa587a55f754f13b5c",
     "results/proposal_validation/qualification_summary.json": "fdd235074ff8f7f0ac3347c1ebd4c13c635e4b28ec7907e8372aa87d022292df",
-    "configs/stopstudy_v5.json": "78bf42430cb750771e3425c8536ea0acfdfbe3c23425d2ce1f1fadfbf20d20f7",
-    "scripts/stopstudy_v5/analyze.py": "cdf826ec33c76e8408aa7a37c4cb6602b3060a3b026f976878784e88e1f74c6f",
-    "scripts/build_stop_report.py": "afd5296629e637b6ef412f638b7d09e8bba2651666a2f2737bb8177b3e6cc96e",
+    "configs/stopstudy_v6.json": "8168158c936b061536ae10a33fca56e638d187016b1553b587bbae4da20f221c",
+    "scripts/stopstudy_v6/analyze.py": "c9d80a856343064674ee01b17ca96dba0618193c5a4ebc5300578bd152545421",
+    "scripts/build_stop_report.py": "5e17ba9e440d8e2b4ac93dedccda69f0c5381214318bf163c4a1c3d6a3718183",
     "scripts/build_proposal_report.py": "b20db468148695c7e448575ce5a4c0cfed3d0e5abd5de858ab6fcc32f708682f",
-    "docs/Final_Stop_On_Escape_Protocol_2026-11-02.txt": "6e955147f38723fe3ef8c0e4698824daaa4cb37d7dbb76f09edf5bf5a939371d",
+    "docs/Stratified_Stop_On_Escape_Protocol_2026-11-02.txt": "ef1439245c36d3a59de9656bae760e40f630e5cc9a3502b34d38a583267e0f6a",
     "docs/inputs/Collaborator_Report_Comments_2026-11-02.txt": "1767df5464974540833dd0de1fe92ab3a8c5abbfd454c9337130685c5c0f69c2"
   },
   "figure_sha256": {
-    "output/pdf/stop_report_figures/cumulative_escape.png": "a370fbaf0a574858d34b00abe9e89d60c991829fa78cb674f31f90c2f7cfe24f",
-    "output/pdf/stop_report_figures/cumulative_escape.pdf": "da75ae79273966f82df38d9b8f2d06cb85e90edb9a1a01179b08f3ac0730c777"
+    "output/pdf/stop_report_figures/cumulative_escape.png": "a41f97dca3a58e3f98ba854219c73308970ec161cb3e665d5dbdab33355e7076",
+    "output/pdf/stop_report_figures/cumulative_escape.pdf": "c4fd2ffd23510aacdfba62d97aef9353191d158775ced39c21f4fe57f0dee8ad"
   },
   "unchanged_collaborator_blocks": [
     "title",
     "authors",
     "intro1",
     "intro2",
-    "attacker",
     "validation",
     "feedback"
   ],
+  "minimally_corrected_collaborator_blocks": [
+    "attacker"
+  ],
   "necessary_method_changes": [
     "attacker and detector temperatures",
-    "stop immediately after first valid escape"
+    "stop immediately after first valid escape",
+    "first attempt is a prespecified circuit; attacker requests begin at attempt two",
+    "ten diverse starting configurations per circuit selected before reviews",
+    "separate four-design detector sanity gate"
   ],
-  "pdf_sha256": "aabe4f46438610b44e3932a74cd3afebddc58518b2392dfec2650897236d3866",
-  "text_sha256": "9e45005f108ff61524b0f6e80834027de99602e3092422a558c8eeba1c59ca95"
+  "pdf_sha256": "e73579fd1b4ce5aa247e1bbb50e8a00346d80f6409479b162f7fca5e7980c763",
+  "text_sha256": "ce21567c68b99d2c69b0c658aa416f66ac01db962003f0db6a3c96bd7e81d917"
 }

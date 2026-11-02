@@ -1,0 +1,33 @@
+{
+  "valid": true,
+  "normal_ok": true,
+  "trigger_ok": true,
+  "simulation_ok": true,
+  "metrics": {
+    "follower_rmse_v": 4.449807712656958e-05,
+    "follower_max_error_v": 6.428000000013867e-05,
+    "output_min_v": 1.60000141,
+    "output_max_v": 1.69999969,
+    "normal_max_deviation_v": 1.0000000161269895e-08,
+    "trigger_recovery_drop_v": 1.6500005474002677,
+    "trigger_reference_mean_v": 1.6500005453919078,
+    "normal_store_peak_v": 1.50617381e-05,
+    "trigger_store_peak_v": 1.09229358,
+    "trigger_store_final_v": 0.807191793
+  },
+  "resolved_parameters": {
+    "insertion_site": "gain_node_pullup",
+    "representation": "mosfet",
+    "strength": "medium",
+    "trigger_profile": "p1",
+    "pump_cap_pf": 0.4,
+    "tau_us": 100.0,
+    "threshold_v": 0.4,
+    "payload_node": "n2",
+    "payload_rail": "vdd",
+    "mos_polarity": "p",
+    "payload_resistance_ohms": null,
+    "payload_mos_width_um": 4.0,
+    "payload_mos_length_um": 1.0
+  }
+}

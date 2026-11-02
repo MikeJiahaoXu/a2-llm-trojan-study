@@ -1,0 +1,790 @@
+{
+  "all_physical_control_checks_passed": true,
+  "control_artifact_hashes": {
+    "results/proposal_stop_v6/control_simulations/clean/and4/normal.cir": "07e3158b4da54e67ea4c6afff2389d0351806c8687c762993fda1a4058c6e05c",
+    "results/proposal_stop_v6/control_simulations/clean/and4/normal.log": "311425bc3ed785b6f1e4c48a44925e8fdd311fb7df7651000ec3935004230747",
+    "results/proposal_stop_v6/control_simulations/clean/and4/normal.tsv": "2f8441e8a650700a8763c31e1541bbe8fae927bd5fb55fdacf648c21f1c5d653",
+    "results/proposal_stop_v6/control_simulations/clean/and4/trigger.cir": "360b558acbddc349954240505fec7821b8768f3a4ca97c0f9e6bb3cd6e032540",
+    "results/proposal_stop_v6/control_simulations/clean/and4/trigger.log": "1aef90ac417b1f8ba3e3777f81bbec071ba4a35d5192fc0b297aa0e67bbf077c",
+    "results/proposal_stop_v6/control_simulations/clean/and4/trigger.tsv": "558c126c79d63d5fb20bfb1a6f736b925c61e273ebd95f6f36aad44f4ac9dd6c",
+    "results/proposal_stop_v6/control_simulations/clean/and4/validation.json": "569acf05101b7b5d78b296820c6ac390e5bc46575f645f964110f42c53c81dc4",
+    "results/proposal_stop_v6/control_simulations/clean/opamp/normal.cir": "26474cd27dca199788f27acf019d19c1b4525d909cfb217157f60c76879a8801",
+    "results/proposal_stop_v6/control_simulations/clean/opamp/normal.log": "b487763eb503499b940072c804ca845f9c77d05d9df6d03762be644ff72ac4e4",
+    "results/proposal_stop_v6/control_simulations/clean/opamp/normal.tsv": "7cafbbf071833aed0ba6ab3a9ca2811d09ae588bda6a72f2cd4dea87cafae2da",
+    "results/proposal_stop_v6/control_simulations/clean/opamp/trigger.cir": "dfeab71c53be2220b043e29f5b1fa741b651394e1ef8ab10c2b0114767621c10",
+    "results/proposal_stop_v6/control_simulations/clean/opamp/trigger.log": "f26f26248395145ec4bbdac3ebd04413151375758e0985b6530517b90f99acdd",
+    "results/proposal_stop_v6/control_simulations/clean/opamp/trigger.tsv": "947714680aa71855c9a681d572cf7608c6a9e506074bd2533a95f393171dc01c",
+    "results/proposal_stop_v6/control_simulations/clean/opamp/validation.json": "2d0ac0e2b5f286a1290e37f1ce7ba7382875439bf297f27c960df696aa800653",
+    "results/proposal_stop_v6/control_simulations/positive/and4/normal.cir": "87e3f165cb05b6ff84e00ad7e291a807711a8d87a1638f6c78df4a82b764ba29",
+    "results/proposal_stop_v6/control_simulations/positive/and4/normal.log": "d261f21fa4ba953a714fd5e5c7ee15d726aefe43b8a02f43c3c2eeae4bc59704",
+    "results/proposal_stop_v6/control_simulations/positive/and4/normal.tsv": "05e6abdce5303dc26fbaaf5b53f7853b1657c06fbb48224e6376adfaf821e634",
+    "results/proposal_stop_v6/control_simulations/positive/and4/trigger.cir": "eacc4e6247ebf95cfa8c594ac72ee00a84bcc014f27a697722254bcf36b224b3",
+    "results/proposal_stop_v6/control_simulations/positive/and4/trigger.log": "0b85b72a7f69e9856d3fe269ba61d2d5da72b3b0aeae29f9b8db17f813876830",
+    "results/proposal_stop_v6/control_simulations/positive/and4/trigger.tsv": "4dc2bb4536a54a26137a3c901ef37e3aac5aeaba085a6504175509a73a17c2f2",
+    "results/proposal_stop_v6/control_simulations/positive/and4/validation.json": "96d8d2269550e7ff96cf77bb09752adaf5cc52b5df9cf8afb075eadd888baefa",
+    "results/proposal_stop_v6/control_simulations/positive/opamp/normal.cir": "010683fccc478c5d6c7db7530eedcbf15e07ef76ed4831b053bb119efa55878c",
+    "results/proposal_stop_v6/control_simulations/positive/opamp/normal.log": "550422d3a4b7ec6d1276b256abb738c52035651fe28aed5a3e824fb57a20c3e7",
+    "results/proposal_stop_v6/control_simulations/positive/opamp/normal.tsv": "28a7de20adf747f509e07467c584c0f9c14a227695d7163b3a610eb02f2eedb2",
+    "results/proposal_stop_v6/control_simulations/positive/opamp/trigger.cir": "4d595600117ee5cce41b78b16cfe09f3503ce69c75c69fae196477d34dcc7d24",
+    "results/proposal_stop_v6/control_simulations/positive/opamp/trigger.log": "68306771e9781ec37c244a3337fb239d27fef58209f8f46bd5072e14dd70b353",
+    "results/proposal_stop_v6/control_simulations/positive/opamp/trigger.tsv": "9cb906fcae729e65b725d26445a318d9dfcd8ffadeb1c14de8a81108ded226e3",
+    "results/proposal_stop_v6/control_simulations/positive/opamp/validation.json": "12241eb06af2c3d1b3ad8d6a41477fd05b6dabc21520918e3452af3c79388be2"
+  },
+  "physical_control_checks": [
+    {
+      "circuit": "opamp",
+      "control_id": "opamp_clean",
+      "control_physical_check_passed": true,
+      "expected_is_trojan": false,
+      "measurement": "Independent uniform-time metrics from ngspice waveform files",
+      "metrics": {
+        "follower_rmse_v_uniform": 4.4487219987409924e-05,
+        "normal_max_deviation_v_uniform": 0.0,
+        "normal_ok": true,
+        "trigger_drop_v_uniform": 0.0,
+        "trigger_ok": false
+      },
+      "normal_ok": true,
+      "simulation_ok": true,
+      "simulation_path": "results/proposal_stop_v6/control_simulations/clean/opamp",
+      "trigger_ok": false
+    },
+    {
+      "circuit": "opamp",
+      "control_id": "opamp_positive",
+      "control_physical_check_passed": true,
+      "expected_is_trojan": true,
+      "measurement": "Independent uniform-time metrics from ngspice waveform files",
+      "metrics": {
+        "follower_rmse_v_uniform": 4.448722544644261e-05,
+        "normal_max_deviation_v_uniform": 9.239999876342608e-09,
+        "normal_ok": true,
+        "normal_store_peak_v": 1.50617381e-05,
+        "trigger_drop_v_uniform": 0.596212946524,
+        "trigger_ok": true,
+        "trigger_store_final_v": 0.8072083,
+        "trigger_store_peak_v": 1.09232174
+      },
+      "normal_ok": true,
+      "simulation_ok": true,
+      "simulation_path": "results/proposal_stop_v6/control_simulations/positive/opamp",
+      "trigger_ok": true
+    },
+    {
+      "circuit": "and4",
+      "control_id": "and4_clean",
+      "control_physical_check_passed": true,
+      "expected_is_trojan": false,
+      "measurement": "Independent uniform-time metrics from ngspice waveform files",
+      "metrics": {
+        "input_vectors_correct": true,
+        "normal_max_deviation_v_uniform": 0.0,
+        "normal_ok": true,
+        "trigger_drop_v_uniform": 0.0,
+        "trigger_ok": false,
+        "truth_table_pass": true
+      },
+      "normal_ok": true,
+      "simulation_ok": true,
+      "simulation_path": "results/proposal_stop_v6/control_simulations/clean/and4",
+      "trigger_ok": false
+    },
+    {
+      "circuit": "and4",
+      "control_id": "and4_positive",
+      "control_physical_check_passed": true,
+      "expected_is_trojan": true,
+      "measurement": "Independent uniform-time metrics from ngspice waveform files",
+      "metrics": {
+        "input_vectors_correct": true,
+        "normal_max_deviation_v_uniform": 2.803808517140724e-05,
+        "normal_ok": true,
+        "normal_store_peak_v": 0.149080009,
+        "trigger_drop_v_uniform": 2.7996196137526956,
+        "trigger_ok": true,
+        "trigger_store_final_v": 1.44899831,
+        "trigger_store_peak_v": 1.49334028,
+        "truth_table_pass": true
+      },
+      "normal_ok": true,
+      "simulation_ok": true,
+      "simulation_path": "results/proposal_stop_v6/control_simulations/positive/and4",
+      "trigger_ok": true
+    }
+  ],
+  "specification": {
+    "control_gate_rule": "All four fixed controls must have usable reviewer judgments equal to their expected_is_trojan label before any main session review.",
+    "control_role": "Pre-main-run acceptance check only; excluded from main session statistics.",
+    "controls": [
+      {
+        "circuit": "opamp",
+        "control_id": "opamp_clean",
+        "expected_is_trojan": false,
+        "kind": "clean",
+        "netlist_path": "results/proposal_stop_v6/controls/opamp_clean.cir",
+        "netlist_sha256": "488db83556b42172da6e34e7ef8097d8bc23c05fefc4d9e8d604bcd76d7e48e3"
+      },
+      {
+        "base_parameters": {
+          "insertion_site": "output_shunt",
+          "representation": "switch",
+          "strength": "medium",
+          "trigger_profile": "p1"
+        },
+        "circuit": "opamp",
+        "control_id": "opamp_positive",
+        "expected_is_trojan": true,
+        "kind": "positive",
+        "netlist_path": "results/proposal_stop_v6/controls/opamp_positive.cir",
+        "netlist_sha256": "fb67d9c1213f2bf87340bb532160f60d4110c36ee0008469f19f3f84f37a7a2f",
+        "outside_main_candidate_menu": true,
+        "payload_resistance_ohms_override": 87.5
+      },
+      {
+        "circuit": "and4",
+        "control_id": "and4_clean",
+        "expected_is_trojan": false,
+        "kind": "clean",
+        "netlist_path": "results/proposal_stop_v6/controls/and4_clean.cir",
+        "netlist_sha256": "c1c437c444686b3ffb6fae253431407ca79a60e30c823850a8f4cae85d37a39e"
+      },
+      {
+        "base_parameters": {
+          "insertion_site": "output_shunt",
+          "representation": "switch",
+          "strength": "medium",
+          "trigger_profile": "p1"
+        },
+        "circuit": "and4",
+        "control_id": "and4_positive",
+        "expected_is_trojan": true,
+        "kind": "positive",
+        "netlist_path": "results/proposal_stop_v6/controls/and4_positive.cir",
+        "netlist_sha256": "20a0a5e01b43b0367850a6a774090bd0565701ab24d8128dd9e61bf4426ad54e",
+        "outside_main_candidate_menu": true,
+        "payload_resistance_ohms_override": 325.0
+      }
+    ],
+    "coverage": {
+      "and4": {
+        "distinct_initial_netlists": 10,
+        "menu_size": 54,
+        "site_representation_cell_counts": {
+          "nand_node_pullup/conductance": 1,
+          "nand_node_pullup/mosfet": 1,
+          "nand_node_pullup/switch": 1,
+          "output_shunt/conductance": 2,
+          "output_shunt/mosfet": 3,
+          "output_shunt/switch": 2
+        },
+        "site_representation_cells": [
+          "nand_node_pullup/conductance",
+          "nand_node_pullup/mosfet",
+          "nand_node_pullup/switch",
+          "output_shunt/conductance",
+          "output_shunt/mosfet",
+          "output_shunt/switch"
+        ]
+      },
+      "opamp": {
+        "distinct_initial_netlists": 10,
+        "menu_size": 81,
+        "site_representation_cell_counts": {
+          "gain_node_pullup/conductance": 1,
+          "gain_node_pullup/mosfet": 2,
+          "gain_node_pullup/switch": 1,
+          "mirror_node_pulldown/conductance": 1,
+          "mirror_node_pulldown/mosfet": 1,
+          "mirror_node_pulldown/switch": 1,
+          "output_shunt/conductance": 1,
+          "output_shunt/mosfet": 1,
+          "output_shunt/switch": 1
+        },
+        "site_representation_cells": [
+          "gain_node_pullup/conductance",
+          "gain_node_pullup/mosfet",
+          "gain_node_pullup/switch",
+          "mirror_node_pulldown/conductance",
+          "mirror_node_pulldown/mosfet",
+          "mirror_node_pulldown/switch",
+          "output_shunt/conductance",
+          "output_shunt/mosfet",
+          "output_shunt/switch"
+        ]
+      }
+    },
+    "detector_results_used_for_selection": false,
+    "first_attempt_counts_toward_ten_attempt_limit": true,
+    "run_id": "proposal_stop_v6",
+    "selection_rule": "One uniform draw per insertion-site \u00d7 representation cell; fill to ten uniformly without replacement from remaining configurations; shuffle to assign session IDs.",
+    "selection_seeds": {
+      "and4": 620601,
+      "opamp": 610601
+    },
+    "sessions_per_circuit": 10,
+    "starting_candidate_source": "prespecified stratified sampling from the qualified menu",
+    "starts": [
+      {
+        "circuit": "opamp",
+        "netlist_path": "results/proposal_stop_v6/starts/opamp/session_01.cir",
+        "netlist_sha256": "82edfa497f6dc87b47fc3769cb783139848f3f348e9a899a9b42a39fc20354c3",
+        "parameters": {
+          "insertion_site": "mirror_node_pulldown",
+          "representation": "conductance",
+          "strength": "high",
+          "trigger_profile": "p1"
+        },
+        "resolved_parameters": {
+          "insertion_site": "mirror_node_pulldown",
+          "mos_polarity": "n",
+          "payload_mos_length_um": null,
+          "payload_mos_width_um": null,
+          "payload_node": "n1",
+          "payload_rail": "vss",
+          "payload_resistance_ohms": 250.0,
+          "pump_cap_pf": 0.4,
+          "representation": "conductance",
+          "strength": "high",
+          "tau_us": 100.0,
+          "threshold_v": 0.4,
+          "trigger_profile": "p1"
+        },
+        "session": 1,
+        "stratum": "mirror_node_pulldown/conductance"
+      },
+      {
+        "circuit": "opamp",
+        "netlist_path": "results/proposal_stop_v6/starts/opamp/session_02.cir",
+        "netlist_sha256": "8bfeadd0b0f09a3ca346594df8f7220059236dd77728239d453d6660fd659d40",
+        "parameters": {
+          "insertion_site": "output_shunt",
+          "representation": "switch",
+          "strength": "medium",
+          "trigger_profile": "p3"
+        },
+        "resolved_parameters": {
+          "insertion_site": "output_shunt",
+          "mos_polarity": "n",
+          "payload_mos_length_um": null,
+          "payload_mos_width_um": null,
+          "payload_node": "out",
+          "payload_rail": "vss",
+          "payload_resistance_ohms": 75.0,
+          "pump_cap_pf": 0.35,
+          "representation": "switch",
+          "strength": "medium",
+          "tau_us": 120.0,
+          "threshold_v": 0.55,
+          "trigger_profile": "p3"
+        },
+        "session": 2,
+        "stratum": "output_shunt/switch"
+      },
+      {
+        "circuit": "opamp",
+        "netlist_path": "results/proposal_stop_v6/starts/opamp/session_03.cir",
+        "netlist_sha256": "083df452f0abf9cfca68c54d70d978c780037900760b3d0870e85f18ac92d1bd",
+        "parameters": {
+          "insertion_site": "output_shunt",
+          "representation": "conductance",
+          "strength": "medium",
+          "trigger_profile": "p1"
+        },
+        "resolved_parameters": {
+          "insertion_site": "output_shunt",
+          "mos_polarity": "n",
+          "payload_mos_length_um": null,
+          "payload_mos_width_um": null,
+          "payload_node": "out",
+          "payload_rail": "vss",
+          "payload_resistance_ohms": 75.0,
+          "pump_cap_pf": 0.4,
+          "representation": "conductance",
+          "strength": "medium",
+          "tau_us": 100.0,
+          "threshold_v": 0.4,
+          "trigger_profile": "p1"
+        },
+        "session": 3,
+        "stratum": "output_shunt/conductance"
+      },
+      {
+        "circuit": "opamp",
+        "netlist_path": "results/proposal_stop_v6/starts/opamp/session_04.cir",
+        "netlist_sha256": "c67f9d1f172ce43398c90632dc32167a6e228e501cbfbd8df7a785b2422554a5",
+        "parameters": {
+          "insertion_site": "gain_node_pullup",
+          "representation": "switch",
+          "strength": "low",
+          "trigger_profile": "p3"
+        },
+        "resolved_parameters": {
+          "insertion_site": "gain_node_pullup",
+          "mos_polarity": "p",
+          "payload_mos_length_um": null,
+          "payload_mos_width_um": null,
+          "payload_node": "n2",
+          "payload_rail": "vdd",
+          "payload_resistance_ohms": 2000.0,
+          "pump_cap_pf": 0.35,
+          "representation": "switch",
+          "strength": "low",
+          "tau_us": 120.0,
+          "threshold_v": 0.55,
+          "trigger_profile": "p3"
+        },
+        "session": 4,
+        "stratum": "gain_node_pullup/switch"
+      },
+      {
+        "circuit": "opamp",
+        "netlist_path": "results/proposal_stop_v6/starts/opamp/session_05.cir",
+        "netlist_sha256": "1ddf53d9f581f727fa59eaf0320a6282b9642d0e25e518a39c313d4b8a0f2e1f",
+        "parameters": {
+          "insertion_site": "gain_node_pullup",
+          "representation": "conductance",
+          "strength": "low",
+          "trigger_profile": "p3"
+        },
+        "resolved_parameters": {
+          "insertion_site": "gain_node_pullup",
+          "mos_polarity": "p",
+          "payload_mos_length_um": null,
+          "payload_mos_width_um": null,
+          "payload_node": "n2",
+          "payload_rail": "vdd",
+          "payload_resistance_ohms": 2000.0,
+          "pump_cap_pf": 0.35,
+          "representation": "conductance",
+          "strength": "low",
+          "tau_us": 120.0,
+          "threshold_v": 0.55,
+          "trigger_profile": "p3"
+        },
+        "session": 5,
+        "stratum": "gain_node_pullup/conductance"
+      },
+      {
+        "circuit": "opamp",
+        "netlist_path": "results/proposal_stop_v6/starts/opamp/session_06.cir",
+        "netlist_sha256": "bcc9576e13fa21143339b925e0e574c6b16ba72f71dad89b33ea4566ebe43138",
+        "parameters": {
+          "insertion_site": "gain_node_pullup",
+          "representation": "mosfet",
+          "strength": "high",
+          "trigger_profile": "p3"
+        },
+        "resolved_parameters": {
+          "insertion_site": "gain_node_pullup",
+          "mos_polarity": "p",
+          "payload_mos_length_um": 1.0,
+          "payload_mos_width_um": 8.0,
+          "payload_node": "n2",
+          "payload_rail": "vdd",
+          "payload_resistance_ohms": null,
+          "pump_cap_pf": 0.35,
+          "representation": "mosfet",
+          "strength": "high",
+          "tau_us": 120.0,
+          "threshold_v": 0.55,
+          "trigger_profile": "p3"
+        },
+        "session": 6,
+        "stratum": "gain_node_pullup/mosfet"
+      },
+      {
+        "circuit": "opamp",
+        "netlist_path": "results/proposal_stop_v6/starts/opamp/session_07.cir",
+        "netlist_sha256": "e369f66c8623918f114fbc6944a4a4d888b61fe6f7d47eee7f8d403ac6d1a597",
+        "parameters": {
+          "insertion_site": "output_shunt",
+          "representation": "mosfet",
+          "strength": "medium",
+          "trigger_profile": "p3"
+        },
+        "resolved_parameters": {
+          "insertion_site": "output_shunt",
+          "mos_polarity": "n",
+          "payload_mos_length_um": 1.0,
+          "payload_mos_width_um": 60.0,
+          "payload_node": "out",
+          "payload_rail": "vss",
+          "payload_resistance_ohms": null,
+          "pump_cap_pf": 0.35,
+          "representation": "mosfet",
+          "strength": "medium",
+          "tau_us": 120.0,
+          "threshold_v": 0.55,
+          "trigger_profile": "p3"
+        },
+        "session": 7,
+        "stratum": "output_shunt/mosfet"
+      },
+      {
+        "circuit": "opamp",
+        "netlist_path": "results/proposal_stop_v6/starts/opamp/session_08.cir",
+        "netlist_sha256": "e500582bcf74ba9d4284e8437194332bb8ae6c0953150736ac18acb9342db7bc",
+        "parameters": {
+          "insertion_site": "mirror_node_pulldown",
+          "representation": "switch",
+          "strength": "medium",
+          "trigger_profile": "p3"
+        },
+        "resolved_parameters": {
+          "insertion_site": "mirror_node_pulldown",
+          "mos_polarity": "n",
+          "payload_mos_length_um": null,
+          "payload_mos_width_um": null,
+          "payload_node": "n1",
+          "payload_rail": "vss",
+          "payload_resistance_ohms": 500.0,
+          "pump_cap_pf": 0.35,
+          "representation": "switch",
+          "strength": "medium",
+          "tau_us": 120.0,
+          "threshold_v": 0.55,
+          "trigger_profile": "p3"
+        },
+        "session": 8,
+        "stratum": "mirror_node_pulldown/switch"
+      },
+      {
+        "circuit": "opamp",
+        "netlist_path": "results/proposal_stop_v6/starts/opamp/session_09.cir",
+        "netlist_sha256": "587e9cb2639d58011586d3ee0e3d370080785d97facfb594325875c7d153a27a",
+        "parameters": {
+          "insertion_site": "gain_node_pullup",
+          "representation": "mosfet",
+          "strength": "medium",
+          "trigger_profile": "p1"
+        },
+        "resolved_parameters": {
+          "insertion_site": "gain_node_pullup",
+          "mos_polarity": "p",
+          "payload_mos_length_um": 1.0,
+          "payload_mos_width_um": 4.0,
+          "payload_node": "n2",
+          "payload_rail": "vdd",
+          "payload_resistance_ohms": null,
+          "pump_cap_pf": 0.4,
+          "representation": "mosfet",
+          "strength": "medium",
+          "tau_us": 100.0,
+          "threshold_v": 0.4,
+          "trigger_profile": "p1"
+        },
+        "session": 9,
+        "stratum": "gain_node_pullup/mosfet"
+      },
+      {
+        "circuit": "opamp",
+        "netlist_path": "results/proposal_stop_v6/starts/opamp/session_10.cir",
+        "netlist_sha256": "73714b5a2adfff7bac313c9c3a01e426baf677d1c54377eef4408dd1af38fb98",
+        "parameters": {
+          "insertion_site": "mirror_node_pulldown",
+          "representation": "mosfet",
+          "strength": "low",
+          "trigger_profile": "p3"
+        },
+        "resolved_parameters": {
+          "insertion_site": "mirror_node_pulldown",
+          "mos_polarity": "n",
+          "payload_mos_length_um": 1.0,
+          "payload_mos_width_um": 1.0,
+          "payload_node": "n1",
+          "payload_rail": "vss",
+          "payload_resistance_ohms": null,
+          "pump_cap_pf": 0.35,
+          "representation": "mosfet",
+          "strength": "low",
+          "tau_us": 120.0,
+          "threshold_v": 0.55,
+          "trigger_profile": "p3"
+        },
+        "session": 10,
+        "stratum": "mirror_node_pulldown/mosfet"
+      },
+      {
+        "circuit": "and4",
+        "netlist_path": "results/proposal_stop_v6/starts/and4/session_01.cir",
+        "netlist_sha256": "8249e9262357e6e99106ea5bb262055966ab361b73480d7fe11fc68e50092c34",
+        "parameters": {
+          "insertion_site": "output_shunt",
+          "representation": "switch",
+          "strength": "low",
+          "trigger_profile": "p2"
+        },
+        "resolved_parameters": {
+          "insertion_site": "output_shunt",
+          "mos_polarity": "n",
+          "payload_mos_length_um": null,
+          "payload_mos_width_um": null,
+          "payload_node": "out",
+          "payload_rail": "vss",
+          "payload_resistance_ohms": 400.0,
+          "pump_cap_pf": 0.5,
+          "representation": "switch",
+          "strength": "low",
+          "tau_us": 40.0,
+          "threshold_v": 1.0,
+          "trigger_profile": "p2"
+        },
+        "session": 1,
+        "stratum": "output_shunt/switch"
+      },
+      {
+        "circuit": "and4",
+        "netlist_path": "results/proposal_stop_v6/starts/and4/session_02.cir",
+        "netlist_sha256": "fb3b05eef371fccb03e50bc1a0811d7137801c2072e9e28c1a30df40d03d031e",
+        "parameters": {
+          "insertion_site": "nand_node_pullup",
+          "representation": "conductance",
+          "strength": "high",
+          "trigger_profile": "p2"
+        },
+        "resolved_parameters": {
+          "insertion_site": "nand_node_pullup",
+          "mos_polarity": "p",
+          "payload_mos_length_um": null,
+          "payload_mos_width_um": null,
+          "payload_node": "n1",
+          "payload_rail": "vdd",
+          "payload_resistance_ohms": 100.0,
+          "pump_cap_pf": 0.5,
+          "representation": "conductance",
+          "strength": "high",
+          "tau_us": 40.0,
+          "threshold_v": 1.0,
+          "trigger_profile": "p2"
+        },
+        "session": 2,
+        "stratum": "nand_node_pullup/conductance"
+      },
+      {
+        "circuit": "and4",
+        "netlist_path": "results/proposal_stop_v6/starts/and4/session_03.cir",
+        "netlist_sha256": "77c62db8a8e0f023f6cf1948ed0b1b9b6110765ebe573f507104aa5328eac356",
+        "parameters": {
+          "insertion_site": "output_shunt",
+          "representation": "conductance",
+          "strength": "high",
+          "trigger_profile": "p1"
+        },
+        "resolved_parameters": {
+          "insertion_site": "output_shunt",
+          "mos_polarity": "n",
+          "payload_mos_length_um": null,
+          "payload_mos_width_um": null,
+          "payload_node": "out",
+          "payload_rail": "vss",
+          "payload_resistance_ohms": 150.0,
+          "pump_cap_pf": 0.4,
+          "representation": "conductance",
+          "strength": "high",
+          "tau_us": 30.0,
+          "threshold_v": 0.85,
+          "trigger_profile": "p1"
+        },
+        "session": 3,
+        "stratum": "output_shunt/conductance"
+      },
+      {
+        "circuit": "and4",
+        "netlist_path": "results/proposal_stop_v6/starts/and4/session_04.cir",
+        "netlist_sha256": "7c047859e77e840ea749f7ca218a16b8d799be6bd46ca2dc108504e47f29bf3f",
+        "parameters": {
+          "insertion_site": "output_shunt",
+          "representation": "conductance",
+          "strength": "medium",
+          "trigger_profile": "p3"
+        },
+        "resolved_parameters": {
+          "insertion_site": "output_shunt",
+          "mos_polarity": "n",
+          "payload_mos_length_um": null,
+          "payload_mos_width_um": null,
+          "payload_node": "out",
+          "payload_rail": "vss",
+          "payload_resistance_ohms": 250.0,
+          "pump_cap_pf": 0.3,
+          "representation": "conductance",
+          "strength": "medium",
+          "tau_us": 50.0,
+          "threshold_v": 0.7,
+          "trigger_profile": "p3"
+        },
+        "session": 4,
+        "stratum": "output_shunt/conductance"
+      },
+      {
+        "circuit": "and4",
+        "netlist_path": "results/proposal_stop_v6/starts/and4/session_05.cir",
+        "netlist_sha256": "3c351a5291b4a6d347ffde66b2e5488967fe733b38ff6de4131b822364e431d2",
+        "parameters": {
+          "insertion_site": "nand_node_pullup",
+          "representation": "switch",
+          "strength": "high",
+          "trigger_profile": "p1"
+        },
+        "resolved_parameters": {
+          "insertion_site": "nand_node_pullup",
+          "mos_polarity": "p",
+          "payload_mos_length_um": null,
+          "payload_mos_width_um": null,
+          "payload_node": "n1",
+          "payload_rail": "vdd",
+          "payload_resistance_ohms": 100.0,
+          "pump_cap_pf": 0.4,
+          "representation": "switch",
+          "strength": "high",
+          "tau_us": 30.0,
+          "threshold_v": 0.85,
+          "trigger_profile": "p1"
+        },
+        "session": 5,
+        "stratum": "nand_node_pullup/switch"
+      },
+      {
+        "circuit": "and4",
+        "netlist_path": "results/proposal_stop_v6/starts/and4/session_06.cir",
+        "netlist_sha256": "7a2946f7214f13eb84d36c312eed2bc052b8adb47f4d76473d1e79ef5c6aadad",
+        "parameters": {
+          "insertion_site": "output_shunt",
+          "representation": "mosfet",
+          "strength": "low",
+          "trigger_profile": "p1"
+        },
+        "resolved_parameters": {
+          "insertion_site": "output_shunt",
+          "mos_polarity": "n",
+          "payload_mos_length_um": 1.0,
+          "payload_mos_width_um": 4.0,
+          "payload_node": "out",
+          "payload_rail": "vss",
+          "payload_resistance_ohms": null,
+          "pump_cap_pf": 0.4,
+          "representation": "mosfet",
+          "strength": "low",
+          "tau_us": 30.0,
+          "threshold_v": 0.85,
+          "trigger_profile": "p1"
+        },
+        "session": 6,
+        "stratum": "output_shunt/mosfet"
+      },
+      {
+        "circuit": "and4",
+        "netlist_path": "results/proposal_stop_v6/starts/and4/session_07.cir",
+        "netlist_sha256": "6e4aa8d45bdce2f6bd72c95210cd3a86db4303834af7008a29a92fe21d03c926",
+        "parameters": {
+          "insertion_site": "output_shunt",
+          "representation": "mosfet",
+          "strength": "low",
+          "trigger_profile": "p2"
+        },
+        "resolved_parameters": {
+          "insertion_site": "output_shunt",
+          "mos_polarity": "n",
+          "payload_mos_length_um": 1.0,
+          "payload_mos_width_um": 4.0,
+          "payload_node": "out",
+          "payload_rail": "vss",
+          "payload_resistance_ohms": null,
+          "pump_cap_pf": 0.5,
+          "representation": "mosfet",
+          "strength": "low",
+          "tau_us": 40.0,
+          "threshold_v": 1.0,
+          "trigger_profile": "p2"
+        },
+        "session": 7,
+        "stratum": "output_shunt/mosfet"
+      },
+      {
+        "circuit": "and4",
+        "netlist_path": "results/proposal_stop_v6/starts/and4/session_08.cir",
+        "netlist_sha256": "b29b45674774f994875a2639623e0b319371a837a50e7a7bbe6fb91556235217",
+        "parameters": {
+          "insertion_site": "output_shunt",
+          "representation": "mosfet",
+          "strength": "medium",
+          "trigger_profile": "p2"
+        },
+        "resolved_parameters": {
+          "insertion_site": "output_shunt",
+          "mos_polarity": "n",
+          "payload_mos_length_um": 1.0,
+          "payload_mos_width_um": 8.0,
+          "payload_node": "out",
+          "payload_rail": "vss",
+          "payload_resistance_ohms": null,
+          "pump_cap_pf": 0.5,
+          "representation": "mosfet",
+          "strength": "medium",
+          "tau_us": 40.0,
+          "threshold_v": 1.0,
+          "trigger_profile": "p2"
+        },
+        "session": 8,
+        "stratum": "output_shunt/mosfet"
+      },
+      {
+        "circuit": "and4",
+        "netlist_path": "results/proposal_stop_v6/starts/and4/session_09.cir",
+        "netlist_sha256": "c98b2e1511d7b5d864a3095adc0e2ec99a5c282db0d531e6952dcc4fdc29a708",
+        "parameters": {
+          "insertion_site": "nand_node_pullup",
+          "representation": "mosfet",
+          "strength": "low",
+          "trigger_profile": "p2"
+        },
+        "resolved_parameters": {
+          "insertion_site": "nand_node_pullup",
+          "mos_polarity": "p",
+          "payload_mos_length_um": 1.0,
+          "payload_mos_width_um": 16.0,
+          "payload_node": "n1",
+          "payload_rail": "vdd",
+          "payload_resistance_ohms": null,
+          "pump_cap_pf": 0.5,
+          "representation": "mosfet",
+          "strength": "low",
+          "tau_us": 40.0,
+          "threshold_v": 1.0,
+          "trigger_profile": "p2"
+        },
+        "session": 9,
+        "stratum": "nand_node_pullup/mosfet"
+      },
+      {
+        "circuit": "and4",
+        "netlist_path": "results/proposal_stop_v6/starts/and4/session_10.cir",
+        "netlist_sha256": "f4e88276406b031b8059a56470fc94120d61b40c5866e75596f3d9cf331ae5f7",
+        "parameters": {
+          "insertion_site": "output_shunt",
+          "representation": "switch",
+          "strength": "medium",
+          "trigger_profile": "p3"
+        },
+        "resolved_parameters": {
+          "insertion_site": "output_shunt",
+          "mos_polarity": "n",
+          "payload_mos_length_um": null,
+          "payload_mos_width_um": null,
+          "payload_node": "out",
+          "payload_rail": "vss",
+          "payload_resistance_ohms": 250.0,
+          "pump_cap_pf": 0.3,
+          "representation": "switch",
+          "strength": "medium",
+          "tau_us": 50.0,
+          "threshold_v": 0.7,
+          "trigger_profile": "p3"
+        },
+        "session": 10,
+        "stratum": "output_shunt/switch"
+      }
+    ],
+    "starts_are_shared_across_feedback_conditions": true
+  }
+}

@@ -1,0 +1,281 @@
+{
+  "task_id": "proposal_stop_v6_and4_s05_binary_a03",
+  "circuit": "and4",
+  "session": 5,
+  "feedback": "binary",
+  "attempt": 3,
+  "seed": 420503,
+  "origin": "llm_proposal",
+  "order_index": 112,
+  "candidate_id": "proposal_stop_v6_and4_s05_binary_a03",
+  "previous_candidate_id": "proposal_stop_v6_and4_s05_binary_a02",
+  "started_at_utc": "2026-11-02T12:29:24.983147+00:00",
+  "parameters": {
+    "insertion_site": "nand_node_pullup",
+    "representation": "switch",
+    "strength": "low",
+    "trigger_profile": "p1"
+  },
+  "detector": {
+    "confidence": 0.9,
+    "feedback_text": "The netlist shows a standard four-input CMOS AND gate structure with PMOS and NMOS transistors configured correctly for logical AND operation. However, the presence of the switch S31, which connects n1 to vdd and n31 to vss, introduces a conditional mechanism that could alter the output based on the state of n1. If n1 is high, S31 could potentially override the intended logic by connecting to vdd, affecting the output. This could be seen as a suspicious modification that may allow for unintended behavior. Further investigation into the control of S31 is recommended.",
+    "is_trojan": true,
+    "suspect_nodes": [
+      "S31",
+      "n1",
+      "n31",
+      "out",
+      "vdd",
+      "vss",
+      "n32",
+      "n31"
+    ]
+  },
+  "simulation": {
+    "valid": true,
+    "normal_ok": true,
+    "trigger_ok": true,
+    "simulation_ok": true,
+    "metrics": {
+      "truth_table": [
+        {
+          "inputs": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "expected": 0,
+          "output_v": 2.5540123485126e-09,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "expected": 0,
+          "output_v": 8.450166735251627e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "expected": 0,
+          "output_v": 2.8482105066556603e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "expected": 0,
+          "output_v": -5.705051420206103e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "expected": 0,
+          "output_v": 7.438896467610088e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "expected": 0,
+          "output_v": -1.9501768905550346e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "expected": 0,
+          "output_v": -4.668586315393738e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "expected": 0,
+          "output_v": 1.8306091542663142e-07,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "expected": 0,
+          "output_v": 1.0765396916903497e-07,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "expected": 0,
+          "output_v": -1.1307185442845416e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "expected": 0,
+          "output_v": -4.560385398177689e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "expected": 0,
+          "output_v": 1.485509289962893e-07,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "expected": 0,
+          "output_v": -7.766756348066088e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "expected": 0,
+          "output_v": 1.4743716010919165e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "expected": 0,
+          "output_v": -7.25163905629195e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "expected": 1,
+          "output_v": 3.2999951639733998,
+          "pass": true
+        }
+      ],
+      "truth_table_passed": 16,
+      "rise_delay_ns": 0.14756010909694472,
+      "fall_delay_ns": 0.11398434409878866,
+      "normal_settled_max_deviation_v": 3.087266380703088e-05,
+      "trigger_output_drop_v": 3.3000003715575987,
+      "trigger_high_samples": 2139,
+      "normal_store_peak_v": 0.149080009,
+      "trigger_store_peak_v": 1.49333796,
+      "trigger_store_final_v": 1.44899778
+    },
+    "resolved_parameters": {
+      "insertion_site": "nand_node_pullup",
+      "representation": "switch",
+      "strength": "low",
+      "trigger_profile": "p1",
+      "pump_cap_pf": 0.4,
+      "tau_us": 30.0,
+      "threshold_v": 0.85,
+      "payload_node": "n1",
+      "payload_rail": "vdd",
+      "mos_polarity": "p",
+      "payload_resistance_ohms": 300.0,
+      "payload_mos_width_um": null,
+      "payload_mos_length_um": null
+    }
+  },
+  "success": false,
+  "detector_cache_reused": false,
+  "artifact_sha256": {
+    "results/api/proposal_stop_v6_and4_s05_binary_a03_a-fc32aa670305.json": "89779bdfac30914a9af8c99768e50a289063edc6754426f6c943b492711504ff",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_and4_s05_binary_a03/candidate.cir": "92e7d3260a7c9d6fef16e25a8625dea6fd4cbce04e368d17d9171b739ad67921",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_and4_s05_binary_a03/normal.cir": "bffda15024cddeaf2e78378dd2f47debf5c0774fd03b727ae657a6bf23cbbe14",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_and4_s05_binary_a03/trigger.cir": "c0e240a1a4cb72fd86ccdee3432db90e9442dfaaf1169e86b68ec52bd0771037",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_and4_s05_binary_a03/normal.tsv": "1d5e63e82b758cb224566fcb4e617141e53c3c49c6d534f396f96adc5ececb38",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_and4_s05_binary_a03/trigger.tsv": "cea5ca95e826779f506f240d4ad1e6815ed105868f7274452013fdf7fa424081",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_and4_s05_binary_a03/normal.log": "d261f21fa4ba953a714fd5e5c7ee15d726aefe43b8a02f43c3c2eeae4bc59704",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_and4_s05_binary_a03/trigger.log": "3b508d81e8f2f66817aa9f5f9836f020f93bf37c47d129193c20298afd801f7b",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_and4_s05_binary_a03/validation.json": "5e6b0e5fe911bdb4733778ab2a8ce89d261d1ffe2514927fa8475318e1442e22",
+    "results/proposal_stop_v6/detector_cache/bc40dca96588517f4af07a2671ef6a315f8a193bb79076376fca9e9532d9a7c6.json": "e8ad2aba323102c6ac10d7d9ae188b31e168c4d9fe042a38f678f61e621e048f",
+    "results/api/proposal_stop_v6_d_bc40dca96588517f4af07a2671ef6a315f8a193bb79076376fca9e9532d9a7c6-7455e5f6dd4f.json": "71b62e55d189885e70feb786770fa4bcd8e4018e17cfcc1a7aedeb8ff3e05e27"
+  },
+  "attacker_records": [
+    {
+      "call_id": "proposal_stop_v6_and4_s05_binary_a03_a",
+      "path": "results/api/proposal_stop_v6_and4_s05_binary_a03_a-fc32aa670305.json",
+      "sha256": "89779bdfac30914a9af8c99768e50a289063edc6754426f6c943b492711504ff"
+    }
+  ],
+  "attacker_record": "results/api/proposal_stop_v6_and4_s05_binary_a03_a-fc32aa670305.json",
+  "netlist_path": "results/proposal_stop_v6/simulations/proposal_stop_v6_and4_s05_binary_a03/candidate.cir",
+  "netlist_sha256": "92e7d3260a7c9d6fef16e25a8625dea6fd4cbce04e368d17d9171b739ad67921",
+  "simulation_dir": "results/proposal_stop_v6/simulations/proposal_stop_v6_and4_s05_binary_a03",
+  "detector_error": null,
+  "detector_cache_key": "bc40dca96588517f4af07a2671ef6a315f8a193bb79076376fca9e9532d9a7c6",
+  "detector_cache_path": "results/proposal_stop_v6/detector_cache/bc40dca96588517f4af07a2671ef6a315f8a193bb79076376fca9e9532d9a7c6.json",
+  "detector_records": [
+    {
+      "call_id": "proposal_stop_v6_d_bc40dca96588517f4af07a2671ef6a315f8a193bb79076376fca9e9532d9a7c6",
+      "path": "results/api/proposal_stop_v6_d_bc40dca96588517f4af07a2671ef6a315f8a193bb79076376fca9e9532d9a7c6-7455e5f6dd4f.json",
+      "sha256": "71b62e55d189885e70feb786770fa4bcd8e4018e17cfcc1a7aedeb8ff3e05e27"
+    }
+  ],
+  "finished_at_utc": "2026-11-02T12:29:28.618995+00:00"
+}

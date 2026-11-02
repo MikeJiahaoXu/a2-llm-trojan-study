@@ -1,0 +1,41 @@
+{
+  "complete": true,
+  "protocol": "proposal_stop_v6",
+  "completed_at_utc": "2026-11-02T12:32:05.570047+00:00",
+  "sessions": 60,
+  "condition_attempt_rows": 197,
+  "planned_candidate_tasks": 560,
+  "maximum_attacker_requests": 540,
+  "actual_candidate_events": 157,
+  "skipped_tasks": 403,
+  "unique_review_requests": 48,
+  "candidate_unique_review_requests": 44,
+  "control_review_requests": 4,
+  "controls_sha256": "459591fddea7cc0fc318914497828f1e7a0dc3f50bdcca223316534836d917e1",
+  "controls_gate_sha256": "228524cc62c2e347f3760df66f93858ff8495956361f625b487590747c4296f5",
+  "control_gate_passed": true,
+  "manifest_sha256": "d13a9eae330a47a5420528643bc5d0d7b9c3b43c1a31df4c7a346beca9b87a83",
+  "schedule_sha256": "5935cfddff934dba93945fd96711e451c8f69dfb07defa0496baa76d0c292d81",
+  "attempts_sha256": "0a5559375742298c47bb6fa9bdb872145c2524e1ab59fb7db6cf607545c476ed",
+  "dispositions_sha256": "00cd3f34eea680aa3c2b127be05fdfbd4a0dfd3af2eb7afd86714392017d8e6c",
+  "clean_simulation_sha256": {
+    "results/proposal_stop_v6/clean_simulations/and4/normal.cir": "07e3158b4da54e67ea4c6afff2389d0351806c8687c762993fda1a4058c6e05c",
+    "results/proposal_stop_v6/clean_simulations/and4/normal.log": "311425bc3ed785b6f1e4c48a44925e8fdd311fb7df7651000ec3935004230747",
+    "results/proposal_stop_v6/clean_simulations/and4/normal.tsv": "2f8441e8a650700a8763c31e1541bbe8fae927bd5fb55fdacf648c21f1c5d653",
+    "results/proposal_stop_v6/clean_simulations/and4/trigger.cir": "360b558acbddc349954240505fec7821b8768f3a4ca97c0f9e6bb3cd6e032540",
+    "results/proposal_stop_v6/clean_simulations/and4/trigger.log": "1aef90ac417b1f8ba3e3777f81bbec071ba4a35d5192fc0b297aa0e67bbf077c",
+    "results/proposal_stop_v6/clean_simulations/and4/trigger.tsv": "558c126c79d63d5fb20bfb1a6f736b925c61e273ebd95f6f36aad44f4ac9dd6c",
+    "results/proposal_stop_v6/clean_simulations/opamp/normal.cir": "26474cd27dca199788f27acf019d19c1b4525d909cfb217157f60c76879a8801",
+    "results/proposal_stop_v6/clean_simulations/opamp/normal.log": "b487763eb503499b940072c804ca845f9c77d05d9df6d03762be644ff72ac4e4",
+    "results/proposal_stop_v6/clean_simulations/opamp/normal.tsv": "7cafbbf071833aed0ba6ab3a9ca2811d09ae588bda6a72f2cd4dea87cafae2da",
+    "results/proposal_stop_v6/clean_simulations/opamp/trigger.cir": "dfeab71c53be2220b043e29f5b1fa741b651394e1ef8ab10c2b0114767621c10",
+    "results/proposal_stop_v6/clean_simulations/opamp/trigger.log": "f26f26248395145ec4bbdac3ebd04413151375758e0985b6530517b90f99acdd",
+    "results/proposal_stop_v6/clean_simulations/opamp/trigger.tsv": "947714680aa71855c9a681d572cf7608c6a9e506074bd2533a95f393171dc01c"
+  },
+  "budget": {
+    "project_committed_usd": 0.5572503,
+    "study_committed_usd": 0.0311592,
+    "project_cap_usd": 6.5,
+    "study_cap_usd": 3.0
+  }
+}

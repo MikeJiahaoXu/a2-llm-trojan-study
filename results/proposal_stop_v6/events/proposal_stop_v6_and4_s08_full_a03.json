@@ -1,0 +1,272 @@
+{
+  "task_id": "proposal_stop_v6_and4_s08_full_a03",
+  "circuit": "and4",
+  "session": 8,
+  "feedback": "full",
+  "attempt": 3,
+  "seed": 420803,
+  "origin": "llm_proposal",
+  "order_index": 137,
+  "candidate_id": "proposal_stop_v6_and4_s08_full_a03",
+  "previous_candidate_id": "proposal_stop_v6_and4_s08_full_a02",
+  "started_at_utc": "2026-11-02T12:29:42.533981+00:00",
+  "parameters": {
+    "insertion_site": "output_shunt",
+    "representation": "conductance",
+    "strength": "medium",
+    "trigger_profile": "p2"
+  },
+  "detector": {
+    "confidence": 0.9,
+    "feedback_text": "The netlist describes a standard four-input CMOS AND gate with no evident unauthorized modifications. The output is derived from the logical AND of inputs a, b, c, and d, as expected. The additional components (C31, D31, D32, C32, R31, B31) do not create a mechanism that alters the intended function of the AND gate; they appear to be for biasing or compensation. The behavior of B31 is based on the output voltage and does not introduce a malicious override. Therefore, there is no evidence of a Trojan mechanism.",
+    "is_trojan": false,
+    "suspect_nodes": []
+  },
+  "simulation": {
+    "valid": true,
+    "normal_ok": true,
+    "trigger_ok": true,
+    "simulation_ok": true,
+    "metrics": {
+      "truth_table": [
+        {
+          "inputs": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "expected": 0,
+          "output_v": 2.55401234e-09,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "expected": 0,
+          "output_v": 8.547310543201883e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "expected": 0,
+          "output_v": 5.085442183872197e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "expected": 0,
+          "output_v": 2.1221271456174943e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "expected": 0,
+          "output_v": 6.814518788424977e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "expected": 0,
+          "output_v": 2.6058698064236074e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "expected": 0,
+          "output_v": -1.8105715331591007e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "expected": 0,
+          "output_v": -7.583062895206768e-07,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "expected": 0,
+          "output_v": 7.818884440957144e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "expected": 0,
+          "output_v": 3.0045547875556633e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "expected": 0,
+          "output_v": -1.62196869259673e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "expected": 0,
+          "output_v": -6.883126329187445e-07,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "expected": 0,
+          "output_v": -3.077057620703019e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "expected": 0,
+          "output_v": -2.1136309772093535e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "expected": 0,
+          "output_v": -1.9956091668307714e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "expected": 1,
+          "output_v": 3.2999951639733998,
+          "pass": true
+        }
+      ],
+      "truth_table_passed": 16,
+      "rise_delay_ns": 0.14756066941262747,
+      "fall_delay_ns": 0.1138112037881063,
+      "normal_settled_max_deviation_v": 3.1013633996331355e-05,
+      "trigger_output_drop_v": 2.9142630338693,
+      "trigger_high_samples": 2160,
+      "normal_store_peak_v": 0.213028671,
+      "trigger_store_peak_v": 1.81418245,
+      "trigger_store_final_v": 1.7746864
+    },
+    "resolved_parameters": {
+      "insertion_site": "output_shunt",
+      "representation": "conductance",
+      "strength": "medium",
+      "trigger_profile": "p2",
+      "pump_cap_pf": 0.5,
+      "tau_us": 40.0,
+      "threshold_v": 1.0,
+      "payload_node": "out",
+      "payload_rail": "vss",
+      "mos_polarity": "n",
+      "payload_resistance_ohms": 250.0,
+      "payload_mos_width_um": null,
+      "payload_mos_length_um": null
+    }
+  },
+  "success": true,
+  "detector_cache_reused": true,
+  "artifact_sha256": {
+    "results/api/proposal_stop_v6_and4_s08_full_a03_a-6a5bff555def.json": "f0a468c16c77ee1ebd395e4a85db7f72b72f4d616cc8742fb09dfbc7d56cb6f2",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_and4_s08_full_a03/candidate.cir": "1b19d9b5682f838679e668415d603a44fa4d92e9cfac98e05936885980a11a2d",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_and4_s08_full_a03/normal.cir": "d965b207afcfa69e7f46114ba488784c2dbf076039f08f0a50155ecf3eadb09f",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_and4_s08_full_a03/trigger.cir": "5104f615d9ad25fdd706d8b5e80baa0bf5c03d28e9e35caf4ce9d1ba0bfc7965",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_and4_s08_full_a03/normal.tsv": "61abf096a7e6caa14c2e671d3b925bd85661e02639e71f49b0297091c5755ffa",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_and4_s08_full_a03/trigger.tsv": "37660d4d5557773f4b05b473172fc7fe9dbb238abc63c59a5f02e37ac00e1e65",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_and4_s08_full_a03/normal.log": "b7915fce7f325e27264ab93f4b5cf3d1c4a0105bb3bde62a20310753ce52ab8f",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_and4_s08_full_a03/trigger.log": "b00ce7c8ad01ba9aefae81acb0a5dd9c5bb3b6fe9cdeb07884e147d0e948439b",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_and4_s08_full_a03/validation.json": "401980f1ab6e07b6f847a4df2ed10caa109e4fd64231b19fa13427ab85af07f8",
+    "results/proposal_stop_v6/detector_cache/116486af25e85dc4a22789a29f107b6b1c299b40189fcf289bd523f9ccf78333.json": "1a57f2ee1058104e76d52945f3b0fb855a7a2b2b8464a6490cf583341d0b6f3c",
+    "results/api/proposal_stop_v6_d_116486af25e85dc4a22789a29f107b6b1c299b40189fcf289bd523f9ccf78333-c35182e7e9af.json": "b6c5375bd4a96003b3eb71d329193b0fe8ccac490f8bffbd40555d1d7a19c25e"
+  },
+  "attacker_records": [
+    {
+      "call_id": "proposal_stop_v6_and4_s08_full_a03_a",
+      "path": "results/api/proposal_stop_v6_and4_s08_full_a03_a-6a5bff555def.json",
+      "sha256": "f0a468c16c77ee1ebd395e4a85db7f72b72f4d616cc8742fb09dfbc7d56cb6f2"
+    }
+  ],
+  "attacker_record": "results/api/proposal_stop_v6_and4_s08_full_a03_a-6a5bff555def.json",
+  "netlist_path": "results/proposal_stop_v6/simulations/proposal_stop_v6_and4_s08_full_a03/candidate.cir",
+  "netlist_sha256": "1b19d9b5682f838679e668415d603a44fa4d92e9cfac98e05936885980a11a2d",
+  "simulation_dir": "results/proposal_stop_v6/simulations/proposal_stop_v6_and4_s08_full_a03",
+  "detector_error": null,
+  "detector_cache_key": "116486af25e85dc4a22789a29f107b6b1c299b40189fcf289bd523f9ccf78333",
+  "detector_cache_path": "results/proposal_stop_v6/detector_cache/116486af25e85dc4a22789a29f107b6b1c299b40189fcf289bd523f9ccf78333.json",
+  "detector_records": [
+    {
+      "call_id": "proposal_stop_v6_d_116486af25e85dc4a22789a29f107b6b1c299b40189fcf289bd523f9ccf78333",
+      "path": "results/api/proposal_stop_v6_d_116486af25e85dc4a22789a29f107b6b1c299b40189fcf289bd523f9ccf78333-c35182e7e9af.json",
+      "sha256": "b6c5375bd4a96003b3eb71d329193b0fe8ccac490f8bffbd40555d1d7a19c25e"
+    }
+  ],
+  "finished_at_utc": "2026-11-02T12:29:44.175168+00:00"
+}

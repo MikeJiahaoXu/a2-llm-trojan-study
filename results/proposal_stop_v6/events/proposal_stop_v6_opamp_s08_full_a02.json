@@ -1,0 +1,104 @@
+{
+  "task_id": "proposal_stop_v6_opamp_s08_full_a02",
+  "circuit": "opamp",
+  "session": 8,
+  "feedback": "full",
+  "attempt": 2,
+  "seed": 410802,
+  "origin": "llm_proposal",
+  "order_index": 62,
+  "candidate_id": "proposal_stop_v6_opamp_s08_full_a02",
+  "previous_candidate_id": "proposal_stop_v6_opamp_s08_shared_a01",
+  "started_at_utc": "2026-11-02T12:28:39.607326+00:00",
+  "parameters": {
+    "insertion_site": "gain_node_pullup",
+    "representation": "mosfet",
+    "strength": "high",
+    "trigger_profile": "p2"
+  },
+  "detector": {
+    "confidence": 0.9,
+    "feedback_text": "The netlist shows a conditional mechanism involving the B-source B31, which uses a behavioral expression dependent on the voltage at node n31. This voltage is influenced by the diode D31 and capacitor C31, creating a feedback loop that can alter the output based on the input conditions. The behavior of B31 can lead to unexpected output changes, indicating a potential unauthorized modification. The presence of this feedback mechanism suggests that the circuit may not function solely as intended, warranting further investigation.",
+    "is_trojan": true,
+    "suspect_nodes": [
+      "n31",
+      "n32",
+      "n33",
+      "out",
+      "nb",
+      "nt",
+      "vdd",
+      "vss"
+    ]
+  },
+  "simulation": {
+    "valid": true,
+    "normal_ok": true,
+    "trigger_ok": true,
+    "simulation_ok": true,
+    "metrics": {
+      "follower_rmse_v": 4.449807712656958e-05,
+      "follower_max_error_v": 6.428000000013867e-05,
+      "output_min_v": 1.60000141,
+      "output_max_v": 1.69999969,
+      "normal_max_deviation_v": 1.0000000161269895e-08,
+      "trigger_recovery_drop_v": 1.6500005473912902,
+      "trigger_reference_mean_v": 1.650000545339846,
+      "normal_store_peak_v": 1.44313037e-05,
+      "trigger_store_peak_v": 1.17180019,
+      "trigger_store_final_v": 0.837397806
+    },
+    "resolved_parameters": {
+      "insertion_site": "gain_node_pullup",
+      "representation": "mosfet",
+      "strength": "high",
+      "trigger_profile": "p2",
+      "pump_cap_pf": 0.5,
+      "tau_us": 90.0,
+      "threshold_v": 0.5,
+      "payload_node": "n2",
+      "payload_rail": "vdd",
+      "mos_polarity": "p",
+      "payload_resistance_ohms": null,
+      "payload_mos_width_um": 8.0,
+      "payload_mos_length_um": 1.0
+    }
+  },
+  "success": false,
+  "detector_cache_reused": true,
+  "artifact_sha256": {
+    "results/api/proposal_stop_v6_opamp_s08_full_a02_a-339d455d8bed.json": "6c140696f470ebea50bb4a2a61fda4a5c2bff2fe03f66c63b1310e17e51c81a5",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s08_full_a02/candidate.cir": "bf32f508dec7be73b3c13062fb5573653a9d7dba3549855a36bd4aa91d732d42",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s08_full_a02/normal.cir": "299ad91c3c08a42db147b54bb0379827c245f2e366a006d7c3b63850c3f686a4",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s08_full_a02/trigger.cir": "e28de3ef439bfdad4c88cc34d80f7818619338c1456410e09d30fb4709f5cb47",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s08_full_a02/normal.tsv": "bcfda3a0639a1812013463bdd7e902e1563f7f5937c64424ce38953f8f31a882",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s08_full_a02/trigger.tsv": "f32559bb2bb5dddc21c1434dcb06bbdb4cca631beb90fc382bfa05032a3c2eb4",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s08_full_a02/normal.log": "b8bc3306388b4d88351b71449835631df7bd47e00833323caa7f124e196b33cd",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s08_full_a02/trigger.log": "c08bd5388b687f7e440cdbd81a16e6c63b9a4a9e4f3f86b83dccbdf83a5bd3c1",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s08_full_a02/validation.json": "f75fe4f6d18da281bf44a8005f7e1ee6de23bf867752b4b7f0c1a206c247cd37",
+    "results/proposal_stop_v6/detector_cache/1c6db0622dd6fde5bf19dedf42983810ea7f5556e7eeb3ff13f0f6c9b38b7c4f.json": "be6f6ee5e578b5d612f18dfb381112f848900e20064d2b476175445a2936a87f",
+    "results/api/proposal_stop_v6_d_1c6db0622dd6fde5bf19dedf42983810ea7f5556e7eeb3ff13f0f6c9b38b7c4f-ea6b62a6a151.json": "8c7baba0bd66107c8430500eae337b5a1357a4ccfd3c45bf3e0992ff9aaa8617"
+  },
+  "attacker_records": [
+    {
+      "call_id": "proposal_stop_v6_opamp_s08_full_a02_a",
+      "path": "results/api/proposal_stop_v6_opamp_s08_full_a02_a-339d455d8bed.json",
+      "sha256": "6c140696f470ebea50bb4a2a61fda4a5c2bff2fe03f66c63b1310e17e51c81a5"
+    }
+  ],
+  "attacker_record": "results/api/proposal_stop_v6_opamp_s08_full_a02_a-339d455d8bed.json",
+  "netlist_path": "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s08_full_a02/candidate.cir",
+  "netlist_sha256": "bf32f508dec7be73b3c13062fb5573653a9d7dba3549855a36bd4aa91d732d42",
+  "simulation_dir": "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s08_full_a02",
+  "detector_error": null,
+  "detector_cache_key": "1c6db0622dd6fde5bf19dedf42983810ea7f5556e7eeb3ff13f0f6c9b38b7c4f",
+  "detector_cache_path": "results/proposal_stop_v6/detector_cache/1c6db0622dd6fde5bf19dedf42983810ea7f5556e7eeb3ff13f0f6c9b38b7c4f.json",
+  "detector_records": [
+    {
+      "call_id": "proposal_stop_v6_d_1c6db0622dd6fde5bf19dedf42983810ea7f5556e7eeb3ff13f0f6c9b38b7c4f",
+      "path": "results/api/proposal_stop_v6_d_1c6db0622dd6fde5bf19dedf42983810ea7f5556e7eeb3ff13f0f6c9b38b7c4f-ea6b62a6a151.json",
+      "sha256": "8c7baba0bd66107c8430500eae337b5a1357a4ccfd3c45bf3e0992ff9aaa8617"
+    }
+  ],
+  "finished_at_utc": "2026-11-02T12:28:41.459788+00:00"
+}

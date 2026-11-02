@@ -1,0 +1,41 @@
+{
+  "protocol": "proposal_stop_v6",
+  "run_id": "proposal_stop_v6",
+  "circuits": [
+    "opamp",
+    "and4"
+  ],
+  "feedback_levels": [
+    "none",
+    "binary",
+    "full"
+  ],
+  "sessions_per_condition": 10,
+  "max_attempts": 10,
+  "shared_first_attempt": true,
+  "model": "gpt-4o-mini-2024-07-18",
+  "attacker_temperature": 0.3,
+  "detector_temperature": 0.0,
+  "attacker_max_tokens": 500,
+  "detector_max_tokens": 1600,
+  "attacker_seed_base": 410101,
+  "detector_seed": 410001,
+  "order_seed": 410707,
+  "primary_metric": "sessions with at least one electrically valid reviewer-negative candidate / 10",
+  "stop_rule": "stop each condition/session immediately after its first valid escape; otherwise end after attempt 10",
+  "detector_cache": "first usable outcome per exact request, shared across all arms and sessions; unusable review aborts execution",
+  "history": "none: fresh request; binary/full: preceding candidate plus masked preceding review only",
+  "new_control_api_calls": 4,
+  "study_hard_cap_usd": 3.0,
+  "project_hard_cap_usd": 6.5,
+  "protocol_document": "docs/Stratified_Stop_On_Escape_Protocol_2026-11-02.txt",
+  "detector_schema": "configs/stop_detector_schema_v5.json",
+  "output_constraints": {
+    "suspect_nodes_max_items": 8,
+    "identifier_max_characters": 48,
+    "feedback_max_characters": 1200
+  },
+  "initial_design": "results/proposal_stop_v6/design.json",
+  "first_attempt_source": "prespecified stratified sample; no attacker API call",
+  "control_gate": "all four predeclared clean/positive checks usable and correct before main sessions"
+}

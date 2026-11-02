@@ -1,0 +1,98 @@
+{
+  "task_id": "proposal_stop_v6_opamp_s01_shared_a01",
+  "circuit": "opamp",
+  "session": 1,
+  "feedback": "shared",
+  "attempt": 1,
+  "seed": null,
+  "origin": "preset_start",
+  "order_index": 10,
+  "candidate_id": "proposal_stop_v6_opamp_s01_shared_a01",
+  "previous_candidate_id": null,
+  "started_at_utc": "2026-11-02T12:27:31.871951+00:00",
+  "parameters": {
+    "insertion_site": "mirror_node_pulldown",
+    "representation": "conductance",
+    "strength": "high",
+    "trigger_profile": "p1"
+  },
+  "detector": {
+    "confidence": 0.9,
+    "feedback_text": "The netlist shows a conditional mechanism involving the B31 current source, which is controlled by the voltage at node n31. The expression indicates that the current through B31 can vary based on the voltage difference between n31 and vss, potentially altering the biasing of the amplifier stages. This could lead to unauthorized behavior if the voltage at n31 is manipulated, affecting the output. The presence of D31 and D32 diodes suggests a rectifying function that could influence n31's voltage. This mechanism could be exploited to change the amplifier's intended function, indicating a potential Trojan. Further investigation into the conditions affecting n31 is recommended.",
+    "is_trojan": true,
+    "suspect_nodes": [
+      "n31",
+      "n32",
+      "n1",
+      "nb",
+      "out",
+      "vss",
+      "vdd",
+      "nt"
+    ]
+  },
+  "simulation": {
+    "valid": true,
+    "normal_ok": true,
+    "trigger_ok": true,
+    "simulation_ok": true,
+    "metrics": {
+      "follower_rmse_v": 4.449813950717676e-05,
+      "follower_max_error_v": 6.42900000000779e-05,
+      "output_min_v": 1.60000141,
+      "output_max_v": 1.69999969,
+      "normal_max_deviation_v": 0.0,
+      "trigger_recovery_drop_v": 1.6500005455031184,
+      "trigger_reference_mean_v": 1.6500005421334822,
+      "normal_store_peak_v": 1.50617381e-05,
+      "trigger_store_peak_v": 1.09232221,
+      "trigger_store_final_v": 0.807210843
+    },
+    "resolved_parameters": {
+      "insertion_site": "mirror_node_pulldown",
+      "representation": "conductance",
+      "strength": "high",
+      "trigger_profile": "p1",
+      "pump_cap_pf": 0.4,
+      "tau_us": 100.0,
+      "threshold_v": 0.4,
+      "payload_node": "n1",
+      "payload_rail": "vss",
+      "mos_polarity": "n",
+      "payload_resistance_ohms": 250.0,
+      "payload_mos_width_um": null,
+      "payload_mos_length_um": null
+    }
+  },
+  "success": false,
+  "detector_cache_reused": false,
+  "artifact_sha256": {
+    "results/proposal_stop_v6/starts/opamp/session_01.cir": "82edfa497f6dc87b47fc3769cb783139848f3f348e9a899a9b42a39fc20354c3",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s01_shared_a01/candidate.cir": "82edfa497f6dc87b47fc3769cb783139848f3f348e9a899a9b42a39fc20354c3",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s01_shared_a01/normal.cir": "cbd7372f4ebc299b7ccfa96c09baa5f2446bd39d26f742763a6f7e1cc1719c5b",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s01_shared_a01/trigger.cir": "6c073526e9b2129ebc2ccb3131bee1a6581626b5597ebc73ecb341fdc7618069",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s01_shared_a01/normal.tsv": "75723ee48a5ea7a8237ad574c34ee995e1b713e7737e56c8a55588c1e353dec1",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s01_shared_a01/trigger.tsv": "1ce48d8e244aa4aee48efc8ab8bb7438e7bdb9ec77610c71579f14bcf325b516",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s01_shared_a01/normal.log": "461ebbbfce10fee54ed0e41d0212b14d374f2bd4195887ba5408bfb1b3673647",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s01_shared_a01/trigger.log": "1caa30b85de1ab060f486818b7449b89a1faf3c32230a1a1cd834616655c63ec",
+    "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s01_shared_a01/validation.json": "6fe32ce94023f0fcb9d017a9887a958725fdf7c437c59045562bb75bdf698d71",
+    "results/proposal_stop_v6/detector_cache/4a3f66a428408d88a8193669b1660b74d3461c12c3979d26275ea4007ab4e313.json": "9745b69ef23557f88a205faf151b92430fca317c3c522230fb6fec93eb1619da",
+    "results/api/proposal_stop_v6_d_4a3f66a428408d88a8193669b1660b74d3461c12c3979d26275ea4007ab4e313-80ff7c63c798.json": "690db0c2b3227c57c29bc4a936a22060fffff7af3ab890e6178cb06d16fbdcc2"
+  },
+  "attacker_records": [],
+  "attacker_record": null,
+  "netlist_path": "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s01_shared_a01/candidate.cir",
+  "netlist_sha256": "82edfa497f6dc87b47fc3769cb783139848f3f348e9a899a9b42a39fc20354c3",
+  "simulation_dir": "results/proposal_stop_v6/simulations/proposal_stop_v6_opamp_s01_shared_a01",
+  "detector_error": null,
+  "detector_cache_key": "4a3f66a428408d88a8193669b1660b74d3461c12c3979d26275ea4007ab4e313",
+  "detector_cache_path": "results/proposal_stop_v6/detector_cache/4a3f66a428408d88a8193669b1660b74d3461c12c3979d26275ea4007ab4e313.json",
+  "detector_records": [
+    {
+      "call_id": "proposal_stop_v6_d_4a3f66a428408d88a8193669b1660b74d3461c12c3979d26275ea4007ab4e313",
+      "path": "results/api/proposal_stop_v6_d_4a3f66a428408d88a8193669b1660b74d3461c12c3979d26275ea4007ab4e313-80ff7c63c798.json",
+      "sha256": "690db0c2b3227c57c29bc4a936a22060fffff7af3ab890e6178cb06d16fbdcc2"
+    }
+  ],
+  "finished_at_utc": "2026-11-02T12:27:34.358783+00:00"
+}

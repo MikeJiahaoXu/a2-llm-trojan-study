@@ -5,36 +5,38 @@ This Information Security course project asks whether detector feedback helps an
 ## Current deliverables
 
 - [Informal report](output/pdf/A2_Trojan_LLM_Informal_Report.pdf), with [editable text](output/pdf/A2_Trojan_LLM_Informal_Report.txt)
-- [Cumulative escaped-session line plots](results/proposal_stop_v5/figures/cumulative_escape.png)
-- [Six-condition results](results/proposal_stop_v5/groups.csv), [individual sessions](results/proposal_stop_v5/sessions.csv), and [curve values](results/proposal_stop_v5/cumulative.csv)
-- [Independent audit](results/proposal_stop_v5/audit.json) and [delivery checks](results/final_delivery.json)
-- [Protocol declared before execution](docs/Final_Stop_On_Escape_Protocol_2026-11-02.txt)
+- [Cumulative escaped-session line plots](results/proposal_stop_v6/figures/cumulative_escape.png)
+- [Six-condition results](results/proposal_stop_v6/groups.csv), [individual sessions](results/proposal_stop_v6/sessions.csv), and [curve values](results/proposal_stop_v6/cumulative.csv)
+- [Independent audit](results/proposal_stop_v6/audit.json) and [delivery checks](results/final_delivery.json)
+- [Protocol declared before execution](docs/Stratified_Stop_On_Escape_Protocol_2026-11-02.txt)
 - [Chinese revision notes](docs/Final_Report_Revision_Notes_2026-11-02.txt)
 
-The active run is `proposal_stop_v5`, identified in `configs/active_experiment.json`. The presentation has not been updated; this delivery focuses on the report and requested experiment.
+The active run is `proposal_stop_v6`, identified in `configs/active_experiment.json`. The presentation has not been updated; this delivery focuses on the report and requested experiment.
 
 ## Results
 
 <!-- CURRENT_RESULTS_START -->
-| Circuit | Feedback | Escaped sessions | Median first escape among successful sessions |
-| --- | --- | ---: | ---: |
-| Op-amp | None | 0/10 | — |
-| Op-amp | Binary | 9/10 | 5 |
-| Op-amp | Full | 10/10 | 2.5 |
-| AND4 | None | 10/10 | 1.0 |
-| AND4 | Binary | 10/10 | 1.0 |
-| AND4 | Full | 10/10 | 1.0 |
+| Circuit | Feedback | Escape at attempt 1 | Escape by attempt 10 | Median first escape among successes |
+| --- | --- | ---: | ---: | ---: |
+| Op-amp | None | 6/10 | 6/10 | 1 |
+| Op-amp | Binary | 6/10 | 10/10 | 1 |
+| Op-amp | Full | 6/10 | 10/10 | 1 |
+| AND4 | None | 4/10 | 4/10 | 1 |
+| AND4 | Binary | 4/10 | 10/10 | 2 |
+| AND4 | Full | 4/10 | 10/10 | 2 |
 
-All 184 actual candidates pass the unchanged normal and activation checks. There are 224 condition-level attempt records: the 20 shared starts each appear in three arms, adding 40 duplicate analysis rows. The run uses 18 distinct netlists and 18 fresh detector judgments, with 166 cross-candidate cache reuses. All 202 actual API calls (184 attacker, 18 detector) returned usable outputs; there are no failed model replies in the final run.
+All 157 candidate events pass the unchanged normal and activation checks: 20 preset starts and 137 LLM proposals. The 197 condition-level rows include 40 additional copies because each of the 20 shared starts appears in three conditions. Main candidates use 44 distinct netlists, 44 fresh detector judgments and 113 cross-candidate cache reuses. The 181 main API calls (137 attacker, 44 detector) and four separate control reviews all return usable outputs.
 
-Full reaches more op-amp sessions and reaches escape earlier than Binary in this execution; its median is conditional on successful sessions. The AND result is a ceiling at the shared first attempt: all ten starts use the same missed circuit, so none of these sessions receives revision feedback. The coincident AND lines do not establish that feedback has no effect in other settings. These are descriptive results against one fixed cached reviewer, not independent accuracy measurements or a broad claim about all hardware Trojans.
+The two feedback conditions resolve all four initially detected op-amp starts and all six initially detected AND starts. None adds no escapes after the preset first attempt. Full reaches ten escaped sessions by attempt 5 for the op-amp and attempt 3 for AND; Binary reaches ten by attempts 6 and 7. Their final success counts tie, while Full reaches them earlier in this execution. The op-amp medians are all 1 because six shared starts already escape; those medians alone do not describe revision speed. The paired finite-menu results do not establish a general model advantage.
 
-![Cumulative escaped sessions](results/proposal_stop_v5/figures/cumulative_escape.png)
+![Cumulative escaped sessions](results/proposal_stop_v6/figures/cumulative_escape.png)
 <!-- CURRENT_RESULTS_END -->
 
 ## What a session means
 
-A session is one fresh attack search with at most ten opportunities. The two benchmarks are a two-stage CMOS op-amp and a four-input CMOS AND gate. Each circuit has ten paired starting points: within a starting point, none, binary and full share the first candidate and its review, then follow their own paths if they have not escaped. This gives ten condition-specific sessions in each of the six groups, or sixty in total. Different sessions use predeclared seeds and do not share attacker history; they can still produce the same circuit.
+A session is one search from a prespecified starting circuit, with at most ten opportunities. Before any new detector calls, ten different configurations per benchmark are drawn from the qualified menu. The draw covers every insertion-site × device-representation combination (nine for the op-amp, six for AND), then fills to ten without replacement and shuffles session assignments. Fixed sampling seeds and the selected netlists are frozen in [design.json](results/proposal_stop_v6/design.json); detector judgments do not enter selection.
+
+For each circuit/session index, None, Binary and Full share the first circuit and its review, then follow their own paths if they have not escaped. Attempt one is rendered by Python and makes no attacker API call. Later attempts use the LLM attacker. Thus there are ten paired starting points per benchmark and sixty condition-specific sessions in total. Follow-ups use predeclared seeds and do not share attacker history; they can still converge to the same circuit. The first-attempt statistic measures the selected starting circuits, not LLM one-shot generation performance.
 
 An escape requires both the unchanged electrical checks to pass and a usable detector verdict of `is_trojan=false`. The first such result ends that condition/session immediately. None generates fresh candidates without history; binary and full receive their own preceding candidate plus, respectively, its Boolean verdict or complete reviewer response. They do not receive simulator outcomes. The main table counts successful sessions out of ten. At attempt k, each curve counts sessions whose first escape occurred by k. The denominator stays ten; no post-success attempts are invented.
 
@@ -44,6 +46,8 @@ Both roles use `gpt-4o-mini-2024-07-18`. **Attacker temperature is 0.3; detector
 
 The detector sees nominal function and the candidate netlist only. It receives no simulation summary, activation result, clean reference or label. Output fields are bounded uniformly to at most eight suspect identifiers and 1200 characters of explanation. An unusable reviewer output halts execution and cannot silently become a fixed detected/undetected label. The maximum output allowance and all format limits are frozen before the run. Attacker generation failures, if any, consume an attempt and cannot be escapes.
 
+Before main sessions, the same detector must correctly label two clean circuits and two physically verified known-positive circuits. The four control netlists and expected labels were frozen before API calls; the positives use fixed switch resistances outside the exact main menu. Labels and control identities are never supplied to the detector. A wrong or unusable verdict halts the run, without selecting a new seed or replacement control. These are basic setup checks sharing the circuit templates, not an independent detector accuracy estimate; they are excluded from the six groups and curves.
+
 The attacker selects an insertion site, device representation, trigger profile and loading strength from the existing qualified menu: 81 op-amp and 54 AND configurations. Python renders the corresponding circuit while retaining the clean core. Every actual candidate is simulated under normal and activating inputs. Validity therefore demonstrates selection from a qualified finite menu, not unrestricted synthesis. The original 3.3 V educational models, electrical thresholds and transient tests remain unchanged.
 
 ## Reproduce the recorded analysis without API calls
@@ -51,10 +55,10 @@ The attacker selects an insertion site, device representation, trigger profile a
 Use Python 3.11 or later, install `requirements.txt` in a virtual environment, then run:
 
 ```sh
-.venv/bin/python -m scripts.stopstudy_v5.analyze
-.venv/bin/python -m scripts.stopstudy_v5.verify
+.venv/bin/python -m scripts.stopstudy_v6.analyze
+.venv/bin/python -m scripts.stopstudy_v6.verify
 .venv/bin/python scripts/build_stop_report.py
-.venv/bin/python -m scripts.stopstudy_v5.check_delivery
+.venv/bin/python -m scripts.stopstudy_v6.check_delivery
 .venv/bin/python scripts/package_delivery.py
 ```
 
@@ -71,9 +75,9 @@ Targeted offline protocol tests:
 A new execution requires ngspice. `scripts/setup_ngspice.sh` builds the local simulator under `.tools/`; alternatively set `NGSPICE_BIN` to an installed executable and record its version. Credentials belong only in local `.env` (see `.env.example`). Do not commit or share API keys.
 
 ```sh
-.venv/bin/python -m scripts.stopstudy_v5.experiment --prepare
-.venv/bin/python -m scripts.stopstudy_v5.verify --preflight
-.venv/bin/python -u -m scripts.stopstudy_v5.experiment --run
+.venv/bin/python -m scripts.stopstudy_v6.experiment --prepare
+.venv/bin/python -m scripts.stopstudy_v6.verify --preflight
+.venv/bin/python -u -m scripts.stopstudy_v6.experiment --run
 ```
 
 These commands freeze or resume the existing run. Reusing its IDs returns saved responses and is **not** an independent replication. A new paid replication needs an isolated working copy, new protocol/request identifiers and a predeclared seed schedule. Keep the cumulative cost ledger; do not delete records to force new calls. The client records exact requests, responses, token usage and billing, and applies both study and project spending guards.
@@ -82,17 +86,17 @@ These commands freeze or resume the existing run. Reusing its IDs returns saved 
 
 | Path | Contents |
 | --- | --- |
-| `configs/stopstudy_v5.json` | Ten-session allocation, temperatures, seeds, stopping rule |
+| `configs/stopstudy_v6.json` | Ten-session allocation, temperatures, seeds, stopping rule |
 | `configs/stop_detector_schema_v5.json` | Uniform bounded reviewer output schema |
 | `configs/proposal_prompts/` | Attacker and netlist-only reviewer prompts |
-| `scripts/stopstudy_v5/` | Runner, bounded API client, analysis and independent audit |
+| `scripts/stopstudy_v6/` | Runner, bounded API client, analysis and independent audit |
 | `netlists/templates/` | Original clean circuits |
 | `results/proposal_validation/` | Clean-circuit checks and qualification of all permitted edits |
-| `results/proposal_stop_v5/` | Frozen sources/schedule, actual events, cache, simulations, session results and plots |
-| `results/api/proposal_stop_v5_*.json` | Raw requests, responses and usage for this run |
+| `results/proposal_stop_v6/` | Frozen starts/controls/sources/schedule, actual events, cache, simulations, session results and plots |
+| `results/api/proposal_stop_v6_*.json` | Raw requests, responses and usage for this run |
 | `output/pdf/` | Current report and provenance |
 
-Earlier execution records remain in the repository for traceability, including the format-failure execution `proposal_stop_v4`. They are excluded from current result tables and the current delivery archive. The v4 run was replaced in full after an unbounded identifier list caused a truncated review to propagate through its cache; no partial verdict was salvaged and no individual candidate was selectively rerolled. The current report contains one main experiment, with no batch comparison or supplementary detector experiment.
+Earlier execution records remain in the repository for traceability and are excluded from current tables and the delivery archive. The preceding `proposal_stop_v5` used fresh attacker calls for all initial candidates, but its ten AND starts collapsed to the same missed circuit. The current design replaces that initial generation step with preselected different circuits; it does not select starts using detection outcomes or change the detector seed. The earlier output-format failure in `proposal_stop_v4` is also archived. Current numerical results must be read with the current protocol, rather than pooled with those different designs. The report contains one main experiment, with no batch comparison or supplementary detector experiment.
 
 ## References
 

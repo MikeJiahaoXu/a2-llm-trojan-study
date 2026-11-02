@@ -1,21 +1,20 @@
 当前交付：A2 Trojan LLM 主实验
 
-最终报告：output/pdf/A2_Trojan_LLM_Informal_Report.pdf
+报告：output/pdf/A2_Trojan_LLM_Informal_Report.pdf
 可编辑文本：output/pdf/A2_Trojan_LLM_Informal_Report.txt
-折线图：results/proposal_stop_v5/figures/cumulative_escape.png
-逐项修改说明：docs/Final_Report_Revision_Notes_2026-11-02.txt
+累计逃逸折线图：results/proposal_stop_v6/figures/cumulative_escape.png
+详细修改说明：docs/Final_Report_Revision_Notes_2026-11-02.txt
 仓库：https://github.com/MikeJiahaoXu/a2-llm-trojan-study
 
-只包含当前主实验：两个电路、none/binary/full三个条件，每组10个session，每个最多10次，首次有效escape即停止。Attacker temperature=0.3，Detector=0.0；同一网表复用固定检测判定。
+每种电路先固定十份不同起点，三种反馈配对共享；第一轮由Python生成，第二轮起由LLM修改。每个session最多十次，首次有效逃逸即停止。Attacker temperature=0.3，Detector=0.0，相同请求复用判定。四份单独的基本控制均正确识别后才启动主实验。
 
-成功session数（none / binary / full）：
-运放：0/10、9/10、10/10；成功者首次成功次数中位数：—、5、2.5。
-AND：10/10、10/10、10/10；全部第一次成功，反馈未参与修改，因此三条曲线重合。
+十次内成功session数（None / Binary / Full）：
+运放：6/10、10/10、10/10；其中第一轮三组均6/10。
+AND：4/10、10/10、10/10；其中第一轮三组均4/10。
+Full达到十个成功session的次数：运放第5次、AND第3次；Binary分别第6次和第7次。
 
-224条条件级记录来自184次实际候选生成，包含40条共享起点的重复计数。18份不同网表各检测一次，后续跨候选复用166次；202次实际API调用全部有效。所有184次实际候选均通过正常与触发测试，独立审计通过。
+157个实际候选事件包括20个预设起点和137个LLM提案，均通过电气测试。44份不同正式网表各检测一次，后续复用113次。185次API调用包含四次基本控制，全部有效。197条条件级记录含共享起点的40条额外副本。独立原始记录与波形审计通过。
 
-当前结果没有混入旧temperature=0.3的session，也没有Supplementary detector comparison或Batch1/Batch2分表。旧记录只在仓库保留追溯，当前压缩包排除旧实验数据。输出格式故障修复的原因及整组重跑方式见修改说明。
+当前压缩包仅包含本次主实验及其复现依赖，不混入旧batch或补充实验。旧实验仍在GitHub保留以便追溯。新旧运行的首次检测判定可能不同，不能仅凭结果变化声称起点改进的因果效应或模型进步；具体例子见修改说明。
 
-压缩包包含当前实验代码、原始请求与响应、仿真、审计、折线图和报告。未包含密钥、虚拟环境、本地仿真器构建目录或旧PPT。PPT没有修改。
-
-离线复算命令见README.md；重新统计和生成报告不会产生API费用。
+密钥、虚拟环境、本地ngspice构建目录和旧PPT均不打包。PPT没有修改。离线复算步骤见README.md，不会产生API调用。

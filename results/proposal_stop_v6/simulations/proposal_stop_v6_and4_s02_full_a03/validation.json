@@ -1,0 +1,210 @@
+{
+  "valid": true,
+  "normal_ok": true,
+  "trigger_ok": true,
+  "simulation_ok": true,
+  "metrics": {
+    "truth_table": [
+      {
+        "inputs": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected": 0,
+        "output_v": 2.5540123485126e-09,
+        "pass": true
+      },
+      {
+        "inputs": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "expected": 0,
+        "output_v": 8.547310543201883e-06,
+        "pass": true
+      },
+      {
+        "inputs": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "expected": 0,
+        "output_v": 5.085442183872197e-08,
+        "pass": true
+      },
+      {
+        "inputs": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "expected": 0,
+        "output_v": 2.122127149486336e-06,
+        "pass": true
+      },
+      {
+        "inputs": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "expected": 0,
+        "output_v": 6.814518809584976e-08,
+        "pass": true
+      },
+      {
+        "inputs": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "expected": 0,
+        "output_v": 2.6058698117932076e-06,
+        "pass": true
+      },
+      {
+        "inputs": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "expected": 0,
+        "output_v": -1.8105715742331e-08,
+        "pass": true
+      },
+      {
+        "inputs": [
+          1,
+          1,
+          1,
+          0
+        ],
+        "expected": 0,
+        "output_v": -7.583062952838769e-07,
+        "pass": true
+      },
+      {
+        "inputs": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "expected": 0,
+        "output_v": 7.818884499333138e-08,
+        "pass": true
+      },
+      {
+        "inputs": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "expected": 0,
+        "output_v": 3.0045547934464637e-06,
+        "pass": true
+      },
+      {
+        "inputs": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "expected": 0,
+        "output_v": -1.62196869259673e-08,
+        "pass": true
+      },
+      {
+        "inputs": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "expected": 0,
+        "output_v": -6.883126388531446e-07,
+        "pass": true
+      },
+      {
+        "inputs": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "expected": 0,
+        "output_v": -3.077057562631019e-08,
+        "pass": true
+      },
+      {
+        "inputs": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "expected": 0,
+        "output_v": -2.1136309751843527e-06,
+        "pass": true
+      },
+      {
+        "inputs": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "expected": 0,
+        "output_v": -1.9956091506307727e-08,
+        "pass": true
+      },
+      {
+        "inputs": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "expected": 1,
+        "output_v": 3.2999951639733998,
+        "pass": true
+      }
+    ],
+    "truth_table_passed": 16,
+    "rise_delay_ns": 0.14756066990051844,
+    "fall_delay_ns": 0.1138112037881063,
+    "normal_settled_max_deviation_v": 3.1013633996331355e-05,
+    "trigger_output_drop_v": 3.3000004787797477,
+    "trigger_high_samples": 2129,
+    "normal_store_peak_v": 0.213028671,
+    "trigger_store_peak_v": 1.81417843,
+    "trigger_store_final_v": 1.77468477
+  },
+  "resolved_parameters": {
+    "insertion_site": "nand_node_pullup",
+    "representation": "switch",
+    "strength": "high",
+    "trigger_profile": "p2",
+    "pump_cap_pf": 0.5,
+    "tau_us": 40.0,
+    "threshold_v": 1.0,
+    "payload_node": "n1",
+    "payload_rail": "vdd",
+    "mos_polarity": "p",
+    "payload_resistance_ohms": 100.0,
+    "payload_mos_width_um": null,
+    "payload_mos_length_um": null
+  }
+}
