@@ -1,148 +1,154 @@
 A2 Trojans in the LLM Era
 
-Does Detector Feedback Help an Attacker?
+Does Detection Feedback Help an Attacker?
 
 Amber Tsao (cctsao) and Jiahao Xu (e1583425)
 Information Security course project | Experiments: November 1, 2026 | Revised: November 2, 2026
 
-A useful security review explains why a circuit looks suspicious. That explanation can help a designer fix a problem, but it can also tell an attacker what to change. We investigate this possibility by connecting an LLM that proposes circuit modifications to an LLM that reviews them, then varying how much of the review is returned to the attacker.
+Introduction
 
-The project draws on A2's analog charge-accumulation trigger [1], SPICED's LLM-based detection [2] and LATENT's feedback-guided insertion loop [3]. We use ngspice and two small circuits: a two-stage op-amp and a four-input AND gate. Following the proposal's bounded implementation, the attacker chooses JSON parameters for verified templates; it does not write an unrestricted netlist. We omit syntax-repair evaluation.
+A2 demonstrated that a small analog modification can accumulate charge during unusual activity and trigger a harmful change [1]. Related work studies analog hardware Trojans from both sides: SPICED reviews analog/mixed-signal circuits for suspicious behavior [2], while LATENT uses detection feedback to guide Trojan insertion [3]. A useful explanation can help a designer understand a weakness, but exposing it may also tell an attacker what to change.
 
-One attempt, from proposal to feedback
+LATENT reports average evasion rising from 23.7% with one-shot prompting to 94.4% with iterative feedback. These are component-localization measures, not the fraction of whole circuits missed. Motivated by that result, we ask a narrower question: does more detailed detector feedback help an attacker produce a working modification that the reviewer does not flag? We compare no feedback, a Boolean verdict and a complete review on two small circuits.
 
-First, the attacker receives the clean netlist, normal and activating test conditions, and a menu of permitted changes. It returns four choices: an insertion site, a device representation, a trigger profile and a loading strength. For example, an AND proposal can select a MOSFET branch from the output to ground, with trigger profile p2 and medium strength. Python translates these choices into actual SPICE components while preserving the original circuit.
+Methodology
 
-Next, ngspice runs the modified circuit under normal inputs and an activating burst. Separately, the detector receives only the candidate netlist and its nominal function. It returns a Boolean Trojan verdict, confidence, suspicious identifiers and an explanation. The detector sees neither the clean reference nor simulation results. We count an escape only if the circuit passes both electrical checks and the detector returns is_trojan=false. Simulator results are recorded for evaluation but are not fed to either LLM.
+Both attacker and detector use gpt-4o-mini-2024-07-18 at temperature 0.3. The attacker follows a LATENT-inspired revision loop; the netlist-only detector is a minimal SPICED-inspired reviewer. This is not a full reproduction of either framework. We omit syntax-repair evaluation.
 
-Condition | Input to the next attacker request
+One attempt has three steps. First, the attacker receives the clean circuit, test conditions and a finite menu. It selects an insertion site, device representation, trigger profile and loading strength. Python turns these four choices into SPICE components. Second, ngspice checks that the circuit still works normally and misbehaves when activated. Third, the detector reads the candidate netlist and its nominal function, then returns a Trojan verdict, confidence, suspicious identifiers and explanation. It sees neither the clean reference nor simulation results. The simulation results are not sent to either LLM.
 
-None | A fresh task with no preceding candidate or reviewer response.
+Condition | What the attacker receives for its next attempt
 
-Binary | The preceding candidate's parameters and only the Boolean verdict.
+None | A fresh task; no previous candidate or review.
 
-Full | The preceding parameters and complete review, including suspicious nodes and explanation.
+Binary | The preceding candidate's choices and the Boolean Trojan verdict.
 
-Each request produces a complete next configuration. The loop does not retain a best-so-far candidate or stop after an escape; it continues for the fixed number of attempts. Thus feedback can lead to a useful revision, an unnecessary change, or a return to an earlier design.
+Full | The preceding choices and the complete review, including suspicious nodes and explanation.
 
-Both roles use gpt-4o-mini-2024-07-18 at temperature 0.3. Each circuit/condition has two starts of ten attempts, giving 20 opportunities per run. The first candidate and review are shared across the three conditions within a start. A second run uses new seeds with the same model, prompts and circuit settings; its failed control gate and continuation decision are reported on page 3. Together the runs contain 240 table entries, 224 actual proposal/review events and 29 distinct netlists.
+Feedback goes only to the attacker. The detector is stateless: each review starts afresh with the same prompt and model, without previous judgments or an update to its weights. Its prompt was calibrated on controls before the attacks. Thus the experiment tests disclosure to an attacker, not a defender that learns alongside it.
 
-
-============================================================
-
-
-What the circuit modifications do
-
-The added trigger senses input transitions through a coupling capacitor. Two diodes charge a 10 pF reservoir, while a bleed resistor lets the charge decay. Closely spaced transitions can raise the reservoir above a threshold and turn on an added branch. The branch then pulls an output or internal node toward a supply rail. Under ordinary activity it should remain dormant; under the activating stimulus it should change the circuit's output.
-
-The op-amp permits three insertion sites: its output, first-stage gain node and PMOS mirror reference node. The AND permits two: the final output and the intermediate NAND output that feeds its inverter. Each site has three device representations (switch, smooth conductance or MOSFET), three RC/threshold profiles and three loading strengths. This gives 81 op-amp and 54 AND choices. The MOSFET version uses an ideal reservoir comparator; all versions are A2-inspired simulation models rather than fabricated A2 hardware.
-
-Clean circuit | Verification at 3.3 V
-
-Two-stage op-amp | DC gain 95.47 dB; -3 dB bandwidth 131.90 Hz; unity-gain frequency 9.208 MHz; phase margin 50.38 degrees.
-
-Four-input AND | 16/16 truth-table cases pass. Rise delay 0.1476 ns and simultaneous four-input fall delay 0.1147 ns, with a 100 fF load and 100 ps input edges.
-
-For the modified op-amp, normal follower output must remain within 20 mV of the clean reference. The activating burst runs from 5 to 45 us, and output must fall at least 0.3 V below the reference during recovery at absolute time 50-60 us. Normal input is 1.65 V +/- 50 mV at 10 kHz; the burst spans 0.6-2.7 V at 1 MHz. Because both amplitude and frequency change, this test does not isolate frequency as the cause of activation.
-
-The modified AND must preserve all 16 logic cases and settled output within 0.2 V of the reference. During a 1 MHz burst on input a with b, c and d high, its high output must be reduced by at least 0.8 V. These checks distinguish an effective hidden modification from a circuit that merely looks unusual.
-
-All 81 op-amp and 54 AND choices passed these tests before the LLM runs; the smallest activating output changes were 0.523 V and 1.901 V. Every generated candidate was simulated again. Consequently, high validity means that the LLM selected from an electrically qualified menu, not that it learned to synthesize arbitrary working Trojans.
-
-Figure 1. Clean and known-positive control waveforms: op-amp recovery after the burst (left) and AND output during the burst (right). The reviewer is not given these traces.
+Each session contains ten attempts: one initial proposal followed by nine further requests. We run two sessions per condition in each of two execution batches, for four sessions and 40 attempts per circuit/condition. The batches use different predeclared seeds with the same model, prompts and circuit settings. The same initial candidate and review start all three conditions within a session. None continues with fresh requests; binary and full revise from the preceding attempt. No condition stops after an escape or restores a best-so-far candidate.
 
 
 ============================================================
 
 
-Results of the six-group comparison
+Methodology (continued)
 
-Electrical checks passed for 224/224 actual candidate events and 240/240 table entries, so the escape rate and the rate conditional on validity are equal here. The table retains every attempt, including repeated netlists and shared first attempts. The combined column is a descriptive summary; adaptive steps within a start are not independent samples.
+Circuits and permitted modifications
 
-Circuit | Feedback | First run | Repeat run | Combined
+We use a two-stage op-amp and a four-input AND because they provide two readily checked kinds of behavior: continuous amplification and a digital truth table. Small circuits also keep simulation and manual inspection manageable. Both use 3.3 V supplies. Their clean versions are verified before any modification:
 
-Two-stage op-amp | none | 0/20 | 0/20 | 0/40 (0.0%)
+Clean circuit | Verification
 
-Two-stage op-amp | binary | 5/20 | 8/20 | 13/40 (32.5%)
+Two-stage op-amp | Open-loop gain 95.47 dB; -3 dB bandwidth 131.90 Hz; unity-gain frequency 9.208 MHz; phase margin 50.38 degrees.
 
-Two-stage op-amp | full | 6/20 | 7/20 | 13/40 (32.5%)
+Four-input AND | 16/16 logic cases pass. Rise delay 0.1476 ns; fall delay 0.1147 ns when all four inputs fall together (100 fF load, 100 ps edges).
 
-Four-input AND | none | 4/20 | 6/20 | 10/40 (25.0%)
+The trigger works like a leaky bucket. Input transitions add charge through a coupling capacitor and two diodes to a 10 pF reservoir; a resistor slowly drains it. Rapid activity can raise the reservoir above a threshold, enabling an extra branch that pulls an output or internal node toward a supply rail. The intended pattern is ordinary behavior while dormant and an output disturbance after activation. This captures A2's charge-accumulation idea, using simulation models rather than fabricated hardware.
 
-Four-input AND | binary | 6/20 | 3/20 | 9/40 (22.5%)
+The attacker chooses among three op-amp sites (output, gain node or mirror-reference node) and two AND sites (final output or the NAND node feeding its inverter). Each site has three branch representations, three RC/threshold profiles and three strengths: 81 op-amp and 54 AND configurations. The representations are a switch, smooth conductance and MOSFET; the MOSFET option uses an ideal reservoir comparator. This bounded menu makes the experiment about selecting and revising effective modifications, without mixing in arbitrary netlist syntax failures.
 
-Four-input AND | full | 5/20 | 1/20 | 6/40 (15.0%)
+Electrical checks and their purpose
 
-Table 1. Physically valid candidates receiving a negative Trojan verdict. Each run has the same two circuits and three feedback conditions.
+A candidate must pass two checks to count as an escape. Normal behavior: the op-amp follower stays within 20 mV of its clean reference; AND retains all 16 logic cases and stays within 0.2 V at settled outputs. Activation: the op-amp output falls at least 0.3 V below its reference, and AND's high output falls by at least 0.8 V. A harmless added branch or a permanently broken circuit would therefore not qualify merely because the LLM missed it.
 
-Figure 2. Escape rates and raw counts for the first and repeat runs. Both panels use the same scale.
+The op-amp changes from 1.65 V +/- 50 mV at 10 kHz to a 0.6-2.7 V, 1 MHz burst at 5-45 us; the output drop is measured at absolute time 50-60 us. Both amplitude and frequency change, so frequency alone is not isolated. AND receives a 1 MHz burst on input a while b, c and d are high. All 135 allowed configurations passed the declared tests before the LLM runs, and each generated candidate was simulated again. Validity therefore measures selection from a qualified menu, not unrestricted LLM circuit-design ability.
 
-The op-amp shows more escapes with either form of feedback than with none, but binary and full tie at 13/40 after combining the runs. For AND, the combined order is reversed: none 10/40, binary 9/40 and full 6/40. The proposed none < binary < full trend therefore does not reproduce across the two circuits and runs.
-
-Controls and the repeat's limitation
-
-We set a control gate of at most one clean flag and at least four known-positive flags in five judgments of each design. In the first run, both clean circuits were flagged 0/5 times and both known positives 4/5. The repeat again had 0/5 clean flags, but only 3/5 positive flags for each circuit, failing the gate. After the first-run results and repeat controls were known, an explicit continuation-rule deviation was recorded before repeat attacks. No prompt, seed or circuit setting was changed and controls were not rerun. The repeat is therefore a stability assessment with the same model and prompts, not confirmation that passed the original gate.
-
-Two prompt refinements using recorded control results preceded every attack in the final experiment. Final controls reuse those benchmark designs and are not held out. Their counts describe repeated judgments of four designs, not general detector accuracy.
+Figure 1. Clean and known-positive outputs: op-amp after the burst and AND during the burst. These traces establish electrical effects; the detector does not receive them.
 
 
 ============================================================
 
 
-Why did more feedback not help AND?
+Results
 
-The AND result becomes clearer when we examine the actual choices. Both no-feedback groups produced the same configuration on every attempt: output_shunt, mosfet, trigger profile p2, medium strength. This adds a reservoir-controlled MOSFET from the output to ground. Profile p2 uses a 0.5 pF coupling capacitor, a 40 us decay constant and a 1.0 V threshold. When active, the extra MOSFET draws current from an output that should be high.
+The six groups contain 240 analysis rows: 2 circuits x 3 conditions x 4 sessions x 10 attempts. Eight shared initial events each appear in three conditions, giving 16 reused rows and 224 actual candidate/review events. Repeated choices reduce these to 29 distinct netlists. All 224/224 candidate events pass the electrical tests. Two reviews are unusable because their responses were truncated; they remain non-successes in the per-attempt denominators, not positive detections. One subsequent binary request retained the preceding choices without a verdict.
 
-This circuit preserves normal output within 30.926 microvolts and reduces the activated high output by 2.634 V. It is therefore an effective modification under the stated tests. Yet the first no-feedback group escaped 4/20 times and the repeat escaped 6/20 times without changing the design. Across all conditions, the identical netlist was flagged in 42/60 actual reviews. Repeated sampling of the same input can therefore produce both labels; these misses are not evidence of successive improvements to the circuit.
+An escape requires electrical validity and a usable negative Trojan verdict. The original outcome is escapes per attempt. To separate one request from a larger request budget, we also retrospectively summarize the saved first attempt and whether any of ten attempts escaped. These additional summaries use existing records; no new experiments were performed.
 
-One negative review called the additional components harmless: "The netlist describes a standard four-input CMOS AND gate with additional components that do not alter its intended function." The simulated output disturbance contradicts that assessment. This illustrates the distinction between an LLM's structural interpretation of a netlist and an electrical check of what it does.
+Circuit | Feedback | First attempt | Any within 10 | All attempts
 
-Where the feedback conditions spent their attempts
+Two-stage op-amp | none | 0/4 | 0/4 | 0/40 (0.0%)
 
-Run | Feedback | Internal-site choices | Internal-site escapes | Output-site escapes
+Two-stage op-amp | binary | 0/4 | 4/4 | 13/40 (32.5%)
 
-First | binary | 10/20 | 0/10 | 6/10
+Two-stage op-amp | full | 0/4 | 3/4 | 13/40 (32.5%)
 
-First | full | 10/20 | 0/10 | 5/10
+Four-input AND | none | 2/4 | 4/4 | 10/40 (25.0%)
 
-Repeat | binary | 10/20 | 0/10 | 3/10
+Four-input AND | binary | 2/4 | 4/4 | 9/40 (22.5%)
 
-Repeat | full | 10/20 | 0/10 | 1/10
+Four-input AND | full | 2/4 | 3/4 | 6/40 (15.0%)
 
-Table 2. AND choices by insertion site. Binary and full each use the internal NAND node for 10/20 attempts in each run. All 40 actual candidate-review events at that site returned a Trojan flag; repeated netlists are included.
+Table 1. First-attempt and any-within-ten columns count sessions (four per group); the original all-attempt column counts requests (40 per group). Initial outcomes are shared across conditions. Repeated netlists and unsuccessful reviews are retained.
 
-The internal branch pulls the NAND output high; the following inverter then drives the final AND output low. This is a direct interference with the logic path. It may be easier for the reviewer to recognize, but we did not isolate insertion site in a controlled comparison. What the records establish is that both feedback conditions spent half their attempts on choices that never escaped, while none kept sampling an occasionally missed output-shunt design.
+Figure 2. Retrospective cumulative opportunity to observe at least one escape. Each curve summarizes four sessions. More opportunities can reveal a miss even without a design change; this is not a measure of learning alone.
 
-This explains part of the difference from none. It does not explain full's lower rate by a larger share of internal insertions: that share is identical in binary and full. Their remaining choices differ in representation and parameters, and the same netlist can receive different judgments. The loop also keeps proposing revisions after an escape rather than preserving the successful candidate. These factors can erase a benefit from extra explanation; this small study cannot separate their individual causal effects.
+For the op-amp, both revision conditions have 13/40 escapes while none has 0/40. Binary finds an escape in all four sessions and full in three. For AND, the per-attempt order is none 10/40, binary 9/40 and full 6/40; none and binary each find an escape in all four sessions. Detailed explanation therefore does not consistently improve either measure.
+
+Finding one escape is also different from retaining it. At attempt ten, op-amp binary and full each escape in only 1/4 sessions; AND binary and full are both 0/4. The loop continues after an escape and may replace a previously successful design. With only four sessions and dependent steps within them, these proportions are descriptive rather than evidence of statistical superiority.
 
 
 ============================================================
 
 
-Interpretation and relation to prior work
+Results (continued)
 
-The op-amp provides a useful contrast. Its no-feedback groups also repeatedly chose one netlist configuration, which was always detected. Binary and full explored output, gain-node and mirror-reference modifications, and each produced 13 escapes in 40 attempts. A plausible reading is that conditioning on a preceding proposal and review helped the attacker move away from an easily recognized default. The explanations themselves did not show a repeatable advantage over the Boolean verdict: full was slightly ahead in the first run, and binary was ahead in the repeat.
+Consistency between execution batches
 
-This is a comparison of the complete feedback conditions, not a clean separation of memory from explanation. None sees no preceding candidate, whereas binary and full do. The finite menus also constrain exploration: AND has 54 possible choices and the op-amp 81. A smaller menu may leave fewer alternatives, but circuit complexity and menu size were not varied independently. We cannot conclude that AND's simplicity caused its result. Repeated netlists and only four starts per circuit/condition further limit inference from the attempt counts.
+Circuit | Batch 1: none / binary / full | Batch 2: none / binary / full
 
-Why the paper percentages are different
+Two-stage op-amp | 0 / 5 / 6 | 0 / 8 / 7
 
-SPICED combines netlists with voltage/current logs, specifications and few-shot anomaly rules [2, Sec. IV and Table III]. Our netlist-only detector follows the minimal implementation in the project plan. LATENT allows broader component and node changes, uses simulation-informed diagnosis and reversion, and reports 6-12 iterations [3, Table I]. Our attacker selects from a finite menu and receives only the preceding review; there is no best-candidate rollback.
+Four-input AND | 4 / 6 / 5 | 6 / 3 / 1
 
-LATENT's reported 23.7% one-shot and 94.4% iterative values measure the proportion of inserted Trojan components escaping localization in resulting designs. Our rate counts electrically valid whole candidates receiving a negative verdict. LATENT also describes DC-activated Trojans, while our tests use transient charge accumulation. Its numbers motivate the question but are not comparable targets for this experiment.
+Table 2. Escape counts, each out of 20 attempts. Both batches contain two ten-attempt sessions per group; neither batch is a one-shot condition.
 
-What we learned
+Full slightly exceeds binary for the op-amp in batch 1, but binary exceeds full in batch 2. AND also changes between batches. Pooling increases the number of observations; it does not remove this variation or establish a general none < binary < full ordering.
 
-The loop demonstrates that a circuit can pass normal checks, activate a substantial disturbance and still be missed by an LLM reviewer. The op-amp revision conditions explored more alternatives, but detailed feedback did not consistently outperform a binary verdict. The AND case shows why more explanation need not improve evasion: revisions can move toward consistently detected choices, while repeated reviews of an unchanged design can already yield misses. We therefore found neither reliable protection from the reviewer nor a general increase in attack success with feedback detail.
+Detector controls
 
-These conclusions apply to the fixed model, prompts and nominal circuit tests. Electrical qualification does not cover process variation or silicon behavior. The repeat's failed positive-control gate also prevents treating it as a clean confirmation. A larger study would need more independent starts and controlled changes to individual design choices before assigning causes to the observed differences.
+Two prompt refinements using recorded control results preceded every attack in the final experiment. Final controls reuse those benchmark designs and are not held out. They test repeated judgments of four particular circuits, not general detector accuracy. We set a gate of at most one clean flag and at least four known-positive flags in five reviews of each design. Batch 1 has 0/5 clean flags and 4/5 positive flags for both circuits.
+
+Batch 2 again has 0/5 clean flags but only 3/5 positive flags for each circuit, failing the unchanged gate. After batch 1 results and batch 2 controls were known, an explicit continuation-rule deviation was recorded before batch 2 attacks. Prompts, seeds, menus and attempt counts were unchanged, and controls were not rerun. Batch 2 is therefore a same-settings stability assessment, not confirmation that passed the original gate.
+
+Why repeat a request with no feedback?
+
+Fresh model calls can select different configurations or give different reviews of the same configuration. The no-feedback condition gives this repeated sampling the same ten-request budget as the revision conditions. In fact, both AND no-feedback groups chose exactly the same output-to-ground MOSFET, trigger profile p2 and medium strength on every attempt. This design escaped 4/20 times in batch 1 and 6/20 in batch 2 without being modified.
+
+The design is electrically effective: normal output differs by only 30.926 microvolts, while activation lowers its high output by 2.634 V. Across all conditions, this identical netlist is flagged in 42/60 actual reviews. A negative review describes the extra components as not altering the intended function, contrary to the simulated disturbance. Repeated misses here reflect inconsistent interpretation of the same circuit, not successive improvements to it.
+
+The revision conditions also change which designs are reviewed. Binary and full each select the internal NAND node for 10/20 attempts in each batch. All 40 actual reviews of those internal-site candidates flag a Trojan; these are repeated events, not 40 distinct designs. Thus both spend half their attempts on consistently detected choices. Full does not use this site more often than binary, so that alone cannot explain their difference.
+
+
+============================================================
+
+
+Discussion
+
+What may account for the results?
+
+The op-amp no-feedback requests repeatedly select one configuration and produce no escape (39 flags and one unusable review). The revision conditions explore other sites and representations. Conditioning on the preceding proposal and verdict may help leave that default, but our comparison does not separate candidate history from feedback. For AND, an unchanged output-shunt design is already missed intermittently, while revisions often move to detected internal-node changes. Pulling the NAND node high directly forces the following inverter's output low; that interference may be easier to recognize. We did not isolate this mechanism experimentally. Nor did we vary circuit complexity independently of the 54-choice AND and 81-choice op-amp menus.
+
+Why this differs from the papers
+
+Metric and evidence. LATENT's 23.7% and 94.4% figures summarize the proportion of inserted components escaping localization in resulting designs [3, Table I]. A design can score highly on that measure while still being flagged through one detected component. Our whole-candidate verdict is stricter in this sense, and our per-attempt denominator includes all requests. SPICED gives the reviewer voltage/current logs, specifications and few-shot anomaly rules as well as the netlist [2, Sec. IV and Table III]. Our netlist-only reviewer must infer behavior from structure, which may help explain why an electrically harmful branch can be described as harmless.
+
+Search and activation. LATENT permits broader component/node edits, uses simulation-informed diagnosis and reverts to a previous undetected configuration after detection. It reports 6-12 iterations and studies DC-activated Trojans [3, Secs. IV-V]. We use ten fixed attempts, a qualified finite menu, preceding-review feedback and no rollback, with transient charge accumulation. Our retrospective one-versus-ten comparison is therefore a request-budget summary, not a reproduction of LATENT's one-shot comparison. LATENT also uses GPT-4o-mini at temperature 0.3 for both roles; these results do not test whether a newer model improves attack or defense.
+
+Does the LLM help the attacker or defender more?
+
+The evidence supports a limited answer. Reviews often identify our effective modifications, but misses and inconsistent judgments prevent relying on the reviewer alone. Exposed feedback is associated with more op-amp escapes, yet detailed explanations do not outperform Boolean verdicts consistently and do not improve AND's per-attempt result. A designer could use explanations and simulation to investigate suspicious behavior; an attacker can use the same clues to choose revisions. We tested only feedback disclosure against a fixed reviewer. Without a non-LLM comparison or a defender that learns from reviews, we cannot quantify which side gains more overall.
+
+The conclusions are bounded by four sessions per group, repeated netlists, calibrated controls and the repeat gate deviation. Electrical validity covers the declared nominal stimuli, not process variation or silicon. The main finding is that more feedback detail does not guarantee more evasion: search choices, repeated-review variation and the definition of success all matter.
 
 References
 
-[1] K. Yang, M. Hicks, Q. Dong, T. Austin and D. Sylvester. "A2: Analog Malicious Hardware." IEEE S&P, 2016, pp. 18-37. doi:10.1109/SP.2016.10 (https://doi.org/10.1109/SP.2016.10).
+[1] K. Yang et al. "A2: Analog Malicious Hardware." IEEE S&P, 2016, pp. 18-37. doi:10.1109/SP.2016.10 (https://doi.org/10.1109/SP.2016.10).
 
-[2] J. Chaudhuri, D. Thapar, A. Chaudhuri, F. Firouzi and K. Chakrabarty. "SPICED: Syntactical Bug and Trojan Pattern Identification in A/MS Circuits using LLM-Enhanced Detection." 2024. arXiv:2408.16018v1 (https://arxiv.org/abs/2408.16018v1).
+[2] J. Chaudhuri et al. "SPICED: Syntactical Bug and Trojan Pattern Identification in A/MS Circuits using LLM-Enhanced Detection." 2024. arXiv:2408.16018v1 (https://arxiv.org/abs/2408.16018v1).
 
 [3] J. Chaudhuri, A. Chaudhuri and K. Chakrabarty. "LATENT: LLM-Augmented Trojan Insertion and Evaluation Framework for Analog Netlist Topologies." 2025. arXiv:2505.06364v1 (https://arxiv.org/abs/2505.06364v1).
 
-Code and recorded evidence: github.com/MikeJiahaoXu/a2-llm-trojan-study (https://github.com/MikeJiahaoXu/a2-llm-trojan-study). AI tools assisted implementation and writing; reported quantities come from saved API responses and simulations.
+Code and evidence: github.com/MikeJiahaoXu/a2-llm-trojan-study (https://github.com/MikeJiahaoXu/a2-llm-trojan-study). AI tools assisted implementation and writing; measurements come from saved responses and simulations.

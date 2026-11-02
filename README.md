@@ -5,7 +5,8 @@ An Information Security course project studying whether more detailed circuit-de
 ## Read the results
 
 - [Five-page informal report](output/pdf/A2_Trojan_LLM_Informal_Report.pdf)
-- [Five-minute presentation](output/slides/a2_feedback/output.pptx): six editable slides with English speaker notes and timings.
+- [Response to collaborator comments](docs/Report_Revision_Notes_2026-11-02.txt) (Chinese): explains the report changes and the corrected one-shot comparison.
+- [Previous presentation](output/slides/a2_feedback/output.pptx): retained unchanged; it predates the current report revision and will be updated after the report is agreed.
 - [First-run group results](results/proposal_main_v3/groups.csv) and [repeat results](results/proposal_repeat_v3/groups.csv)
 - [Frozen protocol](configs/proposal_experiment.json) and [proposal requirements map](docs/proposal_requirements.json)
 - [Electrical qualification](results/proposal_validation/qualification_summary.json)
@@ -22,7 +23,20 @@ Counts below are electrically valid, reviewer-negative attempts divided by all a
 | AND4 | First run | 4/20 | 6/20 | 5/20 |
 | AND4 | Repeat | 6/20 | 3/20 | 1/20 |
 
-All 240 analysis rows pass the unchanged electrical requirements. They represent 224 actual candidate events and **29 distinct netlists**, all independently re-simulated. The allowed menu was prequalified, so electrical validity is enforced by the constrained design space rather than evidence of unrestricted LLM synthesis ability.
+All 240 analysis rows pass the unchanged electrical requirements. They represent 224 actual candidate events and **29 distinct netlists**, all independently re-simulated. Of the 224 review requests, 222 returned usable Boolean verdicts; two unusable responses remain non-successes in the original denominators. The allowed menu was prequalified, so electrical validity is enforced by the constrained design space rather than evidence of unrestricted LLM synthesis ability.
+
+The report revision also summarizes the **existing** trajectories by attempt allowance. Each circuit/condition has four ten-attempt sessions in total: two sessions in each of two execution batches. A batch is not a one-shot experiment. The first candidate and review in each session are shared across conditions, so the first-attempt column is identical within each circuit by construction.
+
+| Circuit | Feedback | First attempt succeeds | At least one escape within 10 attempts | All-attempt escapes |
+| --- | --- | ---: | ---: | ---: |
+| Op-amp | None | 0/4 | 0/4 | 0/40 |
+| Op-amp | Binary | 0/4 | 4/4 | 13/40 |
+| Op-amp | Full | 0/4 | 3/4 | 13/40 |
+| AND4 | None | 2/4 | 4/4 | 10/40 |
+| AND4 | Binary | 2/4 | 4/4 | 9/40 |
+| AND4 | Full | 2/4 | 3/4 | 6/40 |
+
+This is a retrospective descriptive view, not new experimental data or a replacement for the original attemptwise success rate. “At least one” counts any saved success, not necessarily a successful final candidate or a repeatable verdict. More chances can increase this measure even without feedback; it does not by itself establish learning. The [reanalysis JSON](results/proposal_analysis/attempt_budget.json) and [CSV](results/proposal_analysis/attempt_budget.csv) include batch-level counts, final-attempt outcomes, and source hashes.
 
 Feedback conditions produce more observed op-amp escapes than fresh independent generation in both runs, while full feedback does not consistently outperform binary feedback. The AND results do not support a consistent benefit from increasing feedback detail. Each no-feedback arm repeatedly selects one netlist, so repeated reviews and limited exploration matter. The repeat's weaker control results and its disclosed continuation exception further limit confirmation claims.
 
@@ -40,7 +54,7 @@ The complete permitted Cartesian menu contains **81 op-amp and 54 AND variants**
 | `binary` | The same task plus its own preceding parameters and only the Boolean reviewer verdict |
 | `full` | The same task plus its own preceding parameters and the complete reviewer JSON |
 
-The detector receives the candidate netlist and nominal function only, returning `is_trojan`, `confidence`, `suspect_nodes`, and `feedback_text`. It does not receive simulator results, a clean reference, true labels, modification metadata, or attack history. This follows the execution plan's minimal detector specification and is not the complete SPICED pipeline. No simulator feedback is supplied to any attacker.
+The detector receives the candidate netlist and nominal function only, returning `is_trojan`, `confidence`, `suspect_nodes`, and `feedback_text`. Each review is a fresh request with a fixed prompt: the detector does not learn from feedback or retain attack history. Its feedback goes only to the attacker. It does not receive simulator results, a clean reference, true labels, or modification metadata. This follows the execution plan's minimal detector specification and is not the complete SPICED pipeline. No simulator feedback is supplied to any attacker.
 
 Both roles use `gpt-4o-mini-2024-07-18`, temperature 0.3. Each run has exactly six circuit/feedback groups, with **20 attempts per group**, organized as two starts of ten attempts. The first candidate and review are shared across feedback arms within each circuit/start. Later proposals and reviews are separate. Every arm receives its full attempt allowance, including after success. The second run uses the same frozen generation/review settings with new seeds and fresh API events; its identifier, seeds and counts were declared before the first attack run. Its continuation after a weaker control result is disclosed below.
 
@@ -86,6 +100,7 @@ The setup script builds ngspice under `.tools/`. The smoke check and archived re
 .venv/bin/python -m scripts.proposal.verify --run-id proposal_main_v3 --run-id proposal_repeat_v3
 .venv/bin/python -m scripts.proposal.audit_simulations --run-ids proposal_main_v3 proposal_repeat_v3
 .venv/bin/python -m scripts.proposal.diagnose_and
+.venv/bin/python -m scripts.proposal.analyze_attempt_budget
 .venv/bin/python scripts/build_proposal_report.py --run-id proposal_main_v3 --replication-id proposal_repeat_v3
 .venv/bin/python -m scripts.proposal.check_delivery
 .venv/bin/python -m unittest discover -s tests -v

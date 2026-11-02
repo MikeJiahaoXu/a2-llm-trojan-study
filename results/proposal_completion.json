@@ -1,6 +1,6 @@
 {
   "complete": true,
-  "checked_at_utc": "2026-11-02T01:35:47.416227+00:00",
+  "checked_at_utc": "2026-11-02T07:44:09.928081+00:00",
   "protocol": "proposal_v3",
   "execution_runs": [
     "proposal_main_v3",
@@ -483,8 +483,8 @@
       ],
       "details": {
         "pages": 5,
-        "pdf_sha256": "b18dbe1e95d3709280b46684f7d7edcc8620ef275a643dd882e658766ed8270a",
-        "text_sha256": "7d805459872140a66f8f8f0877b1b897ad7205aff02daceded5b86f56ec532d1",
+        "pdf_sha256": "43fd9a37c3831cd01bdd8d8b2c1c2ddf1ab4d2fab441f2cc448b86c13c0fe77d",
+        "text_sha256": "4ff335503fc43106456fdca9f0e9a81c1d5ea4cfbfaba02b85813b1db517e346",
         "provenance_bound_to_configured_runs": true
       }
     },
@@ -811,7 +811,7 @@
       }
     ]
   },
-  "checker_sha256": "3787e41a358c659a590798315b505f5e1a6bb3dd61754d0febe0f91483f1ea2e",
+  "checker_sha256": "afce5e8785409176d1d5ac7b635d4b0d715a6d15174e7a0de2a26f00b4ae63c2",
   "requirements_sha256": "261942372156c1f7d82d227659e219bc7d90f90a56fc235f5be3a0e705fdcde9",
   "scope": "Evidence and deliverable completeness for the declared course-scale proposal. This is not full reproduction of A2, SPICED, or LATENT, a general security guarantee, or proof that a feedback condition is superior.",
   "verification_limits": "Machine checks bind artifacts, counts, routing, physical tests, and report provenance. Scientific interpretation and visual presentation also require human review."

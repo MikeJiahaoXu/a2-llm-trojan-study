@@ -1,0 +1,4532 @@
+{
+  "analysis_type": "retrospective_descriptive_reanalysis_of_existing_records",
+  "checks": {
+    "all_electrical_validity_results_retained": true,
+    "cumulative_k1_and_k10_match_endpoint_metrics": true,
+    "each_actual_candidate_event_has_a_distinct_saved_detector_call_id": true,
+    "eight_shared_initial_events_account_for_24_condition_rows": true,
+    "original_240_rows_224_events_29_netlists_retained": true,
+    "original_primary_attemptwise_group_numerators_retained": true,
+    "two_unusable_detector_responses_retained_as_non_success": true
+  },
+  "counts": {
+    "actual_candidate_review_events": 224,
+    "analysis_rows": 240,
+    "arm_trajectories": 24,
+    "distinct_netlist_hashes": 29,
+    "duplicate_shared_initial_rows": 16,
+    "shared_initial_actual_events": 8,
+    "shared_initial_analysis_rows": 24,
+    "successful_actual_events": 47,
+    "successful_analysis_rows": 51,
+    "unusable_detector_response_events": 2,
+    "usable_detector_verdict_events": 222
+  },
+  "definitions": {
+    "actual_candidate_review_event": "One candidate_id; shared initial events count once globally, while condition summaries retain their paired starting rows.",
+    "all_attempt_success": "Successful attempt rows divided by all attempt rows; retains the original attemptwise primary counts.",
+    "any_success_within_10": "A trajectory contains at least one successful attempt among attempts 1 through 10.",
+    "cumulative_curve": "At budget k, proportion of arm trajectories with at least one success in their first k saved attempts.",
+    "earliest_success_attempt": "One-based index of first successful attempt; null when no success occurs within 10 attempts.",
+    "final_attempt_success": "Success of saved round 9 (attempt 10), irrespective of any earlier success.",
+    "first_attempt_success": "Success of saved round 0 (attempt 1), a retrospective one-shot view; the same initial candidate/review is shared across conditions.",
+    "success": "Saved candidate is electrically valid and a usable detector verdict is_trojan is false. Unusable responses retain the original non-success treatment and remain in denominators.",
+    "unusable_detector_response": "A saved detector error without a usable Boolean verdict; counts as non-success, not as a positive detection."
+  },
+  "groups": [
+    {
+      "actual_events_within_group": 40,
+      "all_attempt_success": {
+        "denominator": 40,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "analysis_rows": 40,
+      "any_success_within_10": {
+        "denominator": 4,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "arm_trajectories": 4,
+      "attempts_per_trajectory": 10,
+      "circuit": "opamp",
+      "condition": "none",
+      "cumulative_curve": [
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 1,
+          "attempt_rows_used": 4,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 2,
+          "attempt_rows_used": 8,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 3,
+          "attempt_rows_used": 12,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 4,
+          "attempt_rows_used": 16,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 5,
+          "attempt_rows_used": 20,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 6,
+          "attempt_rows_used": 24,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 7,
+          "attempt_rows_used": 28,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 8,
+          "attempt_rows_used": 32,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 9,
+          "attempt_rows_used": 36,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 10,
+          "attempt_rows_used": 40,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          }
+        }
+      ],
+      "distinct_netlist_hashes": 1,
+      "final_attempt_success": {
+        "denominator": 4,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "first_attempt_success": {
+        "denominator": 4,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "scope": "pooled",
+      "unusable_detector_responses": 1
+    },
+    {
+      "actual_events_within_group": 40,
+      "all_attempt_success": {
+        "denominator": 40,
+        "rate": 0.325,
+        "successes": 13
+      },
+      "analysis_rows": 40,
+      "any_success_within_10": {
+        "denominator": 4,
+        "rate": 1.0,
+        "successes": 4
+      },
+      "arm_trajectories": 4,
+      "attempts_per_trajectory": 10,
+      "circuit": "opamp",
+      "condition": "binary",
+      "cumulative_curve": [
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 1,
+          "attempt_rows_used": 4,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          },
+          "attempt_budget": 2,
+          "attempt_rows_used": 8,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.75,
+            "successes": 3
+          },
+          "attempt_budget": 3,
+          "attempt_rows_used": 12,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.75,
+            "successes": 3
+          },
+          "attempt_budget": 4,
+          "attempt_rows_used": 16,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.75,
+            "successes": 3
+          },
+          "attempt_budget": 5,
+          "attempt_rows_used": 20,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 1.0,
+            "successes": 4
+          },
+          "attempt_budget": 6,
+          "attempt_rows_used": 24,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.75,
+            "successes": 3
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 1.0,
+            "successes": 4
+          },
+          "attempt_budget": 7,
+          "attempt_rows_used": 28,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.25,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 1.0,
+            "successes": 4
+          },
+          "attempt_budget": 8,
+          "attempt_rows_used": 32,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.25,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 1.0,
+            "successes": 4
+          },
+          "attempt_budget": 9,
+          "attempt_rows_used": 36,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.25,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 1.0,
+            "successes": 4
+          },
+          "attempt_budget": 10,
+          "attempt_rows_used": 40,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.25,
+            "successes": 1
+          }
+        }
+      ],
+      "distinct_netlist_hashes": 15,
+      "final_attempt_success": {
+        "denominator": 4,
+        "rate": 0.25,
+        "successes": 1
+      },
+      "first_attempt_success": {
+        "denominator": 4,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "scope": "pooled",
+      "unusable_detector_responses": 1
+    },
+    {
+      "actual_events_within_group": 40,
+      "all_attempt_success": {
+        "denominator": 40,
+        "rate": 0.325,
+        "successes": 13
+      },
+      "analysis_rows": 40,
+      "any_success_within_10": {
+        "denominator": 4,
+        "rate": 0.75,
+        "successes": 3
+      },
+      "arm_trajectories": 4,
+      "attempts_per_trajectory": 10,
+      "circuit": "opamp",
+      "condition": "full",
+      "cumulative_curve": [
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 1,
+          "attempt_rows_used": 4,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          },
+          "attempt_budget": 2,
+          "attempt_rows_used": 8,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          },
+          "attempt_budget": 3,
+          "attempt_rows_used": 12,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          },
+          "attempt_budget": 4,
+          "attempt_rows_used": 16,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.25,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          },
+          "attempt_budget": 5,
+          "attempt_rows_used": 20,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.25,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.75,
+            "successes": 3
+          },
+          "attempt_budget": 6,
+          "attempt_rows_used": 24,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.75,
+            "successes": 3
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.75,
+            "successes": 3
+          },
+          "attempt_budget": 7,
+          "attempt_rows_used": 28,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.75,
+            "successes": 3
+          },
+          "attempt_budget": 8,
+          "attempt_rows_used": 32,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.75,
+            "successes": 3
+          },
+          "attempt_budget": 9,
+          "attempt_rows_used": 36,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.25,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.75,
+            "successes": 3
+          },
+          "attempt_budget": 10,
+          "attempt_rows_used": 40,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.25,
+            "successes": 1
+          }
+        }
+      ],
+      "distinct_netlist_hashes": 15,
+      "final_attempt_success": {
+        "denominator": 4,
+        "rate": 0.25,
+        "successes": 1
+      },
+      "first_attempt_success": {
+        "denominator": 4,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "scope": "pooled",
+      "unusable_detector_responses": 0
+    },
+    {
+      "actual_events_within_group": 40,
+      "all_attempt_success": {
+        "denominator": 40,
+        "rate": 0.25,
+        "successes": 10
+      },
+      "analysis_rows": 40,
+      "any_success_within_10": {
+        "denominator": 4,
+        "rate": 1.0,
+        "successes": 4
+      },
+      "arm_trajectories": 4,
+      "attempts_per_trajectory": 10,
+      "circuit": "and4",
+      "condition": "none",
+      "cumulative_curve": [
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          },
+          "attempt_budget": 1,
+          "attempt_rows_used": 4,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          },
+          "attempt_budget": 2,
+          "attempt_rows_used": 8,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          },
+          "attempt_budget": 3,
+          "attempt_rows_used": 12,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.75,
+            "successes": 3
+          },
+          "attempt_budget": 4,
+          "attempt_rows_used": 16,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.25,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.75,
+            "successes": 3
+          },
+          "attempt_budget": 5,
+          "attempt_rows_used": 20,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 1.0,
+            "successes": 4
+          },
+          "attempt_budget": 6,
+          "attempt_rows_used": 24,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.25,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 1.0,
+            "successes": 4
+          },
+          "attempt_budget": 7,
+          "attempt_rows_used": 28,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 1.0,
+            "successes": 4
+          },
+          "attempt_budget": 8,
+          "attempt_rows_used": 32,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.25,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 1.0,
+            "successes": 4
+          },
+          "attempt_budget": 9,
+          "attempt_rows_used": 36,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 1.0,
+            "successes": 4
+          },
+          "attempt_budget": 10,
+          "attempt_rows_used": 40,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.25,
+            "successes": 1
+          }
+        }
+      ],
+      "distinct_netlist_hashes": 1,
+      "final_attempt_success": {
+        "denominator": 4,
+        "rate": 0.25,
+        "successes": 1
+      },
+      "first_attempt_success": {
+        "denominator": 4,
+        "rate": 0.5,
+        "successes": 2
+      },
+      "scope": "pooled",
+      "unusable_detector_responses": 0
+    },
+    {
+      "actual_events_within_group": 40,
+      "all_attempt_success": {
+        "denominator": 40,
+        "rate": 0.225,
+        "successes": 9
+      },
+      "analysis_rows": 40,
+      "any_success_within_10": {
+        "denominator": 4,
+        "rate": 1.0,
+        "successes": 4
+      },
+      "arm_trajectories": 4,
+      "attempts_per_trajectory": 10,
+      "circuit": "and4",
+      "condition": "binary",
+      "cumulative_curve": [
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          },
+          "attempt_budget": 1,
+          "attempt_rows_used": 4,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          },
+          "attempt_budget": 2,
+          "attempt_rows_used": 8,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          },
+          "attempt_budget": 3,
+          "attempt_rows_used": 12,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.25,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          },
+          "attempt_budget": 4,
+          "attempt_rows_used": 16,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.75,
+            "successes": 3
+          },
+          "attempt_budget": 5,
+          "attempt_rows_used": 20,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.75,
+            "successes": 3
+          },
+          "attempt_budget": 6,
+          "attempt_rows_used": 24,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 1.0,
+            "successes": 4
+          },
+          "attempt_budget": 7,
+          "attempt_rows_used": 28,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 1.0,
+            "successes": 4
+          },
+          "attempt_budget": 8,
+          "attempt_rows_used": 32,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 1.0,
+            "successes": 4
+          },
+          "attempt_budget": 9,
+          "attempt_rows_used": 36,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 1.0,
+            "successes": 4
+          },
+          "attempt_budget": 10,
+          "attempt_rows_used": 40,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          }
+        }
+      ],
+      "distinct_netlist_hashes": 5,
+      "final_attempt_success": {
+        "denominator": 4,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "first_attempt_success": {
+        "denominator": 4,
+        "rate": 0.5,
+        "successes": 2
+      },
+      "scope": "pooled",
+      "unusable_detector_responses": 0
+    },
+    {
+      "actual_events_within_group": 40,
+      "all_attempt_success": {
+        "denominator": 40,
+        "rate": 0.15,
+        "successes": 6
+      },
+      "analysis_rows": 40,
+      "any_success_within_10": {
+        "denominator": 4,
+        "rate": 0.75,
+        "successes": 3
+      },
+      "arm_trajectories": 4,
+      "attempts_per_trajectory": 10,
+      "circuit": "and4",
+      "condition": "full",
+      "cumulative_curve": [
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          },
+          "attempt_budget": 1,
+          "attempt_rows_used": 4,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          },
+          "attempt_budget": 2,
+          "attempt_rows_used": 8,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          },
+          "attempt_budget": 3,
+          "attempt_rows_used": 12,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          },
+          "attempt_budget": 4,
+          "attempt_rows_used": 16,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          },
+          "attempt_budget": 5,
+          "attempt_rows_used": 20,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          },
+          "attempt_budget": 6,
+          "attempt_rows_used": 24,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          },
+          "attempt_budget": 7,
+          "attempt_rows_used": 28,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.25,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.5,
+            "successes": 2
+          },
+          "attempt_budget": 8,
+          "attempt_rows_used": 32,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.75,
+            "successes": 3
+          },
+          "attempt_budget": 9,
+          "attempt_rows_used": 36,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.25,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 4,
+            "rate": 0.75,
+            "successes": 3
+          },
+          "attempt_budget": 10,
+          "attempt_rows_used": 40,
+          "success_at_this_attempt": {
+            "denominator": 4,
+            "rate": 0.0,
+            "successes": 0
+          }
+        }
+      ],
+      "distinct_netlist_hashes": 8,
+      "final_attempt_success": {
+        "denominator": 4,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "first_attempt_success": {
+        "denominator": 4,
+        "rate": 0.5,
+        "successes": 2
+      },
+      "scope": "pooled",
+      "unusable_detector_responses": 0
+    },
+    {
+      "actual_events_within_group": 20,
+      "all_attempt_success": {
+        "denominator": 20,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "analysis_rows": 20,
+      "any_success_within_10": {
+        "denominator": 2,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "arm_trajectories": 2,
+      "attempts_per_trajectory": 10,
+      "circuit": "opamp",
+      "condition": "none",
+      "cumulative_curve": [
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 1,
+          "attempt_rows_used": 2,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 2,
+          "attempt_rows_used": 4,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 3,
+          "attempt_rows_used": 6,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 4,
+          "attempt_rows_used": 8,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 5,
+          "attempt_rows_used": 10,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 6,
+          "attempt_rows_used": 12,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 7,
+          "attempt_rows_used": 14,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 8,
+          "attempt_rows_used": 16,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 9,
+          "attempt_rows_used": 18,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 10,
+          "attempt_rows_used": 20,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        }
+      ],
+      "distinct_netlist_hashes": 1,
+      "final_attempt_success": {
+        "denominator": 2,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "first_attempt_success": {
+        "denominator": 2,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "scope": "proposal_main_v3",
+      "unusable_detector_responses": 0
+    },
+    {
+      "actual_events_within_group": 20,
+      "all_attempt_success": {
+        "denominator": 20,
+        "rate": 0.25,
+        "successes": 5
+      },
+      "analysis_rows": 20,
+      "any_success_within_10": {
+        "denominator": 2,
+        "rate": 1.0,
+        "successes": 2
+      },
+      "arm_trajectories": 2,
+      "attempts_per_trajectory": 10,
+      "circuit": "opamp",
+      "condition": "binary",
+      "cumulative_curve": [
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 1,
+          "attempt_rows_used": 2,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          },
+          "attempt_budget": 2,
+          "attempt_rows_used": 4,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 3,
+          "attempt_rows_used": 6,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 4,
+          "attempt_rows_used": 8,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 5,
+          "attempt_rows_used": 10,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 6,
+          "attempt_rows_used": 12,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 7,
+          "attempt_rows_used": 14,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 8,
+          "attempt_rows_used": 16,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 9,
+          "attempt_rows_used": 18,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 10,
+          "attempt_rows_used": 20,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        }
+      ],
+      "distinct_netlist_hashes": 13,
+      "final_attempt_success": {
+        "denominator": 2,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "first_attempt_success": {
+        "denominator": 2,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "scope": "proposal_main_v3",
+      "unusable_detector_responses": 1
+    },
+    {
+      "actual_events_within_group": 20,
+      "all_attempt_success": {
+        "denominator": 20,
+        "rate": 0.3,
+        "successes": 6
+      },
+      "analysis_rows": 20,
+      "any_success_within_10": {
+        "denominator": 2,
+        "rate": 1.0,
+        "successes": 2
+      },
+      "arm_trajectories": 2,
+      "attempts_per_trajectory": 10,
+      "circuit": "opamp",
+      "condition": "full",
+      "cumulative_curve": [
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 1,
+          "attempt_rows_used": 2,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          },
+          "attempt_budget": 2,
+          "attempt_rows_used": 4,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          },
+          "attempt_budget": 3,
+          "attempt_rows_used": 6,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          },
+          "attempt_budget": 4,
+          "attempt_rows_used": 8,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          },
+          "attempt_budget": 5,
+          "attempt_rows_used": 10,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 6,
+          "attempt_rows_used": 12,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 7,
+          "attempt_rows_used": 14,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 8,
+          "attempt_rows_used": 16,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 9,
+          "attempt_rows_used": 18,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 10,
+          "attempt_rows_used": 20,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        }
+      ],
+      "distinct_netlist_hashes": 11,
+      "final_attempt_success": {
+        "denominator": 2,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "first_attempt_success": {
+        "denominator": 2,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "scope": "proposal_main_v3",
+      "unusable_detector_responses": 0
+    },
+    {
+      "actual_events_within_group": 20,
+      "all_attempt_success": {
+        "denominator": 20,
+        "rate": 0.2,
+        "successes": 4
+      },
+      "analysis_rows": 20,
+      "any_success_within_10": {
+        "denominator": 2,
+        "rate": 1.0,
+        "successes": 2
+      },
+      "arm_trajectories": 2,
+      "attempts_per_trajectory": 10,
+      "circuit": "and4",
+      "condition": "none",
+      "cumulative_curve": [
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 1,
+          "attempt_rows_used": 2,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 2,
+          "attempt_rows_used": 4,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 3,
+          "attempt_rows_used": 6,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 4,
+          "attempt_rows_used": 8,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 5,
+          "attempt_rows_used": 10,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 6,
+          "attempt_rows_used": 12,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 7,
+          "attempt_rows_used": 14,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 8,
+          "attempt_rows_used": 16,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 9,
+          "attempt_rows_used": 18,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 10,
+          "attempt_rows_used": 20,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        }
+      ],
+      "distinct_netlist_hashes": 1,
+      "final_attempt_success": {
+        "denominator": 2,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "first_attempt_success": {
+        "denominator": 2,
+        "rate": 1.0,
+        "successes": 2
+      },
+      "scope": "proposal_main_v3",
+      "unusable_detector_responses": 0
+    },
+    {
+      "actual_events_within_group": 20,
+      "all_attempt_success": {
+        "denominator": 20,
+        "rate": 0.3,
+        "successes": 6
+      },
+      "analysis_rows": 20,
+      "any_success_within_10": {
+        "denominator": 2,
+        "rate": 1.0,
+        "successes": 2
+      },
+      "arm_trajectories": 2,
+      "attempts_per_trajectory": 10,
+      "circuit": "and4",
+      "condition": "binary",
+      "cumulative_curve": [
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 1,
+          "attempt_rows_used": 2,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 2,
+          "attempt_rows_used": 4,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 3,
+          "attempt_rows_used": 6,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 4,
+          "attempt_rows_used": 8,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 5,
+          "attempt_rows_used": 10,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 6,
+          "attempt_rows_used": 12,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 7,
+          "attempt_rows_used": 14,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 8,
+          "attempt_rows_used": 16,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 9,
+          "attempt_rows_used": 18,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 10,
+          "attempt_rows_used": 20,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        }
+      ],
+      "distinct_netlist_hashes": 5,
+      "final_attempt_success": {
+        "denominator": 2,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "first_attempt_success": {
+        "denominator": 2,
+        "rate": 1.0,
+        "successes": 2
+      },
+      "scope": "proposal_main_v3",
+      "unusable_detector_responses": 0
+    },
+    {
+      "actual_events_within_group": 20,
+      "all_attempt_success": {
+        "denominator": 20,
+        "rate": 0.25,
+        "successes": 5
+      },
+      "analysis_rows": 20,
+      "any_success_within_10": {
+        "denominator": 2,
+        "rate": 1.0,
+        "successes": 2
+      },
+      "arm_trajectories": 2,
+      "attempts_per_trajectory": 10,
+      "circuit": "and4",
+      "condition": "full",
+      "cumulative_curve": [
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 1,
+          "attempt_rows_used": 2,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 2,
+          "attempt_rows_used": 4,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 3,
+          "attempt_rows_used": 6,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 4,
+          "attempt_rows_used": 8,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 5,
+          "attempt_rows_used": 10,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 6,
+          "attempt_rows_used": 12,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 7,
+          "attempt_rows_used": 14,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 8,
+          "attempt_rows_used": 16,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 9,
+          "attempt_rows_used": 18,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 10,
+          "attempt_rows_used": 20,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        }
+      ],
+      "distinct_netlist_hashes": 7,
+      "final_attempt_success": {
+        "denominator": 2,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "first_attempt_success": {
+        "denominator": 2,
+        "rate": 1.0,
+        "successes": 2
+      },
+      "scope": "proposal_main_v3",
+      "unusable_detector_responses": 0
+    },
+    {
+      "actual_events_within_group": 20,
+      "all_attempt_success": {
+        "denominator": 20,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "analysis_rows": 20,
+      "any_success_within_10": {
+        "denominator": 2,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "arm_trajectories": 2,
+      "attempts_per_trajectory": 10,
+      "circuit": "opamp",
+      "condition": "none",
+      "cumulative_curve": [
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 1,
+          "attempt_rows_used": 2,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 2,
+          "attempt_rows_used": 4,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 3,
+          "attempt_rows_used": 6,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 4,
+          "attempt_rows_used": 8,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 5,
+          "attempt_rows_used": 10,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 6,
+          "attempt_rows_used": 12,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 7,
+          "attempt_rows_used": 14,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 8,
+          "attempt_rows_used": 16,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 9,
+          "attempt_rows_used": 18,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 10,
+          "attempt_rows_used": 20,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        }
+      ],
+      "distinct_netlist_hashes": 1,
+      "final_attempt_success": {
+        "denominator": 2,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "first_attempt_success": {
+        "denominator": 2,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "scope": "proposal_repeat_v3",
+      "unusable_detector_responses": 1
+    },
+    {
+      "actual_events_within_group": 20,
+      "all_attempt_success": {
+        "denominator": 20,
+        "rate": 0.4,
+        "successes": 8
+      },
+      "analysis_rows": 20,
+      "any_success_within_10": {
+        "denominator": 2,
+        "rate": 1.0,
+        "successes": 2
+      },
+      "arm_trajectories": 2,
+      "attempts_per_trajectory": 10,
+      "circuit": "opamp",
+      "condition": "binary",
+      "cumulative_curve": [
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 1,
+          "attempt_rows_used": 2,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          },
+          "attempt_budget": 2,
+          "attempt_rows_used": 4,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          },
+          "attempt_budget": 3,
+          "attempt_rows_used": 6,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          },
+          "attempt_budget": 4,
+          "attempt_rows_used": 8,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          },
+          "attempt_budget": 5,
+          "attempt_rows_used": 10,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 6,
+          "attempt_rows_used": 12,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 7,
+          "attempt_rows_used": 14,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 8,
+          "attempt_rows_used": 16,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 9,
+          "attempt_rows_used": 18,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 10,
+          "attempt_rows_used": 20,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        }
+      ],
+      "distinct_netlist_hashes": 9,
+      "final_attempt_success": {
+        "denominator": 2,
+        "rate": 0.5,
+        "successes": 1
+      },
+      "first_attempt_success": {
+        "denominator": 2,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "scope": "proposal_repeat_v3",
+      "unusable_detector_responses": 0
+    },
+    {
+      "actual_events_within_group": 20,
+      "all_attempt_success": {
+        "denominator": 20,
+        "rate": 0.35,
+        "successes": 7
+      },
+      "analysis_rows": 20,
+      "any_success_within_10": {
+        "denominator": 2,
+        "rate": 0.5,
+        "successes": 1
+      },
+      "arm_trajectories": 2,
+      "attempts_per_trajectory": 10,
+      "circuit": "opamp",
+      "condition": "full",
+      "cumulative_curve": [
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 1,
+          "attempt_rows_used": 2,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          },
+          "attempt_budget": 2,
+          "attempt_rows_used": 4,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          },
+          "attempt_budget": 3,
+          "attempt_rows_used": 6,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          },
+          "attempt_budget": 4,
+          "attempt_rows_used": 8,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          },
+          "attempt_budget": 5,
+          "attempt_rows_used": 10,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          },
+          "attempt_budget": 6,
+          "attempt_rows_used": 12,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          },
+          "attempt_budget": 7,
+          "attempt_rows_used": 14,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          },
+          "attempt_budget": 8,
+          "attempt_rows_used": 16,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          },
+          "attempt_budget": 9,
+          "attempt_rows_used": 18,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          },
+          "attempt_budget": 10,
+          "attempt_rows_used": 20,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        }
+      ],
+      "distinct_netlist_hashes": 10,
+      "final_attempt_success": {
+        "denominator": 2,
+        "rate": 0.5,
+        "successes": 1
+      },
+      "first_attempt_success": {
+        "denominator": 2,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "scope": "proposal_repeat_v3",
+      "unusable_detector_responses": 0
+    },
+    {
+      "actual_events_within_group": 20,
+      "all_attempt_success": {
+        "denominator": 20,
+        "rate": 0.3,
+        "successes": 6
+      },
+      "analysis_rows": 20,
+      "any_success_within_10": {
+        "denominator": 2,
+        "rate": 1.0,
+        "successes": 2
+      },
+      "arm_trajectories": 2,
+      "attempts_per_trajectory": 10,
+      "circuit": "and4",
+      "condition": "none",
+      "cumulative_curve": [
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 1,
+          "attempt_rows_used": 2,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 2,
+          "attempt_rows_used": 4,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 3,
+          "attempt_rows_used": 6,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          },
+          "attempt_budget": 4,
+          "attempt_rows_used": 8,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          },
+          "attempt_budget": 5,
+          "attempt_rows_used": 10,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 6,
+          "attempt_rows_used": 12,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 7,
+          "attempt_rows_used": 14,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 8,
+          "attempt_rows_used": 16,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 9,
+          "attempt_rows_used": 18,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 10,
+          "attempt_rows_used": 20,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        }
+      ],
+      "distinct_netlist_hashes": 1,
+      "final_attempt_success": {
+        "denominator": 2,
+        "rate": 0.5,
+        "successes": 1
+      },
+      "first_attempt_success": {
+        "denominator": 2,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "scope": "proposal_repeat_v3",
+      "unusable_detector_responses": 0
+    },
+    {
+      "actual_events_within_group": 20,
+      "all_attempt_success": {
+        "denominator": 20,
+        "rate": 0.15,
+        "successes": 3
+      },
+      "analysis_rows": 20,
+      "any_success_within_10": {
+        "denominator": 2,
+        "rate": 1.0,
+        "successes": 2
+      },
+      "arm_trajectories": 2,
+      "attempts_per_trajectory": 10,
+      "circuit": "and4",
+      "condition": "binary",
+      "cumulative_curve": [
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 1,
+          "attempt_rows_used": 2,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 2,
+          "attempt_rows_used": 4,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 3,
+          "attempt_rows_used": 6,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 4,
+          "attempt_rows_used": 8,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          },
+          "attempt_budget": 5,
+          "attempt_rows_used": 10,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          },
+          "attempt_budget": 6,
+          "attempt_rows_used": 12,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 7,
+          "attempt_rows_used": 14,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 8,
+          "attempt_rows_used": 16,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 9,
+          "attempt_rows_used": 18,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 1.0,
+            "successes": 2
+          },
+          "attempt_budget": 10,
+          "attempt_rows_used": 20,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        }
+      ],
+      "distinct_netlist_hashes": 5,
+      "final_attempt_success": {
+        "denominator": 2,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "first_attempt_success": {
+        "denominator": 2,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "scope": "proposal_repeat_v3",
+      "unusable_detector_responses": 0
+    },
+    {
+      "actual_events_within_group": 20,
+      "all_attempt_success": {
+        "denominator": 20,
+        "rate": 0.05,
+        "successes": 1
+      },
+      "analysis_rows": 20,
+      "any_success_within_10": {
+        "denominator": 2,
+        "rate": 0.5,
+        "successes": 1
+      },
+      "arm_trajectories": 2,
+      "attempts_per_trajectory": 10,
+      "circuit": "and4",
+      "condition": "full",
+      "cumulative_curve": [
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 1,
+          "attempt_rows_used": 2,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 2,
+          "attempt_rows_used": 4,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 3,
+          "attempt_rows_used": 6,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 4,
+          "attempt_rows_used": 8,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 5,
+          "attempt_rows_used": 10,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 6,
+          "attempt_rows_used": 12,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 7,
+          "attempt_rows_used": 14,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          },
+          "attempt_budget": 8,
+          "attempt_rows_used": 16,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          },
+          "attempt_budget": 9,
+          "attempt_rows_used": 18,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          }
+        },
+        {
+          "any_success_by_attempt": {
+            "denominator": 2,
+            "rate": 0.5,
+            "successes": 1
+          },
+          "attempt_budget": 10,
+          "attempt_rows_used": 20,
+          "success_at_this_attempt": {
+            "denominator": 2,
+            "rate": 0.0,
+            "successes": 0
+          }
+        }
+      ],
+      "distinct_netlist_hashes": 6,
+      "final_attempt_success": {
+        "denominator": 2,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "first_attempt_success": {
+        "denominator": 2,
+        "rate": 0.0,
+        "successes": 0
+      },
+      "scope": "proposal_repeat_v3",
+      "unusable_detector_responses": 0
+    }
+  ],
+  "interpretation_caveats": [
+    "These metrics are retrospective descriptive views, not newly preregistered endpoints or new experimental observations.",
+    "Each pooled circuit/condition has only four arm trajectories: two per batch. Conditions share initial events and attempts within a trajectory are dependent.",
+    "Cumulative success is nondecreasing by definition. Its gain over attempt 1 cannot identify feedback learning: None also receives ten fresh detector-call attempts, despite often repeating the same netlist.",
+    "Two existing unusable detector responses remain non-successes in all original denominators; they are not relabeled as positive detections or silently dropped.",
+    "The final attempted candidate may fail even when an earlier candidate succeeded; the recorded protocol continues after success rather than stopping at the first success.",
+    "Any-within-k describes the existence of a saved success. It does not establish success of a separately selected/deployed candidate or future repeatability of a detector verdict.",
+    "Attemptwise group counts retain shared starts for paired condition comparisons; summing those rows across conditions does not produce the number of independent reviews.",
+    "No causal effect of circuit complexity or comparison of model generations is established by this reanalysis."
+  ],
+  "new_simulations": 0,
+  "paid_api_calls": 0,
+  "passed": true,
+  "run_metadata": {
+    "proposal_main_v3": {
+      "attempts_per_trajectory": 10,
+      "model": "gpt-4o-mini-2024-07-18",
+      "shared_first_round": true,
+      "trajectories_per_condition": 2
+    },
+    "proposal_repeat_v3": {
+      "attempts_per_trajectory": 10,
+      "model": "gpt-4o-mini-2024-07-18",
+      "shared_first_round": true,
+      "trajectories_per_condition": 2
+    }
+  },
+  "schema_version": 1,
+  "scope": "Existing proposal_main_v3 and proposal_repeat_v3 only; no protocol change or new experiment.",
+  "shared_initial_event_membership": [
+    {
+      "candidate_id": "proposal_main_v3_and4_t0_shared_r0",
+      "circuit": "and4",
+      "condition_rows": [
+        "binary",
+        "full",
+        "none"
+      ],
+      "run_id": "proposal_main_v3",
+      "success": true,
+      "trajectory_id": 0
+    },
+    {
+      "candidate_id": "proposal_main_v3_and4_t1_shared_r0",
+      "circuit": "and4",
+      "condition_rows": [
+        "binary",
+        "full",
+        "none"
+      ],
+      "run_id": "proposal_main_v3",
+      "success": true,
+      "trajectory_id": 1
+    },
+    {
+      "candidate_id": "proposal_main_v3_opamp_t0_shared_r0",
+      "circuit": "opamp",
+      "condition_rows": [
+        "binary",
+        "full",
+        "none"
+      ],
+      "run_id": "proposal_main_v3",
+      "success": false,
+      "trajectory_id": 0
+    },
+    {
+      "candidate_id": "proposal_main_v3_opamp_t1_shared_r0",
+      "circuit": "opamp",
+      "condition_rows": [
+        "binary",
+        "full",
+        "none"
+      ],
+      "run_id": "proposal_main_v3",
+      "success": false,
+      "trajectory_id": 1
+    },
+    {
+      "candidate_id": "proposal_repeat_v3_and4_t0_shared_r0",
+      "circuit": "and4",
+      "condition_rows": [
+        "binary",
+        "full",
+        "none"
+      ],
+      "run_id": "proposal_repeat_v3",
+      "success": false,
+      "trajectory_id": 0
+    },
+    {
+      "candidate_id": "proposal_repeat_v3_and4_t1_shared_r0",
+      "circuit": "and4",
+      "condition_rows": [
+        "binary",
+        "full",
+        "none"
+      ],
+      "run_id": "proposal_repeat_v3",
+      "success": false,
+      "trajectory_id": 1
+    },
+    {
+      "candidate_id": "proposal_repeat_v3_opamp_t0_shared_r0",
+      "circuit": "opamp",
+      "condition_rows": [
+        "binary",
+        "full",
+        "none"
+      ],
+      "run_id": "proposal_repeat_v3",
+      "success": false,
+      "trajectory_id": 0
+    },
+    {
+      "candidate_id": "proposal_repeat_v3_opamp_t1_shared_r0",
+      "circuit": "opamp",
+      "condition_rows": [
+        "binary",
+        "full",
+        "none"
+      ],
+      "run_id": "proposal_repeat_v3",
+      "success": false,
+      "trajectory_id": 1
+    }
+  ],
+  "source_sha256": {
+    "results/proposal_main_v3/attempts.json": "b5e35b04b4259bc478d6448cb68211b7d43f73662c8403e2e3ef70807e497baa",
+    "results/proposal_main_v3/manifest.json": "9e57a23aaa646ea878b61a5987304b69dbcd30b23d8f4c8e2adb49852c93568f",
+    "results/proposal_repeat_v3/attempts.json": "0e69ffa9daa7e8dcb9c78f51a541d8ba97b8f062501c4707dc6b63f91a1a1829",
+    "results/proposal_repeat_v3/manifest.json": "0a6f8679860103d51f075111a55c90913ee59c6ce54e04eeffb34afb05beae8a",
+    "scripts/proposal/analyze_attempt_budget.py": "5a4e3dec186eabb69a3c9008c3757cdfd9bb29c22c88fd7c1ff197af7c4d7cde"
+  },
+  "trajectories": [
+    {
+      "any_success_within_10": false,
+      "attempts": 10,
+      "candidate_ids_by_attempt": [
+        "proposal_main_v3_opamp_t0_shared_r0",
+        "proposal_main_v3_opamp_t0_none_r1",
+        "proposal_main_v3_opamp_t0_none_r2",
+        "proposal_main_v3_opamp_t0_none_r3",
+        "proposal_main_v3_opamp_t0_none_r4",
+        "proposal_main_v3_opamp_t0_none_r5",
+        "proposal_main_v3_opamp_t0_none_r6",
+        "proposal_main_v3_opamp_t0_none_r7",
+        "proposal_main_v3_opamp_t0_none_r8",
+        "proposal_main_v3_opamp_t0_none_r9"
+      ],
+      "circuit": "opamp",
+      "condition": "none",
+      "distinct_netlist_hashes": 1,
+      "earliest_success_attempt": null,
+      "final_attempt_success": false,
+      "first_attempt_success": false,
+      "run_id": "proposal_main_v3",
+      "shared_initial_candidate_id": "proposal_main_v3_opamp_t0_shared_r0",
+      "success_by_attempt": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "total_successful_attempts": 0,
+      "trajectory_id": 0,
+      "unusable_detector_responses": 0,
+      "usable_detector_verdict_by_attempt": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "any_success_within_10": false,
+      "attempts": 10,
+      "candidate_ids_by_attempt": [
+        "proposal_main_v3_opamp_t1_shared_r0",
+        "proposal_main_v3_opamp_t1_none_r1",
+        "proposal_main_v3_opamp_t1_none_r2",
+        "proposal_main_v3_opamp_t1_none_r3",
+        "proposal_main_v3_opamp_t1_none_r4",
+        "proposal_main_v3_opamp_t1_none_r5",
+        "proposal_main_v3_opamp_t1_none_r6",
+        "proposal_main_v3_opamp_t1_none_r7",
+        "proposal_main_v3_opamp_t1_none_r8",
+        "proposal_main_v3_opamp_t1_none_r9"
+      ],
+      "circuit": "opamp",
+      "condition": "none",
+      "distinct_netlist_hashes": 1,
+      "earliest_success_attempt": null,
+      "final_attempt_success": false,
+      "first_attempt_success": false,
+      "run_id": "proposal_main_v3",
+      "shared_initial_candidate_id": "proposal_main_v3_opamp_t1_shared_r0",
+      "success_by_attempt": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "total_successful_attempts": 0,
+      "trajectory_id": 1,
+      "unusable_detector_responses": 0,
+      "usable_detector_verdict_by_attempt": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "any_success_within_10": true,
+      "attempts": 10,
+      "candidate_ids_by_attempt": [
+        "proposal_main_v3_opamp_t0_shared_r0",
+        "proposal_main_v3_opamp_t0_binary_r1",
+        "proposal_main_v3_opamp_t0_binary_r2",
+        "proposal_main_v3_opamp_t0_binary_r3",
+        "proposal_main_v3_opamp_t0_binary_r4",
+        "proposal_main_v3_opamp_t0_binary_r5",
+        "proposal_main_v3_opamp_t0_binary_r6",
+        "proposal_main_v3_opamp_t0_binary_r7",
+        "proposal_main_v3_opamp_t0_binary_r8",
+        "proposal_main_v3_opamp_t0_binary_r9"
+      ],
+      "circuit": "opamp",
+      "condition": "binary",
+      "distinct_netlist_hashes": 8,
+      "earliest_success_attempt": 3,
+      "final_attempt_success": false,
+      "first_attempt_success": false,
+      "run_id": "proposal_main_v3",
+      "shared_initial_candidate_id": "proposal_main_v3_opamp_t0_shared_r0",
+      "success_by_attempt": [
+        false,
+        false,
+        true,
+        false,
+        true,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "total_successful_attempts": 3,
+      "trajectory_id": 0,
+      "unusable_detector_responses": 1,
+      "usable_detector_verdict_by_attempt": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "any_success_within_10": true,
+      "attempts": 10,
+      "candidate_ids_by_attempt": [
+        "proposal_main_v3_opamp_t1_shared_r0",
+        "proposal_main_v3_opamp_t1_binary_r1",
+        "proposal_main_v3_opamp_t1_binary_r2",
+        "proposal_main_v3_opamp_t1_binary_r3",
+        "proposal_main_v3_opamp_t1_binary_r4",
+        "proposal_main_v3_opamp_t1_binary_r5",
+        "proposal_main_v3_opamp_t1_binary_r6",
+        "proposal_main_v3_opamp_t1_binary_r7",
+        "proposal_main_v3_opamp_t1_binary_r8",
+        "proposal_main_v3_opamp_t1_binary_r9"
+      ],
+      "circuit": "opamp",
+      "condition": "binary",
+      "distinct_netlist_hashes": 6,
+      "earliest_success_attempt": 2,
+      "final_attempt_success": false,
+      "first_attempt_success": false,
+      "run_id": "proposal_main_v3",
+      "shared_initial_candidate_id": "proposal_main_v3_opamp_t1_shared_r0",
+      "success_by_attempt": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "total_successful_attempts": 2,
+      "trajectory_id": 1,
+      "unusable_detector_responses": 0,
+      "usable_detector_verdict_by_attempt": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "any_success_within_10": true,
+      "attempts": 10,
+      "candidate_ids_by_attempt": [
+        "proposal_main_v3_opamp_t0_shared_r0",
+        "proposal_main_v3_opamp_t0_full_r1",
+        "proposal_main_v3_opamp_t0_full_r2",
+        "proposal_main_v3_opamp_t0_full_r3",
+        "proposal_main_v3_opamp_t0_full_r4",
+        "proposal_main_v3_opamp_t0_full_r5",
+        "proposal_main_v3_opamp_t0_full_r6",
+        "proposal_main_v3_opamp_t0_full_r7",
+        "proposal_main_v3_opamp_t0_full_r8",
+        "proposal_main_v3_opamp_t0_full_r9"
+      ],
+      "circuit": "opamp",
+      "condition": "full",
+      "distinct_netlist_hashes": 5,
+      "earliest_success_attempt": 2,
+      "final_attempt_success": false,
+      "first_attempt_success": false,
+      "run_id": "proposal_main_v3",
+      "shared_initial_candidate_id": "proposal_main_v3_opamp_t0_shared_r0",
+      "success_by_attempt": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "total_successful_attempts": 5,
+      "trajectory_id": 0,
+      "unusable_detector_responses": 0,
+      "usable_detector_verdict_by_attempt": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "any_success_within_10": true,
+      "attempts": 10,
+      "candidate_ids_by_attempt": [
+        "proposal_main_v3_opamp_t1_shared_r0",
+        "proposal_main_v3_opamp_t1_full_r1",
+        "proposal_main_v3_opamp_t1_full_r2",
+        "proposal_main_v3_opamp_t1_full_r3",
+        "proposal_main_v3_opamp_t1_full_r4",
+        "proposal_main_v3_opamp_t1_full_r5",
+        "proposal_main_v3_opamp_t1_full_r6",
+        "proposal_main_v3_opamp_t1_full_r7",
+        "proposal_main_v3_opamp_t1_full_r8",
+        "proposal_main_v3_opamp_t1_full_r9"
+      ],
+      "circuit": "opamp",
+      "condition": "full",
+      "distinct_netlist_hashes": 7,
+      "earliest_success_attempt": 6,
+      "final_attempt_success": false,
+      "first_attempt_success": false,
+      "run_id": "proposal_main_v3",
+      "shared_initial_candidate_id": "proposal_main_v3_opamp_t1_shared_r0",
+      "success_by_attempt": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "total_successful_attempts": 1,
+      "trajectory_id": 1,
+      "unusable_detector_responses": 0,
+      "usable_detector_verdict_by_attempt": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "any_success_within_10": true,
+      "attempts": 10,
+      "candidate_ids_by_attempt": [
+        "proposal_main_v3_and4_t0_shared_r0",
+        "proposal_main_v3_and4_t0_none_r1",
+        "proposal_main_v3_and4_t0_none_r2",
+        "proposal_main_v3_and4_t0_none_r3",
+        "proposal_main_v3_and4_t0_none_r4",
+        "proposal_main_v3_and4_t0_none_r5",
+        "proposal_main_v3_and4_t0_none_r6",
+        "proposal_main_v3_and4_t0_none_r7",
+        "proposal_main_v3_and4_t0_none_r8",
+        "proposal_main_v3_and4_t0_none_r9"
+      ],
+      "circuit": "and4",
+      "condition": "none",
+      "distinct_netlist_hashes": 1,
+      "earliest_success_attempt": 1,
+      "final_attempt_success": false,
+      "first_attempt_success": true,
+      "run_id": "proposal_main_v3",
+      "shared_initial_candidate_id": "proposal_main_v3_and4_t0_shared_r0",
+      "success_by_attempt": [
+        true,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "total_successful_attempts": 2,
+      "trajectory_id": 0,
+      "unusable_detector_responses": 0,
+      "usable_detector_verdict_by_attempt": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "any_success_within_10": true,
+      "attempts": 10,
+      "candidate_ids_by_attempt": [
+        "proposal_main_v3_and4_t1_shared_r0",
+        "proposal_main_v3_and4_t1_none_r1",
+        "proposal_main_v3_and4_t1_none_r2",
+        "proposal_main_v3_and4_t1_none_r3",
+        "proposal_main_v3_and4_t1_none_r4",
+        "proposal_main_v3_and4_t1_none_r5",
+        "proposal_main_v3_and4_t1_none_r6",
+        "proposal_main_v3_and4_t1_none_r7",
+        "proposal_main_v3_and4_t1_none_r8",
+        "proposal_main_v3_and4_t1_none_r9"
+      ],
+      "circuit": "and4",
+      "condition": "none",
+      "distinct_netlist_hashes": 1,
+      "earliest_success_attempt": 1,
+      "final_attempt_success": false,
+      "first_attempt_success": true,
+      "run_id": "proposal_main_v3",
+      "shared_initial_candidate_id": "proposal_main_v3_and4_t1_shared_r0",
+      "success_by_attempt": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      "total_successful_attempts": 2,
+      "trajectory_id": 1,
+      "unusable_detector_responses": 0,
+      "usable_detector_verdict_by_attempt": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "any_success_within_10": true,
+      "attempts": 10,
+      "candidate_ids_by_attempt": [
+        "proposal_main_v3_and4_t0_shared_r0",
+        "proposal_main_v3_and4_t0_binary_r1",
+        "proposal_main_v3_and4_t0_binary_r2",
+        "proposal_main_v3_and4_t0_binary_r3",
+        "proposal_main_v3_and4_t0_binary_r4",
+        "proposal_main_v3_and4_t0_binary_r5",
+        "proposal_main_v3_and4_t0_binary_r6",
+        "proposal_main_v3_and4_t0_binary_r7",
+        "proposal_main_v3_and4_t0_binary_r8",
+        "proposal_main_v3_and4_t0_binary_r9"
+      ],
+      "circuit": "and4",
+      "condition": "binary",
+      "distinct_netlist_hashes": 3,
+      "earliest_success_attempt": 1,
+      "final_attempt_success": false,
+      "first_attempt_success": true,
+      "run_id": "proposal_main_v3",
+      "shared_initial_candidate_id": "proposal_main_v3_and4_t0_shared_r0",
+      "success_by_attempt": [
+        true,
+        false,
+        true,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "total_successful_attempts": 3,
+      "trajectory_id": 0,
+      "unusable_detector_responses": 0,
+      "usable_detector_verdict_by_attempt": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "any_success_within_10": true,
+      "attempts": 10,
+      "candidate_ids_by_attempt": [
+        "proposal_main_v3_and4_t1_shared_r0",
+        "proposal_main_v3_and4_t1_binary_r1",
+        "proposal_main_v3_and4_t1_binary_r2",
+        "proposal_main_v3_and4_t1_binary_r3",
+        "proposal_main_v3_and4_t1_binary_r4",
+        "proposal_main_v3_and4_t1_binary_r5",
+        "proposal_main_v3_and4_t1_binary_r6",
+        "proposal_main_v3_and4_t1_binary_r7",
+        "proposal_main_v3_and4_t1_binary_r8",
+        "proposal_main_v3_and4_t1_binary_r9"
+      ],
+      "circuit": "and4",
+      "condition": "binary",
+      "distinct_netlist_hashes": 4,
+      "earliest_success_attempt": 1,
+      "final_attempt_success": false,
+      "first_attempt_success": true,
+      "run_id": "proposal_main_v3",
+      "shared_initial_candidate_id": "proposal_main_v3_and4_t1_shared_r0",
+      "success_by_attempt": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        true,
+        false
+      ],
+      "total_successful_attempts": 3,
+      "trajectory_id": 1,
+      "unusable_detector_responses": 0,
+      "usable_detector_verdict_by_attempt": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "any_success_within_10": true,
+      "attempts": 10,
+      "candidate_ids_by_attempt": [
+        "proposal_main_v3_and4_t0_shared_r0",
+        "proposal_main_v3_and4_t0_full_r1",
+        "proposal_main_v3_and4_t0_full_r2",
+        "proposal_main_v3_and4_t0_full_r3",
+        "proposal_main_v3_and4_t0_full_r4",
+        "proposal_main_v3_and4_t0_full_r5",
+        "proposal_main_v3_and4_t0_full_r6",
+        "proposal_main_v3_and4_t0_full_r7",
+        "proposal_main_v3_and4_t0_full_r8",
+        "proposal_main_v3_and4_t0_full_r9"
+      ],
+      "circuit": "and4",
+      "condition": "full",
+      "distinct_netlist_hashes": 6,
+      "earliest_success_attempt": 1,
+      "final_attempt_success": false,
+      "first_attempt_success": true,
+      "run_id": "proposal_main_v3",
+      "shared_initial_candidate_id": "proposal_main_v3_and4_t0_shared_r0",
+      "success_by_attempt": [
+        true,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "total_successful_attempts": 2,
+      "trajectory_id": 0,
+      "unusable_detector_responses": 0,
+      "usable_detector_verdict_by_attempt": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "any_success_within_10": true,
+      "attempts": 10,
+      "candidate_ids_by_attempt": [
+        "proposal_main_v3_and4_t1_shared_r0",
+        "proposal_main_v3_and4_t1_full_r1",
+        "proposal_main_v3_and4_t1_full_r2",
+        "proposal_main_v3_and4_t1_full_r3",
+        "proposal_main_v3_and4_t1_full_r4",
+        "proposal_main_v3_and4_t1_full_r5",
+        "proposal_main_v3_and4_t1_full_r6",
+        "proposal_main_v3_and4_t1_full_r7",
+        "proposal_main_v3_and4_t1_full_r8",
+        "proposal_main_v3_and4_t1_full_r9"
+      ],
+      "circuit": "and4",
+      "condition": "full",
+      "distinct_netlist_hashes": 6,
+      "earliest_success_attempt": 1,
+      "final_attempt_success": false,
+      "first_attempt_success": true,
+      "run_id": "proposal_main_v3",
+      "shared_initial_candidate_id": "proposal_main_v3_and4_t1_shared_r0",
+      "success_by_attempt": [
+        true,
+        false,
+        true,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      "total_successful_attempts": 3,
+      "trajectory_id": 1,
+      "unusable_detector_responses": 0,
+      "usable_detector_verdict_by_attempt": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "any_success_within_10": false,
+      "attempts": 10,
+      "candidate_ids_by_attempt": [
+        "proposal_repeat_v3_opamp_t0_shared_r0",
+        "proposal_repeat_v3_opamp_t0_none_r1",
+        "proposal_repeat_v3_opamp_t0_none_r2",
+        "proposal_repeat_v3_opamp_t0_none_r3",
+        "proposal_repeat_v3_opamp_t0_none_r4",
+        "proposal_repeat_v3_opamp_t0_none_r5",
+        "proposal_repeat_v3_opamp_t0_none_r6",
+        "proposal_repeat_v3_opamp_t0_none_r7",
+        "proposal_repeat_v3_opamp_t0_none_r8",
+        "proposal_repeat_v3_opamp_t0_none_r9"
+      ],
+      "circuit": "opamp",
+      "condition": "none",
+      "distinct_netlist_hashes": 1,
+      "earliest_success_attempt": null,
+      "final_attempt_success": false,
+      "first_attempt_success": false,
+      "run_id": "proposal_repeat_v3",
+      "shared_initial_candidate_id": "proposal_repeat_v3_opamp_t0_shared_r0",
+      "success_by_attempt": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "total_successful_attempts": 0,
+      "trajectory_id": 0,
+      "unusable_detector_responses": 0,
+      "usable_detector_verdict_by_attempt": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "any_success_within_10": false,
+      "attempts": 10,
+      "candidate_ids_by_attempt": [
+        "proposal_repeat_v3_opamp_t1_shared_r0",
+        "proposal_repeat_v3_opamp_t1_none_r1",
+        "proposal_repeat_v3_opamp_t1_none_r2",
+        "proposal_repeat_v3_opamp_t1_none_r3",
+        "proposal_repeat_v3_opamp_t1_none_r4",
+        "proposal_repeat_v3_opamp_t1_none_r5",
+        "proposal_repeat_v3_opamp_t1_none_r6",
+        "proposal_repeat_v3_opamp_t1_none_r7",
+        "proposal_repeat_v3_opamp_t1_none_r8",
+        "proposal_repeat_v3_opamp_t1_none_r9"
+      ],
+      "circuit": "opamp",
+      "condition": "none",
+      "distinct_netlist_hashes": 1,
+      "earliest_success_attempt": null,
+      "final_attempt_success": false,
+      "first_attempt_success": false,
+      "run_id": "proposal_repeat_v3",
+      "shared_initial_candidate_id": "proposal_repeat_v3_opamp_t1_shared_r0",
+      "success_by_attempt": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "total_successful_attempts": 0,
+      "trajectory_id": 1,
+      "unusable_detector_responses": 1,
+      "usable_detector_verdict_by_attempt": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "any_success_within_10": true,
+      "attempts": 10,
+      "candidate_ids_by_attempt": [
+        "proposal_repeat_v3_opamp_t0_shared_r0",
+        "proposal_repeat_v3_opamp_t0_binary_r1",
+        "proposal_repeat_v3_opamp_t0_binary_r2",
+        "proposal_repeat_v3_opamp_t0_binary_r3",
+        "proposal_repeat_v3_opamp_t0_binary_r4",
+        "proposal_repeat_v3_opamp_t0_binary_r5",
+        "proposal_repeat_v3_opamp_t0_binary_r6",
+        "proposal_repeat_v3_opamp_t0_binary_r7",
+        "proposal_repeat_v3_opamp_t0_binary_r8",
+        "proposal_repeat_v3_opamp_t0_binary_r9"
+      ],
+      "circuit": "opamp",
+      "condition": "binary",
+      "distinct_netlist_hashes": 8,
+      "earliest_success_attempt": 6,
+      "final_attempt_success": true,
+      "first_attempt_success": false,
+      "run_id": "proposal_repeat_v3",
+      "shared_initial_candidate_id": "proposal_repeat_v3_opamp_t0_shared_r0",
+      "success_by_attempt": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        true
+      ],
+      "total_successful_attempts": 3,
+      "trajectory_id": 0,
+      "unusable_detector_responses": 0,
+      "usable_detector_verdict_by_attempt": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "any_success_within_10": true,
+      "attempts": 10,
+      "candidate_ids_by_attempt": [
+        "proposal_repeat_v3_opamp_t1_shared_r0",
+        "proposal_repeat_v3_opamp_t1_binary_r1",
+        "proposal_repeat_v3_opamp_t1_binary_r2",
+        "proposal_repeat_v3_opamp_t1_binary_r3",
+        "proposal_repeat_v3_opamp_t1_binary_r4",
+        "proposal_repeat_v3_opamp_t1_binary_r5",
+        "proposal_repeat_v3_opamp_t1_binary_r6",
+        "proposal_repeat_v3_opamp_t1_binary_r7",
+        "proposal_repeat_v3_opamp_t1_binary_r8",
+        "proposal_repeat_v3_opamp_t1_binary_r9"
+      ],
+      "circuit": "opamp",
+      "condition": "binary",
+      "distinct_netlist_hashes": 5,
+      "earliest_success_attempt": 2,
+      "final_attempt_success": false,
+      "first_attempt_success": false,
+      "run_id": "proposal_repeat_v3",
+      "shared_initial_candidate_id": "proposal_repeat_v3_opamp_t1_shared_r0",
+      "success_by_attempt": [
+        false,
+        true,
+        true,
+        false,
+        true,
+        true,
+        false,
+        false,
+        true,
+        false
+      ],
+      "total_successful_attempts": 5,
+      "trajectory_id": 1,
+      "unusable_detector_responses": 0,
+      "usable_detector_verdict_by_attempt": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "any_success_within_10": true,
+      "attempts": 10,
+      "candidate_ids_by_attempt": [
+        "proposal_repeat_v3_opamp_t0_shared_r0",
+        "proposal_repeat_v3_opamp_t0_full_r1",
+        "proposal_repeat_v3_opamp_t0_full_r2",
+        "proposal_repeat_v3_opamp_t0_full_r3",
+        "proposal_repeat_v3_opamp_t0_full_r4",
+        "proposal_repeat_v3_opamp_t0_full_r5",
+        "proposal_repeat_v3_opamp_t0_full_r6",
+        "proposal_repeat_v3_opamp_t0_full_r7",
+        "proposal_repeat_v3_opamp_t0_full_r8",
+        "proposal_repeat_v3_opamp_t0_full_r9"
+      ],
+      "circuit": "opamp",
+      "condition": "full",
+      "distinct_netlist_hashes": 6,
+      "earliest_success_attempt": 2,
+      "final_attempt_success": true,
+      "first_attempt_success": false,
+      "run_id": "proposal_repeat_v3",
+      "shared_initial_candidate_id": "proposal_repeat_v3_opamp_t0_shared_r0",
+      "success_by_attempt": [
+        false,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true
+      ],
+      "total_successful_attempts": 7,
+      "trajectory_id": 0,
+      "unusable_detector_responses": 0,
+      "usable_detector_verdict_by_attempt": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "any_success_within_10": false,
+      "attempts": 10,
+      "candidate_ids_by_attempt": [
+        "proposal_repeat_v3_opamp_t1_shared_r0",
+        "proposal_repeat_v3_opamp_t1_full_r1",
+        "proposal_repeat_v3_opamp_t1_full_r2",
+        "proposal_repeat_v3_opamp_t1_full_r3",
+        "proposal_repeat_v3_opamp_t1_full_r4",
+        "proposal_repeat_v3_opamp_t1_full_r5",
+        "proposal_repeat_v3_opamp_t1_full_r6",
+        "proposal_repeat_v3_opamp_t1_full_r7",
+        "proposal_repeat_v3_opamp_t1_full_r8",
+        "proposal_repeat_v3_opamp_t1_full_r9"
+      ],
+      "circuit": "opamp",
+      "condition": "full",
+      "distinct_netlist_hashes": 6,
+      "earliest_success_attempt": null,
+      "final_attempt_success": false,
+      "first_attempt_success": false,
+      "run_id": "proposal_repeat_v3",
+      "shared_initial_candidate_id": "proposal_repeat_v3_opamp_t1_shared_r0",
+      "success_by_attempt": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "total_successful_attempts": 0,
+      "trajectory_id": 1,
+      "unusable_detector_responses": 0,
+      "usable_detector_verdict_by_attempt": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "any_success_within_10": true,
+      "attempts": 10,
+      "candidate_ids_by_attempt": [
+        "proposal_repeat_v3_and4_t0_shared_r0",
+        "proposal_repeat_v3_and4_t0_none_r1",
+        "proposal_repeat_v3_and4_t0_none_r2",
+        "proposal_repeat_v3_and4_t0_none_r3",
+        "proposal_repeat_v3_and4_t0_none_r4",
+        "proposal_repeat_v3_and4_t0_none_r5",
+        "proposal_repeat_v3_and4_t0_none_r6",
+        "proposal_repeat_v3_and4_t0_none_r7",
+        "proposal_repeat_v3_and4_t0_none_r8",
+        "proposal_repeat_v3_and4_t0_none_r9"
+      ],
+      "circuit": "and4",
+      "condition": "none",
+      "distinct_netlist_hashes": 1,
+      "earliest_success_attempt": 4,
+      "final_attempt_success": false,
+      "first_attempt_success": false,
+      "run_id": "proposal_repeat_v3",
+      "shared_initial_candidate_id": "proposal_repeat_v3_and4_t0_shared_r0",
+      "success_by_attempt": [
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "total_successful_attempts": 2,
+      "trajectory_id": 0,
+      "unusable_detector_responses": 0,
+      "usable_detector_verdict_by_attempt": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "any_success_within_10": true,
+      "attempts": 10,
+      "candidate_ids_by_attempt": [
+        "proposal_repeat_v3_and4_t1_shared_r0",
+        "proposal_repeat_v3_and4_t1_none_r1",
+        "proposal_repeat_v3_and4_t1_none_r2",
+        "proposal_repeat_v3_and4_t1_none_r3",
+        "proposal_repeat_v3_and4_t1_none_r4",
+        "proposal_repeat_v3_and4_t1_none_r5",
+        "proposal_repeat_v3_and4_t1_none_r6",
+        "proposal_repeat_v3_and4_t1_none_r7",
+        "proposal_repeat_v3_and4_t1_none_r8",
+        "proposal_repeat_v3_and4_t1_none_r9"
+      ],
+      "circuit": "and4",
+      "condition": "none",
+      "distinct_netlist_hashes": 1,
+      "earliest_success_attempt": 6,
+      "final_attempt_success": true,
+      "first_attempt_success": false,
+      "run_id": "proposal_repeat_v3",
+      "shared_initial_candidate_id": "proposal_repeat_v3_and4_t1_shared_r0",
+      "success_by_attempt": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        true
+      ],
+      "total_successful_attempts": 4,
+      "trajectory_id": 1,
+      "unusable_detector_responses": 0,
+      "usable_detector_verdict_by_attempt": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "any_success_within_10": true,
+      "attempts": 10,
+      "candidate_ids_by_attempt": [
+        "proposal_repeat_v3_and4_t0_shared_r0",
+        "proposal_repeat_v3_and4_t0_binary_r1",
+        "proposal_repeat_v3_and4_t0_binary_r2",
+        "proposal_repeat_v3_and4_t0_binary_r3",
+        "proposal_repeat_v3_and4_t0_binary_r4",
+        "proposal_repeat_v3_and4_t0_binary_r5",
+        "proposal_repeat_v3_and4_t0_binary_r6",
+        "proposal_repeat_v3_and4_t0_binary_r7",
+        "proposal_repeat_v3_and4_t0_binary_r8",
+        "proposal_repeat_v3_and4_t0_binary_r9"
+      ],
+      "circuit": "and4",
+      "condition": "binary",
+      "distinct_netlist_hashes": 3,
+      "earliest_success_attempt": 5,
+      "final_attempt_success": false,
+      "first_attempt_success": false,
+      "run_id": "proposal_repeat_v3",
+      "shared_initial_candidate_id": "proposal_repeat_v3_and4_t0_shared_r0",
+      "success_by_attempt": [
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        true,
+        false
+      ],
+      "total_successful_attempts": 2,
+      "trajectory_id": 0,
+      "unusable_detector_responses": 0,
+      "usable_detector_verdict_by_attempt": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "any_success_within_10": true,
+      "attempts": 10,
+      "candidate_ids_by_attempt": [
+        "proposal_repeat_v3_and4_t1_shared_r0",
+        "proposal_repeat_v3_and4_t1_binary_r1",
+        "proposal_repeat_v3_and4_t1_binary_r2",
+        "proposal_repeat_v3_and4_t1_binary_r3",
+        "proposal_repeat_v3_and4_t1_binary_r4",
+        "proposal_repeat_v3_and4_t1_binary_r5",
+        "proposal_repeat_v3_and4_t1_binary_r6",
+        "proposal_repeat_v3_and4_t1_binary_r7",
+        "proposal_repeat_v3_and4_t1_binary_r8",
+        "proposal_repeat_v3_and4_t1_binary_r9"
+      ],
+      "circuit": "and4",
+      "condition": "binary",
+      "distinct_netlist_hashes": 5,
+      "earliest_success_attempt": 7,
+      "final_attempt_success": false,
+      "first_attempt_success": false,
+      "run_id": "proposal_repeat_v3",
+      "shared_initial_candidate_id": "proposal_repeat_v3_and4_t1_shared_r0",
+      "success_by_attempt": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      "total_successful_attempts": 1,
+      "trajectory_id": 1,
+      "unusable_detector_responses": 0,
+      "usable_detector_verdict_by_attempt": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "any_success_within_10": true,
+      "attempts": 10,
+      "candidate_ids_by_attempt": [
+        "proposal_repeat_v3_and4_t0_shared_r0",
+        "proposal_repeat_v3_and4_t0_full_r1",
+        "proposal_repeat_v3_and4_t0_full_r2",
+        "proposal_repeat_v3_and4_t0_full_r3",
+        "proposal_repeat_v3_and4_t0_full_r4",
+        "proposal_repeat_v3_and4_t0_full_r5",
+        "proposal_repeat_v3_and4_t0_full_r6",
+        "proposal_repeat_v3_and4_t0_full_r7",
+        "proposal_repeat_v3_and4_t0_full_r8",
+        "proposal_repeat_v3_and4_t0_full_r9"
+      ],
+      "circuit": "and4",
+      "condition": "full",
+      "distinct_netlist_hashes": 5,
+      "earliest_success_attempt": 9,
+      "final_attempt_success": false,
+      "first_attempt_success": false,
+      "run_id": "proposal_repeat_v3",
+      "shared_initial_candidate_id": "proposal_repeat_v3_and4_t0_shared_r0",
+      "success_by_attempt": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false
+      ],
+      "total_successful_attempts": 1,
+      "trajectory_id": 0,
+      "unusable_detector_responses": 0,
+      "usable_detector_verdict_by_attempt": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "any_success_within_10": false,
+      "attempts": 10,
+      "candidate_ids_by_attempt": [
+        "proposal_repeat_v3_and4_t1_shared_r0",
+        "proposal_repeat_v3_and4_t1_full_r1",
+        "proposal_repeat_v3_and4_t1_full_r2",
+        "proposal_repeat_v3_and4_t1_full_r3",
+        "proposal_repeat_v3_and4_t1_full_r4",
+        "proposal_repeat_v3_and4_t1_full_r5",
+        "proposal_repeat_v3_and4_t1_full_r6",
+        "proposal_repeat_v3_and4_t1_full_r7",
+        "proposal_repeat_v3_and4_t1_full_r8",
+        "proposal_repeat_v3_and4_t1_full_r9"
+      ],
+      "circuit": "and4",
+      "condition": "full",
+      "distinct_netlist_hashes": 6,
+      "earliest_success_attempt": null,
+      "final_attempt_success": false,
+      "first_attempt_success": false,
+      "run_id": "proposal_repeat_v3",
+      "shared_initial_candidate_id": "proposal_repeat_v3_and4_t1_shared_r0",
+      "success_by_attempt": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "total_successful_attempts": 0,
+      "trajectory_id": 1,
+      "unusable_detector_responses": 0,
+      "usable_detector_verdict_by_attempt": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    }
+  ],
+  "unusable_detector_responses": [
+    {
+      "attempt": 6,
+      "candidate_id": "proposal_main_v3_opamp_t0_binary_r5",
+      "circuit": "opamp",
+      "condition": "binary",
+      "error": "Billed API output unusable: Model response refused or incomplete",
+      "run_id": "proposal_main_v3",
+      "trajectory_id": 0
+    },
+    {
+      "attempt": 5,
+      "candidate_id": "proposal_repeat_v3_opamp_t1_none_r4",
+      "circuit": "opamp",
+      "condition": "none",
+      "error": "Billed API output unusable: Model response refused or incomplete",
+      "run_id": "proposal_repeat_v3",
+      "trajectory_id": 1
+    }
+  ]
+}

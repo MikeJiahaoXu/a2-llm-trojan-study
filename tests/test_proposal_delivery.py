@@ -93,28 +93,32 @@ class ProposalDeliveryTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "distinct netlists"):
             check_electrical_coverage(audit, rows)
 
+    def report_provenance_fixture(self, root):
+        run_ids = ["first", "repeat"]
+        for run in run_ids:
+            folder = root / "results" / run
+            folder.mkdir(parents=True)
+            for name in ("attempts.json", "controls.json", "manifest.json", "completion.json"):
+                (folder / name).write_text(json.dumps({"fixture": run, "file": name}))
+        qualification = root / "results/proposal_validation/qualification_summary.json"
+        qualification.parent.mkdir()
+        qualification.write_text("offline qualification fixture")
+        report = root / "report.pdf"
+        report.write_text("offline artifact fixture")
+        report.with_suffix(".txt").write_text("offline text fixture")
+        (root / "audit.json").write_text("offline audit fixture")
+        provenance = {"primary_run": "first", "replication_run": "repeat",
+                      "source_sha256": {run: {name: sha(root / "results" / run / name)
+                                               for name in ("attempts.json", "controls.json", "manifest.json", "completion.json")}
+                                        for run in run_ids},
+                      "qualification_sha256": sha(qualification), "audit_sha256": {"audit.json": sha(root / "audit.json")},
+                      "pdf_sha256": sha(report), "text_sha256": sha(report.with_suffix(".txt"))}
+        return provenance, report, run_ids
+
     def test_report_hash_binding_rejects_stale_data_and_a_different_report(self):
         with tempfile.TemporaryDirectory(prefix="proposal-delivery-test-") as temp:
             root = Path(temp)
-            run_ids = ["first", "repeat"]
-            for run in run_ids:
-                folder = root / "results" / run
-                folder.mkdir(parents=True)
-                for name in ("attempts.json", "controls.json", "manifest.json", "completion.json"):
-                    (folder / name).write_text(json.dumps({"fixture": run, "file": name}))
-            qualification = root / "results/proposal_validation/qualification_summary.json"
-            qualification.parent.mkdir()
-            qualification.write_text("offline qualification fixture")
-            report = root / "report.pdf"
-            report.write_text("offline artifact fixture")
-            report.with_suffix(".txt").write_text("offline text fixture")
-            (root / "audit.json").write_text("offline audit fixture")
-            provenance = {"primary_run": "first", "replication_run": "repeat",
-                          "source_sha256": {run: {name: sha(root / "results" / run / name)
-                                                   for name in ("attempts.json", "controls.json", "manifest.json", "completion.json")}
-                                            for run in run_ids},
-                          "qualification_sha256": sha(qualification), "audit_sha256": {"audit.json": sha(root / "audit.json")},
-                          "pdf_sha256": sha(report), "text_sha256": sha(report.with_suffix(".txt"))}
+            provenance, report, run_ids = self.report_provenance_fixture(root)
             check_provenance(root, provenance, report, run_ids, ["audit.json"])
             data = root / "results/first/attempts.json"
             original = data.read_text()
@@ -124,6 +128,39 @@ class ProposalDeliveryTests(unittest.TestCase):
             data.write_text(original)
             report.write_text("another report")
             with self.assertRaisesRegex(ValueError, "artifact hash"):
+                check_provenance(root, provenance, report, run_ids, ["audit.json"])
+
+    def test_optional_analysis_hashes_reject_changed_json_and_csv(self):
+        with tempfile.TemporaryDirectory(prefix="proposal-analysis-artifact-test-") as temp:
+            root = Path(temp)
+            provenance, report, run_ids = self.report_provenance_fixture(root)
+            # JSON without source_sha256 remains supported, as do non-JSON artifacts.
+            (root / "analysis.json").write_text(json.dumps({"retrospective": True}))
+            (root / "analysis.csv").write_text("successes,attempts\n1,10\n")
+            provenance["analysis_sha256"] = {name: sha(root / name) for name in ("analysis.json", "analysis.csv")}
+            check_provenance(root, provenance, report, run_ids, ["audit.json"])
+            for name in provenance["analysis_sha256"]:
+                with self.subTest(artifact=name):
+                    path = root / name
+                    original = path.read_text()
+                    path.write_text(original + "\n")
+                    with self.assertRaisesRegex(ValueError, "stale analysis artifact"):
+                        check_provenance(root, provenance, report, run_ids, ["audit.json"])
+                    path.write_text(original)
+
+    def test_optional_analysis_rejects_stale_source_even_when_report_source_hash_is_updated(self):
+        with tempfile.TemporaryDirectory(prefix="proposal-analysis-source-test-") as temp:
+            root = Path(temp)
+            provenance, report, run_ids = self.report_provenance_fixture(root)
+            source_name = "results/first/attempts.json"
+            source = root / source_name
+            analysis = root / "analysis.json"
+            analysis.write_text(json.dumps({"source_sha256": {source_name: sha(source)}}))
+            provenance["analysis_sha256"] = {"analysis.json": sha(analysis)}
+            check_provenance(root, provenance, report, run_ids, ["audit.json"])
+            source.write_text(json.dumps({"changed": "experiment outcomes"}))
+            provenance["source_sha256"]["first"]["attempts.json"] = sha(source)
+            with self.assertRaisesRegex(ValueError, "Analysis has stale source evidence"):
                 check_provenance(root, provenance, report, run_ids, ["audit.json"])
 
 

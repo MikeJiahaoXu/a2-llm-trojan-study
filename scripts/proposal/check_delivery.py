@@ -155,6 +155,19 @@ def check_provenance(root, provenance, report, run_ids, audit_paths):
     require(provenance["audit_sha256"] == expected_audits, "Report has stale or incomplete audit evidence")
     require(provenance["pdf_sha256"] == sha(report)
             and provenance["text_sha256"] == sha(report.with_suffix(".txt")), "Report artifact hash changed")
+    analysis_hashes = provenance.get("analysis_sha256", {})
+    require(isinstance(analysis_hashes, dict), "Report analysis provenance must be a file/hash mapping")
+    for name, digest in analysis_hashes.items():
+        path = existing(root, name)
+        require(sha(path) == digest, "Report has stale analysis artifact: " + name)
+        if path.suffix.lower() == ".json":
+            analysis = read(path)
+            if isinstance(analysis, dict) and "source_sha256" in analysis:
+                sources = analysis["source_sha256"]
+                require(isinstance(sources, dict), "Analysis source provenance must be a file/hash mapping: " + name)
+                for source_name, source_digest in sources.items():
+                    require(sha(existing(root, source_name)) == source_digest,
+                            "Analysis has stale source evidence: " + name + " -> " + source_name)
     for name, digest in provenance.get("calibration_controls_sha256", {}).items():
         require(sha(root / name) == digest, "Report calibration disclosure has stale evidence")
     deviations = {f"results/{run_id}/control_gate_deviation.json": sha(root / "results" / run_id / "control_gate_deviation.json")
