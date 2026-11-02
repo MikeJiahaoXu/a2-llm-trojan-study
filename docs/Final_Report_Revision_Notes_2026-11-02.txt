@@ -50,4 +50,4 @@ results/proposal_stop_v6/cumulative.csv
 results/proposal_stop_v6/figures/cumulative_escape.png
 results/proposal_stop_v6/audit.json
 
-PPT保持原样，等待报告确定后再更新。
+PPT已按当前报告更新为7页、约5分钟，直接使用报告折线图，并附英文讲稿与中文答辩提醒。旧批次、旧AND随机判定统计和旧控制失败叙述已移除。路径：output/slides/a2_feedback/output.pptx。

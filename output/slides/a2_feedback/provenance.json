@@ -1,43 +1,62 @@
 {
-  "slides": 6,
+  "run_id": "proposal_stop_v6",
+  "slides": 7,
   "planned_seconds": 300,
-  "spoken_words": 587,
+  "spoken_words": 616,
   "model": "gpt-4o-mini-2024-07-18",
+  "attacker_temperature": 0.3,
+  "detector_temperature": 0,
   "counts": {
     "opamp": [
-      [
-        0,
-        5,
-        6
-      ],
-      [
-        0,
-        8,
-        7
-      ]
+      6,
+      10,
+      10
     ],
     "and4": [
-      [
-        4,
-        6,
-        5
-      ],
-      [
-        6,
-        3,
-        1
-      ]
+      4,
+      10,
+      10
     ]
   },
-  "native_charts": 1,
-  "source_sha256": {
-    "configs/proposal_experiment.json": "4587bbcc984810a257cc7084bd147eb7e580c6866332eb52b475ba5cc387cd0d",
-    "results/proposal_main_v3/attempts.json": "b5e35b04b4259bc478d6448cb68211b7d43f73662c8403e2e3ef70807e497baa",
-    "results/proposal_main_v3/controls.json": "56dd666e7fe916d7faf1b8d29b1d174a734e97da91a22a815de8be626bf0c362",
-    "results/proposal_repeat_v3/attempts.json": "0e69ffa9daa7e8dcb9c78f51a541d8ba97b8f062501c4707dc6b63f91a1a1829",
-    "results/proposal_repeat_v3/controls.json": "a233d28124a5c36fade840a903e340393b21d8b2cfdbb483bc22b777f1d4e017",
-    "results/proposal_analysis/and_diagnostics.json": "329421fa29ecedaac2331dfaf4a5d6332ad6567efb3c46064745aef6167c6ba2",
-    "results/proposal_repeat_v3/control_gate_deviation.json": "291ed49844fc10b3fdf22e4816b47e66eb0ec1f2d8a669fe60e65be98962e989"
+  "initial_escapes": {
+    "opamp": 6,
+    "and4": 4
   },
-  "pptx_sha256": "acf5c047c17929b030caba6074c68692fd8518468d8763d42ff1a8963677f2fc"
+  "attempt_reaching_ten": {
+    "opamp": {
+      "binary": 6,
+      "full": 5
+    },
+    "and4": {
+      "binary": 7,
+      "full": 3
+    }
+  },
+  "native_charts": 0,
+  "reused_report_figures": [
+    {
+      "path": "output/pdf/stop_report_figures/cumulative_escape.png",
+      "sha256": "a41f97dca3a58e3f98ba854219c73308970ec161cb3e665d5dbdab33355e7076",
+      "slide": 5
+    }
+  ],
+  "editable_textboxes": 105,
+  "source_sha256": {
+    "configs/active_experiment.json": "0371166739813d9ae7985908d8f454f2de1483bc037724cb9f3ac142900c645f",
+    "configs/stopstudy_v6.json": "8168158c936b061536ae10a33fca56e638d187016b1553b587bbae4da20f221c",
+    "scripts/presentation/build_slides.mjs": "0397d28bd93925d41a0100649ab54fc1d76a198c1e4b92a038cdc2d5747155f2",
+    "output/pdf/A2_Trojan_LLM_Informal_Report.pdf": "e73579fd1b4ce5aa247e1bbb50e8a00346d80f6409479b162f7fca5e7980c763",
+    "output/pdf/A2_Trojan_LLM_Informal_Report.txt": "ce21567c68b99d2c69b0c658aa416f66ac01db962003f0db6a3c96bd7e81d917",
+    "output/pdf/A2_Trojan_LLM_Informal_Report.provenance.json": "9f7cce13d7756dfe5ea87b0554df867162a65a523bd21eb386a2aa7d9feb366d",
+    "output/pdf/stop_report_figures/cumulative_escape.png": "a41f97dca3a58e3f98ba854219c73308970ec161cb3e665d5dbdab33355e7076",
+    "results/proposal_stop_v6/summary.json": "fa590a5bf27b8665db376b45d4b4d526ec805e552920bef16f192ba646b27442",
+    "results/proposal_stop_v6/attempts.json": "0a5559375742298c47bb6fa9bdb872145c2524e1ab59fb7db6cf607545c476ed",
+    "results/proposal_stop_v6/design.json": "a2c295704e34a46c9c4b51ab771941cd005f7769d14f16aa587a55f754f13b5c",
+    "results/proposal_stop_v6/controls.json": "459591fddea7cc0fc318914497828f1e7a0dc3f50bdcca223316534836d917e1",
+    "results/proposal_stop_v6/controls_gate.json": "228524cc62c2e347f3760df66f93858ff8495956361f625b487590747c4296f5",
+    "results/proposal_stop_v6/completion.json": "5d45d245a2add174cc3ea3127477370ff05781be7fd3b9799042a47946bc0176",
+    "results/proposal_stop_v6/audit.json": "f9ec5e958ba0a19fca90f9a0260061e510b334dc4d881082315c73334393d0a4",
+    "results/proposal_stop_v6/cumulative.csv": "4f3c3968c8eff92e1721108226c04f4be86fbb7ae1bd031d33811c1582a547a9"
+  },
+  "pptx_sha256": "684c32bc97714bc976a6d32beec8eda6856357f58477d815fe181f3635cbd456"
 }

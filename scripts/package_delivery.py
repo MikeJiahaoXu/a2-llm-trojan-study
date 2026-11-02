@@ -99,10 +99,19 @@ def package_current():
     for name,expected in provenance['source_sha256'].items():
         if hashlib.sha256((ROOT/name).read_bytes()).hexdigest()!=expected:
             raise RuntimeError('Report source evidence changed: '+name)
+    deck=ROOT/'output/slides/a2_feedback/output.pptx'
+    deck_provenance=deck.with_name('provenance.json')
+    deck_meta=json.loads(deck_provenance.read_text())
+    if deck_meta.get('run_id')!=run_id or hashlib.sha256(deck.read_bytes()).hexdigest()!=deck_meta['pptx_sha256']:
+        raise RuntimeError('Presentation is stale or differs from its current evidence.')
+    for name,expected in deck_meta['source_sha256'].items():
+        if hashlib.sha256((ROOT/name).read_bytes()).hexdigest()!=expected:
+            raise RuntimeError('Presentation source evidence changed: '+name)
     selected=[ROOT/name for name in ['README.md','LICENSE','requirements.txt','.gitignore','.gitattributes',
               '.env.example','output/阅读说明.txt','results/cost_ledger.json',active['delivery_check'],
               'docs/Stratified_Stop_On_Escape_Protocol_2026-11-02.txt','docs/Final_Report_Revision_Notes_2026-11-02.txt']]
     selected.extend(report.with_suffix(suffix) for suffix in ('.pdf','.txt','.provenance.json'))
+    selected.extend([deck,deck_provenance])
     for directory in ['scripts','tests','configs','docs/inputs','netlists/templates',
                       'results/proposal_validation','results/'+run_id,'output/pdf/stop_report_figures']:
         selected.extend(p for p in (ROOT/directory).rglob('*') if p.is_file()
