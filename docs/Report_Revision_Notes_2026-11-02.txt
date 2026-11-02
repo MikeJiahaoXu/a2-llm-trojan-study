@@ -5,6 +5,13 @@
 1. 保留你修改后的研究动机与结构
 报告按 Introduction、Methodology、Results、Discussion、References 组织。开头保留“检测反馈能帮助防御，也可能向攻击者提供线索”的问题，但明确本实验固定模型，不检验模型代际进步。
 
+前文原句恢复说明：此前一次修订改写了标题和前文，超出了处理批注所需的范围；现已恢复，并与所附文本逐段核对（只忽略空白和排版差异）。
+— 标题、作者行、Introduction第二段：与所附文本原句一致。
+— Introduction第一段：只将两处“A2 trojans”改为“analog hardware trojans”，因为SPICED和LATENT研究的是模拟硬件木马，并非专门复现A2；其余原句不改，包括关于LLM进步的研究动机。
+— Introduction后单独补充LATENT的组件定位指标含义及本实验固定模型这一事实，没有重写原段落。
+— Methodology中以“First, the attacker”“Next, ngspice”“The experiment is conducted”“Each request produces”开头的四段：原句保留，不润色其措辞或语法。
+— 方法开头按方括号要求补模型信息与论文关系；反馈历史和固定检测器的说明另放在下一页。带批注的次数、电路解释，以及后半段分析沿用修订内容。
+
 2. 明确与LATENT、SPICED的关系和模型信息
 攻击循环借鉴LATENT通过检测反馈修订候选的思路；检测器借鉴SPICED的结构审查与解释输出。我们使用课程计划里的简化实现，并未完整复现两篇论文。两种角色都用gpt-4o-mini-2024-07-18，temperature 0.3。
 

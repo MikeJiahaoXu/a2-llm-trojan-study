@@ -466,51 +466,62 @@ def build(primary_id, replication_id, output):
         raise ValueError("Control counts changed; revise the continuation disclosure")
 
     # Page 1: research question and the concrete information flow.
-    p("A2 Trojans in the LLM Era", "title")
-    p("Does Detection Feedback Help an Attacker?", "h2")
-    p("Amber Tsao (cctsao) and Jiahao Xu (e1583425)<br/>Information Security course project | Experiments: November 1, 2026 | Revised: November 2, 2026", "small")
+    p("Security Project Report - A2 Trojan in the LLM era: Is LLM a plus or a minus in dealing with A2?", "h1")
+    p("Amber Tsao (cctsao), Jiahao Xu (e1583425)", "small")
     p("Introduction", "h1")
-    p("A2 demonstrated that a small analog modification can accumulate charge during unusual activity "
-      "and trigger a harmful change [1]. Related work studies analog hardware Trojans from both sides: "
-      "SPICED reviews analog/mixed-signal circuits for suspicious behavior [2], while LATENT uses "
-      "detection feedback to guide Trojan insertion [3]. A useful explanation can help a designer "
-      "understand a weakness, but exposing it may also tell an attacker what to change.")
-    p("LATENT reports average evasion rising from 23.7% with one-shot prompting to 94.4% with iterative "
-      "feedback. These are component-localization measures, not the fraction of whole circuits missed. "
-      "Motivated by that result, we ask a narrower question: <b>does more detailed detector feedback "
-      "help an attacker produce a working modification that the reviewer does not flag?</b> We compare "
-      "no feedback, a Boolean verdict and a complete review on two small circuits.")
+    p("Inspired by the brief survey of recent updates on how researchers tackle analog hardware "
+      "trojans using LLMs, we are interested in gaining a deeper understanding of how these are done "
+      "and how things might change as LLMs improve. We focus on two papers, including SPICED: "
+      "Syntactical Bug and Trojan Pattern Identification in A/MS Circuits using LLM-Enhanced Detection "
+      "(Chaudhuri et al., 2024) and LATENT: LLM-Augmented Trojan Insertion and Evaluation Framework "
+      "for Analog Netlist Topologies (Chaudhuri et al., 2025), which respectively represent the "
+      "defending and attacking LLMs of the analog hardware trojans issue.")
+    p("SPICED feedback was originally designed for designers to not only detect trojans but also "
+      "identify weaknesses and improve the design. However, such feedback may also help the attacker "
+      "side to hide the trojan even better. According to LATENT’s report, the average evasion rate "
+      "can be improved to 94.4% with feedback from 23.7% for one-shot prompting. This leads us to "
+      "question whether LLMs can be a solution to A2 Trojans or mainly leak additional clues to the attacker.")
+    p("LATENT's percentages measure inserted components escaping localization, rather than whole "
+      "circuits escaping detection. Our experiment holds the model fixed and compares feedback conditions.")
     p("Methodology", "h1")
-    p(f"Both attacker and detector use <b>{html.escape(config['model'])}</b> at temperature "
-      f"<b>{config['temperature']}</b>. The attacker follows a LATENT-inspired revision loop; the "
-      "netlist-only detector is a minimal SPICED-inspired reviewer. This is not a full reproduction "
-      "of either framework. We omit syntax-repair evaluation.")
-    p("<b>One attempt has three steps.</b> First, the attacker receives the clean circuit, test "
-      "conditions and a finite menu. It selects an insertion site, device representation, trigger "
-      "profile and loading strength. Python turns these four choices into SPICE components. Second, "
-      "ngspice checks that the circuit still works normally and misbehaves when activated. Third, "
-      "the detector reads the candidate netlist and its nominal function, then returns a Trojan "
-      "verdict, confidence, suspicious identifiers and explanation. It sees neither the clean "
-      "reference nor simulation results. The simulation results are not sent to either LLM.")
-    table(["Condition", "What the attacker receives for its next attempt"], [
-        ["None", "A fresh task; no previous candidate or review."],
-        ["Binary", "The preceding candidate's choices and the Boolean Trojan verdict."],
-        ["Full", "The preceding choices and the complete review, including suspicious nodes and explanation."],
-    ], [66, 450])
-    p("Feedback goes only to the attacker. The detector is stateless: each review starts afresh with "
-      "the same prompt and model, without previous judgments or an update to its weights. Its prompt "
-      "was calibrated on controls before the attacks. Thus the experiment tests disclosure to an "
-      "attacker, not a defender that learns alongside it.")
+    p("Our experiment consists of two small circuits as benchmarks, an LLM attacker inspired by "
+      "LATENT's feedback loop, and a netlist-only LLM detector inspired by SPICED. Both use "
+      f"<b>{html.escape(config['model'])}</b> at temperature <b>{config['temperature']}</b>. "
+      "These are simplified implementations, not full reproductions. We omit syntax-repair evaluation.")
+    p("First, the attacker receives the clean netlist, normal and activating test conditions, and a "
+      "menu of permitted changes. It returns four choices: an insertion site, a device representation, "
+      "a trigger profile, and a loading strength. For example, an AND proposal can select a MOSFET "
+      "branch from the output to ground, with trigger profile p2 and medium strength. Python translates "
+      "these choices into actual SPICE components while preserving the original circuit.")
+    p("Next, ngspice runs the modified circuit under normal inputs and an activating burst. Separately, "
+      "the detector receives only the candidate netlist and its nominal function. It returns a Boolean "
+      "Trojan verdict, confidence, suspicious identifiers and an explanation. The detector sees neither "
+      "the clean reference nor simulation results. We count an escape only if the circuit passes both "
+      "electrical checks and the detector returns is_trojan=false. Simulator results are recorded for "
+      "evaluation but are not fed to either LLM.")
+    p("The experiment is conducted under 3 feedback conditions to test if different levels of detail "
+      "feedback affect evasion rate. “None” means that the attacker receives no feedback from the "
+      "reviewer; “Binary” means that the attacker receives only the result of whether the attack is "
+      "detected or not; “Full” means that suspicious nodes and explanation being found by the detector "
+      "is provided back to the attacker.")
+    p("Each request produces a complete next configuration. The loop does not retain a best-so-far "
+      "candidate or stop after an escape; it continues for the fixed number of attempts. Thus, feedback "
+      "can lead to a useful revision, an unnecessary change, or a return to an earlier design.")
+
+    # Page 2: clarify the commented methods while preserving the preceding prose.
+    report.new_page()
+    p("Methodology (continued)", "h1")
+    p("Binary and full also receive their own preceding candidate's choices; none has no history. "
+      "Full includes the verdict and confidence as well as suspicious nodes and explanation. "
+      "Feedback goes only to the attacker. The detector uses a fresh request with fixed prompts "
+      "and weights each time; it does not learn during the loop. Its control-based prompt calibration "
+      "occurred before the final attacks.")
     p("Each session contains ten attempts: one initial proposal followed by nine further requests. "
       "We run two sessions per condition in each of two execution batches, for <b>four sessions and "
       "40 attempts per circuit/condition</b>. The batches use different predeclared seeds with the "
       "same model, prompts and circuit settings. The same initial candidate and review start all three "
       "conditions within a session. None continues with fresh requests; binary and full revise from "
-      "the preceding attempt. No condition stops after an escape or restores a best-so-far candidate.")
-
-    # Page 2: simple physical mechanism, rationale and evaluation criteria.
-    report.new_page()
-    p("Methodology (continued)", "h1")
+      "the preceding attempt.")
     p("Circuits and permitted modifications", "h2")
     p("We use a two-stage op-amp and a four-input AND because they provide two readily checked kinds "
       "of behavior: continuous amplification and a digital truth table. Small circuits also keep "
@@ -547,10 +558,6 @@ def build(primary_id, replication_id, output):
       "are high. All 135 allowed configurations passed the declared tests before the LLM runs, and "
       "each generated candidate was simulated again. Validity therefore measures selection from "
       "a qualified menu, not unrestricted LLM circuit-design ability.")
-    report.figure(waveform)
-    p("Figure 1. Clean and known-positive outputs: op-amp after the burst and AND during the burst. "
-      "These traces establish electrical effects; the detector does not receive them.", "small")
-
     # Page 3: clearly distinguish original per-attempt results from post-hoc budgets.
     report.new_page()
     p("Results", "h1")
@@ -576,7 +583,7 @@ def build(primary_id, replication_id, output):
       "original all-attempt column counts requests (40 per group). Initial outcomes are shared "
       "across conditions. Repeated netlists and unsuccessful reviews are retained.", "small")
     report.figure(budget_figure)
-    p("Figure 2. Retrospective cumulative opportunity to observe at least one escape. Each curve "
+    p("Figure 1. Retrospective cumulative opportunity to observe at least one escape. Each curve "
       "summarizes four sessions. More opportunities can reveal a "
       "miss even without a design change; this is not a measure of learning alone.", "small")
     p("For the op-amp, both revision conditions have 13/40 escapes while none has 0/40. Binary "
@@ -632,6 +639,9 @@ def build(primary_id, replication_id, output):
       "those internal-site candidates flag a Trojan; these are repeated events, not 40 distinct "
       "designs. Thus both spend half their attempts on consistently detected choices. Full does "
       "not use this site more often than binary, so that alone cannot explain their difference.")
+    report.figure(waveform, width=450)
+    p("Figure 2. Clean and known-positive outputs: op-amp after the burst and AND during the burst. "
+      "These traces establish electrical effects; the detector does not receive them.", "small")
 
     # Page 5: concise interpretation, comparison and balanced security conclusion.
     report.new_page()
