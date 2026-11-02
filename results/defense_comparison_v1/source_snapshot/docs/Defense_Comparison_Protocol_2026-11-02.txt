@@ -1,0 +1,42 @@
+Supplementary detector comparison — protocol declared before new API reviews
+Date: November 2, 2026
+
+Question
+Does a uniformly generated summary of normal-operation circuit simulations change the LLM reviewer's detection of the fixed circuits already produced in this project?
+
+Relationship to the original experiment
+The original proposal_v3 attacker trials, electrical qualification, prompts, results and continuation-rule deviation remain intact. This supplement changes the evidence available to a fixed reviewer. It does not retrain either model, revise the attacker, add attack configurations, or measure adaptive attacks against the supplemented reviewer.
+
+Fixed corpus
+Include every distinct netlist from proposal_main_v3 and proposal_repeat_v3, regardless of its earlier review result:20 op-amp and9 AND candidates. Also include the existing clean and known-positive control for each circuit. These four controls are distinct from the29 observed candidates, giving33 circuits in total. Deduplicate by exact netlist SHA256, with labels and source memberships recorded only in evaluation metadata. No selection based on earlier escape, confidence or explanation is permitted.
+
+The observed candidates were chosen by an earlier attacker from a qualified finite menu; they are not an independently sampled population of hardware Trojans. The control designs participated in earlier prompt calibration and are not held out. Counts for the29 observed candidates and the four controls are reported separately.
+
+Two matched evidence conditions
+1. netlist_only: nominal circuit function and the exact candidate netlist.
+2. normal_logs: the identical function and netlist, with a normal-operation measurement summary appended.
+
+Both conditions use the same system prompt, output schema, model snapshot (gpt-4o-mini-2024-07-18), temperature0, maximum output allowance and paired seed schedule. The shared prompt permits optional normal-operation evidence and states that normal behavior alone does not establish safety. The previous experiment used temperature0.3; its judgments are not reused as the comparison arm.
+
+For each of33 circuits, request three fresh reviews under each condition, yielding198 planned primary requests. Pair the seed within each circuit/repetition and randomize execution order using a recorded, predetermined seed. Each request is stateless. Repetitions do not represent new circuit designs. Temperature0 and fixed seeds are best-effort consistency controls, not guarantees of deterministic output.
+
+Simulation evidence
+Use only the existing normal-operation stimuli: the op-amp unity-follower10kHz sine test and the AND16-state truth-table sequence. Re-simulate these tests with probes for all internal DUT nodes selected by a generic terminal-parsing rule, the external input/output signals, and supply-source current.
+
+The summary contains uniformly sampled normal I/O and uniformly sampled voltage/current statistics. The same extraction rule applies to clean and modified circuits. It supplies no golden-reference comparison, inserted-device list, specially identified reservoir node, previous review, ground-truth label, successful-attack flag, activation-burst waveform, or post-activation metric. No true-label-specific field is added to a positive example. All simulation decks, logs and waveforms are retained.
+
+The normal tests are intentionally not the known activation tests. A null or adverse effect of the summary is a valid outcome. This supplement is not a full SPICED reproduction: SPICED can examine richer voltage/current evidence and activation-related anomalies.
+
+Outcomes
+Primary descriptive results: for each circuit family and evidence condition, report positive verdicts, negative verdicts and unusable outputs over all scheduled reviews of the observed Trojan candidates. Report clean-control flags separately, and retain known-positive control results separately. Unusable replies are neither positive detections nor negative verdicts; they remain visible in the fixed request denominators.
+
+Also report matched verdict changes within each circuit/repetition, and per-netlist results across its three reviews. Any majority summary is secondary and does not convert the vote fraction or model confidence into a calibrated probability. Do not treat repeated judgments as independent circuit samples or use aggregate accuracy dominated by positive cases as the sole outcome.
+
+Execution integrity
+Freeze the corpus, exact prompts, configuration, task order and source hashes before the first paid review. Retain all responses and failures. Do not tune prompts or selectively repeat reviews after seeing labels. Complete the fixed request list regardless of whether the expected improvement appears. A transport recovery, if necessary, uses the predeclared audited recovery policy and a separate call identifier; its unresolved original reservation remains accounted for. Exact-call caching is for resumption only, not for replacing fresh scheduled repetitions.
+
+Operational stops are budget exhaustion, unavailable API access, or corrupt/inconsistent evidence. No result-dependent clean/positive acceptance gate selects this supplement's observations. The original experiment's gate and exception are unchanged.
+
+Interpretation
+This paired comparison estimates the effect of the supplied normal-operation summaries on these fixed circuits under these prompts. It does not establish online defender learning, discovery of a hidden activation stimulus, resistance to a new adaptive attacker, or the overall net benefit of LLMs for hardware security. A larger false-positive benchmark would be needed to generalize beyond the two clean controls.
+

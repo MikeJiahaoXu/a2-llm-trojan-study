@@ -29,11 +29,13 @@
   },
   "analysis_sha256": {
     "results/proposal_analysis/and_diagnostics.json": "329421fa29ecedaac2331dfaf4a5d6332ad6567efb3c46064745aef6167c6ba2",
-    "results/proposal_analysis/attempt_budget.json": "0b1039eb611ff67adf23a72e33fa17550508039d7a2970f07b666375e08e0589"
+    "results/proposal_analysis/attempt_budget.json": "0b1039eb611ff67adf23a72e33fa17550508039d7a2970f07b666375e08e0589",
+    "results/defense_comparison_v1/analysis.json": "9e32f6030a77af23653862e657972b7287eb8a67590430bea218fb39f96c8b11",
+    "results/defense_comparison_v1/independent_audit.json": "d8c80c99ab74704b708e2778a612a96739b7a5d3a29d921b4b1d057644f32e45"
   },
   "protocol_deviation_sha256": {
     "results/proposal_repeat_v3/control_gate_deviation.json": "291ed49844fc10b3fdf22e4816b47e66eb0ec1f2d8a669fe60e65be98962e989"
   },
-  "pdf_sha256": "280afc9d46b2fec30c8dd00f6890e680ea19227bb436f4de4d420b1bf9eeb90d",
-  "text_sha256": "f6b46fc0b2098784377e7030a71b3972b031935560ea8c4525759271acfe39be"
+  "pdf_sha256": "8c85c87ba037ef3314a094f2c4c073090a8c7705d58847120b4d409cf439f2fa",
+  "text_sha256": "16396795470cc179df8ccf26299ff83727d0b465cf92f0d911d968bae72d47d6"
 }

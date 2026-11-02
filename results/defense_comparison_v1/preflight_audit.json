@@ -1,0 +1,236 @@
+{
+  "audit_script_sha256": "e0a2d528f2fb38cf51cc1cb770ec11940d5097d0c461ce6857d9830f88fe2992",
+  "audited_at_utc": "2026-11-02T09:29:25.796703+00:00",
+  "complete": false,
+  "corpus": {
+    "by_circuit": {
+      "and4": 11,
+      "opamp": 22
+    },
+    "case_checks": [
+      {
+        "case_id": "04ccf87d22af0f5b",
+        "internal_nodes": 6,
+        "passed": true,
+        "trace_samples": 7548
+      },
+      {
+        "case_id": "1b19d9b5682f8386",
+        "internal_nodes": 6,
+        "passed": true,
+        "trace_samples": 7548
+      },
+      {
+        "case_id": "2375cc6cfcd6696c",
+        "internal_nodes": 6,
+        "passed": true,
+        "trace_samples": 7548
+      },
+      {
+        "case_id": "3c351a5291b4a6d3",
+        "internal_nodes": 6,
+        "passed": true,
+        "trace_samples": 7548
+      },
+      {
+        "case_id": "6102cb4e7f1039bc",
+        "internal_nodes": 7,
+        "passed": true,
+        "trace_samples": 7550
+      },
+      {
+        "case_id": "75f90dbbfef76189",
+        "internal_nodes": 6,
+        "passed": true,
+        "trace_samples": 7548
+      },
+      {
+        "case_id": "8abfc5ccd6a73717",
+        "internal_nodes": 7,
+        "passed": true,
+        "trace_samples": 7550
+      },
+      {
+        "case_id": "92e7d3260a7c9d6f",
+        "internal_nodes": 6,
+        "passed": true,
+        "trace_samples": 7548
+      },
+      {
+        "case_id": "b29b45674774f994",
+        "internal_nodes": 7,
+        "passed": true,
+        "trace_samples": 7547
+      },
+      {
+        "case_id": "c1c437c444686b3f",
+        "internal_nodes": 4,
+        "passed": true,
+        "trace_samples": 7502
+      },
+      {
+        "case_id": "ccc3a4d4408e2f02",
+        "internal_nodes": 6,
+        "passed": true,
+        "trace_samples": 7548
+      },
+      {
+        "case_id": "01c3248a08e9ab83",
+        "internal_nodes": 6,
+        "passed": true,
+        "trace_samples": 2010
+      },
+      {
+        "case_id": "08a2c29c489971d2",
+        "internal_nodes": 6,
+        "passed": true,
+        "trace_samples": 2010
+      },
+      {
+        "case_id": "17052466c137a9a7",
+        "internal_nodes": 7,
+        "passed": true,
+        "trace_samples": 2010
+      },
+      {
+        "case_id": "1f0447a36e2e26ec",
+        "internal_nodes": 7,
+        "passed": true,
+        "trace_samples": 2010
+      },
+      {
+        "case_id": "20d5e500f854efce",
+        "internal_nodes": 7,
+        "passed": true,
+        "trace_samples": 2010
+      },
+      {
+        "case_id": "29abe2b5f5fe5704",
+        "internal_nodes": 6,
+        "passed": true,
+        "trace_samples": 2010
+      },
+      {
+        "case_id": "3a8bfc3054d49372",
+        "internal_nodes": 7,
+        "passed": true,
+        "trace_samples": 2010
+      },
+      {
+        "case_id": "3fa519ffe28651aa",
+        "internal_nodes": 6,
+        "passed": true,
+        "trace_samples": 2010
+      },
+      {
+        "case_id": "47f7984f95c21404",
+        "internal_nodes": 6,
+        "passed": true,
+        "trace_samples": 2010
+      },
+      {
+        "case_id": "488db83556b42172",
+        "internal_nodes": 4,
+        "passed": true,
+        "trace_samples": 2010
+      },
+      {
+        "case_id": "783dcaaeef8c4337",
+        "internal_nodes": 6,
+        "passed": true,
+        "trace_samples": 2010
+      },
+      {
+        "case_id": "79e50055e0542697",
+        "internal_nodes": 6,
+        "passed": true,
+        "trace_samples": 2010
+      },
+      {
+        "case_id": "7fccf5974326347a",
+        "internal_nodes": 7,
+        "passed": true,
+        "trace_samples": 2010
+      },
+      {
+        "case_id": "8e60d4bb2ecd3d46",
+        "internal_nodes": 6,
+        "passed": true,
+        "trace_samples": 2010
+      },
+      {
+        "case_id": "9d815f034603dc72",
+        "internal_nodes": 6,
+        "passed": true,
+        "trace_samples": 2010
+      },
+      {
+        "case_id": "9db1d3b2d3d9fd77",
+        "internal_nodes": 7,
+        "passed": true,
+        "trace_samples": 2010
+      },
+      {
+        "case_id": "9ebf44cbf71ae0a2",
+        "internal_nodes": 6,
+        "passed": true,
+        "trace_samples": 2010
+      },
+      {
+        "case_id": "ae2c935638454b43",
+        "internal_nodes": 6,
+        "passed": true,
+        "trace_samples": 2010
+      },
+      {
+        "case_id": "b6876ec396da66ef",
+        "internal_nodes": 6,
+        "passed": true,
+        "trace_samples": 2010
+      },
+      {
+        "case_id": "ba4cb6cd3077301d",
+        "internal_nodes": 6,
+        "passed": true,
+        "trace_samples": 2010
+      },
+      {
+        "case_id": "bcc9576e13fa2114",
+        "internal_nodes": 7,
+        "passed": true,
+        "trace_samples": 2010
+      },
+      {
+        "case_id": "d751a635d48cc30b",
+        "internal_nodes": 7,
+        "passed": true,
+        "trace_samples": 2010
+      }
+    ],
+    "control_cases": 4,
+    "input_source_files_checked": 241,
+    "observed_cases": 29,
+    "original_source_snapshot_hashes_checked": 28,
+    "passed": true,
+    "unique_cases": 33
+  },
+  "mode": "preflight",
+  "new_simulations": 0,
+  "paid_api_calls": 0,
+  "passed": true,
+  "request_plan": {
+    "cases": 33,
+    "exact_netlist_and_normal_only_summary_routing": true,
+    "paired_case_repetitions": 99,
+    "passed": true,
+    "planned_requests": 198,
+    "same_system_model_temperature_and_seed_within_pair": true
+  },
+  "run_id": "defense_comparison_v1",
+  "source_sha256": {
+    "configs/defense_comparison.json": "c8a02279c1242802ac429ee53a0bf15597599a6f53aab1857a7d86ec0061e417",
+    "results/defense_comparison_v1/corpus.json": "e32a7cd88a2ed3f5a0ab3e1fe57fe76261d3f082119ccb2af8eebe4fc8858c07",
+    "results/defense_comparison_v1/manifest.json": "7eaa2c2072a3c84bb9ece6c164dfc50de3d14949a0e3ee3210fb74815bcb3e23",
+    "results/defense_comparison_v1/tasks.json": "ae1ec1d4bf7e8a669916fdaaa17c5e1dd08a0c80d4a7621ae4e767990b737a13"
+  }
+}

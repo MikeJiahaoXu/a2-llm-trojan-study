@@ -1,0 +1,1693 @@
+{
+  "protocol": "defense_comparison_v1",
+  "complete": true,
+  "distinct_cases": 33,
+  "scheduled_reviews": 198,
+  "usable_reviews": 195,
+  "unusable_reviews": 3,
+  "groups": [
+    {
+      "circuit": "and4",
+      "population": "observed_candidates",
+      "condition": "netlist_only",
+      "distinct_cases": 9,
+      "scheduled_reviews": 27,
+      "positive": 21,
+      "negative": 6,
+      "unusable": 0,
+      "positive_fraction_all_scheduled": 0.7777777777777778,
+      "negative_fraction_all_scheduled": 0.2222222222222222,
+      "unusable_fraction_all_scheduled": 0.0,
+      "secondary_majority": {
+        "positive": 7,
+        "negative": 2,
+        "unusable": 0
+      }
+    },
+    {
+      "circuit": "and4",
+      "population": "observed_candidates",
+      "condition": "normal_logs",
+      "distinct_cases": 9,
+      "scheduled_reviews": 27,
+      "positive": 27,
+      "negative": 0,
+      "unusable": 0,
+      "positive_fraction_all_scheduled": 1.0,
+      "negative_fraction_all_scheduled": 0.0,
+      "unusable_fraction_all_scheduled": 0.0,
+      "secondary_majority": {
+        "positive": 9,
+        "negative": 0,
+        "unusable": 0
+      }
+    },
+    {
+      "circuit": "and4",
+      "population": "clean_controls",
+      "condition": "netlist_only",
+      "distinct_cases": 1,
+      "scheduled_reviews": 3,
+      "positive": 0,
+      "negative": 3,
+      "unusable": 0,
+      "positive_fraction_all_scheduled": 0.0,
+      "negative_fraction_all_scheduled": 1.0,
+      "unusable_fraction_all_scheduled": 0.0,
+      "secondary_majority": {
+        "positive": 0,
+        "negative": 1,
+        "unusable": 0
+      }
+    },
+    {
+      "circuit": "and4",
+      "population": "clean_controls",
+      "condition": "normal_logs",
+      "distinct_cases": 1,
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "positive_fraction_all_scheduled": 1.0,
+      "negative_fraction_all_scheduled": 0.0,
+      "unusable_fraction_all_scheduled": 0.0,
+      "secondary_majority": {
+        "positive": 1,
+        "negative": 0,
+        "unusable": 0
+      }
+    },
+    {
+      "circuit": "and4",
+      "population": "positive_controls",
+      "condition": "netlist_only",
+      "distinct_cases": 1,
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "positive_fraction_all_scheduled": 1.0,
+      "negative_fraction_all_scheduled": 0.0,
+      "unusable_fraction_all_scheduled": 0.0,
+      "secondary_majority": {
+        "positive": 1,
+        "negative": 0,
+        "unusable": 0
+      }
+    },
+    {
+      "circuit": "and4",
+      "population": "positive_controls",
+      "condition": "normal_logs",
+      "distinct_cases": 1,
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "positive_fraction_all_scheduled": 1.0,
+      "negative_fraction_all_scheduled": 0.0,
+      "unusable_fraction_all_scheduled": 0.0,
+      "secondary_majority": {
+        "positive": 1,
+        "negative": 0,
+        "unusable": 0
+      }
+    },
+    {
+      "circuit": "opamp",
+      "population": "observed_candidates",
+      "condition": "netlist_only",
+      "distinct_cases": 20,
+      "scheduled_reviews": 60,
+      "positive": 39,
+      "negative": 18,
+      "unusable": 3,
+      "positive_fraction_all_scheduled": 0.65,
+      "negative_fraction_all_scheduled": 0.3,
+      "unusable_fraction_all_scheduled": 0.05,
+      "secondary_majority": {
+        "positive": 10,
+        "negative": 7,
+        "unusable": 3
+      }
+    },
+    {
+      "circuit": "opamp",
+      "population": "observed_candidates",
+      "condition": "normal_logs",
+      "distinct_cases": 20,
+      "scheduled_reviews": 60,
+      "positive": 10,
+      "negative": 50,
+      "unusable": 0,
+      "positive_fraction_all_scheduled": 0.16666666666666666,
+      "negative_fraction_all_scheduled": 0.8333333333333334,
+      "unusable_fraction_all_scheduled": 0.0,
+      "secondary_majority": {
+        "positive": 2,
+        "negative": 18,
+        "unusable": 0
+      }
+    },
+    {
+      "circuit": "opamp",
+      "population": "clean_controls",
+      "condition": "netlist_only",
+      "distinct_cases": 1,
+      "scheduled_reviews": 3,
+      "positive": 0,
+      "negative": 3,
+      "unusable": 0,
+      "positive_fraction_all_scheduled": 0.0,
+      "negative_fraction_all_scheduled": 1.0,
+      "unusable_fraction_all_scheduled": 0.0,
+      "secondary_majority": {
+        "positive": 0,
+        "negative": 1,
+        "unusable": 0
+      }
+    },
+    {
+      "circuit": "opamp",
+      "population": "clean_controls",
+      "condition": "normal_logs",
+      "distinct_cases": 1,
+      "scheduled_reviews": 3,
+      "positive": 0,
+      "negative": 3,
+      "unusable": 0,
+      "positive_fraction_all_scheduled": 0.0,
+      "negative_fraction_all_scheduled": 1.0,
+      "unusable_fraction_all_scheduled": 0.0,
+      "secondary_majority": {
+        "positive": 0,
+        "negative": 1,
+        "unusable": 0
+      }
+    },
+    {
+      "circuit": "opamp",
+      "population": "positive_controls",
+      "condition": "netlist_only",
+      "distinct_cases": 1,
+      "scheduled_reviews": 3,
+      "positive": 2,
+      "negative": 1,
+      "unusable": 0,
+      "positive_fraction_all_scheduled": 0.6666666666666666,
+      "negative_fraction_all_scheduled": 0.3333333333333333,
+      "unusable_fraction_all_scheduled": 0.0,
+      "secondary_majority": {
+        "positive": 1,
+        "negative": 0,
+        "unusable": 0
+      }
+    },
+    {
+      "circuit": "opamp",
+      "population": "positive_controls",
+      "condition": "normal_logs",
+      "distinct_cases": 1,
+      "scheduled_reviews": 3,
+      "positive": 0,
+      "negative": 3,
+      "unusable": 0,
+      "positive_fraction_all_scheduled": 0.0,
+      "negative_fraction_all_scheduled": 1.0,
+      "unusable_fraction_all_scheduled": 0.0,
+      "secondary_majority": {
+        "positive": 0,
+        "negative": 1,
+        "unusable": 0
+      }
+    }
+  ],
+  "paired": [
+    {
+      "circuit": "and4",
+      "population": "observed_candidates",
+      "distinct_cases": 9,
+      "scheduled_pairs": 27,
+      "both_usable_pairs": 27,
+      "pairs_with_unusable": 0,
+      "direction": "netlist_only to normal_logs",
+      "transitions": {
+        "positive_to_positive": 21,
+        "positive_to_negative": 0,
+        "positive_to_unusable": 0,
+        "negative_to_positive": 6,
+        "negative_to_negative": 0,
+        "negative_to_unusable": 0,
+        "unusable_to_positive": 0,
+        "unusable_to_negative": 0,
+        "unusable_to_unusable": 0
+      },
+      "positive_verdict_delta": 6
+    },
+    {
+      "circuit": "and4",
+      "population": "clean_controls",
+      "distinct_cases": 1,
+      "scheduled_pairs": 3,
+      "both_usable_pairs": 3,
+      "pairs_with_unusable": 0,
+      "direction": "netlist_only to normal_logs",
+      "transitions": {
+        "positive_to_positive": 0,
+        "positive_to_negative": 0,
+        "positive_to_unusable": 0,
+        "negative_to_positive": 3,
+        "negative_to_negative": 0,
+        "negative_to_unusable": 0,
+        "unusable_to_positive": 0,
+        "unusable_to_negative": 0,
+        "unusable_to_unusable": 0
+      },
+      "positive_verdict_delta": 3
+    },
+    {
+      "circuit": "and4",
+      "population": "positive_controls",
+      "distinct_cases": 1,
+      "scheduled_pairs": 3,
+      "both_usable_pairs": 3,
+      "pairs_with_unusable": 0,
+      "direction": "netlist_only to normal_logs",
+      "transitions": {
+        "positive_to_positive": 3,
+        "positive_to_negative": 0,
+        "positive_to_unusable": 0,
+        "negative_to_positive": 0,
+        "negative_to_negative": 0,
+        "negative_to_unusable": 0,
+        "unusable_to_positive": 0,
+        "unusable_to_negative": 0,
+        "unusable_to_unusable": 0
+      },
+      "positive_verdict_delta": 0
+    },
+    {
+      "circuit": "opamp",
+      "population": "observed_candidates",
+      "distinct_cases": 20,
+      "scheduled_pairs": 60,
+      "both_usable_pairs": 57,
+      "pairs_with_unusable": 3,
+      "direction": "netlist_only to normal_logs",
+      "transitions": {
+        "positive_to_positive": 6,
+        "positive_to_negative": 33,
+        "positive_to_unusable": 0,
+        "negative_to_positive": 2,
+        "negative_to_negative": 16,
+        "negative_to_unusable": 0,
+        "unusable_to_positive": 2,
+        "unusable_to_negative": 1,
+        "unusable_to_unusable": 0
+      },
+      "positive_verdict_delta": -29
+    },
+    {
+      "circuit": "opamp",
+      "population": "clean_controls",
+      "distinct_cases": 1,
+      "scheduled_pairs": 3,
+      "both_usable_pairs": 3,
+      "pairs_with_unusable": 0,
+      "direction": "netlist_only to normal_logs",
+      "transitions": {
+        "positive_to_positive": 0,
+        "positive_to_negative": 0,
+        "positive_to_unusable": 0,
+        "negative_to_positive": 0,
+        "negative_to_negative": 3,
+        "negative_to_unusable": 0,
+        "unusable_to_positive": 0,
+        "unusable_to_negative": 0,
+        "unusable_to_unusable": 0
+      },
+      "positive_verdict_delta": 0
+    },
+    {
+      "circuit": "opamp",
+      "population": "positive_controls",
+      "distinct_cases": 1,
+      "scheduled_pairs": 3,
+      "both_usable_pairs": 3,
+      "pairs_with_unusable": 0,
+      "direction": "netlist_only to normal_logs",
+      "transitions": {
+        "positive_to_positive": 0,
+        "positive_to_negative": 2,
+        "positive_to_unusable": 0,
+        "negative_to_positive": 0,
+        "negative_to_negative": 1,
+        "negative_to_unusable": 0,
+        "unusable_to_positive": 0,
+        "unusable_to_negative": 0,
+        "unusable_to_unusable": 0
+      },
+      "positive_verdict_delta": -2
+    }
+  ],
+  "per_case": [
+    {
+      "case_id": "01c3248a08e9ab83",
+      "circuit": "opamp",
+      "condition": "netlist_only",
+      "netlist_sha256": "01c3248a08e9ab83b31bb2dd96e7eaae18eec52062075fbc0009ced8dda3c725",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 1,
+      "negative": 2,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "negative",
+        "positive"
+      ],
+      "majority": "negative",
+      "unanimous_usable": false
+    },
+    {
+      "case_id": "01c3248a08e9ab83",
+      "circuit": "opamp",
+      "condition": "normal_logs",
+      "netlist_sha256": "01c3248a08e9ab83b31bb2dd96e7eaae18eec52062075fbc0009ced8dda3c725",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 1,
+      "negative": 2,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "positive",
+        "negative"
+      ],
+      "majority": "negative",
+      "unanimous_usable": false
+    },
+    {
+      "case_id": "04ccf87d22af0f5b",
+      "circuit": "and4",
+      "condition": "netlist_only",
+      "netlist_sha256": "04ccf87d22af0f5b98bc4a2b24ee3e050dd096461551a4c35633dad42a8311b8",
+      "populations": [
+        "positive_controls"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "04ccf87d22af0f5b",
+      "circuit": "and4",
+      "condition": "normal_logs",
+      "netlist_sha256": "04ccf87d22af0f5b98bc4a2b24ee3e050dd096461551a4c35633dad42a8311b8",
+      "populations": [
+        "positive_controls"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "08a2c29c489971d2",
+      "circuit": "opamp",
+      "condition": "netlist_only",
+      "netlist_sha256": "08a2c29c489971d232aa8665aa9f17f4c1c03701b16b70c70837310b74fb762b",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "08a2c29c489971d2",
+      "circuit": "opamp",
+      "condition": "normal_logs",
+      "netlist_sha256": "08a2c29c489971d232aa8665aa9f17f4c1c03701b16b70c70837310b74fb762b",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 0,
+      "negative": 3,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "negative",
+        "negative"
+      ],
+      "majority": "negative",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "17052466c137a9a7",
+      "circuit": "opamp",
+      "condition": "netlist_only",
+      "netlist_sha256": "17052466c137a9a74a18dc25fde4ea642e1f2bd277cd6e46a9e8a8d9c0364e4c",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 2,
+      "negative": 0,
+      "unusable": 1,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "unusable"
+      ],
+      "majority": "unusable",
+      "unanimous_usable": false
+    },
+    {
+      "case_id": "17052466c137a9a7",
+      "circuit": "opamp",
+      "condition": "normal_logs",
+      "netlist_sha256": "17052466c137a9a74a18dc25fde4ea642e1f2bd277cd6e46a9e8a8d9c0364e4c",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 0,
+      "negative": 3,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "negative",
+        "negative"
+      ],
+      "majority": "negative",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "1b19d9b5682f8386",
+      "circuit": "and4",
+      "condition": "netlist_only",
+      "netlist_sha256": "1b19d9b5682f838679e668415d603a44fa4d92e9cfac98e05936885980a11a2d",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "1b19d9b5682f8386",
+      "circuit": "and4",
+      "condition": "normal_logs",
+      "netlist_sha256": "1b19d9b5682f838679e668415d603a44fa4d92e9cfac98e05936885980a11a2d",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "1f0447a36e2e26ec",
+      "circuit": "opamp",
+      "condition": "netlist_only",
+      "netlist_sha256": "1f0447a36e2e26eca70b2ee26666a72773a5481117d550e66ba1f5ea7e37a4e4",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 0,
+      "negative": 3,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "negative",
+        "negative"
+      ],
+      "majority": "negative",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "1f0447a36e2e26ec",
+      "circuit": "opamp",
+      "condition": "normal_logs",
+      "netlist_sha256": "1f0447a36e2e26eca70b2ee26666a72773a5481117d550e66ba1f5ea7e37a4e4",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 1,
+      "negative": 2,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "positive",
+        "negative"
+      ],
+      "majority": "negative",
+      "unanimous_usable": false
+    },
+    {
+      "case_id": "20d5e500f854efce",
+      "circuit": "opamp",
+      "condition": "netlist_only",
+      "netlist_sha256": "20d5e500f854efce630277081102f63c2b48a973f2c92a95d4814575261626e6",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "20d5e500f854efce",
+      "circuit": "opamp",
+      "condition": "normal_logs",
+      "netlist_sha256": "20d5e500f854efce630277081102f63c2b48a973f2c92a95d4814575261626e6",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 0,
+      "negative": 3,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "negative",
+        "negative"
+      ],
+      "majority": "negative",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "2375cc6cfcd6696c",
+      "circuit": "and4",
+      "condition": "netlist_only",
+      "netlist_sha256": "2375cc6cfcd6696c2ac52da63165e7a280cb0595c59ace02b82147f93d7098d5",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 0,
+      "negative": 3,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "negative",
+        "negative"
+      ],
+      "majority": "negative",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "2375cc6cfcd6696c",
+      "circuit": "and4",
+      "condition": "normal_logs",
+      "netlist_sha256": "2375cc6cfcd6696c2ac52da63165e7a280cb0595c59ace02b82147f93d7098d5",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "29abe2b5f5fe5704",
+      "circuit": "opamp",
+      "condition": "netlist_only",
+      "netlist_sha256": "29abe2b5f5fe570414e308898ebfc7ea5ff41c93fb141cc2b7db3e092aa74544",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "29abe2b5f5fe5704",
+      "circuit": "opamp",
+      "condition": "normal_logs",
+      "netlist_sha256": "29abe2b5f5fe570414e308898ebfc7ea5ff41c93fb141cc2b7db3e092aa74544",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 0,
+      "negative": 3,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "negative",
+        "negative"
+      ],
+      "majority": "negative",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "3a8bfc3054d49372",
+      "circuit": "opamp",
+      "condition": "netlist_only",
+      "netlist_sha256": "3a8bfc3054d49372cf82df173f67c88700503a8a5b8220c678988b52a99acd96",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "3a8bfc3054d49372",
+      "circuit": "opamp",
+      "condition": "normal_logs",
+      "netlist_sha256": "3a8bfc3054d49372cf82df173f67c88700503a8a5b8220c678988b52a99acd96",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 0,
+      "negative": 3,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "negative",
+        "negative"
+      ],
+      "majority": "negative",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "3c351a5291b4a6d3",
+      "circuit": "and4",
+      "condition": "netlist_only",
+      "netlist_sha256": "3c351a5291b4a6d347ffde66b2e5488967fe733b38ff6de4131b822364e431d2",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "3c351a5291b4a6d3",
+      "circuit": "and4",
+      "condition": "normal_logs",
+      "netlist_sha256": "3c351a5291b4a6d347ffde66b2e5488967fe733b38ff6de4131b822364e431d2",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "3fa519ffe28651aa",
+      "circuit": "opamp",
+      "condition": "netlist_only",
+      "netlist_sha256": "3fa519ffe28651aa6588e45a6cf6d95e38206c25f620a0d5fc998765fb28621e",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 1,
+      "negative": 2,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "positive",
+        "negative"
+      ],
+      "majority": "negative",
+      "unanimous_usable": false
+    },
+    {
+      "case_id": "3fa519ffe28651aa",
+      "circuit": "opamp",
+      "condition": "normal_logs",
+      "netlist_sha256": "3fa519ffe28651aa6588e45a6cf6d95e38206c25f620a0d5fc998765fb28621e",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 0,
+      "negative": 3,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "negative",
+        "negative"
+      ],
+      "majority": "negative",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "47f7984f95c21404",
+      "circuit": "opamp",
+      "condition": "netlist_only",
+      "netlist_sha256": "47f7984f95c21404c4fde4d54035e031337018d2a6161c94c19da2ef26300296",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "47f7984f95c21404",
+      "circuit": "opamp",
+      "condition": "normal_logs",
+      "netlist_sha256": "47f7984f95c21404c4fde4d54035e031337018d2a6161c94c19da2ef26300296",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 0,
+      "negative": 3,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "negative",
+        "negative"
+      ],
+      "majority": "negative",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "488db83556b42172",
+      "circuit": "opamp",
+      "condition": "netlist_only",
+      "netlist_sha256": "488db83556b42172da6e34e7ef8097d8bc23c05fefc4d9e8d604bcd76d7e48e3",
+      "populations": [
+        "clean_controls"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 0,
+      "negative": 3,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "negative",
+        "negative"
+      ],
+      "majority": "negative",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "488db83556b42172",
+      "circuit": "opamp",
+      "condition": "normal_logs",
+      "netlist_sha256": "488db83556b42172da6e34e7ef8097d8bc23c05fefc4d9e8d604bcd76d7e48e3",
+      "populations": [
+        "clean_controls"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 0,
+      "negative": 3,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "negative",
+        "negative"
+      ],
+      "majority": "negative",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "6102cb4e7f1039bc",
+      "circuit": "and4",
+      "condition": "netlist_only",
+      "netlist_sha256": "6102cb4e7f1039bc4e7c7a4ab8624cd0fd07bbdaab3928a77be8e3ca48a51264",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "6102cb4e7f1039bc",
+      "circuit": "and4",
+      "condition": "normal_logs",
+      "netlist_sha256": "6102cb4e7f1039bc4e7c7a4ab8624cd0fd07bbdaab3928a77be8e3ca48a51264",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "75f90dbbfef76189",
+      "circuit": "and4",
+      "condition": "netlist_only",
+      "netlist_sha256": "75f90dbbfef761893e3bac36c3c2fd101a8bf1a5874807d3eb93ac0c70335dbd",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "75f90dbbfef76189",
+      "circuit": "and4",
+      "condition": "normal_logs",
+      "netlist_sha256": "75f90dbbfef761893e3bac36c3c2fd101a8bf1a5874807d3eb93ac0c70335dbd",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "783dcaaeef8c4337",
+      "circuit": "opamp",
+      "condition": "netlist_only",
+      "netlist_sha256": "783dcaaeef8c43371ac25b4fb4ae786643df8ded168780291922a44f6a067878",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 0,
+      "negative": 3,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "negative",
+        "negative"
+      ],
+      "majority": "negative",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "783dcaaeef8c4337",
+      "circuit": "opamp",
+      "condition": "normal_logs",
+      "netlist_sha256": "783dcaaeef8c43371ac25b4fb4ae786643df8ded168780291922a44f6a067878",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 0,
+      "negative": 3,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "negative",
+        "negative"
+      ],
+      "majority": "negative",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "79e50055e0542697",
+      "circuit": "opamp",
+      "condition": "netlist_only",
+      "netlist_sha256": "79e50055e05426975d8124b2d50657bfc9260ee0e11a0d3b76e26e101d314210",
+      "populations": [
+        "positive_controls"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 2,
+      "negative": 1,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "negative",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": false
+    },
+    {
+      "case_id": "79e50055e0542697",
+      "circuit": "opamp",
+      "condition": "normal_logs",
+      "netlist_sha256": "79e50055e05426975d8124b2d50657bfc9260ee0e11a0d3b76e26e101d314210",
+      "populations": [
+        "positive_controls"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 0,
+      "negative": 3,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "negative",
+        "negative"
+      ],
+      "majority": "negative",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "7fccf5974326347a",
+      "circuit": "opamp",
+      "condition": "netlist_only",
+      "netlist_sha256": "7fccf5974326347aa00a385342bf4b2384121162f4f4cebf65658b755df6eda5",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "7fccf5974326347a",
+      "circuit": "opamp",
+      "condition": "normal_logs",
+      "netlist_sha256": "7fccf5974326347aa00a385342bf4b2384121162f4f4cebf65658b755df6eda5",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 0,
+      "negative": 3,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "negative",
+        "negative"
+      ],
+      "majority": "negative",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "8abfc5ccd6a73717",
+      "circuit": "and4",
+      "condition": "netlist_only",
+      "netlist_sha256": "8abfc5ccd6a73717be675db675363c40157351140499f625f28c666034d194d8",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "8abfc5ccd6a73717",
+      "circuit": "and4",
+      "condition": "normal_logs",
+      "netlist_sha256": "8abfc5ccd6a73717be675db675363c40157351140499f625f28c666034d194d8",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "8e60d4bb2ecd3d46",
+      "circuit": "opamp",
+      "condition": "netlist_only",
+      "netlist_sha256": "8e60d4bb2ecd3d468a599e9bbfb4f07ec3cddf822a61e575c5f44eff1f958497",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 2,
+      "negative": 1,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": false
+    },
+    {
+      "case_id": "8e60d4bb2ecd3d46",
+      "circuit": "opamp",
+      "condition": "normal_logs",
+      "netlist_sha256": "8e60d4bb2ecd3d468a599e9bbfb4f07ec3cddf822a61e575c5f44eff1f958497",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 0,
+      "negative": 3,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "negative",
+        "negative"
+      ],
+      "majority": "negative",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "92e7d3260a7c9d6f",
+      "circuit": "and4",
+      "condition": "netlist_only",
+      "netlist_sha256": "92e7d3260a7c9d6fef16e25a8625dea6fd4cbce04e368d17d9171b739ad67921",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "92e7d3260a7c9d6f",
+      "circuit": "and4",
+      "condition": "normal_logs",
+      "netlist_sha256": "92e7d3260a7c9d6fef16e25a8625dea6fd4cbce04e368d17d9171b739ad67921",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "9d815f034603dc72",
+      "circuit": "opamp",
+      "condition": "netlist_only",
+      "netlist_sha256": "9d815f034603dc72af07d9349a62c09e6cc73ed106f1520925a64edef45dec06",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "9d815f034603dc72",
+      "circuit": "opamp",
+      "condition": "normal_logs",
+      "netlist_sha256": "9d815f034603dc72af07d9349a62c09e6cc73ed106f1520925a64edef45dec06",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 1,
+      "negative": 2,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "negative",
+        "negative"
+      ],
+      "majority": "negative",
+      "unanimous_usable": false
+    },
+    {
+      "case_id": "9db1d3b2d3d9fd77",
+      "circuit": "opamp",
+      "condition": "netlist_only",
+      "netlist_sha256": "9db1d3b2d3d9fd77bf22319359373a0c1f8bf4abb2f265b5b24661126acb4211",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 2,
+      "negative": 0,
+      "unusable": 1,
+      "verdicts_by_repetition": [
+        "positive",
+        "unusable",
+        "positive"
+      ],
+      "majority": "unusable",
+      "unanimous_usable": false
+    },
+    {
+      "case_id": "9db1d3b2d3d9fd77",
+      "circuit": "opamp",
+      "condition": "normal_logs",
+      "netlist_sha256": "9db1d3b2d3d9fd77bf22319359373a0c1f8bf4abb2f265b5b24661126acb4211",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "9ebf44cbf71ae0a2",
+      "circuit": "opamp",
+      "condition": "netlist_only",
+      "netlist_sha256": "9ebf44cbf71ae0a257d020bbe714da7f2b4dda92c11248b6cd8aff989750efb9",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 2,
+      "negative": 0,
+      "unusable": 1,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "unusable"
+      ],
+      "majority": "unusable",
+      "unanimous_usable": false
+    },
+    {
+      "case_id": "9ebf44cbf71ae0a2",
+      "circuit": "opamp",
+      "condition": "normal_logs",
+      "netlist_sha256": "9ebf44cbf71ae0a257d020bbe714da7f2b4dda92c11248b6cd8aff989750efb9",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "ae2c935638454b43",
+      "circuit": "opamp",
+      "condition": "netlist_only",
+      "netlist_sha256": "ae2c935638454b43f5ae9da12a9e9e3f3c8334e06038a656cb128a82ed4ea01f",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 1,
+      "negative": 2,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "negative",
+        "positive"
+      ],
+      "majority": "negative",
+      "unanimous_usable": false
+    },
+    {
+      "case_id": "ae2c935638454b43",
+      "circuit": "opamp",
+      "condition": "normal_logs",
+      "netlist_sha256": "ae2c935638454b43f5ae9da12a9e9e3f3c8334e06038a656cb128a82ed4ea01f",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 0,
+      "negative": 3,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "negative",
+        "negative"
+      ],
+      "majority": "negative",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "b29b45674774f994",
+      "circuit": "and4",
+      "condition": "netlist_only",
+      "netlist_sha256": "b29b45674774f994875a2639623e0b319371a837a50e7a7bbe6fb91556235217",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 2,
+      "negative": 1,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": false
+    },
+    {
+      "case_id": "b29b45674774f994",
+      "circuit": "and4",
+      "condition": "normal_logs",
+      "netlist_sha256": "b29b45674774f994875a2639623e0b319371a837a50e7a7bbe6fb91556235217",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "b6876ec396da66ef",
+      "circuit": "opamp",
+      "condition": "netlist_only",
+      "netlist_sha256": "b6876ec396da66ef0a4832b36b798fc52e28fd5536992ae217050c652a25848a",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 1,
+      "negative": 2,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "positive",
+        "negative"
+      ],
+      "majority": "negative",
+      "unanimous_usable": false
+    },
+    {
+      "case_id": "b6876ec396da66ef",
+      "circuit": "opamp",
+      "condition": "normal_logs",
+      "netlist_sha256": "b6876ec396da66ef0a4832b36b798fc52e28fd5536992ae217050c652a25848a",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 0,
+      "negative": 3,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "negative",
+        "negative"
+      ],
+      "majority": "negative",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "ba4cb6cd3077301d",
+      "circuit": "opamp",
+      "condition": "netlist_only",
+      "netlist_sha256": "ba4cb6cd3077301d76d8f430ca9f5da7fc5f7529384b559954495489dfdce5d1",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "ba4cb6cd3077301d",
+      "circuit": "opamp",
+      "condition": "normal_logs",
+      "netlist_sha256": "ba4cb6cd3077301d76d8f430ca9f5da7fc5f7529384b559954495489dfdce5d1",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 1,
+      "negative": 2,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "negative",
+        "negative"
+      ],
+      "majority": "negative",
+      "unanimous_usable": false
+    },
+    {
+      "case_id": "bcc9576e13fa2114",
+      "circuit": "opamp",
+      "condition": "netlist_only",
+      "netlist_sha256": "bcc9576e13fa21143339b925e0e574c6b16ba72f71dad89b33ea4566ebe43138",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 0,
+      "negative": 3,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "negative",
+        "negative"
+      ],
+      "majority": "negative",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "bcc9576e13fa2114",
+      "circuit": "opamp",
+      "condition": "normal_logs",
+      "netlist_sha256": "bcc9576e13fa21143339b925e0e574c6b16ba72f71dad89b33ea4566ebe43138",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 0,
+      "negative": 3,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "negative",
+        "negative"
+      ],
+      "majority": "negative",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "c1c437c444686b3f",
+      "circuit": "and4",
+      "condition": "netlist_only",
+      "netlist_sha256": "c1c437c444686b3ffb6fae253431407ca79a60e30c823850a8f4cae85d37a39e",
+      "populations": [
+        "clean_controls"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 0,
+      "negative": 3,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "negative",
+        "negative"
+      ],
+      "majority": "negative",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "c1c437c444686b3f",
+      "circuit": "and4",
+      "condition": "normal_logs",
+      "netlist_sha256": "c1c437c444686b3ffb6fae253431407ca79a60e30c823850a8f4cae85d37a39e",
+      "populations": [
+        "clean_controls"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "ccc3a4d4408e2f02",
+      "circuit": "and4",
+      "condition": "netlist_only",
+      "netlist_sha256": "ccc3a4d4408e2f02d77e493f7f320a725144eb581db172e00147e97f886e3bd7",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 1,
+      "negative": 2,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "negative",
+        "positive"
+      ],
+      "majority": "negative",
+      "unanimous_usable": false
+    },
+    {
+      "case_id": "ccc3a4d4408e2f02",
+      "circuit": "and4",
+      "condition": "normal_logs",
+      "netlist_sha256": "ccc3a4d4408e2f02d77e493f7f320a725144eb581db172e00147e97f886e3bd7",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "d751a635d48cc30b",
+      "circuit": "opamp",
+      "condition": "netlist_only",
+      "netlist_sha256": "d751a635d48cc30b3ead1cedfbb1a07c2c3d7fabd0824da0518a4167b64ff959",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 3,
+      "negative": 0,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "positive",
+        "positive",
+        "positive"
+      ],
+      "majority": "positive",
+      "unanimous_usable": true
+    },
+    {
+      "case_id": "d751a635d48cc30b",
+      "circuit": "opamp",
+      "condition": "normal_logs",
+      "netlist_sha256": "d751a635d48cc30b3ead1cedfbb1a07c2c3d7fabd0824da0518a4167b64ff959",
+      "populations": [
+        "observed_candidates"
+      ],
+      "scheduled_reviews": 3,
+      "positive": 0,
+      "negative": 3,
+      "unusable": 0,
+      "verdicts_by_repetition": [
+        "negative",
+        "negative",
+        "negative"
+      ],
+      "majority": "negative",
+      "unanimous_usable": true
+    }
+  ],
+  "interpretation": {
+    "population": "Fixed previously generated netlists, not an independently sampled Trojan population",
+    "primary_unit": "Scheduled individual review, shown alongside distinct-netlist denominator",
+    "pairing": "Same exact netlist and repetition seed; both conditions freshly reviewed",
+    "controls": "Calibration-associated clean and known-positive controls reported separately",
+    "unusable": "Neither positive nor negative; retained in scheduled-review denominators",
+    "secondary_majority": "If any reply is unusable, the vote summary is unusable; otherwise at least two positive votes means positive and at least two negative votes means negative",
+    "inference": "Descriptive only: repeated judgments are not independent circuit samples; no confidence intervals or calibrated probabilities"
+  },
+  "source_sha256": {
+    "scripts/defense/analyze.py": "b80bb995d8c605e311029d093d64a0a1b562e815eab27e7c7642b1618226ca45",
+    "results/defense_comparison_v1/corpus.json": "e32a7cd88a2ed3f5a0ab3e1fe57fe76261d3f082119ccb2af8eebe4fc8858c07",
+    "results/defense_comparison_v1/manifest.json": "7eaa2c2072a3c84bb9ece6c164dfc50de3d14949a0e3ee3210fb74815bcb3e23",
+    "results/defense_comparison_v1/tasks.json": "ae1ec1d4bf7e8a669916fdaaa17c5e1dd08a0c80d4a7621ae4e767990b737a13",
+    "results/defense_comparison_v1/reviews.json": "4ed05347b96dcfbc97b38c9ed1f5e292257be4e28155625d928876be946336b3",
+    "results/defense_comparison_v1/completion.json": "c8b98ce78562e5110c059cee181950c4d43e83cba1b6f22fa5feb2afd4a3ddf8"
+  }
+}

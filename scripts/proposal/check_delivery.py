@@ -230,6 +230,27 @@ def check_analysis(root, run_ids, rows_by_run):
     return {"artifacts": files}
 
 
+def check_defense_comparison(root):
+    """Recompute the separate paired review audit without making API requests."""
+    from scripts.defense.verify import verify as verify_defense
+    folder = root / "results/defense_comparison_v1"
+    saved = read(folder / "independent_audit.json")
+    actual = verify_defense(root)
+    require(saved.get("passed") is True and saved.get("complete") is True,
+            "Supplementary detector comparison has not passed its independent audit")
+    require({key: value for key, value in saved.items() if key != "audited_at_utc"} == actual,
+            "Supplementary detector audit differs from raw evidence")
+    require(actual["corpus"]["unique_cases"] == 33
+            and actual["request_plan"]["planned_requests"] == 198
+            and actual["api"]["scheduled_reviews"] == 198,
+            "Supplementary detector allocation differs")
+    return {"distinct_circuits": 33, "scheduled_reviews": 198,
+            "usable_reviews": actual["api"]["usable_reviews"],
+            "unusable_reviews": actual["api"]["unusable_reviews"],
+            "matched_inputs_and_seeds_verified": True,
+            "independently_recounted_from_raw_responses": True}
+
+
 def check_delivery(root, report):
     """Return a complete check ledger; failed checks never become scientific successes."""
     config = read(root / "configs/proposal_experiment.json")
@@ -321,11 +342,22 @@ def check_delivery(root, report):
     stage("analysis", lambda: check_analysis(root, run_ids, rows_by_run),
           [f"results/{r}/summary.json" for r in run_ids] + [f"results/{r}/attempts.csv" for r in run_ids])
 
+    has_defense_comparison = (root / "configs/defense_comparison.json").exists()
+    if has_defense_comparison:
+        stage("supplementary_defense", lambda: check_defense_comparison(root),
+              ["configs/defense_comparison.json", "results/defense_comparison_v1/independent_audit.json",
+               "results/defense_comparison_v1/analysis.json", "results/defense_comparison_v1/reviews.json"])
+
     def report_check():
         from pypdf import PdfReader
         pdf = existing(root, str(report.relative_to(root)))
         provenance = read(pdf.with_suffix(".provenance.json"))
         check_provenance(root, provenance, pdf, run_ids, audit_paths)
+        if has_defense_comparison:
+            for name in ("analysis.json", "independent_audit.json"):
+                source = "results/defense_comparison_v1/" + name
+                require(provenance.get("analysis_sha256", {}).get(source) == sha(root / source),
+                        "Report lacks matching supplementary detector evidence: " + source)
         pages = PdfReader(pdf).pages
         require(3 <= len(pages) <= 5 and provenance["pages"] == len(pages), "Report page count is outside 3-5 or differs from provenance")
         require(all(len(page.extract_text().strip()) > 100 for page in pages), "Report contains an empty/unreadable page")

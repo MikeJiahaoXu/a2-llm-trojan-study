@@ -12,6 +12,10 @@ def main():
     required=['main_v2/completion.json', 'strong_attacker_v1/completion.json',
               'cross_review_v1/completion.json', 'evasion_recheck_v1/summary.json']
     required.extend(run+'/completion.json' for run in active['run_seeds'])
+    defense_config=ROOT/'configs/defense_comparison.json'
+    defense_run=json.loads(defense_config.read_text())['run_id'] if defense_config.exists() else None
+    if defense_run:
+        required.append(defense_run+'/completion.json')
     for evidence in required:
         completion=ROOT/'results'/evidence
         if not completion.exists() or not json.loads(completion.read_text()).get('complete'):
@@ -28,8 +32,19 @@ def main():
     delivery=ROOT/'results/proposal_completion.json'
     if not delivery.exists() or not json.loads(delivery.read_text()).get('complete'):
         raise RuntimeError('Final delivery checks have not passed.')
+    if defense_run:
+        defense_audit=ROOT/'results'/defense_run/'independent_audit.json'
+        if not defense_audit.exists() or not json.loads(defense_audit.read_text()).get('passed'):
+            raise RuntimeError('Supplementary detector audit missing.')
+        if not json.loads(delivery.read_text()).get('checks',{}).get('supplementary_defense',{}).get('passed'):
+            raise RuntimeError('Final delivery checks do not include the supplementary detector experiment.')
     report=ROOT/'output/pdf/A2_Trojan_LLM_Informal_Report'
     provenance=json.loads(report.with_suffix('.provenance.json').read_text())
+    if defense_run:
+        for name in ('analysis.json','independent_audit.json'):
+            source='results/'+defense_run+'/'+name
+            if provenance.get('analysis_sha256',{}).get(source)!=hashlib.sha256((ROOT/source).read_bytes()).hexdigest():
+                raise RuntimeError('Report is not bound to the supplementary evidence: '+source)
     for suffix,field in [('.pdf','pdf_sha256'),('.txt','text_sha256')]:
         if hashlib.sha256(report.with_suffix(suffix).read_bytes()).hexdigest()!=provenance[field]:
             raise RuntimeError('Report differs from its verified provenance: '+suffix)

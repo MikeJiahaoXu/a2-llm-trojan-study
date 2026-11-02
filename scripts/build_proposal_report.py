@@ -245,6 +245,53 @@ def load_attempt_budget(primary, replication):
     return data, pooled, path
 
 
+def load_defense_comparison():
+    """Recount the completed, independently audited supplementary reviews."""
+    directory = ROOT / "results/defense_comparison_v1"
+    analysis_path = directory / "analysis.json"
+    audit_path = directory / "independent_audit.json"
+    analysis, audit = load_json(analysis_path), load_json(audit_path)
+    completion = load_json(directory / "completion.json")
+    if not all(item.get("complete") is True for item in (analysis, audit, completion)) or audit.get("passed") is not True:
+        raise ValueError("Supplementary defense comparison is incomplete or unaudited")
+    for evidence in (analysis, audit):
+        for name, expected in evidence["source_sha256"].items():
+            if file_hash(ROOT / name) != expected:
+                raise ValueError("Supplementary defense evidence changed: " + name)
+    manifest = load_json(directory / "manifest.json")
+    config = manifest["config"]
+    if config["model"] != "gpt-4o-mini-2024-07-18" or config["temperature"] != 0 or config["repetitions"] != 3:
+        raise ValueError("Supplementary model or repetition settings differ from report prose")
+    corpus = load_json(directory / "corpus.json")
+    cases = {case["case_id"]: case for case in corpus["cases"]}
+    reviews = load_json(directory / "reviews.json")
+    if len(cases) != 33 or len(reviews) != 198 or len({r["call_id"] for r in reviews}) != 198:
+        raise ValueError("Supplementary corpus or review count differs from declared scope")
+    groups = {}
+    for recorded in analysis["groups"]:
+        population, circuit, condition = recorded["population"], recorded["circuit"], recorded["condition"]
+        def belongs(case):
+            if population == "observed_candidates":
+                return any(m["kind"] == "candidate" for m in case["memberships"])
+            label = "clean" if population == "clean_controls" else "positive"
+            return any(m["kind"] == "control" and m["control_label"] == label for m in case["memberships"])
+        chosen = {key for key, case in cases.items() if case["circuit"] == circuit and belongs(case)}
+        rows = [r for r in reviews if r["case_id"] in chosen and r["condition"] == condition]
+        recounted = {"distinct_cases": len(chosen), "scheduled_reviews": len(rows),
+                     "positive": sum(r["usable"] and r["output"]["is_trojan"] is True for r in rows),
+                     "negative": sum(r["usable"] and r["output"]["is_trojan"] is False for r in rows),
+                     "unusable": sum(not r["usable"] for r in rows)}
+        if any(recorded[k] != v for k, v in recounted.items()):
+            raise ValueError("Supplementary analysis disagrees with raw reviews")
+        groups[circuit, population, condition] = recounted
+    if len(groups) != 12:
+        raise ValueError("Supplementary comparison is missing a population or condition")
+    clean_and = next(case for case in cases.values() if case["circuit"] == "and4" and case["label"] == "clean")
+    clean_summary = json.loads(clean_and["summary_text"])
+    return {"analysis": analysis, "groups": groups, "clean_and_summary": clean_summary,
+            "source_sha256": {str(path.relative_to(ROOT)): file_hash(path) for path in (analysis_path, audit_path)}}
+
+
 def make_budget_figure(pooled, destination):
     import matplotlib
     matplotlib.use("Agg")
@@ -434,6 +481,7 @@ def build(primary_id, replication_id, output):
     budget, budget_groups, budget_path = load_attempt_budget(primary, replication)
     budget_figure = assets / "attempt_budget.png"
     make_budget_figure(budget_groups, budget_figure)
+    defense = load_defense_comparison()
     report = ReportLayout()
     p, table = report.p, report.table
     clean = qualification["clean_results"]
@@ -508,56 +556,54 @@ def build(primary_id, replication_id, output):
       "candidate or stop after an escape; it continues for the fixed number of attempts. Thus, feedback "
       "can lead to a useful revision, an unnecessary change, or a return to an earlier design.")
 
-    # Page 2: clarify the commented methods while preserving the preceding prose.
+    # Page 2: clarify the commented methods; keep the approved first page intact.
     report.new_page()
     p("Methodology (continued)", "h1")
-    p("Binary and full also receive their own preceding candidate's choices; none has no history. "
-      "Full includes the verdict and confidence as well as suspicious nodes and explanation. "
-      "Feedback goes only to the attacker. The detector uses a fresh request with fixed prompts "
-      "and weights each time; it does not learn during the loop. Its control-based prompt calibration "
+    p("Binary and full also receive their preceding candidate's choices; none has no history. "
+      "Full includes verdict and confidence. Feedback goes only to the attacker. The detector "
+      "uses fresh requests with fixed prompts and weights; its control-based prompt calibration "
       "occurred before the final attacks.")
-    p("Each session contains ten attempts: one initial proposal followed by nine further requests. "
-      "We run two sessions per condition in each of two execution batches, for <b>four sessions and "
-      "40 attempts per circuit/condition</b>. The batches use different predeclared seeds with the "
-      "same model, prompts and circuit settings. The same initial candidate and review start all three "
-      "conditions within a session. None continues with fresh requests; binary and full revise from "
-      "the preceding attempt.")
-    p("Circuits and permitted modifications", "h2")
-    p("We use a two-stage op-amp and a four-input AND because they provide two readily checked kinds "
-      "of behavior: continuous amplification and a digital truth table. Small circuits also keep "
-      "simulation and manual inspection manageable. Both use 3.3 V supplies. Their clean versions "
-      "are verified before any modification:")
+    p("Each session has ten attempts: one initial proposal and nine further requests. Two sessions "
+      "in each of two execution batches give <b>four sessions and 40 attempts per circuit/condition</b>. "
+      "Batches use different predeclared seeds with the same model, prompts and circuits. The initial "
+      "candidate and review are shared across conditions within each session. None makes fresh "
+      "requests; binary and full revise from the preceding attempt.")
+    p("Circuits and electrical checks", "h2")
+    p("The two circuits provide readily checked analog and digital behavior while keeping simulation "
+      "manageable. We verify their clean versions at 3.3 V before modification:")
     op = clean["opamp"]["metrics"]
     gate = clean["and4"]["metrics"]
     table(["Clean circuit", "Verification"], [
         ["Two-stage op-amp", f"Open-loop gain {op['dc_gain_db']:.2f} dB; -3 dB bandwidth {op['bandwidth_3db_hz']:.2f} Hz; unity-gain frequency {op['unity_gain_hz']/1e6:.3f} MHz; phase margin {op['phase_margin_deg']:.2f} degrees."],
         ["Four-input AND", f"{gate['truth_table_passed']}/16 logic cases pass. Rise delay {gate['rise_delay_ns']:.4f} ns; fall delay {gate['fall_delay_ns']:.4f} ns when all four inputs fall together (100 fF load, 100 ps edges)."],
     ], [112, 404])
-    p("The trigger works like a leaky bucket. Input transitions add charge through a coupling "
-      "capacitor and two diodes to a 10 pF reservoir; a resistor slowly drains it. Rapid activity "
-      "can raise the reservoir above a threshold, enabling an extra branch that pulls an output "
-      "or internal node toward a supply rail. The intended pattern is ordinary behavior while "
-      "dormant and an output disturbance after activation. This captures A2's charge-accumulation "
-      "idea, using simulation models rather than fabricated hardware.")
-    p("The attacker chooses among three op-amp sites (output, gain node or mirror-reference node) "
-      "and two AND sites (final output or the NAND node feeding its inverter). Each site has three "
-      "branch representations, three RC/threshold profiles and three strengths: <b>81 op-amp and "
-      "54 AND configurations</b>. The representations are a switch, smooth conductance and MOSFET; "
-      "the MOSFET option uses an ideal reservoir comparator. This bounded menu makes the experiment "
-      "about selecting and revising effective modifications, without mixing in arbitrary netlist "
-      "syntax failures.")
-    p("Electrical checks and their purpose", "h2")
-    p("A candidate must pass two checks to count as an escape. <b>Normal behavior:</b> the op-amp "
-      "follower stays within 20 mV of its clean reference; AND retains all 16 logic cases and stays "
-      "within 0.2 V at settled outputs. <b>Activation:</b> the op-amp output falls at least 0.3 V "
-      "below its reference, and AND's high output falls by at least 0.8 V. A harmless added branch "
-      "or a permanently broken circuit would therefore not qualify merely because the LLM missed it.")
+    p("The trigger works like a leaky bucket: input transitions add charge through a capacitor and "
+      "two diodes to a 10 pF reservoir; a resistor drains it. Rapid activity can cross a threshold, "
+      "enabling a branch that pulls an output or internal node toward a supply rail. These are "
+      "A2-inspired simulation models, not fabricated hardware.")
+    p("The op-amp permits output, gain-node or mirror-reference insertions; AND permits output or "
+      "internal NAND-node insertions. Each site has three representations (switch, smooth conductance "
+      "or MOSFET), three RC/threshold profiles and three strengths: <b>81 op-amp and 54 AND choices</b>. "
+      "The MOSFET uses an ideal reservoir comparator. This finite menu avoids arbitrary syntax failures.")
+    p("For validity, the op-amp follower must stay within 20 mV of its clean reference during normal "
+      "operation and fall at least 0.3 V below it after activation. AND must preserve all 16 logic "
+      "cases, stay within 0.2 V at settled outputs and lose at least 0.8 V from its activated high "
+      "output. Thus a harmless modification or permanently broken circuit does not qualify.")
     p("The op-amp changes from 1.65 V +/- 50 mV at 10 kHz to a 0.6-2.7 V, 1 MHz burst at 5-45 us; "
-      "the output drop is measured at absolute time 50-60 us. Both amplitude and frequency change, "
-      "so frequency alone is not isolated. AND receives a 1 MHz burst on input a while b, c and d "
-      "are high. All 135 allowed configurations passed the declared tests before the LLM runs, and "
-      "each generated candidate was simulated again. Validity therefore measures selection from "
-      "a qualified menu, not unrestricted LLM circuit-design ability.")
+      "its drop is measured at absolute time 50-60 us. Both amplitude and frequency change. AND "
+      "receives a 1 MHz burst on a with b, c and d high. All 135 configurations were qualified before "
+      "the LLM runs and each candidate was re-simulated; validity is not unrestricted LLM design ability.")
+    p("Separate comparison: normal-operation evidence", "h2")
+    p("We additionally review the 29 observed netlists plus two clean and two known-positive "
+      "controls, deduplicated to 33 circuits. Each receives three fresh paired reviews: netlist "
+      "alone versus the same netlist with normal-test summaries. Both arms use the same model "
+      "snapshot as above at temperature <b>0</b>, a shared prompt and matched seeds per pair "
+      "(best-effort consistency), in randomized order. This is separate from the temperature-0.3 "
+      "attack experiment. Summaries contain normal I/O samples, all internal-node voltage statistics "
+      "and supply current, extracted uniformly; they contain no activation tests, golden-reference "
+      "differences or labels. All 198 scheduled reviews are retained without retuning. Neither "
+      "the attacker nor its menu is changed, and the defender does not learn online.")
+
     # Page 3: clearly distinguish original per-attempt results from post-hoc budgets.
     report.new_page()
     p("Results", "h1")
@@ -571,8 +617,7 @@ def build(primary_id, replication_id, output):
     p("An <b>escape</b> requires electrical validity and a usable negative Trojan verdict. The "
       "original outcome is escapes per attempt. To separate one request from a larger request "
       "budget, we also retrospectively summarize the saved first attempt and whether any of ten "
-      "attempts escaped. These additional summaries use existing records; no new experiments "
-      "were performed.")
+      "attempts escaped. These request-budget summaries reuse the original attack records.")
     table(["Circuit", "Feedback", "First attempt", "Any within 10", "All attempts"], [
         [NAMES[c], level,
          f"{budget_groups[c,level]['first_attempt_success']['successes']}/4",
@@ -582,19 +627,30 @@ def build(primary_id, replication_id, output):
     p("Table 1. First-attempt and any-within-ten columns count sessions (four per group); the "
       "original all-attempt column counts requests (40 per group). Initial outcomes are shared "
       "across conditions. Repeated netlists and unsuccessful reviews are retained.", "small")
-    report.figure(budget_figure)
-    p("Figure 1. Retrospective cumulative opportunity to observe at least one escape. Each curve "
-      "summarizes four sessions. More opportunities can reveal a "
-      "miss even without a design change; this is not a measure of learning alone.", "small")
-    p("For the op-amp, both revision conditions have 13/40 escapes while none has 0/40. Binary "
-      "finds an escape in all four sessions and full in three. For AND, the per-attempt order is "
-      "none 10/40, binary 9/40 and full 6/40; none and binary each find an escape in all four "
-      "sessions. Detailed explanation therefore does not consistently improve either measure.")
-    p("Finding one escape is also different from retaining it. At attempt ten, op-amp binary and "
-      "full each escape in only 1/4 sessions; AND binary and full are both 0/4. The loop continues "
-      "after an escape and may replace a previously successful design. With only four sessions and "
-      "dependent steps within them, these proportions are descriptive rather than evidence of "
-      "statistical superiority.")
+    p("Supplementary paired detector comparison", "h2")
+    p("Table 2 counts positive Trojan verdicts on fixed circuits, separately from the attack "
+      "escape rates above. Three fresh judgments per circuit give 198 requests, of which 195 "
+      "produce usable verdicts.")
+    defense_rows = []
+    population_names = {"observed_candidates": "Observed candidates", "clean_controls": "Clean control", "positive_controls": "Known-positive control"}
+    for population in ("observed_candidates", "clean_controls", "positive_controls"):
+        for circuit in CIRCUITS:
+            left = defense["groups"][circuit, population, "netlist_only"]
+            right = defense["groups"][circuit, population, "normal_logs"]
+            name = "Op-amp" if circuit == "opamp" else "AND"
+            defense_rows.append([f"{name}: {population_names[population]} ({left['distinct_cases']})",
+                                 f"{left['positive']}/{left['scheduled_reviews']}",
+                                 f"{right['positive']}/{right['scheduled_reviews']}"])
+    table(["Population (distinct circuits)", "Netlist only: flags", "Normal logs: flags"],
+          defense_rows, [248, 134, 134])
+    p("Table 2. Flags over all scheduled reviews, including failures. The three truncated reviews "
+      "occur in netlist-only op-amp candidates: 39 flags, 18 negative verdicts and 3 unusable replies. "
+      "With logs, these become 10 flags and 50 negative verdicts. Every other cell has no unusable "
+      "replies. Controls are repeated judgments of particular designs, not held-out accuracy estimates.", "small")
+    p("Normal logs do not produce a general improvement. They increase AND candidate detection "
+      "from 21/27 to 27/27, but also flag its clean control 3/3 times: all 33 AND reviews in that "
+      "condition are positive. Op-amp detection instead drops from 39/60 to 10/60. Among its 57 "
+      "usable pairs, 33 change from positive to negative and only two change in the other direction.")
 
     # Page 4: retain batch/control evidence and explain the revealing AND case.
     report.new_page()
@@ -604,12 +660,12 @@ def build(primary_id, replication_id, output):
         [NAMES[c], " / ".join(str(group(primary,c,l)["successes"]) for l in LEVELS),
          " / ".join(str(group(replication,c,l)["successes"]) for l in LEVELS)] for c in CIRCUITS],
         [122, 197, 197])
-    p("Table 2. Escape counts, each out of 20 attempts. Both batches contain two ten-attempt "
+    p("Table 3. Escape counts, each out of 20 attempts. Both batches contain two ten-attempt "
       "sessions per group; neither batch is a one-shot condition.", "small")
     p("Full slightly exceeds binary for the op-amp in batch 1, but binary exceeds full in batch 2. "
       "AND also changes between batches. Pooling increases the number of observations; it does "
       "not remove this variation or establish a general none &lt; binary &lt; full ordering.")
-    p("Detector controls", "h2")
+    p("Controls in the original attack experiment", "h2")
     p("Two prompt refinements using recorded control results preceded every attack in the final "
       "experiment. Final controls reuse those benchmark designs and are <b>not held out</b>. "
       "They test repeated judgments of four particular circuits, not general detector accuracy. "
@@ -640,53 +696,51 @@ def build(primary_id, replication_id, output):
       "designs. Thus both spend half their attempts on consistently detected choices. Full does "
       "not use this site more often than binary, so that alone cannot explain their difference.")
     report.figure(waveform, width=450)
-    p("Figure 2. Clean and known-positive outputs: op-amp after the burst and AND during the burst. "
-      "These traces establish electrical effects; the detector does not receive them.", "small")
+    p("Figure 1. Clean and known-positive outputs: op-amp after the burst and AND during the burst. "
+      "These activation traces establish electrical effects; neither review condition receives them.", "small")
 
-    # Page 5: concise interpretation, comparison and balanced security conclusion.
+    # Page 5: compare the two studies without claiming general defensive benefit.
     report.new_page()
     p("Discussion", "h1")
-    p("What may account for the results?", "h2")
-    p("The op-amp no-feedback requests repeatedly select one configuration and produce no escape "
-      "(39 flags and one unusable review). The revision conditions explore other sites and "
-      "representations. Conditioning on the preceding proposal and verdict may help leave that "
-      "default, but our comparison does not separate candidate history from feedback. For AND, "
-      "an unchanged output-shunt design is already missed intermittently, while revisions often "
-      "move to detected internal-node changes. Pulling the NAND node high directly forces the "
-      "following inverter's output low; that interference may be easier to recognize. We did not "
-      "isolate this mechanism experimentally. Nor did we vary circuit complexity independently "
-      "of the 54-choice AND and 81-choice op-amp menus.")
-    p("Why this differs from the papers", "h2")
-    p("<b>Metric and evidence.</b> LATENT's 23.7% and 94.4% figures summarize the proportion of "
-      "inserted components escaping localization in resulting designs [3, Table I]. A design can "
-      "score highly on that measure while still being flagged through one detected component. "
-      "Our whole-candidate verdict is stricter in this sense, and our per-attempt denominator "
-      "includes all requests. SPICED gives the reviewer voltage/current logs, specifications and "
-      "few-shot anomaly rules as well as the netlist [2, Sec. IV and Table III]. Our netlist-only "
-      "reviewer must infer behavior from structure, which may help explain why an electrically "
-      "harmful branch can be described as harmless.")
-    p("<b>Search and activation.</b> LATENT permits broader component/node edits, uses simulation-informed "
-      "diagnosis and reverts to a previous undetected configuration after detection. It reports "
-      "6-12 iterations and studies DC-activated Trojans [3, Secs. IV-V]. We use ten fixed attempts, "
-      "a qualified finite menu, preceding-review feedback and no rollback, with transient charge "
-      "accumulation. Our retrospective one-versus-ten comparison is therefore a request-budget "
-      "summary, not a reproduction of LATENT's one-shot comparison. LATENT also uses GPT-4o-mini "
-      "at temperature 0.3 for both roles; these results do not test whether a newer model improves "
-      "attack or defense.")
-    p("Does the LLM help the attacker or defender more?", "h2")
-    p("The evidence supports a limited answer. Reviews often identify our effective modifications, "
-      "but misses and inconsistent judgments prevent relying on the reviewer alone. Exposed "
-      "feedback is associated with more op-amp escapes, yet detailed explanations do not outperform "
-      "Boolean verdicts consistently and do not improve AND's per-attempt result. A designer could "
-      "use explanations and simulation to investigate suspicious behavior; an attacker can use "
-      "the same clues to choose revisions. We tested only feedback disclosure against a fixed "
-      "reviewer. Without a non-LLM comparison or a defender that learns from reviews, we cannot "
-      "quantify which side gains more overall.")
-    p("The conclusions are bounded by four sessions per group, repeated netlists, calibrated "
-      "controls and the repeat gate deviation. Electrical validity covers the declared nominal "
-      "stimuli, not process variation or silicon. The main finding is that more feedback detail "
-      "does not guarantee more evasion: search choices, repeated-review variation and the definition "
-      "of success all matter.")
+    p("Feedback and search choices", "h2")
+    p("In the original attack experiment, op-amp revision conditions produce more escapes than "
+      "none, but full and binary tie at 13/40. AND shows the reverse per-attempt order: none 10/40, "
+      "binary 9/40, full 6/40. Detailed feedback therefore has no consistent advantage. Revisions "
+      "explore alternatives but can leave an intermittently missed design for a detected one. "
+      "Candidate history differs between none and revision conditions; circuit complexity and "
+      "menu size were not varied independently. These results do not isolate their causal effects.")
+    p("What the normal logs changed", "h2")
+    clean_summary = defense["clean_and_summary"]
+    p(f"All three log-assisted reviews of the clean AND cite its internal n2 maximum of "
+      f"{clean_summary['internal_voltage_V']['n2']['max']:.2f} V, above the 3.3 V supply, and a negative "
+      "output value. Both features already occur in the uniformly sampled data from the unmodified "
+      "clean model, whose 16 logic cases pass. They do not establish a Trojan. Conversely, some negative "
+      "op-amp reviews invoke normal operation as evidence against an unauthorized modification, "
+      "even though the candidate's separate activation test demonstrates a harmful effect. These "
+      "are recorded rationales, not proof of the model's internal reasoning. They illustrate two "
+      "risks: treating ordinary observed voltage features as malicious, and treating normal tests "
+      "as proof that a conditional mechanism is harmless.")
+    p("Relation to SPICED and LATENT", "h2")
+    p("SPICED combines netlists, voltage/current logs, specifications and few-shot anomaly rules "
+      "[2, Sec. IV and Table III]. Our supplement supplies only normal-operation summaries, including "
+      "supply current rather than per-transistor currents; it does not reproduce SPICED's "
+      "activation-informed diagnosis. More evidence can help only if its meaning and test coverage "
+      "are interpreted correctly.")
+    p("LATENT's 23.7% and 94.4% figures concern inserted components escaping localization in resulting "
+      "designs [3, Table I], whereas we count whole-candidate negative verdicts over all attempts. "
+      "LATENT uses broader component/node edits, simulation-informed diagnosis, reversion to a "
+      "previous undetected configuration and 6-12 iterations; it studies DC-activated Trojans "
+      "[3, Secs. IV-V]. We use fixed ten-attempt sessions, finite choices, no rollback and transient "
+      "activation. LATENT also uses GPT-4o-mini at temperature 0.3; we did not test model progress.")
+    p("Attacker or defender advantage?", "h2")
+    p("The two studies show that neither richer attacker feedback nor additional normal-test evidence "
+      "guarantees a better outcome. The supplement measures reviews of fixed, previously generated "
+      "circuits; it does not test new adaptive attacks against the supplemented detector. Both "
+      "studies keep the reviewer fixed, so neither measures online learning. Without a non-LLM "
+      "comparison, we cannot quantify which side benefits more overall. Four attack sessions per "
+      "group, reused calibration controls, the original repeat gate deviation and simulations at "
+      "a single supply and nominal model settings limit generalization. The control designs are not held out, and repeated "
+      "reviews do not increase their number.")
     p("References", "h2")
     p('[1] K. Yang et al. "A2: Analog Malicious Hardware." IEEE S&amp;P, 2016, pp. 18-37. '
       '<link href="https://doi.org/10.1109/SP.2016.10">doi:10.1109/SP.2016.10</link>.', "small")
@@ -703,7 +757,8 @@ def build(primary_id, replication_id, output):
                   "calibration_controls_sha256": calibration["source_sha256"],
                   "audit_sha256": audits,
                   "analysis_sha256": {str(diagnostic_path.relative_to(ROOT)): file_hash(diagnostic_path),
-                                      str(budget_path.relative_to(ROOT)): file_hash(budget_path)},
+                                      str(budget_path.relative_to(ROOT)): file_hash(budget_path),
+                                      **defense["source_sha256"]},
                   "protocol_deviation_sha256": {str(deviation_path.relative_to(ROOT)): file_hash(deviation_path)},
                   "pdf_sha256": file_hash(output), "text_sha256": file_hash(output.with_suffix(".txt"))}
     output.with_suffix(".provenance.json").write_text(json.dumps(provenance, indent=2)+"\n")

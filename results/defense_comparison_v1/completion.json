@@ -1,0 +1,19 @@
+{
+  "complete": true,
+  "protocol": "defense_comparison_v1",
+  "completed_at_utc": "2026-11-02T09:38:05.310668+00:00",
+  "planned_reviews": 198,
+  "recorded_reviews": 198,
+  "usable_reviews": 195,
+  "unusable_reviews": 3,
+  "cases": 33,
+  "manifest_sha256": "7eaa2c2072a3c84bb9ece6c164dfc50de3d14949a0e3ee3210fb74815bcb3e23",
+  "tasks_sha256": "ae1ec1d4bf7e8a669916fdaaa17c5e1dd08a0c80d4a7621ae4e767990b737a13",
+  "reviews_sha256": "4ed05347b96dcfbc97b38c9ed1f5e292257be4e28155625d928876be946336b3",
+  "budget": {
+    "project_committed_usd": 0.4690632,
+    "supplement_committed_usd": 0.04755735,
+    "project_cap_usd": 6.5,
+    "supplement_cap_usd": 2.0
+  }
+}

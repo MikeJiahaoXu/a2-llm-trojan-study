@@ -1,6 +1,6 @@
 {
   "complete": true,
-  "checked_at_utc": "2026-11-02T08:13:39.009159+00:00",
+  "checked_at_utc": "2026-11-02T09:45:29.957496+00:00",
   "protocol": "proposal_v3",
   "execution_runs": [
     "proposal_main_v3",
@@ -475,6 +475,23 @@
         ]
       }
     },
+    "supplementary_defense": {
+      "passed": true,
+      "evidence": [
+        "configs/defense_comparison.json",
+        "results/defense_comparison_v1/independent_audit.json",
+        "results/defense_comparison_v1/analysis.json",
+        "results/defense_comparison_v1/reviews.json"
+      ],
+      "details": {
+        "distinct_circuits": 33,
+        "scheduled_reviews": 198,
+        "usable_reviews": 195,
+        "unusable_reviews": 3,
+        "matched_inputs_and_seeds_verified": true,
+        "independently_recounted_from_raw_responses": true
+      }
+    },
     "report": {
       "passed": true,
       "evidence": [
@@ -483,8 +500,8 @@
       ],
       "details": {
         "pages": 5,
-        "pdf_sha256": "280afc9d46b2fec30c8dd00f6890e680ea19227bb436f4de4d420b1bf9eeb90d",
-        "text_sha256": "f6b46fc0b2098784377e7030a71b3972b031935560ea8c4525759271acfe39be",
+        "pdf_sha256": "8c85c87ba037ef3314a094f2c4c073090a8c7705d58847120b4d409cf439f2fa",
+        "text_sha256": "16396795470cc179df8ccf26299ff83727d0b465cf92f0d911d968bae72d47d6",
         "provenance_bound_to_configured_runs": true
       }
     },
@@ -811,7 +828,7 @@
       }
     ]
   },
-  "checker_sha256": "afce5e8785409176d1d5ac7b635d4b0d715a6d15174e7a0de2a26f00b4ae63c2",
+  "checker_sha256": "9f64d96d25e734632ea8b5fe0429e2d634141d3a304a13dea81d5ac940c391a8",
   "requirements_sha256": "261942372156c1f7d82d227659e219bc7d90f90a56fc235f5be3a0e705fdcde9",
   "scope": "Evidence and deliverable completeness for the declared course-scale proposal. This is not full reproduction of A2, SPICED, or LATENT, a general security guarantee, or proof that a feedback condition is superior.",
   "verification_limits": "Machine checks bind artifacts, counts, routing, physical tests, and report provenance. Scientific interpretation and visual presentation also require human review."

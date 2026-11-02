@@ -1,0 +1,108 @@
+{
+  "protocol": "defense_comparison_v1",
+  "run_id": "defense_comparison_v1",
+  "config": {
+    "protocol": "defense_comparison_v1",
+    "run_id": "defense_comparison_v1",
+    "corpus": "results/defense_comparison_v1/corpus.json",
+    "prompt": "configs/defense_detector.txt",
+    "protocol_document": "docs/Defense_Comparison_Protocol_2026-11-02.txt",
+    "circuits": [
+      "opamp",
+      "and4"
+    ],
+    "conditions": [
+      "netlist_only",
+      "normal_logs"
+    ],
+    "repetitions": 3,
+    "model": "gpt-4o-mini-2024-07-18",
+    "temperature": 0,
+    "max_tokens": 1200,
+    "seed_base": 310101,
+    "seed_stride": 10,
+    "order_seed": 310707,
+    "expected_cases": 33,
+    "expected_observed_cases": {
+      "opamp": 20,
+      "and4": 9
+    },
+    "expected_controls_per_circuit": {
+      "clean": 1,
+      "positive": 1
+    },
+    "project_hard_cap_usd": 6.5,
+    "supplement_hard_cap_usd": 2.0,
+    "prices_per_million": {
+      "input": 0.15,
+      "cached_input": 0.075,
+      "output": 0.6
+    },
+    "transport_recovery": "at most one distinct-ID retry; retain original uncertain reservation; no HTTP or output-error retry",
+    "analysis": "All scheduled reviews retained; observed candidates and controls reported separately; descriptive paired changes and secondary three-review majority; no IID confidence intervals or online adaptation"
+  },
+  "source_sha256": {
+    "configs/defense_comparison.json": "c8a02279c1242802ac429ee53a0bf15597599a6f53aab1857a7d86ec0061e417",
+    "configs/defense_detector.txt": "b09c005b018a12bdb05a07d8cb7c1862313761a8a98b08f6f04b873cac006661",
+    "docs/Defense_Comparison_Protocol_2026-11-02.txt": "efc01c7b7b410429071506dbf8bbde03e1d8c4ea381d7eede640b130d5336528",
+    "scripts/defense/__init__.py": "6eae3a46cf36acbba01bbcbc75039f7c3e73dd4aaa97157a5ed68437cc78dc9f",
+    "scripts/defense/client.py": "578f5abc5794b02ee6aeb623c2d90de0b0a2d8419ad1bb40aac232809d7f9822",
+    "scripts/defense/experiment.py": "ceb001b4444acdea102bc3ad60c119cf4b12821be90e5ea75f71254e9230306c",
+    "scripts/defense/prepare.py": "4d1c023c89bfff5040ce613709e7767f8e300cb12c3ab3fb76b2f2ec9de742a6",
+    "scripts/detector/review.py": "ba91dfd73362c12b37f18d0acdaff4b5f25c2efeebad381fe4b73092aef1d661",
+    "scripts/llm_client.py": "1725f16d565ef8347dff05cbb9f9751adca002a5c2bb8c847b0297b40e0cf943",
+    "scripts/request_recovery.py": "e8945cac06d2aa7675c75747b6dcd64a7ed79f2ce9b7e262f25ebad1779a83a8"
+  },
+  "corpus_sha256": "e32a7cd88a2ed3f5a0ab3e1fe57fe76261d3f082119ccb2af8eebe4fc8858c07",
+  "tasks_content_sha256": "07a7bed1aa290375662eaedf40b857eed5c490f488dc35fb766579609c104ba7",
+  "planned_primary_requests": 198,
+  "cases": 33,
+  "conditions": [
+    "netlist_only",
+    "normal_logs"
+  ],
+  "repetitions": 3,
+  "seed_rule": "seed_base + seed_stride * zero_based_sorted_circuit_case_index + zero_based_repetition",
+  "order_seed": 310707,
+  "output_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "is_trojan": {
+        "type": "boolean"
+      },
+      "confidence": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      },
+      "suspect_nodes": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "feedback_text": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "is_trojan",
+      "confidence",
+      "suspect_nodes",
+      "feedback_text"
+    ]
+  },
+  "primary_reservation_bound_usd": 0.38554155,
+  "one_transport_recovery_per_task_bound_usd": 0.7710831,
+  "control_gate": "none; retain every scheduled control and observed-case result",
+  "frozen_at_utc": "2026-11-02T09:29:09.477593+00:00",
+  "budget_at_freeze": {
+    "project_committed_usd": 0.42150585,
+    "supplement_committed_usd": 0,
+    "project_cap_usd": 6.5,
+    "supplement_cap_usd": 2.0
+  },
+  "tasks_file_sha256": "ae1ec1d4bf7e8a669916fdaaa17c5e1dd08a0c80d4a7621ae4e767990b737a13",
+  "status": "frozen_before_paid_requests"
+}

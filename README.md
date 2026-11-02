@@ -5,14 +5,15 @@ An Information Security course project studying whether more detailed circuit-de
 ## Read the results
 
 - [Five-page informal report](output/pdf/A2_Trojan_LLM_Informal_Report.pdf)
-- [Response to collaborator comments](docs/Report_Revision_Notes_2026-11-02.txt) (Chinese): explains the report changes and the corrected one-shot comparison.
+- [Response to collaborator comments](docs/Report_Revision_Notes_2026-11-02.txt) (Chinese): explains the report changes, the corrected one-shot comparison, and the separate detector experiment.
 - [Previous presentation](output/slides/a2_feedback/output.pptx): retained unchanged; it predates the current report revision and will be updated after the report is agreed.
 - [First-run group results](results/proposal_main_v3/groups.csv) and [repeat results](results/proposal_repeat_v3/groups.csv)
+- [Supplementary detector-comparison protocol](docs/Defense_Comparison_Protocol_2026-11-02.txt): a separate paired test of netlist-only reviews versus reviews with normal-operation measurements.
 - [Frozen protocol](configs/proposal_experiment.json) and [proposal requirements map](docs/proposal_requirements.json)
 - [Electrical qualification](results/proposal_validation/qualification_summary.json)
 - [Independent protocol audit](results/proposal_main_v3/independent_audit.json), [replication audit](results/proposal_repeat_v3/replication_audit.json), and [waveform/re-simulation audit](results/proposal_audit/audit.json)
 
-## Observed results
+## Original attack-loop results
 
 Counts below are electrically valid, reviewer-negative attempts divided by all attempts.
 
@@ -41,6 +42,29 @@ This is a retrospective descriptive view, not new experimental data or a replace
 Feedback conditions produce more observed op-amp escapes than fresh independent generation in both runs, while full feedback does not consistently outperform binary feedback. The AND results do not support a consistent benefit from increasing feedback detail. Each no-feedback arm repeatedly selects one netlist, so repeated reviews and limited exploration matter. The repeat's weaker control results and its disclosed continuation exception further limit confirmation claims.
 
 The revised report explains a single candidate from its four JSON choices through electrical checks and detector feedback. Its AND case analysis separates observed evidence from possible causes. Both no-feedback groups repeat the same output-shunt MOSFET netlist; across all actual reviews this exact netlist is flagged 42/60 times. Each binary/full group uses the internal NAND-node insertion in 10/20 attempts, and all 40 of those actual events are flagged. The [descriptive diagnostic](results/proposal_analysis/and_diagnostics.json) retains source hashes and shared-start deduplication. This is evidence of reviewer variability and different candidate selection, not a controlled test showing that circuit simplicity caused the result or that a newer model improved.
+
+## Supplementary detector comparison
+
+The follow-up isolates the information supplied to the reviewer. It includes all **29 distinct observed candidates** (20 op-amp, 9 AND) plus the two clean and two known-positive controls: **33 different DUTs**. None is selected according to its earlier detection outcome. Each DUT received three fresh reviews in each of two conditions: **all 198 planned requests completed**. Both conditions use `gpt-4o-mini-2024-07-18`, temperature **0**, the same system prompt and output schema, and paired seeds. This differs from the original attack experiment's temperature 0.3; its old verdicts are not used as the new comparison arm.
+
+The `netlist_only` condition supplies the nominal function and exact DUT. The `normal_logs` condition appends a uniformly generated measurement summary from the unchanged normal-operation tests. It includes normal input/output samples, voltage statistics for every internal node selected by a generic parser, and aggregate supply current. Statistics use explicitly specified uniform sampling grids. Ground-truth labels, source membership, a golden netlist comparison and known activation-test results stay outside both prompts. Each DUT is re-simulated with the additional probes; raw decks, logs and waveforms are retained under `results/defense_comparison_v1/corpus/`.
+
+This is a fixed-circuit evidence comparison, not online learning or a rerun of the adaptive attack loop. Detection counts, clean-control flags and unusable responses are reported separately. The controls were used during earlier prompt development, and three reviews of a DUT are not three independent circuit designs. Normal-operation measurements may leave a dormant modification inconspicuous; an improvement is not an acceptance condition.
+
+| Circuit and population | Distinct DUTs | Netlist-only positive verdicts | With normal logs |
+| --- | ---: | ---: | ---: |
+| Op-amp observed candidates | 20 | 39/60 | 10/60 |
+| AND observed candidates | 9 | 21/27 | 27/27 |
+| Op-amp clean control (false flags) | 1 | 0/3 | 0/3 |
+| AND clean control (false flags) | 1 | 0/3 | 3/3 |
+| Op-amp known-positive control | 1 | 2/3 | 0/3 |
+| AND known-positive control | 1 | 3/3 | 3/3 |
+
+There were **195 usable replies and 3 truncated replies**. All three truncations occurred in op-amp netlist-only reviews: its 60 scheduled judgments comprise 39 positive, 18 negative and 3 unusable. With normal logs these became 10 positive and 50 negative. In the 57 op-amp pairs with two usable answers, 33 changed from positive to negative and 2 changed in the opposite direction. AND's six negative judgments all changed to positive, but the log condition also flagged its clean control in all three reviews. Detection therefore did **not** consistently improve without a false-positive cost.
+
+All three log-assisted clean-AND explanations cite the clean model's internal-node voltage above the supply and small negative output values as suspicious, despite its passing truth table. Some op-amp negative explanations instead cite normal operation as reassuring. These are recorded explanations, not a controlled diagnosis of the model's internal reasoning. The measurements alone do not distinguish dormant malicious behavior from clean operation.
+
+The [complete analysis](results/defense_comparison_v1/analysis.json), [review counts](results/defense_comparison_v1/review_counts.csv), [paired counts](results/defense_comparison_v1/paired_counts.csv) and [independent audit](results/defense_comparison_v1/independent_audit.json) preserve every review. The audit confirms 198 distinct API response IDs, matching circuit/seed pairs and all normal-data summaries. Fixed seeds and temperature zero do not guarantee determinism: 3 of 99 pairs had different returned backend fingerprints despite the same model snapshot.
 
 ## Experimental design
 
@@ -101,6 +125,8 @@ The setup script builds ngspice under `.tools/`. The smoke check and archived re
 .venv/bin/python -m scripts.proposal.audit_simulations --run-ids proposal_main_v3 proposal_repeat_v3
 .venv/bin/python -m scripts.proposal.diagnose_and
 .venv/bin/python -m scripts.proposal.analyze_attempt_budget
+.venv/bin/python -m scripts.defense.analyze
+.venv/bin/python -m scripts.defense.verify
 .venv/bin/python scripts/build_proposal_report.py --run-id proposal_main_v3 --replication-id proposal_repeat_v3
 .venv/bin/python -m scripts.proposal.check_delivery
 .venv/bin/python -m unittest discover -s tests -v
@@ -109,6 +135,8 @@ The setup script builds ngspice under `.tools/`. The smoke check and archived re
 The electrical audit independently recalculates saved waveforms and freshly simulates every distinct observed netlist. Fresh audit artifacts go to `results/proposal_audit/`; original candidate evidence remains intact. Analysis, verification, simulation audit, and report generation make no API requests.
 
 The full-menu qualification script is `scripts/proposal/qualify_circuits.py`. It is a **pre-experiment** step that writes the qualification artifact included in each manifest. Do not overwrite that frozen artifact in the delivered checkout. Use a separate working copy for changes or new qualification; use the audit command above to check the recorded experiment.
+
+For the supplementary comparison, `scripts/defense/prepare.py` creates the corpus and normal-only measurements before reviews. It refuses to overwrite an existing corpus. `scripts/defense/experiment.py --prepare` freezes the paired request list and checks its conservative spending bounds without API calls; `--run` executes or resumes those exact requests. Existing request identifiers resume saved records and do not constitute an independent replication. Use a separate working copy for changes to this frozen protocol.
 
 ## Run a new API experiment
 
@@ -136,6 +164,8 @@ Reusing a delivered run ID resumes cached records; it is not a new replication. 
 | `results/proposal_validation/` | Clean validation and exhaustive qualification of all 135 permitted choices |
 | `results/proposal_main_v3/`, `results/proposal_repeat_v3/` | Final raw records, source snapshots, controls, summaries, figures, and protocol audits |
 | `results/proposal_audit/` | Independent waveform checks and fresh simulations |
+| `scripts/defense/`, `configs/defense_comparison.json` | Separate matched reviewer protocol, bounded client and analysis |
+| `results/defense_comparison_v1/` | Fixed corpus, normal-only measurements, frozen requests and new reviewer evidence |
 | `output/pdf/` | Final report, editable text, figures, and report provenance |
 | `docs/inputs/` | Original proposal and execution plan |
 
