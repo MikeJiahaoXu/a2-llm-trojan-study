@@ -532,9 +532,11 @@ def build(primary_id, replication_id, output):
     p("LATENT's percentages measure inserted components escaping localization, rather than whole "
       "circuits escaping detection. Our experiment holds the model fixed and compares feedback conditions.")
     p("Methodology", "h1")
-    p("Our experiment consists of two small circuits as benchmarks, an LLM attacker inspired by "
-      "LATENT's feedback loop, and a netlist-only LLM detector inspired by SPICED. Both use "
+    p("The original attack-loop experiment uses two small circuits as benchmarks, an LLM attacker inspired by "
+      "LATENT's feedback loop, and a netlist-only LLM detector inspired by SPICED. In those runs, both roles used "
       f"<b>{html.escape(config['model'])}</b> at temperature <b>{config['temperature']}</b>. "
+      "The separate detector comparison uses temperature <b>0</b> in both review conditions; "
+      "the original attack-loop runs were not repeated at this temperature. "
       "These are simplified implementations, not full reproductions. We omit syntax-repair evaluation.")
     p("First, the attacker receives the clean netlist, normal and activating test conditions, and a "
       "menu of permitted changes. It returns four choices: an insertion site, a device representation, "

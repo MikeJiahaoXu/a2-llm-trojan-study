@@ -36,6 +36,6 @@
   "protocol_deviation_sha256": {
     "results/proposal_repeat_v3/control_gate_deviation.json": "291ed49844fc10b3fdf22e4816b47e66eb0ec1f2d8a669fe60e65be98962e989"
   },
-  "pdf_sha256": "8c85c87ba037ef3314a094f2c4c073090a8c7705d58847120b4d409cf439f2fa",
-  "text_sha256": "16396795470cc179df8ccf26299ff83727d0b465cf92f0d911d968bae72d47d6"
+  "pdf_sha256": "52f79d04249de3bb9aacba1484b3431bd8cb04ec0de463d7221d099a8029dd49",
+  "text_sha256": "a43cbb358e280ee5649598a3091f14eef42654a38aec7bc1f5d4778382cadcf9"
 }

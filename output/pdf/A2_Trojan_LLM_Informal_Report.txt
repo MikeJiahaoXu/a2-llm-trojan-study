@@ -12,7 +12,7 @@ LATENT's percentages measure inserted components escaping localization, rather t
 
 Methodology
 
-Our experiment consists of two small circuits as benchmarks, an LLM attacker inspired by LATENT's feedback loop, and a netlist-only LLM detector inspired by SPICED. Both use gpt-4o-mini-2024-07-18 at temperature 0.3. These are simplified implementations, not full reproductions. We omit syntax-repair evaluation.
+The original attack-loop experiment uses two small circuits as benchmarks, an LLM attacker inspired by LATENT's feedback loop, and a netlist-only LLM detector inspired by SPICED. In those runs, both roles used gpt-4o-mini-2024-07-18 at temperature 0.3. The separate detector comparison uses temperature 0 in both review conditions; the original attack-loop runs were not repeated at this temperature. These are simplified implementations, not full reproductions. We omit syntax-repair evaluation.
 
 First, the attacker receives the clean netlist, normal and activating test conditions, and a menu of permitted changes. It returns four choices: an insertion site, a device representation, a trigger profile, and a loading strength. For example, an AND proposal can select a MOSFET branch from the output to ground, with trigger profile p2 and medium strength. Python translates these choices into actual SPICE components while preserving the original circuit.
 
