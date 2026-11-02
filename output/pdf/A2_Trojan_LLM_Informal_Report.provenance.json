@@ -1,41 +1,43 @@
 {
-  "primary_run": "proposal_main_v3",
-  "replication_run": "proposal_repeat_v3",
-  "pages": 5,
+  "protocol": "proposal_stop_v5",
+  "run_id": "proposal_stop_v5",
+  "pages": 4,
+  "generator_sha256": "afd5296629e637b6ef412f638b7d09e8bba2651666a2f2737bb8177b3e6cc96e",
+  "primary_unit": "session",
+  "sessions_per_condition": 10,
   "source_sha256": {
-    "proposal_main_v3": {
-      "attempts.json": "b5e35b04b4259bc478d6448cb68211b7d43f73662c8403e2e3ef70807e497baa",
-      "controls.json": "56dd666e7fe916d7faf1b8d29b1d174a734e97da91a22a815de8be626bf0c362",
-      "manifest.json": "9e57a23aaa646ea878b61a5987304b69dbcd30b23d8f4c8e2adb49852c93568f",
-      "completion.json": "8f7f2e09b4befc05003bd99bca8cb1ff0f06da3216c1f384af219d4b9ac171c3"
-    },
-    "proposal_repeat_v3": {
-      "attempts.json": "0e69ffa9daa7e8dcb9c78f51a541d8ba97b8f062501c4707dc6b63f91a1a1829",
-      "controls.json": "a233d28124a5c36fade840a903e340393b21d8b2cfdbb483bc22b777f1d4e017",
-      "manifest.json": "0a6f8679860103d51f075111a55c90913ee59c6ce54e04eeffb34afb05beae8a",
-      "completion.json": "8f7f2e09b4befc05003bd99bca8cb1ff0f06da3216c1f384af219d4b9ac171c3"
-    }
+    "results/proposal_stop_v5/manifest.json": "4d15e327899bf57c91fc1480053d73e1d140930dbb88bffb2202c2501a65685f",
+    "results/proposal_stop_v5/schedule.json": "809278fac0bde1f9dddaa6bc9dbab8f6e68d9d56b2f2f34307cc3e42d235c376",
+    "results/proposal_stop_v5/attempts.json": "5c9ae5f5062417be90c51f176018bef87cf87cd774d3d886677268020946d9a3",
+    "results/proposal_stop_v5/dispositions.json": "03a9b812f7487802f1007c5b3d8d51826db928ce10ca4820a738211e65085f0b",
+    "results/proposal_stop_v5/completion.json": "1d20262f8589516486b442efaa5d75da909137a98a2a88fc9ccd24a2b24cebd3",
+    "results/proposal_stop_v5/summary.json": "ff6149e689b8101d915ad0fff7643f43528305af3a22998587ffd49f25e697aa",
+    "results/proposal_stop_v5/audit.json": "d3c5735a80a0496c250dd7b484f0b952ff651f5eebc0ccaa29b315dbd829f2f5",
+    "results/proposal_validation/qualification_summary.json": "fdd235074ff8f7f0ac3347c1ebd4c13c635e4b28ec7907e8372aa87d022292df",
+    "configs/stopstudy_v5.json": "78bf42430cb750771e3425c8536ea0acfdfbe3c23425d2ce1f1fadfbf20d20f7",
+    "scripts/stopstudy_v5/analyze.py": "cdf826ec33c76e8408aa7a37c4cb6602b3060a3b026f976878784e88e1f74c6f",
+    "scripts/build_stop_report.py": "afd5296629e637b6ef412f638b7d09e8bba2651666a2f2737bb8177b3e6cc96e",
+    "scripts/build_proposal_report.py": "b20db468148695c7e448575ce5a4c0cfed3d0e5abd5de858ab6fcc32f708682f",
+    "docs/Final_Stop_On_Escape_Protocol_2026-11-02.txt": "6e955147f38723fe3ef8c0e4698824daaa4cb37d7dbb76f09edf5bf5a939371d",
+    "docs/inputs/Collaborator_Report_Comments_2026-11-02.txt": "1767df5464974540833dd0de1fe92ab3a8c5abbfd454c9337130685c5c0f69c2"
   },
-  "qualification_sha256": "fdd235074ff8f7f0ac3347c1ebd4c13c635e4b28ec7907e8372aa87d022292df",
-  "calibration_controls_sha256": {
-    "results/proposal_main_v1/controls.json": "ffb1e64ab358ecff778242c39bd38c23596820c7098bb2401f82cb6ea9f33f33",
-    "results/proposal_main_v2/controls.json": "0986b36c51cd9674852dc1c535318f4d1d5b8e7cb2c6ff15f5dcb86e497b68c1"
+  "figure_sha256": {
+    "output/pdf/stop_report_figures/cumulative_escape.png": "a370fbaf0a574858d34b00abe9e89d60c991829fa78cb674f31f90c2f7cfe24f",
+    "output/pdf/stop_report_figures/cumulative_escape.pdf": "da75ae79273966f82df38d9b8f2d06cb85e90edb9a1a01179b08f3ac0730c777"
   },
-  "audit_sha256": {
-    "results/proposal_main_v3/independent_audit.json": "4aa916db5fd40685fa8dea69e021e8caa1b573f4f28b8a046b1f036295d29a5d",
-    "results/proposal_repeat_v3/independent_audit.json": "b2c28ceb57b01a0fa741cc26856e05d7fb6229bba9940d8e3d52317bf22dc743",
-    "results/proposal_repeat_v3/replication_audit.json": "b37ebd12883c343e03f19a48103df1eea689cd7916b07b16bf7be4c02528752b",
-    "results/proposal_audit/audit.json": "9350e64f7d82c5e348f683a5e568a9a24242785c1fced5b54e3e1eaf7854600a"
-  },
-  "analysis_sha256": {
-    "results/proposal_analysis/and_diagnostics.json": "329421fa29ecedaac2331dfaf4a5d6332ad6567efb3c46064745aef6167c6ba2",
-    "results/proposal_analysis/attempt_budget.json": "0b1039eb611ff67adf23a72e33fa17550508039d7a2970f07b666375e08e0589",
-    "results/defense_comparison_v1/analysis.json": "9e32f6030a77af23653862e657972b7287eb8a67590430bea218fb39f96c8b11",
-    "results/defense_comparison_v1/independent_audit.json": "d8c80c99ab74704b708e2778a612a96739b7a5d3a29d921b4b1d057644f32e45"
-  },
-  "protocol_deviation_sha256": {
-    "results/proposal_repeat_v3/control_gate_deviation.json": "291ed49844fc10b3fdf22e4816b47e66eb0ec1f2d8a669fe60e65be98962e989"
-  },
-  "pdf_sha256": "52f79d04249de3bb9aacba1484b3431bd8cb04ec0de463d7221d099a8029dd49",
-  "text_sha256": "a43cbb358e280ee5649598a3091f14eef42654a38aec7bc1f5d4778382cadcf9"
+  "unchanged_collaborator_blocks": [
+    "title",
+    "authors",
+    "intro1",
+    "intro2",
+    "attacker",
+    "validation",
+    "feedback"
+  ],
+  "necessary_method_changes": [
+    "attacker and detector temperatures",
+    "stop immediately after first valid escape"
+  ],
+  "pdf_sha256": "aabe4f46438610b44e3932a74cd3afebddc58518b2392dfec2650897236d3866",
+  "text_sha256": "9e45005f108ff61524b0f6e80834027de99602e3092422a558c8eeba1c59ca95"
 }

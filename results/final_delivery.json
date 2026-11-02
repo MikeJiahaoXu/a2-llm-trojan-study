@@ -1,0 +1,33 @@
+{
+  "complete": true,
+  "run_id": "proposal_stop_v5",
+  "report_pages": 4,
+  "requested_changes": {
+    "stop_on_first_valid_escape": true,
+    "detector_temperature_zero_and_fixed_cache": true,
+    "ten_new_sessions_per_condition": true,
+    "cumulative_escape_line_plots": true,
+    "only_requested_main_experiment_in_report": true,
+    "one_aggregate_no_batch_tables": true
+  },
+  "api": {
+    "actual_api_events": 202,
+    "roles": {
+      "stop_attacker": 184,
+      "stop_detector": 18
+    },
+    "billed_cost_usd": 0.0307758
+  },
+  "report_pdf_sha256": "aabe4f46438610b44e3932a74cd3afebddc58518b2392dfec2650897236d3866",
+  "report_text_sha256": "9e45005f108ff61524b0f6e80834027de99602e3092422a558c8eeba1c59ca95",
+  "audit_sha256": "d3c5735a80a0496c250dd7b484f0b952ff651f5eebc0ccaa29b315dbd829f2f5",
+  "checker_sha256": "0ca9e2044c46724554e94a200f8943ca5d6b9ef58b2442e2f14ca188e771452c",
+  "checks_include": [
+    "independent raw-response and waveform audit",
+    "all sixty stopped/exhausted sessions",
+    "exact cached reviewer reuse",
+    "current report hashes and scope",
+    "offline reproduction commands"
+  ],
+  "checked_at_utc": "2026-11-02T11:11:06.005102+00:00"
+}

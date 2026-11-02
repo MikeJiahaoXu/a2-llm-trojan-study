@@ -1,0 +1,2802 @@
+[
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_shared_a01",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_shared_a01",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_shared_a01",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_shared_a01",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_shared_a01",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_shared_a01",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_shared_a01",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_shared_a01",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_shared_a01",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_shared_a01",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_shared_a01",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_shared_a01",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_shared_a01",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_shared_a01",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_shared_a01",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_shared_a01",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_shared_a01",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_shared_a01",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_shared_a01",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_shared_a01",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_binary_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_full_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_none_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_binary_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_binary_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_binary_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_none_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_binary_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_full_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_none_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_binary_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_binary_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_full_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_full_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_full_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_none_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_full_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_binary_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_binary_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_none_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_full_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_full_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_full_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_none_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_none_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_binary_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_full_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_none_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_binary_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_binary_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_none_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_binary_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_none_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_none_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_none_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_full_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_none_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_none_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_full_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_none_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_full_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_binary_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_full_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_none_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_none_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_full_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_none_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_binary_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_binary_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_full_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_binary_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_binary_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_full_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_binary_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_none_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_full_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_none_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_binary_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_full_a02",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_full_a02",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_full_a03",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_none_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_none_a03",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_none_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_full_a03",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_full_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_none_a03",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_none_a03",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_full_a03",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_binary_a03",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_none_a03",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_none_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_binary_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_full_a03",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_binary_a03",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_full_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_full_a03",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_binary_a03",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_full_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_binary_a03",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_none_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_full_a03",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_full_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_binary_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_binary_a03",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_none_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_full_a03",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_binary_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_full_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_full_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_full_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_binary_a03",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_binary_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_binary_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_binary_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_binary_a03",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_binary_a03",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_none_a03",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_binary_a03",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_binary_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_binary_a03",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_full_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_none_a03",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_binary_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_binary_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_binary_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_none_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_none_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_full_a03",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_none_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_none_a03",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_none_a03",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_full_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_full_a03",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_none_a03",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_full_a03",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_none_a03",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_full_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_none_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_none_a03",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_full_a04",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_none_a04",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_binary_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_full_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_none_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_full_a04",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_full_a04",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_full_a04",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_full_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_none_a04",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_none_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_binary_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_full_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_binary_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_full_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_full_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_full_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_none_a04",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_full_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_none_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_none_a04",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_binary_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_none_a04",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_full_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_full_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_binary_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_full_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_binary_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_none_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_none_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_none_a04",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_binary_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_binary_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_full_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_binary_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_none_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_none_a04",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_binary_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_binary_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_full_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_binary_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_binary_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_full_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_full_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_binary_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_full_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_none_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_binary_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_none_a04",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_full_a04",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_none_a04",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_binary_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_none_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_binary_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_none_a04",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_none_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_none_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_binary_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_binary_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_binary_a04",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_binary_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_binary_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_none_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_none_a05",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_none_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_binary_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_full_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_binary_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_binary_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_full_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_binary_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_full_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_none_a05",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_none_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_binary_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_none_a05",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_binary_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_binary_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_binary_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_full_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_full_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_none_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_none_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_full_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_binary_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_binary_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_none_a05",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_none_a05",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_full_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_full_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_full_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_none_a05",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_binary_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_full_a05",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_none_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_none_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_full_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_full_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_full_a05",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_none_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_binary_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_binary_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_binary_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_binary_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_full_a05",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_full_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_none_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_none_a05",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_full_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_full_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 4
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_none_a05",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_binary_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_none_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_full_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_full_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_full_a05",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_none_a05",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_binary_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_binary_a05",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_none_a05",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_none_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_full_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_none_a06",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_none_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_binary_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_full_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 4
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_binary_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_binary_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_none_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_none_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_full_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_none_a06",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_full_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_none_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_binary_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_binary_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_none_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_none_a06",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_none_a06",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_binary_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_none_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_none_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_binary_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_binary_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_binary_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_full_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_full_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_binary_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_full_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_binary_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_binary_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_full_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_none_a06",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_full_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_none_a06",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_none_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_none_a06",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_binary_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_binary_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_binary_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_none_a06",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_full_a06",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_none_a06",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_full_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 5
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_full_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_binary_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_binary_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_full_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_full_a06",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_binary_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_full_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_full_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_full_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_none_a06",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_binary_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_none_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_full_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_full_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 5
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_full_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_binary_a06",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_full_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_full_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_none_a07",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_full_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_binary_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_none_a07",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_none_a07",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_full_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_full_a07",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_binary_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_binary_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_binary_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_binary_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_full_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 4
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_full_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_none_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_none_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_full_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_binary_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_full_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_binary_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_full_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_full_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_binary_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_binary_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_none_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_full_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_none_a07",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_binary_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_none_a07",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_none_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_binary_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_none_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_none_a07",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_binary_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_none_a07",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_binary_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_full_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_full_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 5
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_binary_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_full_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_binary_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_none_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_none_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_binary_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_full_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_none_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_binary_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_binary_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_full_a07",
+    "status": "executed",
+    "success": true
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_none_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_binary_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_full_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_none_a07",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_full_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 5
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_none_a07",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_binary_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_none_a07",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_full_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_none_a07",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_binary_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_none_a08",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_full_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_binary_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_full_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 7
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_binary_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_full_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 5
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_none_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_full_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_full_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_none_a08",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_binary_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_full_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_binary_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_full_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 4
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_binary_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_none_a08",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_binary_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_binary_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_none_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_none_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_none_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_full_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_binary_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_none_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_none_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_none_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_full_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_full_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_none_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_full_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_binary_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_binary_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_binary_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_full_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_full_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 7
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_binary_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_binary_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_full_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_none_a08",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_none_a08",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_none_a08",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_binary_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_full_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 5
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_none_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_none_a08",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_binary_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_binary_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_binary_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_full_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_none_a08",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_full_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_full_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_none_a08",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_full_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_binary_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_full_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_none_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_none_a08",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_binary_a08",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_full_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_full_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_binary_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_full_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_binary_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_binary_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_binary_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_none_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_full_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 7
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_binary_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_binary_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_full_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 5
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_full_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_full_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_none_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_binary_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_full_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_none_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_full_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_none_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_full_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 4
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_binary_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_full_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_none_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_none_a09",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_full_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_none_a09",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_binary_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_binary_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_binary_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_none_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_none_a09",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_binary_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_binary_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_none_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_none_a09",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_binary_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_full_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 5
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_binary_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_full_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 7
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_binary_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_full_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_binary_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_none_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_none_a09",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_none_a09",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_binary_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_full_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_full_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_none_a09",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_none_a09",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_none_a09",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_binary_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_full_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_full_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_none_a09",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_full_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_none_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_binary_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_none_a09",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_full_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_none_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_full_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_none_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_full_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_full_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_none_a10",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_full_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 5
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_binary_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_full_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_binary_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_none_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_binary_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_none_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_binary_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_full_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_none_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_full_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_binary_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_binary_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_none_a10",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_full_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 4
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_none_a10",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_full_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 7
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_binary_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_binary_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_binary_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_full_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 7
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_binary_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_binary_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_none_a10",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_none_a10",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_binary_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_binary_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_binary_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_none_a10",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_none_a10",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_none_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_binary_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_binary_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_binary_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_full_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_full_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_full_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_binary_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_none_a10",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_none_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_none_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_full_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_full_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_none_a10",
+    "status": "executed",
+    "success": false
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_none_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_full_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 5
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_binary_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_full_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_full_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_binary_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_full_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_none_a10",
+    "status": "skipped_after_escape",
+    "first_escape_attempt": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_none_a10",
+    "status": "executed",
+    "success": false
+  }
+]

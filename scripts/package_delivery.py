@@ -77,5 +77,58 @@ def main():
     (out/'A2_Trojan_LLM_Project.sha256').write_text(checksum+'  '+destination.name+'\n')
     print(json.dumps({'archive':str(destination),'files':len(selected),'bytes':destination.stat().st_size,'sha256':checksum}))
 
+def package_current():
+    """Package only the active main experiment and its reproduction dependencies."""
+    active=json.loads((ROOT/'configs/active_experiment.json').read_text())
+    run_id=active['run_id']
+    run=ROOT/'results'/run_id
+    completed=json.loads((run/'completion.json').read_text())
+    audit=json.loads((run/'audit.json').read_text())
+    delivery=json.loads((ROOT/active['delivery_check']).read_text())
+    report=ROOT/active['report']
+    provenance=json.loads(report.with_suffix('.provenance.json').read_text())
+    if not completed.get('complete') or not audit.get('passed') or not delivery.get('complete'):
+        raise RuntimeError('Active experiment, audit, and delivery check must all be complete.')
+    if delivery.get('run_id')!=run_id or delivery['audit_sha256']!=hashlib.sha256((run/'audit.json').read_bytes()).hexdigest():
+        raise RuntimeError('Current delivery verification is stale.')
+    if delivery['checker_sha256']!=hashlib.sha256((ROOT/'scripts/stopstudy_v5/check_delivery.py').read_bytes()).hexdigest():
+        raise RuntimeError('Current delivery checker changed.')
+    for suffix,field in [('.pdf','pdf_sha256'),('.txt','text_sha256')]:
+        if hashlib.sha256(report.with_suffix(suffix).read_bytes()).hexdigest()!=provenance[field]:
+            raise RuntimeError('Current report differs from its provenance.')
+    for name,expected in provenance['source_sha256'].items():
+        if hashlib.sha256((ROOT/name).read_bytes()).hexdigest()!=expected:
+            raise RuntimeError('Report source evidence changed: '+name)
+    selected=[ROOT/name for name in ['README.md','LICENSE','requirements.txt','.gitignore','.gitattributes',
+              '.env.example','output/阅读说明.txt','results/cost_ledger.json',active['delivery_check'],
+              'docs/Final_Stop_On_Escape_Protocol_2026-11-02.txt','docs/Final_Report_Revision_Notes_2026-11-02.txt']]
+    selected.extend(report.with_suffix(suffix) for suffix in ('.pdf','.txt','.provenance.json'))
+    for directory in ['scripts','tests','configs','docs/inputs','netlists/templates',
+                      'results/proposal_validation','results/'+run_id,'output/pdf/stop_report_figures']:
+        selected.extend(p for p in (ROOT/directory).rglob('*') if p.is_file()
+                        and '__pycache__' not in p.parts and p.suffix!='.pyc' and p.name!='.api.lock')
+    selected.extend((ROOT/'results/api').glob(run_id+'_*.json'))
+    selected=sorted(set(selected))
+    secret=(dotenv_values(ROOT/'.env').get('OPENAI_API_KEY') or '').encode()
+    manifest={}
+    for path in selected:
+        body=path.read_bytes()
+        if secret and secret in body:
+            raise RuntimeError('Credential found in selected file; packaging refused.')
+        manifest[str(path.relative_to(ROOT))]={'bytes':len(body),'sha256':hashlib.sha256(body).hexdigest()}
+    destination=ROOT/'output/A2_Trojan_LLM_Project.zip'
+    with zipfile.ZipFile(destination,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=6) as archive:
+        for path in selected:
+            archive.write(path,'A2_Trojan_LLM_Project/'+str(path.relative_to(ROOT)))
+        archive.writestr('A2_Trojan_LLM_Project/FILE_MANIFEST.json',json.dumps(manifest,indent=2))
+    checksum=hashlib.sha256(destination.read_bytes()).hexdigest()
+    destination.with_suffix('.sha256').write_text(checksum+'  '+destination.name+'\n')
+    print(json.dumps({'archive':str(destination),'active_run':run_id,'files':len(selected),
+                      'bytes':destination.stat().st_size,'sha256':checksum,'historical_results_included':False}))
+
+
 if __name__=='__main__':
-    main()
+    if (ROOT/'configs/active_experiment.json').exists():
+        package_current()
+    else:
+        main()

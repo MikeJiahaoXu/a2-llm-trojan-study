@@ -1,0 +1,5042 @@
+[
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_shared_a01",
+    "circuit": "opamp",
+    "session": 8,
+    "feedback": "shared",
+    "attempt": 1,
+    "seed": 410801,
+    "order_index": 0
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_shared_a01",
+    "circuit": "and4",
+    "session": 3,
+    "feedback": "shared",
+    "attempt": 1,
+    "seed": 420301,
+    "order_index": 1
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_shared_a01",
+    "circuit": "and4",
+    "session": 1,
+    "feedback": "shared",
+    "attempt": 1,
+    "seed": 420101,
+    "order_index": 2
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_shared_a01",
+    "circuit": "opamp",
+    "session": 5,
+    "feedback": "shared",
+    "attempt": 1,
+    "seed": 410501,
+    "order_index": 3
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_shared_a01",
+    "circuit": "and4",
+    "session": 9,
+    "feedback": "shared",
+    "attempt": 1,
+    "seed": 420901,
+    "order_index": 4
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_shared_a01",
+    "circuit": "and4",
+    "session": 2,
+    "feedback": "shared",
+    "attempt": 1,
+    "seed": 420201,
+    "order_index": 5
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_shared_a01",
+    "circuit": "opamp",
+    "session": 9,
+    "feedback": "shared",
+    "attempt": 1,
+    "seed": 410901,
+    "order_index": 6
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_shared_a01",
+    "circuit": "opamp",
+    "session": 2,
+    "feedback": "shared",
+    "attempt": 1,
+    "seed": 410201,
+    "order_index": 7
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_shared_a01",
+    "circuit": "opamp",
+    "session": 6,
+    "feedback": "shared",
+    "attempt": 1,
+    "seed": 410601,
+    "order_index": 8
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_shared_a01",
+    "circuit": "opamp",
+    "session": 7,
+    "feedback": "shared",
+    "attempt": 1,
+    "seed": 410701,
+    "order_index": 9
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_shared_a01",
+    "circuit": "opamp",
+    "session": 1,
+    "feedback": "shared",
+    "attempt": 1,
+    "seed": 410101,
+    "order_index": 10
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_shared_a01",
+    "circuit": "and4",
+    "session": 4,
+    "feedback": "shared",
+    "attempt": 1,
+    "seed": 420401,
+    "order_index": 11
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_shared_a01",
+    "circuit": "and4",
+    "session": 7,
+    "feedback": "shared",
+    "attempt": 1,
+    "seed": 420701,
+    "order_index": 12
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_shared_a01",
+    "circuit": "opamp",
+    "session": 4,
+    "feedback": "shared",
+    "attempt": 1,
+    "seed": 410401,
+    "order_index": 13
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_shared_a01",
+    "circuit": "opamp",
+    "session": 10,
+    "feedback": "shared",
+    "attempt": 1,
+    "seed": 411001,
+    "order_index": 14
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_shared_a01",
+    "circuit": "and4",
+    "session": 5,
+    "feedback": "shared",
+    "attempt": 1,
+    "seed": 420501,
+    "order_index": 15
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_shared_a01",
+    "circuit": "and4",
+    "session": 10,
+    "feedback": "shared",
+    "attempt": 1,
+    "seed": 421001,
+    "order_index": 16
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_shared_a01",
+    "circuit": "and4",
+    "session": 8,
+    "feedback": "shared",
+    "attempt": 1,
+    "seed": 420801,
+    "order_index": 17
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_shared_a01",
+    "circuit": "and4",
+    "session": 6,
+    "feedback": "shared",
+    "attempt": 1,
+    "seed": 420601,
+    "order_index": 18
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_shared_a01",
+    "circuit": "opamp",
+    "session": 3,
+    "feedback": "shared",
+    "attempt": 1,
+    "seed": 410301,
+    "order_index": 19
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_binary_a02",
+    "circuit": "opamp",
+    "session": 5,
+    "feedback": "binary",
+    "attempt": 2,
+    "seed": 410502,
+    "order_index": 20
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_full_a02",
+    "circuit": "and4",
+    "session": 4,
+    "feedback": "full",
+    "attempt": 2,
+    "seed": 420402,
+    "order_index": 21
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_none_a02",
+    "circuit": "and4",
+    "session": 1,
+    "feedback": "none",
+    "attempt": 2,
+    "seed": 420102,
+    "order_index": 22
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_binary_a02",
+    "circuit": "opamp",
+    "session": 6,
+    "feedback": "binary",
+    "attempt": 2,
+    "seed": 410602,
+    "order_index": 23
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_binary_a02",
+    "circuit": "and4",
+    "session": 8,
+    "feedback": "binary",
+    "attempt": 2,
+    "seed": 420802,
+    "order_index": 24
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_binary_a02",
+    "circuit": "and4",
+    "session": 2,
+    "feedback": "binary",
+    "attempt": 2,
+    "seed": 420202,
+    "order_index": 25
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_none_a02",
+    "circuit": "and4",
+    "session": 7,
+    "feedback": "none",
+    "attempt": 2,
+    "seed": 420702,
+    "order_index": 26
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_binary_a02",
+    "circuit": "opamp",
+    "session": 7,
+    "feedback": "binary",
+    "attempt": 2,
+    "seed": 410702,
+    "order_index": 27
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_full_a02",
+    "circuit": "opamp",
+    "session": 1,
+    "feedback": "full",
+    "attempt": 2,
+    "seed": 410102,
+    "order_index": 28
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_none_a02",
+    "circuit": "and4",
+    "session": 2,
+    "feedback": "none",
+    "attempt": 2,
+    "seed": 420202,
+    "order_index": 29
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_binary_a02",
+    "circuit": "and4",
+    "session": 1,
+    "feedback": "binary",
+    "attempt": 2,
+    "seed": 420102,
+    "order_index": 30
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_binary_a02",
+    "circuit": "and4",
+    "session": 10,
+    "feedback": "binary",
+    "attempt": 2,
+    "seed": 421002,
+    "order_index": 31
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_full_a02",
+    "circuit": "and4",
+    "session": 1,
+    "feedback": "full",
+    "attempt": 2,
+    "seed": 420102,
+    "order_index": 32
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_full_a02",
+    "circuit": "and4",
+    "session": 6,
+    "feedback": "full",
+    "attempt": 2,
+    "seed": 420602,
+    "order_index": 33
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_full_a02",
+    "circuit": "opamp",
+    "session": 2,
+    "feedback": "full",
+    "attempt": 2,
+    "seed": 410202,
+    "order_index": 34
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_none_a02",
+    "circuit": "opamp",
+    "session": 10,
+    "feedback": "none",
+    "attempt": 2,
+    "seed": 411002,
+    "order_index": 35
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_full_a02",
+    "circuit": "and4",
+    "session": 10,
+    "feedback": "full",
+    "attempt": 2,
+    "seed": 421002,
+    "order_index": 36
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_binary_a02",
+    "circuit": "and4",
+    "session": 7,
+    "feedback": "binary",
+    "attempt": 2,
+    "seed": 420702,
+    "order_index": 37
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_binary_a02",
+    "circuit": "and4",
+    "session": 5,
+    "feedback": "binary",
+    "attempt": 2,
+    "seed": 420502,
+    "order_index": 38
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_none_a02",
+    "circuit": "opamp",
+    "session": 7,
+    "feedback": "none",
+    "attempt": 2,
+    "seed": 410702,
+    "order_index": 39
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_full_a02",
+    "circuit": "and4",
+    "session": 3,
+    "feedback": "full",
+    "attempt": 2,
+    "seed": 420302,
+    "order_index": 40
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_full_a02",
+    "circuit": "opamp",
+    "session": 4,
+    "feedback": "full",
+    "attempt": 2,
+    "seed": 410402,
+    "order_index": 41
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_full_a02",
+    "circuit": "opamp",
+    "session": 10,
+    "feedback": "full",
+    "attempt": 2,
+    "seed": 411002,
+    "order_index": 42
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_none_a02",
+    "circuit": "opamp",
+    "session": 9,
+    "feedback": "none",
+    "attempt": 2,
+    "seed": 410902,
+    "order_index": 43
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_none_a02",
+    "circuit": "opamp",
+    "session": 5,
+    "feedback": "none",
+    "attempt": 2,
+    "seed": 410502,
+    "order_index": 44
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_binary_a02",
+    "circuit": "opamp",
+    "session": 10,
+    "feedback": "binary",
+    "attempt": 2,
+    "seed": 411002,
+    "order_index": 45
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_full_a02",
+    "circuit": "and4",
+    "session": 8,
+    "feedback": "full",
+    "attempt": 2,
+    "seed": 420802,
+    "order_index": 46
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_none_a02",
+    "circuit": "and4",
+    "session": 10,
+    "feedback": "none",
+    "attempt": 2,
+    "seed": 421002,
+    "order_index": 47
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_binary_a02",
+    "circuit": "opamp",
+    "session": 2,
+    "feedback": "binary",
+    "attempt": 2,
+    "seed": 410202,
+    "order_index": 48
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_binary_a02",
+    "circuit": "opamp",
+    "session": 3,
+    "feedback": "binary",
+    "attempt": 2,
+    "seed": 410302,
+    "order_index": 49
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_none_a02",
+    "circuit": "opamp",
+    "session": 3,
+    "feedback": "none",
+    "attempt": 2,
+    "seed": 410302,
+    "order_index": 50
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_binary_a02",
+    "circuit": "opamp",
+    "session": 9,
+    "feedback": "binary",
+    "attempt": 2,
+    "seed": 410902,
+    "order_index": 51
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_none_a02",
+    "circuit": "and4",
+    "session": 8,
+    "feedback": "none",
+    "attempt": 2,
+    "seed": 420802,
+    "order_index": 52
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_none_a02",
+    "circuit": "opamp",
+    "session": 2,
+    "feedback": "none",
+    "attempt": 2,
+    "seed": 410202,
+    "order_index": 53
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_none_a02",
+    "circuit": "opamp",
+    "session": 4,
+    "feedback": "none",
+    "attempt": 2,
+    "seed": 410402,
+    "order_index": 54
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_full_a02",
+    "circuit": "opamp",
+    "session": 3,
+    "feedback": "full",
+    "attempt": 2,
+    "seed": 410302,
+    "order_index": 55
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_none_a02",
+    "circuit": "and4",
+    "session": 4,
+    "feedback": "none",
+    "attempt": 2,
+    "seed": 420402,
+    "order_index": 56
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_none_a02",
+    "circuit": "opamp",
+    "session": 1,
+    "feedback": "none",
+    "attempt": 2,
+    "seed": 410102,
+    "order_index": 57
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_full_a02",
+    "circuit": "opamp",
+    "session": 7,
+    "feedback": "full",
+    "attempt": 2,
+    "seed": 410702,
+    "order_index": 58
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_none_a02",
+    "circuit": "and4",
+    "session": 9,
+    "feedback": "none",
+    "attempt": 2,
+    "seed": 420902,
+    "order_index": 59
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_full_a02",
+    "circuit": "and4",
+    "session": 5,
+    "feedback": "full",
+    "attempt": 2,
+    "seed": 420502,
+    "order_index": 60
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_binary_a02",
+    "circuit": "and4",
+    "session": 3,
+    "feedback": "binary",
+    "attempt": 2,
+    "seed": 420302,
+    "order_index": 61
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_full_a02",
+    "circuit": "opamp",
+    "session": 8,
+    "feedback": "full",
+    "attempt": 2,
+    "seed": 410802,
+    "order_index": 62
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_none_a02",
+    "circuit": "and4",
+    "session": 6,
+    "feedback": "none",
+    "attempt": 2,
+    "seed": 420602,
+    "order_index": 63
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_none_a02",
+    "circuit": "opamp",
+    "session": 6,
+    "feedback": "none",
+    "attempt": 2,
+    "seed": 410602,
+    "order_index": 64
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_full_a02",
+    "circuit": "opamp",
+    "session": 5,
+    "feedback": "full",
+    "attempt": 2,
+    "seed": 410502,
+    "order_index": 65
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_none_a02",
+    "circuit": "opamp",
+    "session": 8,
+    "feedback": "none",
+    "attempt": 2,
+    "seed": 410802,
+    "order_index": 66
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_binary_a02",
+    "circuit": "and4",
+    "session": 6,
+    "feedback": "binary",
+    "attempt": 2,
+    "seed": 420602,
+    "order_index": 67
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_binary_a02",
+    "circuit": "opamp",
+    "session": 8,
+    "feedback": "binary",
+    "attempt": 2,
+    "seed": 410802,
+    "order_index": 68
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_full_a02",
+    "circuit": "opamp",
+    "session": 6,
+    "feedback": "full",
+    "attempt": 2,
+    "seed": 410602,
+    "order_index": 69
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_binary_a02",
+    "circuit": "opamp",
+    "session": 4,
+    "feedback": "binary",
+    "attempt": 2,
+    "seed": 410402,
+    "order_index": 70
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_binary_a02",
+    "circuit": "opamp",
+    "session": 1,
+    "feedback": "binary",
+    "attempt": 2,
+    "seed": 410102,
+    "order_index": 71
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_full_a02",
+    "circuit": "and4",
+    "session": 2,
+    "feedback": "full",
+    "attempt": 2,
+    "seed": 420202,
+    "order_index": 72
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_binary_a02",
+    "circuit": "and4",
+    "session": 9,
+    "feedback": "binary",
+    "attempt": 2,
+    "seed": 420902,
+    "order_index": 73
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_none_a02",
+    "circuit": "and4",
+    "session": 3,
+    "feedback": "none",
+    "attempt": 2,
+    "seed": 420302,
+    "order_index": 74
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_full_a02",
+    "circuit": "and4",
+    "session": 9,
+    "feedback": "full",
+    "attempt": 2,
+    "seed": 420902,
+    "order_index": 75
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_none_a02",
+    "circuit": "and4",
+    "session": 5,
+    "feedback": "none",
+    "attempt": 2,
+    "seed": 420502,
+    "order_index": 76
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_binary_a02",
+    "circuit": "and4",
+    "session": 4,
+    "feedback": "binary",
+    "attempt": 2,
+    "seed": 420402,
+    "order_index": 77
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_full_a02",
+    "circuit": "opamp",
+    "session": 9,
+    "feedback": "full",
+    "attempt": 2,
+    "seed": 410902,
+    "order_index": 78
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_full_a02",
+    "circuit": "and4",
+    "session": 7,
+    "feedback": "full",
+    "attempt": 2,
+    "seed": 420702,
+    "order_index": 79
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_full_a03",
+    "circuit": "opamp",
+    "session": 10,
+    "feedback": "full",
+    "attempt": 3,
+    "seed": 411003,
+    "order_index": 80
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_none_a03",
+    "circuit": "and4",
+    "session": 5,
+    "feedback": "none",
+    "attempt": 3,
+    "seed": 420503,
+    "order_index": 81
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_none_a03",
+    "circuit": "opamp",
+    "session": 6,
+    "feedback": "none",
+    "attempt": 3,
+    "seed": 410603,
+    "order_index": 82
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_none_a03",
+    "circuit": "and4",
+    "session": 3,
+    "feedback": "none",
+    "attempt": 3,
+    "seed": 420303,
+    "order_index": 83
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_full_a03",
+    "circuit": "opamp",
+    "session": 1,
+    "feedback": "full",
+    "attempt": 3,
+    "seed": 410103,
+    "order_index": 84
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_full_a03",
+    "circuit": "and4",
+    "session": 9,
+    "feedback": "full",
+    "attempt": 3,
+    "seed": 420903,
+    "order_index": 85
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_none_a03",
+    "circuit": "opamp",
+    "session": 5,
+    "feedback": "none",
+    "attempt": 3,
+    "seed": 410503,
+    "order_index": 86
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_none_a03",
+    "circuit": "opamp",
+    "session": 9,
+    "feedback": "none",
+    "attempt": 3,
+    "seed": 410903,
+    "order_index": 87
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_full_a03",
+    "circuit": "opamp",
+    "session": 9,
+    "feedback": "full",
+    "attempt": 3,
+    "seed": 410903,
+    "order_index": 88
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_binary_a03",
+    "circuit": "opamp",
+    "session": 4,
+    "feedback": "binary",
+    "attempt": 3,
+    "seed": 410403,
+    "order_index": 89
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_none_a03",
+    "circuit": "opamp",
+    "session": 3,
+    "feedback": "none",
+    "attempt": 3,
+    "seed": 410303,
+    "order_index": 90
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_none_a03",
+    "circuit": "and4",
+    "session": 9,
+    "feedback": "none",
+    "attempt": 3,
+    "seed": 420903,
+    "order_index": 91
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_binary_a03",
+    "circuit": "and4",
+    "session": 6,
+    "feedback": "binary",
+    "attempt": 3,
+    "seed": 420603,
+    "order_index": 92
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_full_a03",
+    "circuit": "opamp",
+    "session": 6,
+    "feedback": "full",
+    "attempt": 3,
+    "seed": 410603,
+    "order_index": 93
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_binary_a03",
+    "circuit": "opamp",
+    "session": 9,
+    "feedback": "binary",
+    "attempt": 3,
+    "seed": 410903,
+    "order_index": 94
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_full_a03",
+    "circuit": "and4",
+    "session": 1,
+    "feedback": "full",
+    "attempt": 3,
+    "seed": 420103,
+    "order_index": 95
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_full_a03",
+    "circuit": "opamp",
+    "session": 3,
+    "feedback": "full",
+    "attempt": 3,
+    "seed": 410303,
+    "order_index": 96
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_binary_a03",
+    "circuit": "opamp",
+    "session": 1,
+    "feedback": "binary",
+    "attempt": 3,
+    "seed": 410103,
+    "order_index": 97
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_full_a03",
+    "circuit": "and4",
+    "session": 2,
+    "feedback": "full",
+    "attempt": 3,
+    "seed": 420203,
+    "order_index": 98
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_binary_a03",
+    "circuit": "opamp",
+    "session": 10,
+    "feedback": "binary",
+    "attempt": 3,
+    "seed": 411003,
+    "order_index": 99
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_none_a03",
+    "circuit": "and4",
+    "session": 1,
+    "feedback": "none",
+    "attempt": 3,
+    "seed": 420103,
+    "order_index": 100
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_full_a03",
+    "circuit": "opamp",
+    "session": 8,
+    "feedback": "full",
+    "attempt": 3,
+    "seed": 410803,
+    "order_index": 101
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_full_a03",
+    "circuit": "and4",
+    "session": 10,
+    "feedback": "full",
+    "attempt": 3,
+    "seed": 421003,
+    "order_index": 102
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_binary_a03",
+    "circuit": "and4",
+    "session": 8,
+    "feedback": "binary",
+    "attempt": 3,
+    "seed": 420803,
+    "order_index": 103
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_binary_a03",
+    "circuit": "opamp",
+    "session": 8,
+    "feedback": "binary",
+    "attempt": 3,
+    "seed": 410803,
+    "order_index": 104
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_none_a03",
+    "circuit": "and4",
+    "session": 8,
+    "feedback": "none",
+    "attempt": 3,
+    "seed": 420803,
+    "order_index": 105
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_full_a03",
+    "circuit": "opamp",
+    "session": 2,
+    "feedback": "full",
+    "attempt": 3,
+    "seed": 410203,
+    "order_index": 106
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_binary_a03",
+    "circuit": "and4",
+    "session": 3,
+    "feedback": "binary",
+    "attempt": 3,
+    "seed": 420303,
+    "order_index": 107
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_full_a03",
+    "circuit": "and4",
+    "session": 3,
+    "feedback": "full",
+    "attempt": 3,
+    "seed": 420303,
+    "order_index": 108
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_full_a03",
+    "circuit": "and4",
+    "session": 6,
+    "feedback": "full",
+    "attempt": 3,
+    "seed": 420603,
+    "order_index": 109
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_full_a03",
+    "circuit": "and4",
+    "session": 7,
+    "feedback": "full",
+    "attempt": 3,
+    "seed": 420703,
+    "order_index": 110
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_binary_a03",
+    "circuit": "opamp",
+    "session": 6,
+    "feedback": "binary",
+    "attempt": 3,
+    "seed": 410603,
+    "order_index": 111
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_binary_a03",
+    "circuit": "and4",
+    "session": 5,
+    "feedback": "binary",
+    "attempt": 3,
+    "seed": 420503,
+    "order_index": 112
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_binary_a03",
+    "circuit": "and4",
+    "session": 1,
+    "feedback": "binary",
+    "attempt": 3,
+    "seed": 420103,
+    "order_index": 113
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_binary_a03",
+    "circuit": "and4",
+    "session": 9,
+    "feedback": "binary",
+    "attempt": 3,
+    "seed": 420903,
+    "order_index": 114
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_binary_a03",
+    "circuit": "opamp",
+    "session": 3,
+    "feedback": "binary",
+    "attempt": 3,
+    "seed": 410303,
+    "order_index": 115
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_binary_a03",
+    "circuit": "opamp",
+    "session": 2,
+    "feedback": "binary",
+    "attempt": 3,
+    "seed": 410203,
+    "order_index": 116
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_none_a03",
+    "circuit": "opamp",
+    "session": 1,
+    "feedback": "none",
+    "attempt": 3,
+    "seed": 410103,
+    "order_index": 117
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_binary_a03",
+    "circuit": "opamp",
+    "session": 7,
+    "feedback": "binary",
+    "attempt": 3,
+    "seed": 410703,
+    "order_index": 118
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_binary_a03",
+    "circuit": "and4",
+    "session": 2,
+    "feedback": "binary",
+    "attempt": 3,
+    "seed": 420203,
+    "order_index": 119
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_binary_a03",
+    "circuit": "opamp",
+    "session": 5,
+    "feedback": "binary",
+    "attempt": 3,
+    "seed": 410503,
+    "order_index": 120
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_full_a03",
+    "circuit": "and4",
+    "session": 5,
+    "feedback": "full",
+    "attempt": 3,
+    "seed": 420503,
+    "order_index": 121
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_none_a03",
+    "circuit": "opamp",
+    "session": 10,
+    "feedback": "none",
+    "attempt": 3,
+    "seed": 411003,
+    "order_index": 122
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_binary_a03",
+    "circuit": "and4",
+    "session": 4,
+    "feedback": "binary",
+    "attempt": 3,
+    "seed": 420403,
+    "order_index": 123
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_binary_a03",
+    "circuit": "and4",
+    "session": 10,
+    "feedback": "binary",
+    "attempt": 3,
+    "seed": 421003,
+    "order_index": 124
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_binary_a03",
+    "circuit": "and4",
+    "session": 7,
+    "feedback": "binary",
+    "attempt": 3,
+    "seed": 420703,
+    "order_index": 125
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_none_a03",
+    "circuit": "and4",
+    "session": 6,
+    "feedback": "none",
+    "attempt": 3,
+    "seed": 420603,
+    "order_index": 126
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_none_a03",
+    "circuit": "and4",
+    "session": 10,
+    "feedback": "none",
+    "attempt": 3,
+    "seed": 421003,
+    "order_index": 127
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_full_a03",
+    "circuit": "opamp",
+    "session": 7,
+    "feedback": "full",
+    "attempt": 3,
+    "seed": 410703,
+    "order_index": 128
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_none_a03",
+    "circuit": "and4",
+    "session": 4,
+    "feedback": "none",
+    "attempt": 3,
+    "seed": 420403,
+    "order_index": 129
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_none_a03",
+    "circuit": "opamp",
+    "session": 2,
+    "feedback": "none",
+    "attempt": 3,
+    "seed": 410203,
+    "order_index": 130
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_none_a03",
+    "circuit": "opamp",
+    "session": 8,
+    "feedback": "none",
+    "attempt": 3,
+    "seed": 410803,
+    "order_index": 131
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_full_a03",
+    "circuit": "and4",
+    "session": 4,
+    "feedback": "full",
+    "attempt": 3,
+    "seed": 420403,
+    "order_index": 132
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_full_a03",
+    "circuit": "opamp",
+    "session": 4,
+    "feedback": "full",
+    "attempt": 3,
+    "seed": 410403,
+    "order_index": 133
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_none_a03",
+    "circuit": "opamp",
+    "session": 7,
+    "feedback": "none",
+    "attempt": 3,
+    "seed": 410703,
+    "order_index": 134
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_full_a03",
+    "circuit": "opamp",
+    "session": 5,
+    "feedback": "full",
+    "attempt": 3,
+    "seed": 410503,
+    "order_index": 135
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_none_a03",
+    "circuit": "opamp",
+    "session": 4,
+    "feedback": "none",
+    "attempt": 3,
+    "seed": 410403,
+    "order_index": 136
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_full_a03",
+    "circuit": "and4",
+    "session": 8,
+    "feedback": "full",
+    "attempt": 3,
+    "seed": 420803,
+    "order_index": 137
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_none_a03",
+    "circuit": "and4",
+    "session": 7,
+    "feedback": "none",
+    "attempt": 3,
+    "seed": 420703,
+    "order_index": 138
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_none_a03",
+    "circuit": "and4",
+    "session": 2,
+    "feedback": "none",
+    "attempt": 3,
+    "seed": 420203,
+    "order_index": 139
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_full_a04",
+    "circuit": "opamp",
+    "session": 9,
+    "feedback": "full",
+    "attempt": 4,
+    "seed": 410904,
+    "order_index": 140
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_none_a04",
+    "circuit": "opamp",
+    "session": 5,
+    "feedback": "none",
+    "attempt": 4,
+    "seed": 410504,
+    "order_index": 141
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_binary_a04",
+    "circuit": "opamp",
+    "session": 3,
+    "feedback": "binary",
+    "attempt": 4,
+    "seed": 410304,
+    "order_index": 142
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_full_a04",
+    "circuit": "and4",
+    "session": 3,
+    "feedback": "full",
+    "attempt": 4,
+    "seed": 420304,
+    "order_index": 143
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_none_a04",
+    "circuit": "and4",
+    "session": 7,
+    "feedback": "none",
+    "attempt": 4,
+    "seed": 420704,
+    "order_index": 144
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_full_a04",
+    "circuit": "opamp",
+    "session": 10,
+    "feedback": "full",
+    "attempt": 4,
+    "seed": 411004,
+    "order_index": 145
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_full_a04",
+    "circuit": "opamp",
+    "session": 7,
+    "feedback": "full",
+    "attempt": 4,
+    "seed": 410704,
+    "order_index": 146
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_full_a04",
+    "circuit": "opamp",
+    "session": 5,
+    "feedback": "full",
+    "attempt": 4,
+    "seed": 410504,
+    "order_index": 147
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_full_a04",
+    "circuit": "and4",
+    "session": 9,
+    "feedback": "full",
+    "attempt": 4,
+    "seed": 420904,
+    "order_index": 148
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_none_a04",
+    "circuit": "opamp",
+    "session": 9,
+    "feedback": "none",
+    "attempt": 4,
+    "seed": 410904,
+    "order_index": 149
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_none_a04",
+    "circuit": "and4",
+    "session": 8,
+    "feedback": "none",
+    "attempt": 4,
+    "seed": 420804,
+    "order_index": 150
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_binary_a04",
+    "circuit": "and4",
+    "session": 2,
+    "feedback": "binary",
+    "attempt": 4,
+    "seed": 420204,
+    "order_index": 151
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_full_a04",
+    "circuit": "and4",
+    "session": 5,
+    "feedback": "full",
+    "attempt": 4,
+    "seed": 420504,
+    "order_index": 152
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_binary_a04",
+    "circuit": "and4",
+    "session": 10,
+    "feedback": "binary",
+    "attempt": 4,
+    "seed": 421004,
+    "order_index": 153
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_full_a04",
+    "circuit": "opamp",
+    "session": 4,
+    "feedback": "full",
+    "attempt": 4,
+    "seed": 410404,
+    "order_index": 154
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_full_a04",
+    "circuit": "opamp",
+    "session": 6,
+    "feedback": "full",
+    "attempt": 4,
+    "seed": 410604,
+    "order_index": 155
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_full_a04",
+    "circuit": "opamp",
+    "session": 1,
+    "feedback": "full",
+    "attempt": 4,
+    "seed": 410104,
+    "order_index": 156
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_none_a04",
+    "circuit": "opamp",
+    "session": 10,
+    "feedback": "none",
+    "attempt": 4,
+    "seed": 411004,
+    "order_index": 157
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_full_a04",
+    "circuit": "and4",
+    "session": 4,
+    "feedback": "full",
+    "attempt": 4,
+    "seed": 420404,
+    "order_index": 158
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_none_a04",
+    "circuit": "and4",
+    "session": 3,
+    "feedback": "none",
+    "attempt": 4,
+    "seed": 420304,
+    "order_index": 159
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_none_a04",
+    "circuit": "opamp",
+    "session": 7,
+    "feedback": "none",
+    "attempt": 4,
+    "seed": 410704,
+    "order_index": 160
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_binary_a04",
+    "circuit": "opamp",
+    "session": 2,
+    "feedback": "binary",
+    "attempt": 4,
+    "seed": 410204,
+    "order_index": 161
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_none_a04",
+    "circuit": "opamp",
+    "session": 2,
+    "feedback": "none",
+    "attempt": 4,
+    "seed": 410204,
+    "order_index": 162
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_full_a04",
+    "circuit": "and4",
+    "session": 8,
+    "feedback": "full",
+    "attempt": 4,
+    "seed": 420804,
+    "order_index": 163
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_full_a04",
+    "circuit": "and4",
+    "session": 2,
+    "feedback": "full",
+    "attempt": 4,
+    "seed": 420204,
+    "order_index": 164
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_binary_a04",
+    "circuit": "opamp",
+    "session": 8,
+    "feedback": "binary",
+    "attempt": 4,
+    "seed": 410804,
+    "order_index": 165
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_full_a04",
+    "circuit": "opamp",
+    "session": 3,
+    "feedback": "full",
+    "attempt": 4,
+    "seed": 410304,
+    "order_index": 166
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_binary_a04",
+    "circuit": "and4",
+    "session": 6,
+    "feedback": "binary",
+    "attempt": 4,
+    "seed": 420604,
+    "order_index": 167
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_none_a04",
+    "circuit": "and4",
+    "session": 10,
+    "feedback": "none",
+    "attempt": 4,
+    "seed": 421004,
+    "order_index": 168
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_none_a04",
+    "circuit": "and4",
+    "session": 1,
+    "feedback": "none",
+    "attempt": 4,
+    "seed": 420104,
+    "order_index": 169
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_none_a04",
+    "circuit": "opamp",
+    "session": 6,
+    "feedback": "none",
+    "attempt": 4,
+    "seed": 410604,
+    "order_index": 170
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_binary_a04",
+    "circuit": "and4",
+    "session": 8,
+    "feedback": "binary",
+    "attempt": 4,
+    "seed": 420804,
+    "order_index": 171
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_binary_a04",
+    "circuit": "opamp",
+    "session": 4,
+    "feedback": "binary",
+    "attempt": 4,
+    "seed": 410404,
+    "order_index": 172
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_full_a04",
+    "circuit": "and4",
+    "session": 10,
+    "feedback": "full",
+    "attempt": 4,
+    "seed": 421004,
+    "order_index": 173
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_binary_a04",
+    "circuit": "and4",
+    "session": 1,
+    "feedback": "binary",
+    "attempt": 4,
+    "seed": 420104,
+    "order_index": 174
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_none_a04",
+    "circuit": "and4",
+    "session": 5,
+    "feedback": "none",
+    "attempt": 4,
+    "seed": 420504,
+    "order_index": 175
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_none_a04",
+    "circuit": "opamp",
+    "session": 3,
+    "feedback": "none",
+    "attempt": 4,
+    "seed": 410304,
+    "order_index": 176
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_binary_a04",
+    "circuit": "and4",
+    "session": 7,
+    "feedback": "binary",
+    "attempt": 4,
+    "seed": 420704,
+    "order_index": 177
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_binary_a04",
+    "circuit": "and4",
+    "session": 5,
+    "feedback": "binary",
+    "attempt": 4,
+    "seed": 420504,
+    "order_index": 178
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_full_a04",
+    "circuit": "and4",
+    "session": 1,
+    "feedback": "full",
+    "attempt": 4,
+    "seed": 420104,
+    "order_index": 179
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_binary_a04",
+    "circuit": "and4",
+    "session": 9,
+    "feedback": "binary",
+    "attempt": 4,
+    "seed": 420904,
+    "order_index": 180
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_binary_a04",
+    "circuit": "opamp",
+    "session": 5,
+    "feedback": "binary",
+    "attempt": 4,
+    "seed": 410504,
+    "order_index": 181
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_full_a04",
+    "circuit": "and4",
+    "session": 6,
+    "feedback": "full",
+    "attempt": 4,
+    "seed": 420604,
+    "order_index": 182
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_full_a04",
+    "circuit": "and4",
+    "session": 7,
+    "feedback": "full",
+    "attempt": 4,
+    "seed": 420704,
+    "order_index": 183
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_binary_a04",
+    "circuit": "opamp",
+    "session": 10,
+    "feedback": "binary",
+    "attempt": 4,
+    "seed": 411004,
+    "order_index": 184
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_full_a04",
+    "circuit": "opamp",
+    "session": 2,
+    "feedback": "full",
+    "attempt": 4,
+    "seed": 410204,
+    "order_index": 185
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_none_a04",
+    "circuit": "and4",
+    "session": 2,
+    "feedback": "none",
+    "attempt": 4,
+    "seed": 420204,
+    "order_index": 186
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_binary_a04",
+    "circuit": "and4",
+    "session": 4,
+    "feedback": "binary",
+    "attempt": 4,
+    "seed": 420404,
+    "order_index": 187
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_none_a04",
+    "circuit": "opamp",
+    "session": 1,
+    "feedback": "none",
+    "attempt": 4,
+    "seed": 410104,
+    "order_index": 188
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_full_a04",
+    "circuit": "opamp",
+    "session": 8,
+    "feedback": "full",
+    "attempt": 4,
+    "seed": 410804,
+    "order_index": 189
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_none_a04",
+    "circuit": "opamp",
+    "session": 4,
+    "feedback": "none",
+    "attempt": 4,
+    "seed": 410404,
+    "order_index": 190
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_binary_a04",
+    "circuit": "opamp",
+    "session": 7,
+    "feedback": "binary",
+    "attempt": 4,
+    "seed": 410704,
+    "order_index": 191
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_none_a04",
+    "circuit": "and4",
+    "session": 9,
+    "feedback": "none",
+    "attempt": 4,
+    "seed": 420904,
+    "order_index": 192
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_binary_a04",
+    "circuit": "opamp",
+    "session": 9,
+    "feedback": "binary",
+    "attempt": 4,
+    "seed": 410904,
+    "order_index": 193
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_none_a04",
+    "circuit": "opamp",
+    "session": 8,
+    "feedback": "none",
+    "attempt": 4,
+    "seed": 410804,
+    "order_index": 194
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_none_a04",
+    "circuit": "and4",
+    "session": 6,
+    "feedback": "none",
+    "attempt": 4,
+    "seed": 420604,
+    "order_index": 195
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_none_a04",
+    "circuit": "and4",
+    "session": 4,
+    "feedback": "none",
+    "attempt": 4,
+    "seed": 420404,
+    "order_index": 196
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_binary_a04",
+    "circuit": "and4",
+    "session": 3,
+    "feedback": "binary",
+    "attempt": 4,
+    "seed": 420304,
+    "order_index": 197
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_binary_a04",
+    "circuit": "opamp",
+    "session": 1,
+    "feedback": "binary",
+    "attempt": 4,
+    "seed": 410104,
+    "order_index": 198
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_binary_a04",
+    "circuit": "opamp",
+    "session": 6,
+    "feedback": "binary",
+    "attempt": 4,
+    "seed": 410604,
+    "order_index": 199
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_binary_a05",
+    "circuit": "opamp",
+    "session": 3,
+    "feedback": "binary",
+    "attempt": 5,
+    "seed": 410305,
+    "order_index": 200
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_binary_a05",
+    "circuit": "opamp",
+    "session": 4,
+    "feedback": "binary",
+    "attempt": 5,
+    "seed": 410405,
+    "order_index": 201
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_none_a05",
+    "circuit": "and4",
+    "session": 3,
+    "feedback": "none",
+    "attempt": 5,
+    "seed": 420305,
+    "order_index": 202
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_none_a05",
+    "circuit": "opamp",
+    "session": 3,
+    "feedback": "none",
+    "attempt": 5,
+    "seed": 410305,
+    "order_index": 203
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_none_a05",
+    "circuit": "and4",
+    "session": 7,
+    "feedback": "none",
+    "attempt": 5,
+    "seed": 420705,
+    "order_index": 204
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_binary_a05",
+    "circuit": "opamp",
+    "session": 1,
+    "feedback": "binary",
+    "attempt": 5,
+    "seed": 410105,
+    "order_index": 205
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_full_a05",
+    "circuit": "opamp",
+    "session": 2,
+    "feedback": "full",
+    "attempt": 5,
+    "seed": 410205,
+    "order_index": 206
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_binary_a05",
+    "circuit": "opamp",
+    "session": 8,
+    "feedback": "binary",
+    "attempt": 5,
+    "seed": 410805,
+    "order_index": 207
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_binary_a05",
+    "circuit": "and4",
+    "session": 4,
+    "feedback": "binary",
+    "attempt": 5,
+    "seed": 420405,
+    "order_index": 208
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_full_a05",
+    "circuit": "and4",
+    "session": 2,
+    "feedback": "full",
+    "attempt": 5,
+    "seed": 420205,
+    "order_index": 209
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_binary_a05",
+    "circuit": "and4",
+    "session": 8,
+    "feedback": "binary",
+    "attempt": 5,
+    "seed": 420805,
+    "order_index": 210
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_full_a05",
+    "circuit": "and4",
+    "session": 8,
+    "feedback": "full",
+    "attempt": 5,
+    "seed": 420805,
+    "order_index": 211
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_none_a05",
+    "circuit": "opamp",
+    "session": 5,
+    "feedback": "none",
+    "attempt": 5,
+    "seed": 410505,
+    "order_index": 212
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_none_a05",
+    "circuit": "and4",
+    "session": 8,
+    "feedback": "none",
+    "attempt": 5,
+    "seed": 420805,
+    "order_index": 213
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_binary_a05",
+    "circuit": "opamp",
+    "session": 5,
+    "feedback": "binary",
+    "attempt": 5,
+    "seed": 410505,
+    "order_index": 214
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_none_a05",
+    "circuit": "opamp",
+    "session": 4,
+    "feedback": "none",
+    "attempt": 5,
+    "seed": 410405,
+    "order_index": 215
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_binary_a05",
+    "circuit": "and4",
+    "session": 7,
+    "feedback": "binary",
+    "attempt": 5,
+    "seed": 420705,
+    "order_index": 216
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_binary_a05",
+    "circuit": "and4",
+    "session": 6,
+    "feedback": "binary",
+    "attempt": 5,
+    "seed": 420605,
+    "order_index": 217
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_binary_a05",
+    "circuit": "opamp",
+    "session": 2,
+    "feedback": "binary",
+    "attempt": 5,
+    "seed": 410205,
+    "order_index": 218
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_full_a05",
+    "circuit": "opamp",
+    "session": 4,
+    "feedback": "full",
+    "attempt": 5,
+    "seed": 410405,
+    "order_index": 219
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_full_a05",
+    "circuit": "and4",
+    "session": 4,
+    "feedback": "full",
+    "attempt": 5,
+    "seed": 420405,
+    "order_index": 220
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_none_a05",
+    "circuit": "and4",
+    "session": 1,
+    "feedback": "none",
+    "attempt": 5,
+    "seed": 420105,
+    "order_index": 221
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_none_a05",
+    "circuit": "and4",
+    "session": 6,
+    "feedback": "none",
+    "attempt": 5,
+    "seed": 420605,
+    "order_index": 222
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_full_a05",
+    "circuit": "opamp",
+    "session": 1,
+    "feedback": "full",
+    "attempt": 5,
+    "seed": 410105,
+    "order_index": 223
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_binary_a05",
+    "circuit": "and4",
+    "session": 5,
+    "feedback": "binary",
+    "attempt": 5,
+    "seed": 420505,
+    "order_index": 224
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_binary_a05",
+    "circuit": "and4",
+    "session": 10,
+    "feedback": "binary",
+    "attempt": 5,
+    "seed": 421005,
+    "order_index": 225
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_none_a05",
+    "circuit": "opamp",
+    "session": 8,
+    "feedback": "none",
+    "attempt": 5,
+    "seed": 410805,
+    "order_index": 226
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_none_a05",
+    "circuit": "opamp",
+    "session": 7,
+    "feedback": "none",
+    "attempt": 5,
+    "seed": 410705,
+    "order_index": 227
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_full_a05",
+    "circuit": "and4",
+    "session": 7,
+    "feedback": "full",
+    "attempt": 5,
+    "seed": 420705,
+    "order_index": 228
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_full_a05",
+    "circuit": "and4",
+    "session": 9,
+    "feedback": "full",
+    "attempt": 5,
+    "seed": 420905,
+    "order_index": 229
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_full_a05",
+    "circuit": "opamp",
+    "session": 6,
+    "feedback": "full",
+    "attempt": 5,
+    "seed": 410605,
+    "order_index": 230
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_none_a05",
+    "circuit": "opamp",
+    "session": 9,
+    "feedback": "none",
+    "attempt": 5,
+    "seed": 410905,
+    "order_index": 231
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_binary_a05",
+    "circuit": "and4",
+    "session": 1,
+    "feedback": "binary",
+    "attempt": 5,
+    "seed": 420105,
+    "order_index": 232
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_full_a05",
+    "circuit": "opamp",
+    "session": 9,
+    "feedback": "full",
+    "attempt": 5,
+    "seed": 410905,
+    "order_index": 233
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_none_a05",
+    "circuit": "and4",
+    "session": 10,
+    "feedback": "none",
+    "attempt": 5,
+    "seed": 421005,
+    "order_index": 234
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_none_a05",
+    "circuit": "and4",
+    "session": 4,
+    "feedback": "none",
+    "attempt": 5,
+    "seed": 420405,
+    "order_index": 235
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_full_a05",
+    "circuit": "and4",
+    "session": 1,
+    "feedback": "full",
+    "attempt": 5,
+    "seed": 420105,
+    "order_index": 236
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_full_a05",
+    "circuit": "opamp",
+    "session": 3,
+    "feedback": "full",
+    "attempt": 5,
+    "seed": 410305,
+    "order_index": 237
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_full_a05",
+    "circuit": "opamp",
+    "session": 10,
+    "feedback": "full",
+    "attempt": 5,
+    "seed": 411005,
+    "order_index": 238
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_none_a05",
+    "circuit": "and4",
+    "session": 9,
+    "feedback": "none",
+    "attempt": 5,
+    "seed": 420905,
+    "order_index": 239
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_binary_a05",
+    "circuit": "and4",
+    "session": 9,
+    "feedback": "binary",
+    "attempt": 5,
+    "seed": 420905,
+    "order_index": 240
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_binary_a05",
+    "circuit": "opamp",
+    "session": 7,
+    "feedback": "binary",
+    "attempt": 5,
+    "seed": 410705,
+    "order_index": 241
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_binary_a05",
+    "circuit": "opamp",
+    "session": 10,
+    "feedback": "binary",
+    "attempt": 5,
+    "seed": 411005,
+    "order_index": 242
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_binary_a05",
+    "circuit": "and4",
+    "session": 2,
+    "feedback": "binary",
+    "attempt": 5,
+    "seed": 420205,
+    "order_index": 243
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_full_a05",
+    "circuit": "opamp",
+    "session": 8,
+    "feedback": "full",
+    "attempt": 5,
+    "seed": 410805,
+    "order_index": 244
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_full_a05",
+    "circuit": "and4",
+    "session": 5,
+    "feedback": "full",
+    "attempt": 5,
+    "seed": 420505,
+    "order_index": 245
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_none_a05",
+    "circuit": "and4",
+    "session": 5,
+    "feedback": "none",
+    "attempt": 5,
+    "seed": 420505,
+    "order_index": 246
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_none_a05",
+    "circuit": "opamp",
+    "session": 6,
+    "feedback": "none",
+    "attempt": 5,
+    "seed": 410605,
+    "order_index": 247
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_full_a05",
+    "circuit": "and4",
+    "session": 3,
+    "feedback": "full",
+    "attempt": 5,
+    "seed": 420305,
+    "order_index": 248
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_full_a05",
+    "circuit": "opamp",
+    "session": 5,
+    "feedback": "full",
+    "attempt": 5,
+    "seed": 410505,
+    "order_index": 249
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_none_a05",
+    "circuit": "opamp",
+    "session": 1,
+    "feedback": "none",
+    "attempt": 5,
+    "seed": 410105,
+    "order_index": 250
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_binary_a05",
+    "circuit": "opamp",
+    "session": 6,
+    "feedback": "binary",
+    "attempt": 5,
+    "seed": 410605,
+    "order_index": 251
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_none_a05",
+    "circuit": "and4",
+    "session": 2,
+    "feedback": "none",
+    "attempt": 5,
+    "seed": 420205,
+    "order_index": 252
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_full_a05",
+    "circuit": "and4",
+    "session": 10,
+    "feedback": "full",
+    "attempt": 5,
+    "seed": 421005,
+    "order_index": 253
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_full_a05",
+    "circuit": "and4",
+    "session": 6,
+    "feedback": "full",
+    "attempt": 5,
+    "seed": 420605,
+    "order_index": 254
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_full_a05",
+    "circuit": "opamp",
+    "session": 7,
+    "feedback": "full",
+    "attempt": 5,
+    "seed": 410705,
+    "order_index": 255
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_none_a05",
+    "circuit": "opamp",
+    "session": 10,
+    "feedback": "none",
+    "attempt": 5,
+    "seed": 411005,
+    "order_index": 256
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_binary_a05",
+    "circuit": "and4",
+    "session": 3,
+    "feedback": "binary",
+    "attempt": 5,
+    "seed": 420305,
+    "order_index": 257
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_binary_a05",
+    "circuit": "opamp",
+    "session": 9,
+    "feedback": "binary",
+    "attempt": 5,
+    "seed": 410905,
+    "order_index": 258
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_none_a05",
+    "circuit": "opamp",
+    "session": 2,
+    "feedback": "none",
+    "attempt": 5,
+    "seed": 410205,
+    "order_index": 259
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_none_a06",
+    "circuit": "and4",
+    "session": 4,
+    "feedback": "none",
+    "attempt": 6,
+    "seed": 420406,
+    "order_index": 260
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_full_a06",
+    "circuit": "and4",
+    "session": 1,
+    "feedback": "full",
+    "attempt": 6,
+    "seed": 420106,
+    "order_index": 261
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_none_a06",
+    "circuit": "opamp",
+    "session": 5,
+    "feedback": "none",
+    "attempt": 6,
+    "seed": 410506,
+    "order_index": 262
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_none_a06",
+    "circuit": "and4",
+    "session": 1,
+    "feedback": "none",
+    "attempt": 6,
+    "seed": 420106,
+    "order_index": 263
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_binary_a06",
+    "circuit": "opamp",
+    "session": 9,
+    "feedback": "binary",
+    "attempt": 6,
+    "seed": 410906,
+    "order_index": 264
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_full_a06",
+    "circuit": "opamp",
+    "session": 5,
+    "feedback": "full",
+    "attempt": 6,
+    "seed": 410506,
+    "order_index": 265
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_binary_a06",
+    "circuit": "and4",
+    "session": 2,
+    "feedback": "binary",
+    "attempt": 6,
+    "seed": 420206,
+    "order_index": 266
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_binary_a06",
+    "circuit": "and4",
+    "session": 7,
+    "feedback": "binary",
+    "attempt": 6,
+    "seed": 420706,
+    "order_index": 267
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_none_a06",
+    "circuit": "and4",
+    "session": 2,
+    "feedback": "none",
+    "attempt": 6,
+    "seed": 420206,
+    "order_index": 268
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_none_a06",
+    "circuit": "and4",
+    "session": 8,
+    "feedback": "none",
+    "attempt": 6,
+    "seed": 420806,
+    "order_index": 269
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_full_a06",
+    "circuit": "and4",
+    "session": 10,
+    "feedback": "full",
+    "attempt": 6,
+    "seed": 421006,
+    "order_index": 270
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_none_a06",
+    "circuit": "opamp",
+    "session": 2,
+    "feedback": "none",
+    "attempt": 6,
+    "seed": 410206,
+    "order_index": 271
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_full_a06",
+    "circuit": "and4",
+    "session": 2,
+    "feedback": "full",
+    "attempt": 6,
+    "seed": 420206,
+    "order_index": 272
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_none_a06",
+    "circuit": "and4",
+    "session": 10,
+    "feedback": "none",
+    "attempt": 6,
+    "seed": 421006,
+    "order_index": 273
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_binary_a06",
+    "circuit": "opamp",
+    "session": 3,
+    "feedback": "binary",
+    "attempt": 6,
+    "seed": 410306,
+    "order_index": 274
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_binary_a06",
+    "circuit": "and4",
+    "session": 4,
+    "feedback": "binary",
+    "attempt": 6,
+    "seed": 420406,
+    "order_index": 275
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_none_a06",
+    "circuit": "and4",
+    "session": 3,
+    "feedback": "none",
+    "attempt": 6,
+    "seed": 420306,
+    "order_index": 276
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_none_a06",
+    "circuit": "opamp",
+    "session": 9,
+    "feedback": "none",
+    "attempt": 6,
+    "seed": 410906,
+    "order_index": 277
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_none_a06",
+    "circuit": "opamp",
+    "session": 8,
+    "feedback": "none",
+    "attempt": 6,
+    "seed": 410806,
+    "order_index": 278
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_binary_a06",
+    "circuit": "and4",
+    "session": 6,
+    "feedback": "binary",
+    "attempt": 6,
+    "seed": 420606,
+    "order_index": 279
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_none_a06",
+    "circuit": "and4",
+    "session": 9,
+    "feedback": "none",
+    "attempt": 6,
+    "seed": 420906,
+    "order_index": 280
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_none_a06",
+    "circuit": "and4",
+    "session": 5,
+    "feedback": "none",
+    "attempt": 6,
+    "seed": 420506,
+    "order_index": 281
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_binary_a06",
+    "circuit": "and4",
+    "session": 3,
+    "feedback": "binary",
+    "attempt": 6,
+    "seed": 420306,
+    "order_index": 282
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_binary_a06",
+    "circuit": "opamp",
+    "session": 8,
+    "feedback": "binary",
+    "attempt": 6,
+    "seed": 410806,
+    "order_index": 283
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_binary_a06",
+    "circuit": "opamp",
+    "session": 1,
+    "feedback": "binary",
+    "attempt": 6,
+    "seed": 410106,
+    "order_index": 284
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_full_a06",
+    "circuit": "and4",
+    "session": 5,
+    "feedback": "full",
+    "attempt": 6,
+    "seed": 420506,
+    "order_index": 285
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_full_a06",
+    "circuit": "opamp",
+    "session": 1,
+    "feedback": "full",
+    "attempt": 6,
+    "seed": 410106,
+    "order_index": 286
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_binary_a06",
+    "circuit": "opamp",
+    "session": 10,
+    "feedback": "binary",
+    "attempt": 6,
+    "seed": 411006,
+    "order_index": 287
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_full_a06",
+    "circuit": "opamp",
+    "session": 6,
+    "feedback": "full",
+    "attempt": 6,
+    "seed": 410606,
+    "order_index": 288
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_binary_a06",
+    "circuit": "and4",
+    "session": 10,
+    "feedback": "binary",
+    "attempt": 6,
+    "seed": 421006,
+    "order_index": 289
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_binary_a06",
+    "circuit": "opamp",
+    "session": 5,
+    "feedback": "binary",
+    "attempt": 6,
+    "seed": 410506,
+    "order_index": 290
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_full_a06",
+    "circuit": "and4",
+    "session": 7,
+    "feedback": "full",
+    "attempt": 6,
+    "seed": 420706,
+    "order_index": 291
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_none_a06",
+    "circuit": "opamp",
+    "session": 10,
+    "feedback": "none",
+    "attempt": 6,
+    "seed": 411006,
+    "order_index": 292
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_full_a06",
+    "circuit": "opamp",
+    "session": 4,
+    "feedback": "full",
+    "attempt": 6,
+    "seed": 410406,
+    "order_index": 293
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_none_a06",
+    "circuit": "opamp",
+    "session": 1,
+    "feedback": "none",
+    "attempt": 6,
+    "seed": 410106,
+    "order_index": 294
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_none_a06",
+    "circuit": "and4",
+    "session": 6,
+    "feedback": "none",
+    "attempt": 6,
+    "seed": 420606,
+    "order_index": 295
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_none_a06",
+    "circuit": "opamp",
+    "session": 7,
+    "feedback": "none",
+    "attempt": 6,
+    "seed": 410706,
+    "order_index": 296
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_binary_a06",
+    "circuit": "opamp",
+    "session": 4,
+    "feedback": "binary",
+    "attempt": 6,
+    "seed": 410406,
+    "order_index": 297
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_binary_a06",
+    "circuit": "and4",
+    "session": 9,
+    "feedback": "binary",
+    "attempt": 6,
+    "seed": 420906,
+    "order_index": 298
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_binary_a06",
+    "circuit": "and4",
+    "session": 5,
+    "feedback": "binary",
+    "attempt": 6,
+    "seed": 420506,
+    "order_index": 299
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_none_a06",
+    "circuit": "opamp",
+    "session": 4,
+    "feedback": "none",
+    "attempt": 6,
+    "seed": 410406,
+    "order_index": 300
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_full_a06",
+    "circuit": "opamp",
+    "session": 10,
+    "feedback": "full",
+    "attempt": 6,
+    "seed": 411006,
+    "order_index": 301
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_none_a06",
+    "circuit": "opamp",
+    "session": 3,
+    "feedback": "none",
+    "attempt": 6,
+    "seed": 410306,
+    "order_index": 302
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_full_a06",
+    "circuit": "opamp",
+    "session": 7,
+    "feedback": "full",
+    "attempt": 6,
+    "seed": 410706,
+    "order_index": 303
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_full_a06",
+    "circuit": "and4",
+    "session": 3,
+    "feedback": "full",
+    "attempt": 6,
+    "seed": 420306,
+    "order_index": 304
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_binary_a06",
+    "circuit": "opamp",
+    "session": 7,
+    "feedback": "binary",
+    "attempt": 6,
+    "seed": 410706,
+    "order_index": 305
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_binary_a06",
+    "circuit": "opamp",
+    "session": 6,
+    "feedback": "binary",
+    "attempt": 6,
+    "seed": 410606,
+    "order_index": 306
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_full_a06",
+    "circuit": "and4",
+    "session": 8,
+    "feedback": "full",
+    "attempt": 6,
+    "seed": 420806,
+    "order_index": 307
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_full_a06",
+    "circuit": "opamp",
+    "session": 9,
+    "feedback": "full",
+    "attempt": 6,
+    "seed": 410906,
+    "order_index": 308
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_binary_a06",
+    "circuit": "and4",
+    "session": 1,
+    "feedback": "binary",
+    "attempt": 6,
+    "seed": 420106,
+    "order_index": 309
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_full_a06",
+    "circuit": "opamp",
+    "session": 2,
+    "feedback": "full",
+    "attempt": 6,
+    "seed": 410206,
+    "order_index": 310
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_full_a06",
+    "circuit": "and4",
+    "session": 4,
+    "feedback": "full",
+    "attempt": 6,
+    "seed": 420406,
+    "order_index": 311
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_full_a06",
+    "circuit": "and4",
+    "session": 6,
+    "feedback": "full",
+    "attempt": 6,
+    "seed": 420606,
+    "order_index": 312
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_none_a06",
+    "circuit": "opamp",
+    "session": 6,
+    "feedback": "none",
+    "attempt": 6,
+    "seed": 410606,
+    "order_index": 313
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_binary_a06",
+    "circuit": "opamp",
+    "session": 2,
+    "feedback": "binary",
+    "attempt": 6,
+    "seed": 410206,
+    "order_index": 314
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_none_a06",
+    "circuit": "and4",
+    "session": 7,
+    "feedback": "none",
+    "attempt": 6,
+    "seed": 420706,
+    "order_index": 315
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_full_a06",
+    "circuit": "and4",
+    "session": 9,
+    "feedback": "full",
+    "attempt": 6,
+    "seed": 420906,
+    "order_index": 316
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_full_a06",
+    "circuit": "opamp",
+    "session": 8,
+    "feedback": "full",
+    "attempt": 6,
+    "seed": 410806,
+    "order_index": 317
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_full_a06",
+    "circuit": "opamp",
+    "session": 3,
+    "feedback": "full",
+    "attempt": 6,
+    "seed": 410306,
+    "order_index": 318
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_binary_a06",
+    "circuit": "and4",
+    "session": 8,
+    "feedback": "binary",
+    "attempt": 6,
+    "seed": 420806,
+    "order_index": 319
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_full_a07",
+    "circuit": "and4",
+    "session": 4,
+    "feedback": "full",
+    "attempt": 7,
+    "seed": 420407,
+    "order_index": 320
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_full_a07",
+    "circuit": "opamp",
+    "session": 4,
+    "feedback": "full",
+    "attempt": 7,
+    "seed": 410407,
+    "order_index": 321
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_none_a07",
+    "circuit": "opamp",
+    "session": 7,
+    "feedback": "none",
+    "attempt": 7,
+    "seed": 410707,
+    "order_index": 322
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_full_a07",
+    "circuit": "opamp",
+    "session": 3,
+    "feedback": "full",
+    "attempt": 7,
+    "seed": 410307,
+    "order_index": 323
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_binary_a07",
+    "circuit": "opamp",
+    "session": 8,
+    "feedback": "binary",
+    "attempt": 7,
+    "seed": 410807,
+    "order_index": 324
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_none_a07",
+    "circuit": "opamp",
+    "session": 2,
+    "feedback": "none",
+    "attempt": 7,
+    "seed": 410207,
+    "order_index": 325
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_none_a07",
+    "circuit": "opamp",
+    "session": 6,
+    "feedback": "none",
+    "attempt": 7,
+    "seed": 410607,
+    "order_index": 326
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_full_a07",
+    "circuit": "and4",
+    "session": 9,
+    "feedback": "full",
+    "attempt": 7,
+    "seed": 420907,
+    "order_index": 327
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_full_a07",
+    "circuit": "opamp",
+    "session": 9,
+    "feedback": "full",
+    "attempt": 7,
+    "seed": 410907,
+    "order_index": 328
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_binary_a07",
+    "circuit": "and4",
+    "session": 10,
+    "feedback": "binary",
+    "attempt": 7,
+    "seed": 421007,
+    "order_index": 329
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_binary_a07",
+    "circuit": "and4",
+    "session": 2,
+    "feedback": "binary",
+    "attempt": 7,
+    "seed": 420207,
+    "order_index": 330
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_binary_a07",
+    "circuit": "opamp",
+    "session": 2,
+    "feedback": "binary",
+    "attempt": 7,
+    "seed": 410207,
+    "order_index": 331
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_binary_a07",
+    "circuit": "and4",
+    "session": 1,
+    "feedback": "binary",
+    "attempt": 7,
+    "seed": 420107,
+    "order_index": 332
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_full_a07",
+    "circuit": "opamp",
+    "session": 5,
+    "feedback": "full",
+    "attempt": 7,
+    "seed": 410507,
+    "order_index": 333
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_full_a07",
+    "circuit": "and4",
+    "session": 6,
+    "feedback": "full",
+    "attempt": 7,
+    "seed": 420607,
+    "order_index": 334
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_none_a07",
+    "circuit": "and4",
+    "session": 1,
+    "feedback": "none",
+    "attempt": 7,
+    "seed": 420107,
+    "order_index": 335
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_none_a07",
+    "circuit": "and4",
+    "session": 4,
+    "feedback": "none",
+    "attempt": 7,
+    "seed": 420407,
+    "order_index": 336
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_full_a07",
+    "circuit": "and4",
+    "session": 10,
+    "feedback": "full",
+    "attempt": 7,
+    "seed": 421007,
+    "order_index": 337
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_binary_a07",
+    "circuit": "opamp",
+    "session": 5,
+    "feedback": "binary",
+    "attempt": 7,
+    "seed": 410507,
+    "order_index": 338
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_full_a07",
+    "circuit": "opamp",
+    "session": 2,
+    "feedback": "full",
+    "attempt": 7,
+    "seed": 410207,
+    "order_index": 339
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_binary_a07",
+    "circuit": "and4",
+    "session": 3,
+    "feedback": "binary",
+    "attempt": 7,
+    "seed": 420307,
+    "order_index": 340
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_full_a07",
+    "circuit": "opamp",
+    "session": 6,
+    "feedback": "full",
+    "attempt": 7,
+    "seed": 410607,
+    "order_index": 341
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_full_a07",
+    "circuit": "and4",
+    "session": 8,
+    "feedback": "full",
+    "attempt": 7,
+    "seed": 420807,
+    "order_index": 342
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_binary_a07",
+    "circuit": "and4",
+    "session": 5,
+    "feedback": "binary",
+    "attempt": 7,
+    "seed": 420507,
+    "order_index": 343
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_binary_a07",
+    "circuit": "and4",
+    "session": 7,
+    "feedback": "binary",
+    "attempt": 7,
+    "seed": 420707,
+    "order_index": 344
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_none_a07",
+    "circuit": "and4",
+    "session": 7,
+    "feedback": "none",
+    "attempt": 7,
+    "seed": 420707,
+    "order_index": 345
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_full_a07",
+    "circuit": "and4",
+    "session": 1,
+    "feedback": "full",
+    "attempt": 7,
+    "seed": 420107,
+    "order_index": 346
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_none_a07",
+    "circuit": "opamp",
+    "session": 10,
+    "feedback": "none",
+    "attempt": 7,
+    "seed": 411007,
+    "order_index": 347
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_binary_a07",
+    "circuit": "opamp",
+    "session": 10,
+    "feedback": "binary",
+    "attempt": 7,
+    "seed": 411007,
+    "order_index": 348
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_none_a07",
+    "circuit": "opamp",
+    "session": 3,
+    "feedback": "none",
+    "attempt": 7,
+    "seed": 410307,
+    "order_index": 349
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_none_a07",
+    "circuit": "and4",
+    "session": 3,
+    "feedback": "none",
+    "attempt": 7,
+    "seed": 420307,
+    "order_index": 350
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_binary_a07",
+    "circuit": "and4",
+    "session": 6,
+    "feedback": "binary",
+    "attempt": 7,
+    "seed": 420607,
+    "order_index": 351
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_none_a07",
+    "circuit": "and4",
+    "session": 2,
+    "feedback": "none",
+    "attempt": 7,
+    "seed": 420207,
+    "order_index": 352
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_none_a07",
+    "circuit": "opamp",
+    "session": 1,
+    "feedback": "none",
+    "attempt": 7,
+    "seed": 410107,
+    "order_index": 353
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_binary_a07",
+    "circuit": "opamp",
+    "session": 4,
+    "feedback": "binary",
+    "attempt": 7,
+    "seed": 410407,
+    "order_index": 354
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_none_a07",
+    "circuit": "opamp",
+    "session": 5,
+    "feedback": "none",
+    "attempt": 7,
+    "seed": 410507,
+    "order_index": 355
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_binary_a07",
+    "circuit": "opamp",
+    "session": 6,
+    "feedback": "binary",
+    "attempt": 7,
+    "seed": 410607,
+    "order_index": 356
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_full_a07",
+    "circuit": "and4",
+    "session": 2,
+    "feedback": "full",
+    "attempt": 7,
+    "seed": 420207,
+    "order_index": 357
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_full_a07",
+    "circuit": "opamp",
+    "session": 7,
+    "feedback": "full",
+    "attempt": 7,
+    "seed": 410707,
+    "order_index": 358
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_binary_a07",
+    "circuit": "and4",
+    "session": 4,
+    "feedback": "binary",
+    "attempt": 7,
+    "seed": 420407,
+    "order_index": 359
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_full_a07",
+    "circuit": "opamp",
+    "session": 1,
+    "feedback": "full",
+    "attempt": 7,
+    "seed": 410107,
+    "order_index": 360
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_binary_a07",
+    "circuit": "opamp",
+    "session": 1,
+    "feedback": "binary",
+    "attempt": 7,
+    "seed": 410107,
+    "order_index": 361
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_none_a07",
+    "circuit": "and4",
+    "session": 10,
+    "feedback": "none",
+    "attempt": 7,
+    "seed": 421007,
+    "order_index": 362
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_none_a07",
+    "circuit": "and4",
+    "session": 6,
+    "feedback": "none",
+    "attempt": 7,
+    "seed": 420607,
+    "order_index": 363
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_binary_a07",
+    "circuit": "opamp",
+    "session": 7,
+    "feedback": "binary",
+    "attempt": 7,
+    "seed": 410707,
+    "order_index": 364
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_full_a07",
+    "circuit": "and4",
+    "session": 7,
+    "feedback": "full",
+    "attempt": 7,
+    "seed": 420707,
+    "order_index": 365
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_none_a07",
+    "circuit": "and4",
+    "session": 9,
+    "feedback": "none",
+    "attempt": 7,
+    "seed": 420907,
+    "order_index": 366
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_binary_a07",
+    "circuit": "and4",
+    "session": 8,
+    "feedback": "binary",
+    "attempt": 7,
+    "seed": 420807,
+    "order_index": 367
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_binary_a07",
+    "circuit": "and4",
+    "session": 9,
+    "feedback": "binary",
+    "attempt": 7,
+    "seed": 420907,
+    "order_index": 368
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_full_a07",
+    "circuit": "opamp",
+    "session": 10,
+    "feedback": "full",
+    "attempt": 7,
+    "seed": 411007,
+    "order_index": 369
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_none_a07",
+    "circuit": "and4",
+    "session": 8,
+    "feedback": "none",
+    "attempt": 7,
+    "seed": 420807,
+    "order_index": 370
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_binary_a07",
+    "circuit": "opamp",
+    "session": 3,
+    "feedback": "binary",
+    "attempt": 7,
+    "seed": 410307,
+    "order_index": 371
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_full_a07",
+    "circuit": "and4",
+    "session": 5,
+    "feedback": "full",
+    "attempt": 7,
+    "seed": 420507,
+    "order_index": 372
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_none_a07",
+    "circuit": "opamp",
+    "session": 8,
+    "feedback": "none",
+    "attempt": 7,
+    "seed": 410807,
+    "order_index": 373
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_full_a07",
+    "circuit": "opamp",
+    "session": 8,
+    "feedback": "full",
+    "attempt": 7,
+    "seed": 410807,
+    "order_index": 374
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_none_a07",
+    "circuit": "opamp",
+    "session": 9,
+    "feedback": "none",
+    "attempt": 7,
+    "seed": 410907,
+    "order_index": 375
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_binary_a07",
+    "circuit": "opamp",
+    "session": 9,
+    "feedback": "binary",
+    "attempt": 7,
+    "seed": 410907,
+    "order_index": 376
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_none_a07",
+    "circuit": "opamp",
+    "session": 4,
+    "feedback": "none",
+    "attempt": 7,
+    "seed": 410407,
+    "order_index": 377
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_full_a07",
+    "circuit": "and4",
+    "session": 3,
+    "feedback": "full",
+    "attempt": 7,
+    "seed": 420307,
+    "order_index": 378
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_none_a07",
+    "circuit": "and4",
+    "session": 5,
+    "feedback": "none",
+    "attempt": 7,
+    "seed": 420507,
+    "order_index": 379
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_binary_a08",
+    "circuit": "opamp",
+    "session": 5,
+    "feedback": "binary",
+    "attempt": 8,
+    "seed": 410508,
+    "order_index": 380
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_none_a08",
+    "circuit": "opamp",
+    "session": 1,
+    "feedback": "none",
+    "attempt": 8,
+    "seed": 410108,
+    "order_index": 381
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_full_a08",
+    "circuit": "and4",
+    "session": 1,
+    "feedback": "full",
+    "attempt": 8,
+    "seed": 420108,
+    "order_index": 382
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_binary_a08",
+    "circuit": "and4",
+    "session": 1,
+    "feedback": "binary",
+    "attempt": 8,
+    "seed": 420108,
+    "order_index": 383
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_full_a08",
+    "circuit": "opamp",
+    "session": 9,
+    "feedback": "full",
+    "attempt": 8,
+    "seed": 410908,
+    "order_index": 384
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_binary_a08",
+    "circuit": "opamp",
+    "session": 3,
+    "feedback": "binary",
+    "attempt": 8,
+    "seed": 410308,
+    "order_index": 385
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_full_a08",
+    "circuit": "opamp",
+    "session": 8,
+    "feedback": "full",
+    "attempt": 8,
+    "seed": 410808,
+    "order_index": 386
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_none_a08",
+    "circuit": "and4",
+    "session": 8,
+    "feedback": "none",
+    "attempt": 8,
+    "seed": 420808,
+    "order_index": 387
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_full_a08",
+    "circuit": "opamp",
+    "session": 2,
+    "feedback": "full",
+    "attempt": 8,
+    "seed": 410208,
+    "order_index": 388
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_full_a08",
+    "circuit": "and4",
+    "session": 5,
+    "feedback": "full",
+    "attempt": 8,
+    "seed": 420508,
+    "order_index": 389
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_none_a08",
+    "circuit": "opamp",
+    "session": 10,
+    "feedback": "none",
+    "attempt": 8,
+    "seed": 411008,
+    "order_index": 390
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_binary_a08",
+    "circuit": "opamp",
+    "session": 9,
+    "feedback": "binary",
+    "attempt": 8,
+    "seed": 410908,
+    "order_index": 391
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_full_a08",
+    "circuit": "and4",
+    "session": 6,
+    "feedback": "full",
+    "attempt": 8,
+    "seed": 420608,
+    "order_index": 392
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_binary_a08",
+    "circuit": "opamp",
+    "session": 1,
+    "feedback": "binary",
+    "attempt": 8,
+    "seed": 410108,
+    "order_index": 393
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_full_a08",
+    "circuit": "opamp",
+    "session": 5,
+    "feedback": "full",
+    "attempt": 8,
+    "seed": 410508,
+    "order_index": 394
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_binary_a08",
+    "circuit": "and4",
+    "session": 8,
+    "feedback": "binary",
+    "attempt": 8,
+    "seed": 420808,
+    "order_index": 395
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_none_a08",
+    "circuit": "opamp",
+    "session": 9,
+    "feedback": "none",
+    "attempt": 8,
+    "seed": 410908,
+    "order_index": 396
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_binary_a08",
+    "circuit": "and4",
+    "session": 5,
+    "feedback": "binary",
+    "attempt": 8,
+    "seed": 420508,
+    "order_index": 397
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_binary_a08",
+    "circuit": "opamp",
+    "session": 6,
+    "feedback": "binary",
+    "attempt": 8,
+    "seed": 410608,
+    "order_index": 398
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_none_a08",
+    "circuit": "and4",
+    "session": 9,
+    "feedback": "none",
+    "attempt": 8,
+    "seed": 420908,
+    "order_index": 399
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_none_a08",
+    "circuit": "and4",
+    "session": 6,
+    "feedback": "none",
+    "attempt": 8,
+    "seed": 420608,
+    "order_index": 400
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_none_a08",
+    "circuit": "and4",
+    "session": 1,
+    "feedback": "none",
+    "attempt": 8,
+    "seed": 420108,
+    "order_index": 401
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_full_a08",
+    "circuit": "and4",
+    "session": 3,
+    "feedback": "full",
+    "attempt": 8,
+    "seed": 420308,
+    "order_index": 402
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_binary_a08",
+    "circuit": "and4",
+    "session": 10,
+    "feedback": "binary",
+    "attempt": 8,
+    "seed": 421008,
+    "order_index": 403
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_none_a08",
+    "circuit": "and4",
+    "session": 2,
+    "feedback": "none",
+    "attempt": 8,
+    "seed": 420208,
+    "order_index": 404
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_none_a08",
+    "circuit": "and4",
+    "session": 5,
+    "feedback": "none",
+    "attempt": 8,
+    "seed": 420508,
+    "order_index": 405
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_none_a08",
+    "circuit": "and4",
+    "session": 10,
+    "feedback": "none",
+    "attempt": 8,
+    "seed": 421008,
+    "order_index": 406
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_full_a08",
+    "circuit": "and4",
+    "session": 2,
+    "feedback": "full",
+    "attempt": 8,
+    "seed": 420208,
+    "order_index": 407
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_full_a08",
+    "circuit": "and4",
+    "session": 9,
+    "feedback": "full",
+    "attempt": 8,
+    "seed": 420908,
+    "order_index": 408
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_none_a08",
+    "circuit": "and4",
+    "session": 4,
+    "feedback": "none",
+    "attempt": 8,
+    "seed": 420408,
+    "order_index": 409
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_full_a08",
+    "circuit": "opamp",
+    "session": 1,
+    "feedback": "full",
+    "attempt": 8,
+    "seed": 410108,
+    "order_index": 410
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_binary_a08",
+    "circuit": "opamp",
+    "session": 10,
+    "feedback": "binary",
+    "attempt": 8,
+    "seed": 411008,
+    "order_index": 411
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_binary_a08",
+    "circuit": "and4",
+    "session": 4,
+    "feedback": "binary",
+    "attempt": 8,
+    "seed": 420408,
+    "order_index": 412
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_binary_a08",
+    "circuit": "and4",
+    "session": 7,
+    "feedback": "binary",
+    "attempt": 8,
+    "seed": 420708,
+    "order_index": 413
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_full_a08",
+    "circuit": "opamp",
+    "session": 4,
+    "feedback": "full",
+    "attempt": 8,
+    "seed": 410408,
+    "order_index": 414
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_full_a08",
+    "circuit": "opamp",
+    "session": 10,
+    "feedback": "full",
+    "attempt": 8,
+    "seed": 411008,
+    "order_index": 415
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_binary_a08",
+    "circuit": "opamp",
+    "session": 4,
+    "feedback": "binary",
+    "attempt": 8,
+    "seed": 410408,
+    "order_index": 416
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_binary_a08",
+    "circuit": "and4",
+    "session": 2,
+    "feedback": "binary",
+    "attempt": 8,
+    "seed": 420208,
+    "order_index": 417
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_full_a08",
+    "circuit": "and4",
+    "session": 4,
+    "feedback": "full",
+    "attempt": 8,
+    "seed": 420408,
+    "order_index": 418
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_none_a08",
+    "circuit": "opamp",
+    "session": 8,
+    "feedback": "none",
+    "attempt": 8,
+    "seed": 410808,
+    "order_index": 419
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_none_a08",
+    "circuit": "opamp",
+    "session": 3,
+    "feedback": "none",
+    "attempt": 8,
+    "seed": 410308,
+    "order_index": 420
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_none_a08",
+    "circuit": "opamp",
+    "session": 7,
+    "feedback": "none",
+    "attempt": 8,
+    "seed": 410708,
+    "order_index": 421
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_binary_a08",
+    "circuit": "and4",
+    "session": 3,
+    "feedback": "binary",
+    "attempt": 8,
+    "seed": 420308,
+    "order_index": 422
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_full_a08",
+    "circuit": "opamp",
+    "session": 7,
+    "feedback": "full",
+    "attempt": 8,
+    "seed": 410708,
+    "order_index": 423
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_none_a08",
+    "circuit": "and4",
+    "session": 3,
+    "feedback": "none",
+    "attempt": 8,
+    "seed": 420308,
+    "order_index": 424
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_none_a08",
+    "circuit": "opamp",
+    "session": 4,
+    "feedback": "none",
+    "attempt": 8,
+    "seed": 410408,
+    "order_index": 425
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_binary_a08",
+    "circuit": "and4",
+    "session": 9,
+    "feedback": "binary",
+    "attempt": 8,
+    "seed": 420908,
+    "order_index": 426
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_binary_a08",
+    "circuit": "opamp",
+    "session": 8,
+    "feedback": "binary",
+    "attempt": 8,
+    "seed": 410808,
+    "order_index": 427
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_binary_a08",
+    "circuit": "opamp",
+    "session": 2,
+    "feedback": "binary",
+    "attempt": 8,
+    "seed": 410208,
+    "order_index": 428
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_full_a08",
+    "circuit": "and4",
+    "session": 7,
+    "feedback": "full",
+    "attempt": 8,
+    "seed": 420708,
+    "order_index": 429
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_none_a08",
+    "circuit": "opamp",
+    "session": 6,
+    "feedback": "none",
+    "attempt": 8,
+    "seed": 410608,
+    "order_index": 430
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_full_a08",
+    "circuit": "and4",
+    "session": 8,
+    "feedback": "full",
+    "attempt": 8,
+    "seed": 420808,
+    "order_index": 431
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_full_a08",
+    "circuit": "and4",
+    "session": 10,
+    "feedback": "full",
+    "attempt": 8,
+    "seed": 421008,
+    "order_index": 432
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_none_a08",
+    "circuit": "opamp",
+    "session": 5,
+    "feedback": "none",
+    "attempt": 8,
+    "seed": 410508,
+    "order_index": 433
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_full_a08",
+    "circuit": "opamp",
+    "session": 3,
+    "feedback": "full",
+    "attempt": 8,
+    "seed": 410308,
+    "order_index": 434
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_binary_a08",
+    "circuit": "opamp",
+    "session": 7,
+    "feedback": "binary",
+    "attempt": 8,
+    "seed": 410708,
+    "order_index": 435
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_full_a08",
+    "circuit": "opamp",
+    "session": 6,
+    "feedback": "full",
+    "attempt": 8,
+    "seed": 410608,
+    "order_index": 436
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_none_a08",
+    "circuit": "and4",
+    "session": 7,
+    "feedback": "none",
+    "attempt": 8,
+    "seed": 420708,
+    "order_index": 437
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_none_a08",
+    "circuit": "opamp",
+    "session": 2,
+    "feedback": "none",
+    "attempt": 8,
+    "seed": 410208,
+    "order_index": 438
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_binary_a08",
+    "circuit": "and4",
+    "session": 6,
+    "feedback": "binary",
+    "attempt": 8,
+    "seed": 420608,
+    "order_index": 439
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_full_a09",
+    "circuit": "opamp",
+    "session": 1,
+    "feedback": "full",
+    "attempt": 9,
+    "seed": 410109,
+    "order_index": 440
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_full_a09",
+    "circuit": "and4",
+    "session": 2,
+    "feedback": "full",
+    "attempt": 9,
+    "seed": 420209,
+    "order_index": 441
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_binary_a09",
+    "circuit": "and4",
+    "session": 5,
+    "feedback": "binary",
+    "attempt": 9,
+    "seed": 420509,
+    "order_index": 442
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_full_a09",
+    "circuit": "opamp",
+    "session": 6,
+    "feedback": "full",
+    "attempt": 9,
+    "seed": 410609,
+    "order_index": 443
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_binary_a09",
+    "circuit": "and4",
+    "session": 4,
+    "feedback": "binary",
+    "attempt": 9,
+    "seed": 420409,
+    "order_index": 444
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_binary_a09",
+    "circuit": "opamp",
+    "session": 7,
+    "feedback": "binary",
+    "attempt": 9,
+    "seed": 410709,
+    "order_index": 445
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_binary_a09",
+    "circuit": "and4",
+    "session": 7,
+    "feedback": "binary",
+    "attempt": 9,
+    "seed": 420709,
+    "order_index": 446
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_none_a09",
+    "circuit": "and4",
+    "session": 2,
+    "feedback": "none",
+    "attempt": 9,
+    "seed": 420209,
+    "order_index": 447
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_full_a09",
+    "circuit": "opamp",
+    "session": 9,
+    "feedback": "full",
+    "attempt": 9,
+    "seed": 410909,
+    "order_index": 448
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_binary_a09",
+    "circuit": "and4",
+    "session": 2,
+    "feedback": "binary",
+    "attempt": 9,
+    "seed": 420209,
+    "order_index": 449
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_binary_a09",
+    "circuit": "opamp",
+    "session": 4,
+    "feedback": "binary",
+    "attempt": 9,
+    "seed": 410409,
+    "order_index": 450
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_full_a09",
+    "circuit": "opamp",
+    "session": 8,
+    "feedback": "full",
+    "attempt": 9,
+    "seed": 410809,
+    "order_index": 451
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_full_a09",
+    "circuit": "and4",
+    "session": 10,
+    "feedback": "full",
+    "attempt": 9,
+    "seed": 421009,
+    "order_index": 452
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_full_a09",
+    "circuit": "and4",
+    "session": 9,
+    "feedback": "full",
+    "attempt": 9,
+    "seed": 420909,
+    "order_index": 453
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_none_a09",
+    "circuit": "and4",
+    "session": 10,
+    "feedback": "none",
+    "attempt": 9,
+    "seed": 421009,
+    "order_index": 454
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_binary_a09",
+    "circuit": "opamp",
+    "session": 9,
+    "feedback": "binary",
+    "attempt": 9,
+    "seed": 410909,
+    "order_index": 455
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_full_a09",
+    "circuit": "opamp",
+    "session": 4,
+    "feedback": "full",
+    "attempt": 9,
+    "seed": 410409,
+    "order_index": 456
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_none_a09",
+    "circuit": "and4",
+    "session": 5,
+    "feedback": "none",
+    "attempt": 9,
+    "seed": 420509,
+    "order_index": 457
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_full_a09",
+    "circuit": "and4",
+    "session": 1,
+    "feedback": "full",
+    "attempt": 9,
+    "seed": 420109,
+    "order_index": 458
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_none_a09",
+    "circuit": "and4",
+    "session": 6,
+    "feedback": "none",
+    "attempt": 9,
+    "seed": 420609,
+    "order_index": 459
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_full_a09",
+    "circuit": "opamp",
+    "session": 5,
+    "feedback": "full",
+    "attempt": 9,
+    "seed": 410509,
+    "order_index": 460
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_binary_a09",
+    "circuit": "opamp",
+    "session": 8,
+    "feedback": "binary",
+    "attempt": 9,
+    "seed": 410809,
+    "order_index": 461
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_full_a09",
+    "circuit": "and4",
+    "session": 5,
+    "feedback": "full",
+    "attempt": 9,
+    "seed": 420509,
+    "order_index": 462
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_none_a09",
+    "circuit": "and4",
+    "session": 3,
+    "feedback": "none",
+    "attempt": 9,
+    "seed": 420309,
+    "order_index": 463
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_none_a09",
+    "circuit": "opamp",
+    "session": 5,
+    "feedback": "none",
+    "attempt": 9,
+    "seed": 410509,
+    "order_index": 464
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_full_a09",
+    "circuit": "opamp",
+    "session": 3,
+    "feedback": "full",
+    "attempt": 9,
+    "seed": 410309,
+    "order_index": 465
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_none_a09",
+    "circuit": "opamp",
+    "session": 1,
+    "feedback": "none",
+    "attempt": 9,
+    "seed": 410109,
+    "order_index": 466
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_binary_a09",
+    "circuit": "opamp",
+    "session": 5,
+    "feedback": "binary",
+    "attempt": 9,
+    "seed": 410509,
+    "order_index": 467
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_binary_a09",
+    "circuit": "and4",
+    "session": 8,
+    "feedback": "binary",
+    "attempt": 9,
+    "seed": 420809,
+    "order_index": 468
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_binary_a09",
+    "circuit": "and4",
+    "session": 1,
+    "feedback": "binary",
+    "attempt": 9,
+    "seed": 420109,
+    "order_index": 469
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_none_a09",
+    "circuit": "and4",
+    "session": 4,
+    "feedback": "none",
+    "attempt": 9,
+    "seed": 420409,
+    "order_index": 470
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_none_a09",
+    "circuit": "opamp",
+    "session": 4,
+    "feedback": "none",
+    "attempt": 9,
+    "seed": 410409,
+    "order_index": 471
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_binary_a09",
+    "circuit": "and4",
+    "session": 3,
+    "feedback": "binary",
+    "attempt": 9,
+    "seed": 420309,
+    "order_index": 472
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_binary_a09",
+    "circuit": "and4",
+    "session": 9,
+    "feedback": "binary",
+    "attempt": 9,
+    "seed": 420909,
+    "order_index": 473
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_none_a09",
+    "circuit": "and4",
+    "session": 9,
+    "feedback": "none",
+    "attempt": 9,
+    "seed": 420909,
+    "order_index": 474
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_none_a09",
+    "circuit": "opamp",
+    "session": 3,
+    "feedback": "none",
+    "attempt": 9,
+    "seed": 410309,
+    "order_index": 475
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_binary_a09",
+    "circuit": "opamp",
+    "session": 6,
+    "feedback": "binary",
+    "attempt": 9,
+    "seed": 410609,
+    "order_index": 476
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_full_a09",
+    "circuit": "opamp",
+    "session": 7,
+    "feedback": "full",
+    "attempt": 9,
+    "seed": 410709,
+    "order_index": 477
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_binary_a09",
+    "circuit": "and4",
+    "session": 6,
+    "feedback": "binary",
+    "attempt": 9,
+    "seed": 420609,
+    "order_index": 478
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_full_a09",
+    "circuit": "opamp",
+    "session": 10,
+    "feedback": "full",
+    "attempt": 9,
+    "seed": 411009,
+    "order_index": 479
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_binary_a09",
+    "circuit": "and4",
+    "session": 10,
+    "feedback": "binary",
+    "attempt": 9,
+    "seed": 421009,
+    "order_index": 480
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_full_a09",
+    "circuit": "and4",
+    "session": 4,
+    "feedback": "full",
+    "attempt": 9,
+    "seed": 420409,
+    "order_index": 481
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_binary_a09",
+    "circuit": "opamp",
+    "session": 1,
+    "feedback": "binary",
+    "attempt": 9,
+    "seed": 410109,
+    "order_index": 482
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_none_a09",
+    "circuit": "and4",
+    "session": 1,
+    "feedback": "none",
+    "attempt": 9,
+    "seed": 420109,
+    "order_index": 483
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_none_a09",
+    "circuit": "opamp",
+    "session": 2,
+    "feedback": "none",
+    "attempt": 9,
+    "seed": 410209,
+    "order_index": 484
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_none_a09",
+    "circuit": "opamp",
+    "session": 6,
+    "feedback": "none",
+    "attempt": 9,
+    "seed": 410609,
+    "order_index": 485
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_binary_a09",
+    "circuit": "opamp",
+    "session": 3,
+    "feedback": "binary",
+    "attempt": 9,
+    "seed": 410309,
+    "order_index": 486
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_full_a09",
+    "circuit": "and4",
+    "session": 7,
+    "feedback": "full",
+    "attempt": 9,
+    "seed": 420709,
+    "order_index": 487
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_full_a09",
+    "circuit": "and4",
+    "session": 3,
+    "feedback": "full",
+    "attempt": 9,
+    "seed": 420309,
+    "order_index": 488
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_none_a09",
+    "circuit": "opamp",
+    "session": 10,
+    "feedback": "none",
+    "attempt": 9,
+    "seed": 411009,
+    "order_index": 489
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_none_a09",
+    "circuit": "opamp",
+    "session": 9,
+    "feedback": "none",
+    "attempt": 9,
+    "seed": 410909,
+    "order_index": 490
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_none_a09",
+    "circuit": "opamp",
+    "session": 7,
+    "feedback": "none",
+    "attempt": 9,
+    "seed": 410709,
+    "order_index": 491
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_binary_a09",
+    "circuit": "opamp",
+    "session": 2,
+    "feedback": "binary",
+    "attempt": 9,
+    "seed": 410209,
+    "order_index": 492
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_full_a09",
+    "circuit": "and4",
+    "session": 6,
+    "feedback": "full",
+    "attempt": 9,
+    "seed": 420609,
+    "order_index": 493
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_full_a09",
+    "circuit": "opamp",
+    "session": 2,
+    "feedback": "full",
+    "attempt": 9,
+    "seed": 410209,
+    "order_index": 494
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_none_a09",
+    "circuit": "opamp",
+    "session": 8,
+    "feedback": "none",
+    "attempt": 9,
+    "seed": 410809,
+    "order_index": 495
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_full_a09",
+    "circuit": "and4",
+    "session": 8,
+    "feedback": "full",
+    "attempt": 9,
+    "seed": 420809,
+    "order_index": 496
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_none_a09",
+    "circuit": "and4",
+    "session": 7,
+    "feedback": "none",
+    "attempt": 9,
+    "seed": 420709,
+    "order_index": 497
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_binary_a09",
+    "circuit": "opamp",
+    "session": 10,
+    "feedback": "binary",
+    "attempt": 9,
+    "seed": 411009,
+    "order_index": 498
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_none_a09",
+    "circuit": "and4",
+    "session": 8,
+    "feedback": "none",
+    "attempt": 9,
+    "seed": 420809,
+    "order_index": 499
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_full_a10",
+    "circuit": "and4",
+    "session": 4,
+    "feedback": "full",
+    "attempt": 10,
+    "seed": 420410,
+    "order_index": 500
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_none_a10",
+    "circuit": "and4",
+    "session": 5,
+    "feedback": "none",
+    "attempt": 10,
+    "seed": 420510,
+    "order_index": 501
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_full_a10",
+    "circuit": "opamp",
+    "session": 3,
+    "feedback": "full",
+    "attempt": 10,
+    "seed": 410310,
+    "order_index": 502
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_none_a10",
+    "circuit": "and4",
+    "session": 4,
+    "feedback": "none",
+    "attempt": 10,
+    "seed": 420410,
+    "order_index": 503
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_full_a10",
+    "circuit": "opamp",
+    "session": 1,
+    "feedback": "full",
+    "attempt": 10,
+    "seed": 410110,
+    "order_index": 504
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_full_a10",
+    "circuit": "and4",
+    "session": 9,
+    "feedback": "full",
+    "attempt": 10,
+    "seed": 420910,
+    "order_index": 505
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_none_a10",
+    "circuit": "opamp",
+    "session": 6,
+    "feedback": "none",
+    "attempt": 10,
+    "seed": 410610,
+    "order_index": 506
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_full_a10",
+    "circuit": "opamp",
+    "session": 8,
+    "feedback": "full",
+    "attempt": 10,
+    "seed": 410810,
+    "order_index": 507
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_binary_a10",
+    "circuit": "opamp",
+    "session": 4,
+    "feedback": "binary",
+    "attempt": 10,
+    "seed": 410410,
+    "order_index": 508
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_full_a10",
+    "circuit": "and4",
+    "session": 5,
+    "feedback": "full",
+    "attempt": 10,
+    "seed": 420510,
+    "order_index": 509
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_binary_a10",
+    "circuit": "and4",
+    "session": 3,
+    "feedback": "binary",
+    "attempt": 10,
+    "seed": 420310,
+    "order_index": 510
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_none_a10",
+    "circuit": "and4",
+    "session": 10,
+    "feedback": "none",
+    "attempt": 10,
+    "seed": 421010,
+    "order_index": 511
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_binary_a10",
+    "circuit": "opamp",
+    "session": 1,
+    "feedback": "binary",
+    "attempt": 10,
+    "seed": 410110,
+    "order_index": 512
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_none_a10",
+    "circuit": "and4",
+    "session": 6,
+    "feedback": "none",
+    "attempt": 10,
+    "seed": 420610,
+    "order_index": 513
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_binary_a10",
+    "circuit": "and4",
+    "session": 8,
+    "feedback": "binary",
+    "attempt": 10,
+    "seed": 420810,
+    "order_index": 514
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_full_a10",
+    "circuit": "and4",
+    "session": 8,
+    "feedback": "full",
+    "attempt": 10,
+    "seed": 420810,
+    "order_index": 515
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_none_a10",
+    "circuit": "and4",
+    "session": 7,
+    "feedback": "none",
+    "attempt": 10,
+    "seed": 420710,
+    "order_index": 516
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_full_a10",
+    "circuit": "and4",
+    "session": 7,
+    "feedback": "full",
+    "attempt": 10,
+    "seed": 420710,
+    "order_index": 517
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s05_binary_a10",
+    "circuit": "and4",
+    "session": 5,
+    "feedback": "binary",
+    "attempt": 10,
+    "seed": 420510,
+    "order_index": 518
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_binary_a10",
+    "circuit": "opamp",
+    "session": 6,
+    "feedback": "binary",
+    "attempt": 10,
+    "seed": 410610,
+    "order_index": 519
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_none_a10",
+    "circuit": "opamp",
+    "session": 5,
+    "feedback": "none",
+    "attempt": 10,
+    "seed": 410510,
+    "order_index": 520
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_full_a10",
+    "circuit": "opamp",
+    "session": 5,
+    "feedback": "full",
+    "attempt": 10,
+    "seed": 410510,
+    "order_index": 521
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_none_a10",
+    "circuit": "opamp",
+    "session": 9,
+    "feedback": "none",
+    "attempt": 10,
+    "seed": 410910,
+    "order_index": 522
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_full_a10",
+    "circuit": "opamp",
+    "session": 10,
+    "feedback": "full",
+    "attempt": 10,
+    "seed": 411010,
+    "order_index": 523
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_binary_a10",
+    "circuit": "opamp",
+    "session": 2,
+    "feedback": "binary",
+    "attempt": 10,
+    "seed": 410210,
+    "order_index": 524
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_binary_a10",
+    "circuit": "opamp",
+    "session": 10,
+    "feedback": "binary",
+    "attempt": 10,
+    "seed": 411010,
+    "order_index": 525
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_binary_a10",
+    "circuit": "opamp",
+    "session": 7,
+    "feedback": "binary",
+    "attempt": 10,
+    "seed": 410710,
+    "order_index": 526
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_full_a10",
+    "circuit": "opamp",
+    "session": 9,
+    "feedback": "full",
+    "attempt": 10,
+    "seed": 410910,
+    "order_index": 527
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_binary_a10",
+    "circuit": "and4",
+    "session": 2,
+    "feedback": "binary",
+    "attempt": 10,
+    "seed": 420210,
+    "order_index": 528
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s07_binary_a10",
+    "circuit": "and4",
+    "session": 7,
+    "feedback": "binary",
+    "attempt": 10,
+    "seed": 420710,
+    "order_index": 529
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_none_a10",
+    "circuit": "opamp",
+    "session": 8,
+    "feedback": "none",
+    "attempt": 10,
+    "seed": 410810,
+    "order_index": 530
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_none_a10",
+    "circuit": "opamp",
+    "session": 7,
+    "feedback": "none",
+    "attempt": 10,
+    "seed": 410710,
+    "order_index": 531
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_binary_a10",
+    "circuit": "and4",
+    "session": 10,
+    "feedback": "binary",
+    "attempt": 10,
+    "seed": 421010,
+    "order_index": 532
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s05_binary_a10",
+    "circuit": "opamp",
+    "session": 5,
+    "feedback": "binary",
+    "attempt": 10,
+    "seed": 410510,
+    "order_index": 533
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s04_binary_a10",
+    "circuit": "and4",
+    "session": 4,
+    "feedback": "binary",
+    "attempt": 10,
+    "seed": 420410,
+    "order_index": 534
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s10_none_a10",
+    "circuit": "opamp",
+    "session": 10,
+    "feedback": "none",
+    "attempt": 10,
+    "seed": 411010,
+    "order_index": 535
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s01_none_a10",
+    "circuit": "opamp",
+    "session": 1,
+    "feedback": "none",
+    "attempt": 10,
+    "seed": 410110,
+    "order_index": 536
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_none_a10",
+    "circuit": "and4",
+    "session": 1,
+    "feedback": "none",
+    "attempt": 10,
+    "seed": 420110,
+    "order_index": 537
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_binary_a10",
+    "circuit": "and4",
+    "session": 9,
+    "feedback": "binary",
+    "attempt": 10,
+    "seed": 420910,
+    "order_index": 538
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s09_binary_a10",
+    "circuit": "opamp",
+    "session": 9,
+    "feedback": "binary",
+    "attempt": 10,
+    "seed": 410910,
+    "order_index": 539
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s08_binary_a10",
+    "circuit": "opamp",
+    "session": 8,
+    "feedback": "binary",
+    "attempt": 10,
+    "seed": 410810,
+    "order_index": 540
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_full_a10",
+    "circuit": "and4",
+    "session": 6,
+    "feedback": "full",
+    "attempt": 10,
+    "seed": 420610,
+    "order_index": 541
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s10_full_a10",
+    "circuit": "and4",
+    "session": 10,
+    "feedback": "full",
+    "attempt": 10,
+    "seed": 421010,
+    "order_index": 542
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_full_a10",
+    "circuit": "opamp",
+    "session": 2,
+    "feedback": "full",
+    "attempt": 10,
+    "seed": 410210,
+    "order_index": 543
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_binary_a10",
+    "circuit": "and4",
+    "session": 1,
+    "feedback": "binary",
+    "attempt": 10,
+    "seed": 420110,
+    "order_index": 544
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_none_a10",
+    "circuit": "opamp",
+    "session": 3,
+    "feedback": "none",
+    "attempt": 10,
+    "seed": 410310,
+    "order_index": 545
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_none_a10",
+    "circuit": "and4",
+    "session": 3,
+    "feedback": "none",
+    "attempt": 10,
+    "seed": 420310,
+    "order_index": 546
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_none_a10",
+    "circuit": "and4",
+    "session": 2,
+    "feedback": "none",
+    "attempt": 10,
+    "seed": 420210,
+    "order_index": 547
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s02_full_a10",
+    "circuit": "and4",
+    "session": 2,
+    "feedback": "full",
+    "attempt": 10,
+    "seed": 420210,
+    "order_index": 548
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_full_a10",
+    "circuit": "opamp",
+    "session": 4,
+    "feedback": "full",
+    "attempt": 10,
+    "seed": 410410,
+    "order_index": 549
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s02_none_a10",
+    "circuit": "opamp",
+    "session": 2,
+    "feedback": "none",
+    "attempt": 10,
+    "seed": 410210,
+    "order_index": 550
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s09_none_a10",
+    "circuit": "and4",
+    "session": 9,
+    "feedback": "none",
+    "attempt": 10,
+    "seed": 420910,
+    "order_index": 551
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s07_full_a10",
+    "circuit": "opamp",
+    "session": 7,
+    "feedback": "full",
+    "attempt": 10,
+    "seed": 410710,
+    "order_index": 552
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s03_binary_a10",
+    "circuit": "opamp",
+    "session": 3,
+    "feedback": "binary",
+    "attempt": 10,
+    "seed": 410310,
+    "order_index": 553
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s03_full_a10",
+    "circuit": "and4",
+    "session": 3,
+    "feedback": "full",
+    "attempt": 10,
+    "seed": 420310,
+    "order_index": 554
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s01_full_a10",
+    "circuit": "and4",
+    "session": 1,
+    "feedback": "full",
+    "attempt": 10,
+    "seed": 420110,
+    "order_index": 555
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s06_binary_a10",
+    "circuit": "and4",
+    "session": 6,
+    "feedback": "binary",
+    "attempt": 10,
+    "seed": 420610,
+    "order_index": 556
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s06_full_a10",
+    "circuit": "opamp",
+    "session": 6,
+    "feedback": "full",
+    "attempt": 10,
+    "seed": 410610,
+    "order_index": 557
+  },
+  {
+    "task_id": "proposal_stop_v4_and4_s08_none_a10",
+    "circuit": "and4",
+    "session": 8,
+    "feedback": "none",
+    "attempt": 10,
+    "seed": 420810,
+    "order_index": 558
+  },
+  {
+    "task_id": "proposal_stop_v4_opamp_s04_none_a10",
+    "circuit": "opamp",
+    "session": 4,
+    "feedback": "none",
+    "attempt": 10,
+    "seed": 410410,
+    "order_index": 559
+  }
+]

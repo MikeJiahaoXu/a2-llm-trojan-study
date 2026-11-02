@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "is_trojan": {
+      "type": "boolean"
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "suspect_nodes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9_.:+-]{1,48}$"
+      },
+      "maxItems": 8
+    },
+    "feedback_text": {
+      "type": "string",
+      "pattern": "^[\\s\\S]{0,1200}$"
+    }
+  },
+  "required": [
+    "is_trojan",
+    "confidence",
+    "suspect_nodes",
+    "feedback_text"
+  ]
+}

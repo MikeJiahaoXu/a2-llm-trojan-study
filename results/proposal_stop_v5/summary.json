@@ -1,0 +1,2175 @@
+{
+  "run_id": "proposal_stop_v5",
+  "complete": true,
+  "primary_unit": "Session; ten sessions per circuit and feedback condition",
+  "groups": [
+    {
+      "circuit": "opamp",
+      "feedback": "none",
+      "sessions": 10,
+      "max_attempts_per_session": 10,
+      "escaped_sessions": 0,
+      "unsuccessful_sessions": 10,
+      "escape_fraction": 0.0,
+      "first_attempt_escapes": 0,
+      "median_first_escape_among_successes": null,
+      "first_escape_attempts": [],
+      "attempts_made": 100,
+      "valid_attempts": 100,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "cumulative_curve": [
+        {
+          "attempt": 1,
+          "escaped_sessions": 0,
+          "total_sessions": 10,
+          "escape_fraction": 0.0
+        },
+        {
+          "attempt": 2,
+          "escaped_sessions": 0,
+          "total_sessions": 10,
+          "escape_fraction": 0.0
+        },
+        {
+          "attempt": 3,
+          "escaped_sessions": 0,
+          "total_sessions": 10,
+          "escape_fraction": 0.0
+        },
+        {
+          "attempt": 4,
+          "escaped_sessions": 0,
+          "total_sessions": 10,
+          "escape_fraction": 0.0
+        },
+        {
+          "attempt": 5,
+          "escaped_sessions": 0,
+          "total_sessions": 10,
+          "escape_fraction": 0.0
+        },
+        {
+          "attempt": 6,
+          "escaped_sessions": 0,
+          "total_sessions": 10,
+          "escape_fraction": 0.0
+        },
+        {
+          "attempt": 7,
+          "escaped_sessions": 0,
+          "total_sessions": 10,
+          "escape_fraction": 0.0
+        },
+        {
+          "attempt": 8,
+          "escaped_sessions": 0,
+          "total_sessions": 10,
+          "escape_fraction": 0.0
+        },
+        {
+          "attempt": 9,
+          "escaped_sessions": 0,
+          "total_sessions": 10,
+          "escape_fraction": 0.0
+        },
+        {
+          "attempt": 10,
+          "escaped_sessions": 0,
+          "total_sessions": 10,
+          "escape_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "binary",
+      "sessions": 10,
+      "max_attempts_per_session": 10,
+      "escaped_sessions": 9,
+      "unsuccessful_sessions": 1,
+      "escape_fraction": 0.9,
+      "first_attempt_escapes": 0,
+      "median_first_escape_among_successes": 5,
+      "first_escape_attempts": [
+        4,
+        7,
+        4,
+        5,
+        10,
+        5,
+        6,
+        7,
+        4
+      ],
+      "attempts_made": 62,
+      "valid_attempts": 62,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 10,
+      "cumulative_curve": [
+        {
+          "attempt": 1,
+          "escaped_sessions": 0,
+          "total_sessions": 10,
+          "escape_fraction": 0.0
+        },
+        {
+          "attempt": 2,
+          "escaped_sessions": 0,
+          "total_sessions": 10,
+          "escape_fraction": 0.0
+        },
+        {
+          "attempt": 3,
+          "escaped_sessions": 0,
+          "total_sessions": 10,
+          "escape_fraction": 0.0
+        },
+        {
+          "attempt": 4,
+          "escaped_sessions": 3,
+          "total_sessions": 10,
+          "escape_fraction": 0.3
+        },
+        {
+          "attempt": 5,
+          "escaped_sessions": 5,
+          "total_sessions": 10,
+          "escape_fraction": 0.5
+        },
+        {
+          "attempt": 6,
+          "escaped_sessions": 6,
+          "total_sessions": 10,
+          "escape_fraction": 0.6
+        },
+        {
+          "attempt": 7,
+          "escaped_sessions": 8,
+          "total_sessions": 10,
+          "escape_fraction": 0.8
+        },
+        {
+          "attempt": 8,
+          "escaped_sessions": 8,
+          "total_sessions": 10,
+          "escape_fraction": 0.8
+        },
+        {
+          "attempt": 9,
+          "escaped_sessions": 8,
+          "total_sessions": 10,
+          "escape_fraction": 0.8
+        },
+        {
+          "attempt": 10,
+          "escaped_sessions": 9,
+          "total_sessions": 10,
+          "escape_fraction": 0.9
+        }
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "full",
+      "sessions": 10,
+      "max_attempts_per_session": 10,
+      "escaped_sessions": 10,
+      "unsuccessful_sessions": 0,
+      "escape_fraction": 1.0,
+      "first_attempt_escapes": 0,
+      "median_first_escape_among_successes": 2.5,
+      "first_escape_attempts": [
+        2,
+        2,
+        6,
+        2,
+        3,
+        2,
+        2,
+        5,
+        5,
+        3
+      ],
+      "attempts_made": 32,
+      "valid_attempts": 32,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 13,
+      "cumulative_curve": [
+        {
+          "attempt": 1,
+          "escaped_sessions": 0,
+          "total_sessions": 10,
+          "escape_fraction": 0.0
+        },
+        {
+          "attempt": 2,
+          "escaped_sessions": 5,
+          "total_sessions": 10,
+          "escape_fraction": 0.5
+        },
+        {
+          "attempt": 3,
+          "escaped_sessions": 7,
+          "total_sessions": 10,
+          "escape_fraction": 0.7
+        },
+        {
+          "attempt": 4,
+          "escaped_sessions": 7,
+          "total_sessions": 10,
+          "escape_fraction": 0.7
+        },
+        {
+          "attempt": 5,
+          "escaped_sessions": 9,
+          "total_sessions": 10,
+          "escape_fraction": 0.9
+        },
+        {
+          "attempt": 6,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 7,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 8,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 9,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 10,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        }
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "none",
+      "sessions": 10,
+      "max_attempts_per_session": 10,
+      "escaped_sessions": 10,
+      "unsuccessful_sessions": 0,
+      "escape_fraction": 1.0,
+      "first_attempt_escapes": 10,
+      "median_first_escape_among_successes": 1.0,
+      "first_escape_attempts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "attempts_made": 10,
+      "valid_attempts": 10,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "cumulative_curve": [
+        {
+          "attempt": 1,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 2,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 3,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 4,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 5,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 6,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 7,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 8,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 9,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 10,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        }
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "binary",
+      "sessions": 10,
+      "max_attempts_per_session": 10,
+      "escaped_sessions": 10,
+      "unsuccessful_sessions": 0,
+      "escape_fraction": 1.0,
+      "first_attempt_escapes": 10,
+      "median_first_escape_among_successes": 1.0,
+      "first_escape_attempts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "attempts_made": 10,
+      "valid_attempts": 10,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "cumulative_curve": [
+        {
+          "attempt": 1,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 2,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 3,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 4,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 5,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 6,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 7,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 8,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 9,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 10,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        }
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "full",
+      "sessions": 10,
+      "max_attempts_per_session": 10,
+      "escaped_sessions": 10,
+      "unsuccessful_sessions": 0,
+      "escape_fraction": 1.0,
+      "first_attempt_escapes": 10,
+      "median_first_escape_among_successes": 1.0,
+      "first_escape_attempts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "attempts_made": 10,
+      "valid_attempts": 10,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "cumulative_curve": [
+        {
+          "attempt": 1,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 2,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 3,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 4,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 5,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 6,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 7,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 8,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 9,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        },
+        {
+          "attempt": 10,
+          "escaped_sessions": 10,
+          "total_sessions": 10,
+          "escape_fraction": 1.0
+        }
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "circuit": "opamp",
+      "feedback": "none",
+      "session": 1,
+      "attempts_made": 10,
+      "escaped": false,
+      "first_escape_attempt": null,
+      "stop_reason": "attempt_limit",
+      "valid_attempts": 10,
+      "usable_detector_attempts": 10,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s01_shared_a01",
+        "proposal_stop_v5_opamp_s01_none_a02",
+        "proposal_stop_v5_opamp_s01_none_a03",
+        "proposal_stop_v5_opamp_s01_none_a04",
+        "proposal_stop_v5_opamp_s01_none_a05",
+        "proposal_stop_v5_opamp_s01_none_a06",
+        "proposal_stop_v5_opamp_s01_none_a07",
+        "proposal_stop_v5_opamp_s01_none_a08",
+        "proposal_stop_v5_opamp_s01_none_a09",
+        "proposal_stop_v5_opamp_s01_none_a10"
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "none",
+      "session": 2,
+      "attempts_made": 10,
+      "escaped": false,
+      "first_escape_attempt": null,
+      "stop_reason": "attempt_limit",
+      "valid_attempts": 10,
+      "usable_detector_attempts": 10,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s02_shared_a01",
+        "proposal_stop_v5_opamp_s02_none_a02",
+        "proposal_stop_v5_opamp_s02_none_a03",
+        "proposal_stop_v5_opamp_s02_none_a04",
+        "proposal_stop_v5_opamp_s02_none_a05",
+        "proposal_stop_v5_opamp_s02_none_a06",
+        "proposal_stop_v5_opamp_s02_none_a07",
+        "proposal_stop_v5_opamp_s02_none_a08",
+        "proposal_stop_v5_opamp_s02_none_a09",
+        "proposal_stop_v5_opamp_s02_none_a10"
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "none",
+      "session": 3,
+      "attempts_made": 10,
+      "escaped": false,
+      "first_escape_attempt": null,
+      "stop_reason": "attempt_limit",
+      "valid_attempts": 10,
+      "usable_detector_attempts": 10,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s03_shared_a01",
+        "proposal_stop_v5_opamp_s03_none_a02",
+        "proposal_stop_v5_opamp_s03_none_a03",
+        "proposal_stop_v5_opamp_s03_none_a04",
+        "proposal_stop_v5_opamp_s03_none_a05",
+        "proposal_stop_v5_opamp_s03_none_a06",
+        "proposal_stop_v5_opamp_s03_none_a07",
+        "proposal_stop_v5_opamp_s03_none_a08",
+        "proposal_stop_v5_opamp_s03_none_a09",
+        "proposal_stop_v5_opamp_s03_none_a10"
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "none",
+      "session": 4,
+      "attempts_made": 10,
+      "escaped": false,
+      "first_escape_attempt": null,
+      "stop_reason": "attempt_limit",
+      "valid_attempts": 10,
+      "usable_detector_attempts": 10,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s04_shared_a01",
+        "proposal_stop_v5_opamp_s04_none_a02",
+        "proposal_stop_v5_opamp_s04_none_a03",
+        "proposal_stop_v5_opamp_s04_none_a04",
+        "proposal_stop_v5_opamp_s04_none_a05",
+        "proposal_stop_v5_opamp_s04_none_a06",
+        "proposal_stop_v5_opamp_s04_none_a07",
+        "proposal_stop_v5_opamp_s04_none_a08",
+        "proposal_stop_v5_opamp_s04_none_a09",
+        "proposal_stop_v5_opamp_s04_none_a10"
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "none",
+      "session": 5,
+      "attempts_made": 10,
+      "escaped": false,
+      "first_escape_attempt": null,
+      "stop_reason": "attempt_limit",
+      "valid_attempts": 10,
+      "usable_detector_attempts": 10,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s05_shared_a01",
+        "proposal_stop_v5_opamp_s05_none_a02",
+        "proposal_stop_v5_opamp_s05_none_a03",
+        "proposal_stop_v5_opamp_s05_none_a04",
+        "proposal_stop_v5_opamp_s05_none_a05",
+        "proposal_stop_v5_opamp_s05_none_a06",
+        "proposal_stop_v5_opamp_s05_none_a07",
+        "proposal_stop_v5_opamp_s05_none_a08",
+        "proposal_stop_v5_opamp_s05_none_a09",
+        "proposal_stop_v5_opamp_s05_none_a10"
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "none",
+      "session": 6,
+      "attempts_made": 10,
+      "escaped": false,
+      "first_escape_attempt": null,
+      "stop_reason": "attempt_limit",
+      "valid_attempts": 10,
+      "usable_detector_attempts": 10,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s06_shared_a01",
+        "proposal_stop_v5_opamp_s06_none_a02",
+        "proposal_stop_v5_opamp_s06_none_a03",
+        "proposal_stop_v5_opamp_s06_none_a04",
+        "proposal_stop_v5_opamp_s06_none_a05",
+        "proposal_stop_v5_opamp_s06_none_a06",
+        "proposal_stop_v5_opamp_s06_none_a07",
+        "proposal_stop_v5_opamp_s06_none_a08",
+        "proposal_stop_v5_opamp_s06_none_a09",
+        "proposal_stop_v5_opamp_s06_none_a10"
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "none",
+      "session": 7,
+      "attempts_made": 10,
+      "escaped": false,
+      "first_escape_attempt": null,
+      "stop_reason": "attempt_limit",
+      "valid_attempts": 10,
+      "usable_detector_attempts": 10,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s07_shared_a01",
+        "proposal_stop_v5_opamp_s07_none_a02",
+        "proposal_stop_v5_opamp_s07_none_a03",
+        "proposal_stop_v5_opamp_s07_none_a04",
+        "proposal_stop_v5_opamp_s07_none_a05",
+        "proposal_stop_v5_opamp_s07_none_a06",
+        "proposal_stop_v5_opamp_s07_none_a07",
+        "proposal_stop_v5_opamp_s07_none_a08",
+        "proposal_stop_v5_opamp_s07_none_a09",
+        "proposal_stop_v5_opamp_s07_none_a10"
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "none",
+      "session": 8,
+      "attempts_made": 10,
+      "escaped": false,
+      "first_escape_attempt": null,
+      "stop_reason": "attempt_limit",
+      "valid_attempts": 10,
+      "usable_detector_attempts": 10,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s08_shared_a01",
+        "proposal_stop_v5_opamp_s08_none_a02",
+        "proposal_stop_v5_opamp_s08_none_a03",
+        "proposal_stop_v5_opamp_s08_none_a04",
+        "proposal_stop_v5_opamp_s08_none_a05",
+        "proposal_stop_v5_opamp_s08_none_a06",
+        "proposal_stop_v5_opamp_s08_none_a07",
+        "proposal_stop_v5_opamp_s08_none_a08",
+        "proposal_stop_v5_opamp_s08_none_a09",
+        "proposal_stop_v5_opamp_s08_none_a10"
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "none",
+      "session": 9,
+      "attempts_made": 10,
+      "escaped": false,
+      "first_escape_attempt": null,
+      "stop_reason": "attempt_limit",
+      "valid_attempts": 10,
+      "usable_detector_attempts": 10,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s09_shared_a01",
+        "proposal_stop_v5_opamp_s09_none_a02",
+        "proposal_stop_v5_opamp_s09_none_a03",
+        "proposal_stop_v5_opamp_s09_none_a04",
+        "proposal_stop_v5_opamp_s09_none_a05",
+        "proposal_stop_v5_opamp_s09_none_a06",
+        "proposal_stop_v5_opamp_s09_none_a07",
+        "proposal_stop_v5_opamp_s09_none_a08",
+        "proposal_stop_v5_opamp_s09_none_a09",
+        "proposal_stop_v5_opamp_s09_none_a10"
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "none",
+      "session": 10,
+      "attempts_made": 10,
+      "escaped": false,
+      "first_escape_attempt": null,
+      "stop_reason": "attempt_limit",
+      "valid_attempts": 10,
+      "usable_detector_attempts": 10,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s10_shared_a01",
+        "proposal_stop_v5_opamp_s10_none_a02",
+        "proposal_stop_v5_opamp_s10_none_a03",
+        "proposal_stop_v5_opamp_s10_none_a04",
+        "proposal_stop_v5_opamp_s10_none_a05",
+        "proposal_stop_v5_opamp_s10_none_a06",
+        "proposal_stop_v5_opamp_s10_none_a07",
+        "proposal_stop_v5_opamp_s10_none_a08",
+        "proposal_stop_v5_opamp_s10_none_a09",
+        "proposal_stop_v5_opamp_s10_none_a10"
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "binary",
+      "session": 1,
+      "attempts_made": 4,
+      "escaped": true,
+      "first_escape_attempt": 4,
+      "stop_reason": "escape",
+      "valid_attempts": 4,
+      "usable_detector_attempts": 4,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 4,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s01_shared_a01",
+        "proposal_stop_v5_opamp_s01_binary_a02",
+        "proposal_stop_v5_opamp_s01_binary_a03",
+        "proposal_stop_v5_opamp_s01_binary_a04"
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "binary",
+      "session": 2,
+      "attempts_made": 7,
+      "escaped": true,
+      "first_escape_attempt": 7,
+      "stop_reason": "escape",
+      "valid_attempts": 7,
+      "usable_detector_attempts": 7,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 6,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s02_shared_a01",
+        "proposal_stop_v5_opamp_s02_binary_a02",
+        "proposal_stop_v5_opamp_s02_binary_a03",
+        "proposal_stop_v5_opamp_s02_binary_a04",
+        "proposal_stop_v5_opamp_s02_binary_a05",
+        "proposal_stop_v5_opamp_s02_binary_a06",
+        "proposal_stop_v5_opamp_s02_binary_a07"
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "binary",
+      "session": 3,
+      "attempts_made": 4,
+      "escaped": true,
+      "first_escape_attempt": 4,
+      "stop_reason": "escape",
+      "valid_attempts": 4,
+      "usable_detector_attempts": 4,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 4,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s03_shared_a01",
+        "proposal_stop_v5_opamp_s03_binary_a02",
+        "proposal_stop_v5_opamp_s03_binary_a03",
+        "proposal_stop_v5_opamp_s03_binary_a04"
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "binary",
+      "session": 4,
+      "attempts_made": 5,
+      "escaped": true,
+      "first_escape_attempt": 5,
+      "stop_reason": "escape",
+      "valid_attempts": 5,
+      "usable_detector_attempts": 5,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 5,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s04_shared_a01",
+        "proposal_stop_v5_opamp_s04_binary_a02",
+        "proposal_stop_v5_opamp_s04_binary_a03",
+        "proposal_stop_v5_opamp_s04_binary_a04",
+        "proposal_stop_v5_opamp_s04_binary_a05"
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "binary",
+      "session": 5,
+      "attempts_made": 10,
+      "escaped": true,
+      "first_escape_attempt": 10,
+      "stop_reason": "escape",
+      "valid_attempts": 10,
+      "usable_detector_attempts": 10,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 5,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s05_shared_a01",
+        "proposal_stop_v5_opamp_s05_binary_a02",
+        "proposal_stop_v5_opamp_s05_binary_a03",
+        "proposal_stop_v5_opamp_s05_binary_a04",
+        "proposal_stop_v5_opamp_s05_binary_a05",
+        "proposal_stop_v5_opamp_s05_binary_a06",
+        "proposal_stop_v5_opamp_s05_binary_a07",
+        "proposal_stop_v5_opamp_s05_binary_a08",
+        "proposal_stop_v5_opamp_s05_binary_a09",
+        "proposal_stop_v5_opamp_s05_binary_a10"
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "binary",
+      "session": 6,
+      "attempts_made": 5,
+      "escaped": true,
+      "first_escape_attempt": 5,
+      "stop_reason": "escape",
+      "valid_attempts": 5,
+      "usable_detector_attempts": 5,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 5,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s06_shared_a01",
+        "proposal_stop_v5_opamp_s06_binary_a02",
+        "proposal_stop_v5_opamp_s06_binary_a03",
+        "proposal_stop_v5_opamp_s06_binary_a04",
+        "proposal_stop_v5_opamp_s06_binary_a05"
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "binary",
+      "session": 7,
+      "attempts_made": 6,
+      "escaped": true,
+      "first_escape_attempt": 6,
+      "stop_reason": "escape",
+      "valid_attempts": 6,
+      "usable_detector_attempts": 6,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 4,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s07_shared_a01",
+        "proposal_stop_v5_opamp_s07_binary_a02",
+        "proposal_stop_v5_opamp_s07_binary_a03",
+        "proposal_stop_v5_opamp_s07_binary_a04",
+        "proposal_stop_v5_opamp_s07_binary_a05",
+        "proposal_stop_v5_opamp_s07_binary_a06"
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "binary",
+      "session": 8,
+      "attempts_made": 10,
+      "escaped": false,
+      "first_escape_attempt": null,
+      "stop_reason": "attempt_limit",
+      "valid_attempts": 10,
+      "usable_detector_attempts": 10,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 6,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s08_shared_a01",
+        "proposal_stop_v5_opamp_s08_binary_a02",
+        "proposal_stop_v5_opamp_s08_binary_a03",
+        "proposal_stop_v5_opamp_s08_binary_a04",
+        "proposal_stop_v5_opamp_s08_binary_a05",
+        "proposal_stop_v5_opamp_s08_binary_a06",
+        "proposal_stop_v5_opamp_s08_binary_a07",
+        "proposal_stop_v5_opamp_s08_binary_a08",
+        "proposal_stop_v5_opamp_s08_binary_a09",
+        "proposal_stop_v5_opamp_s08_binary_a10"
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "binary",
+      "session": 9,
+      "attempts_made": 7,
+      "escaped": true,
+      "first_escape_attempt": 7,
+      "stop_reason": "escape",
+      "valid_attempts": 7,
+      "usable_detector_attempts": 7,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 5,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s09_shared_a01",
+        "proposal_stop_v5_opamp_s09_binary_a02",
+        "proposal_stop_v5_opamp_s09_binary_a03",
+        "proposal_stop_v5_opamp_s09_binary_a04",
+        "proposal_stop_v5_opamp_s09_binary_a05",
+        "proposal_stop_v5_opamp_s09_binary_a06",
+        "proposal_stop_v5_opamp_s09_binary_a07"
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "binary",
+      "session": 10,
+      "attempts_made": 4,
+      "escaped": true,
+      "first_escape_attempt": 4,
+      "stop_reason": "escape",
+      "valid_attempts": 4,
+      "usable_detector_attempts": 4,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 4,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s10_shared_a01",
+        "proposal_stop_v5_opamp_s10_binary_a02",
+        "proposal_stop_v5_opamp_s10_binary_a03",
+        "proposal_stop_v5_opamp_s10_binary_a04"
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "full",
+      "session": 1,
+      "attempts_made": 2,
+      "escaped": true,
+      "first_escape_attempt": 2,
+      "stop_reason": "escape",
+      "valid_attempts": 2,
+      "usable_detector_attempts": 2,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 2,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s01_shared_a01",
+        "proposal_stop_v5_opamp_s01_full_a02"
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "full",
+      "session": 2,
+      "attempts_made": 2,
+      "escaped": true,
+      "first_escape_attempt": 2,
+      "stop_reason": "escape",
+      "valid_attempts": 2,
+      "usable_detector_attempts": 2,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 2,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s02_shared_a01",
+        "proposal_stop_v5_opamp_s02_full_a02"
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "full",
+      "session": 3,
+      "attempts_made": 6,
+      "escaped": true,
+      "first_escape_attempt": 6,
+      "stop_reason": "escape",
+      "valid_attempts": 6,
+      "usable_detector_attempts": 6,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 6,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s03_shared_a01",
+        "proposal_stop_v5_opamp_s03_full_a02",
+        "proposal_stop_v5_opamp_s03_full_a03",
+        "proposal_stop_v5_opamp_s03_full_a04",
+        "proposal_stop_v5_opamp_s03_full_a05",
+        "proposal_stop_v5_opamp_s03_full_a06"
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "full",
+      "session": 4,
+      "attempts_made": 2,
+      "escaped": true,
+      "first_escape_attempt": 2,
+      "stop_reason": "escape",
+      "valid_attempts": 2,
+      "usable_detector_attempts": 2,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 2,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s04_shared_a01",
+        "proposal_stop_v5_opamp_s04_full_a02"
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "full",
+      "session": 5,
+      "attempts_made": 3,
+      "escaped": true,
+      "first_escape_attempt": 3,
+      "stop_reason": "escape",
+      "valid_attempts": 3,
+      "usable_detector_attempts": 3,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 3,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s05_shared_a01",
+        "proposal_stop_v5_opamp_s05_full_a02",
+        "proposal_stop_v5_opamp_s05_full_a03"
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "full",
+      "session": 6,
+      "attempts_made": 2,
+      "escaped": true,
+      "first_escape_attempt": 2,
+      "stop_reason": "escape",
+      "valid_attempts": 2,
+      "usable_detector_attempts": 2,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 2,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s06_shared_a01",
+        "proposal_stop_v5_opamp_s06_full_a02"
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "full",
+      "session": 7,
+      "attempts_made": 2,
+      "escaped": true,
+      "first_escape_attempt": 2,
+      "stop_reason": "escape",
+      "valid_attempts": 2,
+      "usable_detector_attempts": 2,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 2,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s07_shared_a01",
+        "proposal_stop_v5_opamp_s07_full_a02"
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "full",
+      "session": 8,
+      "attempts_made": 5,
+      "escaped": true,
+      "first_escape_attempt": 5,
+      "stop_reason": "escape",
+      "valid_attempts": 5,
+      "usable_detector_attempts": 5,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 5,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s08_shared_a01",
+        "proposal_stop_v5_opamp_s08_full_a02",
+        "proposal_stop_v5_opamp_s08_full_a03",
+        "proposal_stop_v5_opamp_s08_full_a04",
+        "proposal_stop_v5_opamp_s08_full_a05"
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "full",
+      "session": 9,
+      "attempts_made": 5,
+      "escaped": true,
+      "first_escape_attempt": 5,
+      "stop_reason": "escape",
+      "valid_attempts": 5,
+      "usable_detector_attempts": 5,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 3,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s09_shared_a01",
+        "proposal_stop_v5_opamp_s09_full_a02",
+        "proposal_stop_v5_opamp_s09_full_a03",
+        "proposal_stop_v5_opamp_s09_full_a04",
+        "proposal_stop_v5_opamp_s09_full_a05"
+      ]
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "full",
+      "session": 10,
+      "attempts_made": 3,
+      "escaped": true,
+      "first_escape_attempt": 3,
+      "stop_reason": "escape",
+      "valid_attempts": 3,
+      "usable_detector_attempts": 3,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 3,
+      "candidate_ids": [
+        "proposal_stop_v5_opamp_s10_shared_a01",
+        "proposal_stop_v5_opamp_s10_full_a02",
+        "proposal_stop_v5_opamp_s10_full_a03"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "none",
+      "session": 1,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s01_shared_a01"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "none",
+      "session": 2,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s02_shared_a01"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "none",
+      "session": 3,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s03_shared_a01"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "none",
+      "session": 4,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s04_shared_a01"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "none",
+      "session": 5,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s05_shared_a01"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "none",
+      "session": 6,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s06_shared_a01"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "none",
+      "session": 7,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s07_shared_a01"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "none",
+      "session": 8,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s08_shared_a01"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "none",
+      "session": 9,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s09_shared_a01"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "none",
+      "session": 10,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s10_shared_a01"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "binary",
+      "session": 1,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s01_shared_a01"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "binary",
+      "session": 2,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s02_shared_a01"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "binary",
+      "session": 3,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s03_shared_a01"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "binary",
+      "session": 4,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s04_shared_a01"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "binary",
+      "session": 5,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s05_shared_a01"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "binary",
+      "session": 6,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s06_shared_a01"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "binary",
+      "session": 7,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s07_shared_a01"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "binary",
+      "session": 8,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s08_shared_a01"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "binary",
+      "session": 9,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s09_shared_a01"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "binary",
+      "session": 10,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s10_shared_a01"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "full",
+      "session": 1,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s01_shared_a01"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "full",
+      "session": 2,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s02_shared_a01"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "full",
+      "session": 3,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s03_shared_a01"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "full",
+      "session": 4,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s04_shared_a01"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "full",
+      "session": 5,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s05_shared_a01"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "full",
+      "session": 6,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s06_shared_a01"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "full",
+      "session": 7,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s07_shared_a01"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "full",
+      "session": 8,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s08_shared_a01"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "full",
+      "session": 9,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s09_shared_a01"
+      ]
+    },
+    {
+      "circuit": "and4",
+      "feedback": "full",
+      "session": 10,
+      "attempts_made": 1,
+      "escaped": true,
+      "first_escape_attempt": 1,
+      "stop_reason": "escape",
+      "valid_attempts": 1,
+      "usable_detector_attempts": 1,
+      "unusable_detector_attempts": 0,
+      "distinct_netlists": 1,
+      "candidate_ids": [
+        "proposal_stop_v5_and4_s10_shared_a01"
+      ]
+    }
+  ],
+  "cumulative": [
+    {
+      "circuit": "opamp",
+      "feedback": "none",
+      "attempt": 1,
+      "escaped_sessions": 0,
+      "total_sessions": 10,
+      "escape_fraction": 0.0
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "none",
+      "attempt": 2,
+      "escaped_sessions": 0,
+      "total_sessions": 10,
+      "escape_fraction": 0.0
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "none",
+      "attempt": 3,
+      "escaped_sessions": 0,
+      "total_sessions": 10,
+      "escape_fraction": 0.0
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "none",
+      "attempt": 4,
+      "escaped_sessions": 0,
+      "total_sessions": 10,
+      "escape_fraction": 0.0
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "none",
+      "attempt": 5,
+      "escaped_sessions": 0,
+      "total_sessions": 10,
+      "escape_fraction": 0.0
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "none",
+      "attempt": 6,
+      "escaped_sessions": 0,
+      "total_sessions": 10,
+      "escape_fraction": 0.0
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "none",
+      "attempt": 7,
+      "escaped_sessions": 0,
+      "total_sessions": 10,
+      "escape_fraction": 0.0
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "none",
+      "attempt": 8,
+      "escaped_sessions": 0,
+      "total_sessions": 10,
+      "escape_fraction": 0.0
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "none",
+      "attempt": 9,
+      "escaped_sessions": 0,
+      "total_sessions": 10,
+      "escape_fraction": 0.0
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "none",
+      "attempt": 10,
+      "escaped_sessions": 0,
+      "total_sessions": 10,
+      "escape_fraction": 0.0
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "binary",
+      "attempt": 1,
+      "escaped_sessions": 0,
+      "total_sessions": 10,
+      "escape_fraction": 0.0
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "binary",
+      "attempt": 2,
+      "escaped_sessions": 0,
+      "total_sessions": 10,
+      "escape_fraction": 0.0
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "binary",
+      "attempt": 3,
+      "escaped_sessions": 0,
+      "total_sessions": 10,
+      "escape_fraction": 0.0
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "binary",
+      "attempt": 4,
+      "escaped_sessions": 3,
+      "total_sessions": 10,
+      "escape_fraction": 0.3
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "binary",
+      "attempt": 5,
+      "escaped_sessions": 5,
+      "total_sessions": 10,
+      "escape_fraction": 0.5
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "binary",
+      "attempt": 6,
+      "escaped_sessions": 6,
+      "total_sessions": 10,
+      "escape_fraction": 0.6
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "binary",
+      "attempt": 7,
+      "escaped_sessions": 8,
+      "total_sessions": 10,
+      "escape_fraction": 0.8
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "binary",
+      "attempt": 8,
+      "escaped_sessions": 8,
+      "total_sessions": 10,
+      "escape_fraction": 0.8
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "binary",
+      "attempt": 9,
+      "escaped_sessions": 8,
+      "total_sessions": 10,
+      "escape_fraction": 0.8
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "binary",
+      "attempt": 10,
+      "escaped_sessions": 9,
+      "total_sessions": 10,
+      "escape_fraction": 0.9
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "full",
+      "attempt": 1,
+      "escaped_sessions": 0,
+      "total_sessions": 10,
+      "escape_fraction": 0.0
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "full",
+      "attempt": 2,
+      "escaped_sessions": 5,
+      "total_sessions": 10,
+      "escape_fraction": 0.5
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "full",
+      "attempt": 3,
+      "escaped_sessions": 7,
+      "total_sessions": 10,
+      "escape_fraction": 0.7
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "full",
+      "attempt": 4,
+      "escaped_sessions": 7,
+      "total_sessions": 10,
+      "escape_fraction": 0.7
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "full",
+      "attempt": 5,
+      "escaped_sessions": 9,
+      "total_sessions": 10,
+      "escape_fraction": 0.9
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "full",
+      "attempt": 6,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "full",
+      "attempt": 7,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "full",
+      "attempt": 8,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "full",
+      "attempt": 9,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "opamp",
+      "feedback": "full",
+      "attempt": 10,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "none",
+      "attempt": 1,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "none",
+      "attempt": 2,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "none",
+      "attempt": 3,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "none",
+      "attempt": 4,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "none",
+      "attempt": 5,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "none",
+      "attempt": 6,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "none",
+      "attempt": 7,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "none",
+      "attempt": 8,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "none",
+      "attempt": 9,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "none",
+      "attempt": 10,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "binary",
+      "attempt": 1,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "binary",
+      "attempt": 2,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "binary",
+      "attempt": 3,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "binary",
+      "attempt": 4,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "binary",
+      "attempt": 5,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "binary",
+      "attempt": 6,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "binary",
+      "attempt": 7,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "binary",
+      "attempt": 8,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "binary",
+      "attempt": 9,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "binary",
+      "attempt": 10,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "full",
+      "attempt": 1,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "full",
+      "attempt": 2,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "full",
+      "attempt": 3,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "full",
+      "attempt": 4,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "full",
+      "attempt": 5,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "full",
+      "attempt": 6,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "full",
+      "attempt": 7,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "full",
+      "attempt": 8,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "full",
+      "attempt": 9,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    },
+    {
+      "circuit": "and4",
+      "feedback": "full",
+      "attempt": 10,
+      "escaped_sessions": 10,
+      "total_sessions": 10,
+      "escape_fraction": 1.0
+    }
+  ],
+  "totals": {
+    "condition_sessions": 60,
+    "paired_starting_points": 20,
+    "analysis_rows": 224,
+    "actual_candidate_events": 184,
+    "shared_initial_duplicate_rows": 40,
+    "escaped_condition_sessions": 49,
+    "electrically_valid_candidate_events": 184,
+    "distinct_netlists": 18,
+    "distinct_detector_cache_entries": 18,
+    "unusable_detector_cache_entries": 0,
+    "detector_cache_reuses_candidate_events": 166,
+    "usable_detector_candidate_events": 184,
+    "unusable_detector_candidate_events": 0,
+    "unreviewed_candidate_events": 0,
+    "unusable_attacker_candidate_events": 0,
+    "attacker_api_records": 184,
+    "detector_api_records": 18,
+    "total_api_records": 202
+  },
+  "interpretation": {
+    "success": "Electrical validity and a usable is_trojan=false verdict",
+    "stopping": "Immediately after the first successful attempt, otherwise after attempt ten",
+    "curve": "Number of the ten sessions with first escape at or before the displayed attempt; no later attempts are imputed",
+    "median": "First-escape attempt among successful sessions only; null when no session succeeds",
+    "pairing": "Three conditions share the initial candidate and cached judgment within each circuit/session",
+    "cache": "A cached answer is reused evidence, not a fresh detector API judgment",
+    "inference": "Descriptive results on fixed circuit menus and one fixed cached reviewer; sessions can repeat circuits and conditions are paired",
+    "failures": "Electrically invalid candidates and unusable attacker output cannot escape and consume an attempt; unusable detector output halts the run and prevents a completed result"
+  },
+  "source_sha256": {
+    "scripts/stopstudy_v5/analyze.py": "cdf826ec33c76e8408aa7a37c4cb6602b3060a3b026f976878784e88e1f74c6f",
+    "results/proposal_stop_v5/manifest.json": "4d15e327899bf57c91fc1480053d73e1d140930dbb88bffb2202c2501a65685f",
+    "results/proposal_stop_v5/schedule.json": "809278fac0bde1f9dddaa6bc9dbab8f6e68d9d56b2f2f34307cc3e42d235c376",
+    "results/proposal_stop_v5/attempts.json": "5c9ae5f5062417be90c51f176018bef87cf87cd774d3d886677268020946d9a3",
+    "results/proposal_stop_v5/completion.json": "1d20262f8589516486b442efaa5d75da909137a98a2a88fc9ccd24a2b24cebd3",
+    "results/proposal_stop_v5/dispositions.json": "03a9b812f7487802f1007c5b3d8d51826db928ce10ca4820a738211e65085f0b"
+  }
+}

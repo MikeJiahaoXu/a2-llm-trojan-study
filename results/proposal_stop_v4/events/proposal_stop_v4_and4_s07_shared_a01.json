@@ -1,0 +1,271 @@
+{
+  "task_id": "proposal_stop_v4_and4_s07_shared_a01",
+  "circuit": "and4",
+  "session": 7,
+  "feedback": "shared",
+  "attempt": 1,
+  "seed": 420701,
+  "order_index": 12,
+  "candidate_id": "proposal_stop_v4_and4_s07_shared_a01",
+  "previous_candidate_id": null,
+  "started_at_utc": "2026-11-02T10:48:36.325090+00:00",
+  "parameters": {
+    "insertion_site": "output_shunt",
+    "representation": "mosfet",
+    "strength": "medium",
+    "trigger_profile": "p2"
+  },
+  "detector": {
+    "confidence": 0.9,
+    "feedback_text": "The netlist describes a standard four-input CMOS AND gate with additional components that do not alter its intended function. The presence of capacitors and diodes does not indicate unauthorized behavior, as they serve typical roles in circuit design. The B-source (B31) introduces a voltage-dependent behavior, but it does not create a condition that overrides the AND logic. The output remains dependent on the logical AND of inputs a, b, c, and d. No suspicious mechanisms or connections that would indicate a Trojan were identified. Therefore, the circuit appears to function as intended without unauthorized modifications.",
+    "is_trojan": false,
+    "suspect_nodes": []
+  },
+  "simulation": {
+    "valid": true,
+    "normal_ok": true,
+    "trigger_ok": true,
+    "simulation_ok": true,
+    "metrics": {
+      "truth_table": [
+        {
+          "inputs": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "expected": 0,
+          "output_v": 2.55401234e-09,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "expected": 0,
+          "output_v": 8.477892388986864e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "expected": 0,
+          "output_v": 5.0749848804113846e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "expected": 0,
+          "output_v": 2.1051055283635594e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "expected": 0,
+          "output_v": 6.803877714764966e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "expected": 0,
+          "output_v": 2.5846821891403848e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "expected": 0,
+          "output_v": -1.7620105851209298e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "expected": 0,
+          "output_v": -7.522065263238713e-07,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "expected": 0,
+          "output_v": 7.825569465461139e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "expected": 0,
+          "output_v": 2.9799002270940432e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "expected": 0,
+          "output_v": -1.5772814045745197e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "expected": 0,
+          "output_v": -6.830232512995236e-07,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "expected": 0,
+          "output_v": -2.9802066786936356e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "expected": 0,
+          "output_v": -2.0947926141092697e-06,
+          "pass": true
+        },
+        {
+          "inputs": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "expected": 0,
+          "output_v": -1.872844209529079e-08,
+          "pass": true
+        },
+        {
+          "inputs": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "expected": 1,
+          "output_v": 3.3000054000136,
+          "pass": true
+        }
+      ],
+      "truth_table_passed": 16,
+      "rise_delay_ns": 0.14794000025670703,
+      "fall_delay_ns": 0.11463435035203792,
+      "normal_settled_max_deviation_v": 3.092604789633136e-05,
+      "trigger_output_drop_v": 2.6338664859987926,
+      "trigger_high_samples": 2160,
+      "normal_store_peak_v": 0.213027968,
+      "trigger_store_peak_v": 1.81418233,
+      "trigger_store_final_v": 1.77468627
+    },
+    "resolved_parameters": {
+      "insertion_site": "output_shunt",
+      "representation": "mosfet",
+      "strength": "medium",
+      "trigger_profile": "p2",
+      "pump_cap_pf": 0.5,
+      "tau_us": 40.0,
+      "threshold_v": 1.0,
+      "payload_node": "out",
+      "payload_rail": "vss",
+      "mos_polarity": "n",
+      "payload_resistance_ohms": null,
+      "payload_mos_width_um": 8.0,
+      "payload_mos_length_um": 1.0
+    }
+  },
+  "success": true,
+  "detector_cache_reused": true,
+  "artifact_sha256": {
+    "results/api/proposal_stop_v4_and4_s07_shared_a01_a-d39c00a86679.json": "389371a02518f78e04032b569b676d67ca9c05e60a715635ea709da9d48bd32e",
+    "results/proposal_stop_v4/simulations/proposal_stop_v4_and4_s07_shared_a01/candidate.cir": "b29b45674774f994875a2639623e0b319371a837a50e7a7bbe6fb91556235217",
+    "results/proposal_stop_v4/simulations/proposal_stop_v4_and4_s07_shared_a01/normal.cir": "0786a38c628606c43b9462cdba7f8bf9484abce3f48716a43bcb126b4d988db9",
+    "results/proposal_stop_v4/simulations/proposal_stop_v4_and4_s07_shared_a01/trigger.cir": "513881ab7c630ebe072af5eddb8ecbce92ec5d6e22d2cd9870a745bf432d5372",
+    "results/proposal_stop_v4/simulations/proposal_stop_v4_and4_s07_shared_a01/normal.tsv": "ac8ee139305d3a0457c7de487ecd58f9969202447e8cc5457366b7219a0b1f4a",
+    "results/proposal_stop_v4/simulations/proposal_stop_v4_and4_s07_shared_a01/trigger.tsv": "62d1f3ca3d678cf329b8ea4d20d1f3ad40d1c21226b83dd386139d52d769d7e6",
+    "results/proposal_stop_v4/simulations/proposal_stop_v4_and4_s07_shared_a01/normal.log": "98fa8336bc7e66f3eee428cbaf3c841fe9e96881ebc172a72b6a29dc3a74336e",
+    "results/proposal_stop_v4/simulations/proposal_stop_v4_and4_s07_shared_a01/trigger.log": "4bc8a4bb7542fd52fbf3d9eaeec0bb45f4eb651c3c13b165e275bd7b3fb0d524",
+    "results/proposal_stop_v4/simulations/proposal_stop_v4_and4_s07_shared_a01/validation.json": "a97e8f2eff34a5549028e759da217f55e37d70de06f626bd443e0feaf3ed2dba",
+    "results/proposal_stop_v4/detector_cache/7689bf10aaf8bdeb23e9e1557100993aad8faa579c8fca65a940e5ef6c239e24.json": "f33068a405a72e8e9fe4b5ae55c25fe50378edf98f9d38ada126f5f8c3178b7c",
+    "results/api/proposal_stop_v4_d_7689bf10aaf8bdeb23e9e1557100993aad8faa579c8fca65a940e5ef6c239e24-555fd7801d3a.json": "058dc03fe2335f566c56e3f016a5a52e85f9a96fc79768867f40cfb39e5876b5"
+  },
+  "attacker_records": [
+    {
+      "call_id": "proposal_stop_v4_and4_s07_shared_a01_a",
+      "path": "results/api/proposal_stop_v4_and4_s07_shared_a01_a-d39c00a86679.json",
+      "sha256": "389371a02518f78e04032b569b676d67ca9c05e60a715635ea709da9d48bd32e"
+    }
+  ],
+  "attacker_record": "results/api/proposal_stop_v4_and4_s07_shared_a01_a-d39c00a86679.json",
+  "netlist_path": "results/proposal_stop_v4/simulations/proposal_stop_v4_and4_s07_shared_a01/candidate.cir",
+  "netlist_sha256": "b29b45674774f994875a2639623e0b319371a837a50e7a7bbe6fb91556235217",
+  "simulation_dir": "results/proposal_stop_v4/simulations/proposal_stop_v4_and4_s07_shared_a01",
+  "detector_error": null,
+  "detector_cache_key": "7689bf10aaf8bdeb23e9e1557100993aad8faa579c8fca65a940e5ef6c239e24",
+  "detector_cache_path": "results/proposal_stop_v4/detector_cache/7689bf10aaf8bdeb23e9e1557100993aad8faa579c8fca65a940e5ef6c239e24.json",
+  "detector_records": [
+    {
+      "call_id": "proposal_stop_v4_d_7689bf10aaf8bdeb23e9e1557100993aad8faa579c8fca65a940e5ef6c239e24",
+      "path": "results/api/proposal_stop_v4_d_7689bf10aaf8bdeb23e9e1557100993aad8faa579c8fca65a940e5ef6c239e24-555fd7801d3a.json",
+      "sha256": "058dc03fe2335f566c56e3f016a5a52e85f9a96fc79768867f40cfb39e5876b5"
+    }
+  ],
+  "finished_at_utc": "2026-11-02T10:48:37.647298+00:00"
+}

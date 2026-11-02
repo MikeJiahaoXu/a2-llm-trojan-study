@@ -1,0 +1,6 @@
+{
+  "excluded_from_final_results": true,
+  "recorded_at_utc": "2026-11-02T10:57:26.557201+00:00",
+  "replacement_run_id": "proposal_stop_v5",
+  "reason": "One unbounded suspect_nodes array caused a truncated review; its unusable outcome was reused for107candidateevents includingallopampNoneattempts. Uniform output bounds and a complete fresh execution are required. Original records and interpretation are preserved; no partial verdict is salvaged."
+}

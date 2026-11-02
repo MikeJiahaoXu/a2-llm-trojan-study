@@ -1,47 +1,21 @@
-A2 Trojans in the LLM Era — 项目阅读说明
+当前交付：A2 Trojan LLM 主实验
 
-提交报告：output/pdf/A2_Trojan_LLM_Informal_Report.pdf
-可编辑报告：output/pdf/A2_Trojan_LLM_Informal_Report.txt
-修改说明：docs/Report_Revision_Notes_2026-11-02.txt（逐项回应合作者的方括号批注）
-旧版汇报：output/slides/a2_feedback/output.pptx（本轮未修改，尚未纳入本次报告修订；等报告确认后再更新）
-项目仓库：https://github.com/MikeJiahaoXu/a2-llm-trojan-study
-复现方法：README.md
+最终报告：output/pdf/A2_Trojan_LLM_Informal_Report.pdf
+可编辑文本：output/pdf/A2_Trojan_LLM_Informal_Report.txt
+折线图：results/proposal_stop_v5/figures/cumulative_escape.png
+逐项修改说明：docs/Final_Report_Revision_Notes_2026-11-02.txt
+仓库：https://github.com/MikeJiahaoXu/a2-llm-trojan-study
 
-本项目按 proposal 保留两个电路（两级运放、四输入 AND）和三种反馈（none、binary、full），使用 ngspice、Python 和实际 OpenAI API 调用。不包含语法修复评测或额外反馈组。
+只包含当前主实验：两个电路、none/binary/full三个条件，每组10个session，每个最多10次，首次有效escape即停止。Attacker temperature=0.3，Detector=0.0；同一网表复用固定检测判定。
 
-完成两批执行，每批六组，每组两条session，每条10次尝试，共240条分析记录。共享初次候选去重后为224次实际候选生成，涉及29份不同网表。所有候选通过既定电气测试，29份不同网表均已独立重新仿真。224次检测请求中有222次可用判定、2次输出截断；后两次保留在分母并计为未成功，不能视为成功检出。
+成功session数（none / binary / full）：
+运放：0/10、9/10、10/10；成功者首次成功次数中位数：—、5、2.5。
+AND：10/10、10/10、10/10；全部第一次成功，反馈未参与修改，因此三条曲线重合。
 
-有效且未检出次数（每项分母20）：
-运放 首轮：none=0，binary=5，full=6；复跑：0，8，7。
-AND 首轮：none=4，binary=6，full=5；复跑：6，3，1。
+224条条件级记录来自184次实际候选生成，包含40条共享起点的重复计数。18份不同网表各检测一次，后续跨候选复用166次；202次实际API调用全部有效。所有184次实际候选均通过正常与触发测试，独立审计通过。
 
-研究范围是预先完成电气验证的有限模板选择与修改，不是任意电路合成。结果显示反馈在运放上的观察效果与 AND 不同，不能得出反馈越详细越容易逃避检测的普遍结论。
+当前结果没有混入旧temperature=0.3的session，也没有Supplementary detector comparison或Batch1/Batch2分表。旧记录只在仓库保留追溯，当前压缩包排除旧实验数据。输出格式故障修复的原因及整组重跑方式见修改说明。
 
-本次按合作者批注补充方法并改写讨论，补充实验选择的原因、次数计算、检测器为何不会在线学习，以及和论文的关键差异。标题及前文未批注段落已恢复她的原句；Introduction第一段仅有两处必要的论文研究范围修正，详见修改说明。相同AND输出端MOSFET网表在60次实际评审中被检出42次；binary/full每批各有10/20次内部节点插入，这40次全部被检出。这些是实际观察，不是“电路太简单”或“新模型进步”的因果证明。
+压缩包包含当前实验代码、原始请求与响应、仿真、审计、折线图和报告。未包含密钥、虚拟环境、本地仿真器构建目录或旧PPT。PPT没有修改。
 
-新表从已有记录比较“第一次尝试”与“10次内至少成功一次”，每个条件的分母均为4条session：
-运放第一次：0/4、0/4、0/4；10次内：0/4、4/4、3/4。
-AND第一次：2/4、2/4、2/4；10次内：4/4、4/4、3/4。
-以上顺序均为none、binary、full。这是描述性重分析；原逐次成功率未改变，这项重分析本身没有新增API调用。另有本次新做的检测器输入对照，见下文。更多尝试机会可以增加至少一次成功的比例，不能直接理解为反馈学习或最终候选质量提高。第一批和第二批都包含10次尝试，不能分别改名为one-shot和multi-round。
-
-首轮检测器控制检查通过；复跑的已知木马识别为3/5，低于原4/5门槛。该结果完整保留，并在复跑攻击开始前记录继续执行的规则变更。模型、提示、种子、模板和尝试次数不变。报告明确将复跑作为稳定性观察，不声称其完全满足原停止规则。
-
-本次新增的检测器输入对照：
-对全部29份不同候选（运放20、AND 9）及4份控制电路，分别提供网表、网表加正常操作仿真摘要。每份网表每个条件各3次新评审，总共198次实际调用。两组均使用同一模型snapshot、temperature=0和成对seed；不把旧temperature=0.3的判断混作新对照。
-检出数：运放39/60→10/60；AND 21/27→27/27。
-干净电路误报：运放0/3→0/3；AND 0/3→3/3。
-已知木马控制：运放2/3→0/3；AND 3/3→3/3。
-195次回复可用，3次截断均在运放网表组；该组余下18次为漏检。所有失败保留在分母，没有选择性重跑。
-摘要只用正常测试，未给已知触发波形、触发压降或真实标签。AND的干净模型本身有内部节点电压超过供电、输出轻微负值等数值特征，三次解释均将其视为可疑；而部分运放漏检回复把正常工作视为安全线索。不能只报AND检出增加而省略误报，也不能把正常工作当作不存在潜伏木马的证据。这项实验检验额外输入证据，不是检测器在线学习、SPICED完整复现或攻防总体收益评估。
-
-主要证据：
-results/proposal_main_v3/：首轮原始记录、CSV、图表、冻结源文件和审计。
-results/proposal_repeat_v3/：复跑记录、继续执行声明及审计。
-results/proposal_validation/：两个干净电路及135种允许配置的电气验证。
-results/proposal_audit/audit.json：所有224次候选记录和29份独立网表的仿真复核。
-results/proposal_analysis/attempt_budget.json、attempt_budget.csv：首次、末次、10次内至少一次及原逐次指标。
-results/defense_comparison_v1/：33份网表及正常仿真、198次新评审、成对统计和独立审计。
-docs/Defense_Comparison_Protocol_2026-11-02.txt：本次补充实验调用前冻结的方案。
-results/proposal_completion.json：交付要求核对。
-
-完整压缩包包含代码、文档、实验记录和报告；已有PPT作为旧版保留，本轮没有更新。不包含API密钥、本地虚拟环境或仿真器构建目录。旧实验记录保留供追溯，不计入当前报告的实验比例。
+离线复算命令见README.md；重新统计和生成报告不会产生API费用。

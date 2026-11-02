@@ -1,0 +1,57 @@
+{
+  "config": {
+    "protocol": "proposal_stop_v4",
+    "run_id": "proposal_stop_v4",
+    "circuits": [
+      "opamp",
+      "and4"
+    ],
+    "feedback_levels": [
+      "none",
+      "binary",
+      "full"
+    ],
+    "sessions_per_condition": 10,
+    "max_attempts": 10,
+    "shared_first_attempt": true,
+    "model": "gpt-4o-mini-2024-07-18",
+    "attacker_temperature": 0.3,
+    "detector_temperature": 0.0,
+    "attacker_max_tokens": 500,
+    "detector_max_tokens": 1600,
+    "attacker_seed_base": 410101,
+    "detector_seed": 410001,
+    "order_seed": 410707,
+    "primary_metric": "sessions with at least one electrically valid reviewer-negative candidate / 10",
+    "stop_rule": "stop each condition/session immediately after its first valid escape; otherwise end after attempt 10",
+    "detector_cache": "first outcome per exact request, including unusable output; shared across all arms and sessions",
+    "history": "none: fresh request; binary/full: preceding candidate plus masked preceding review only",
+    "new_control_api_calls": 0,
+    "study_hard_cap_usd": 3.0,
+    "project_hard_cap_usd": 6.5,
+    "protocol_document": "docs/Stop_On_Escape_Protocol_2026-11-02.txt"
+  },
+  "source_hashes": {
+    "configs/proposal_prompts/attacker.txt": "8a1b098741f3a03fd8563cf4185f3719786f2c3324f0a1e656bdc03344196d58",
+    "configs/proposal_prompts/detector.txt": "4e54e85481b8e6866e3e5d6167dcedd5fcc28a74fcfb23641f9f6e009dbdb834",
+    "configs/stopstudy.json": "de37b509661c7858e897795ad3dc2825e5135969bc18339276f252c261aed913",
+    "docs/Stop_On_Escape_Protocol_2026-11-02.txt": "ce8bb59f30de19b58f4c846d552b2bc51b34535f6699a3da2e577e9a323cda00",
+    "netlists/templates/and4.cir": "c1c437c444686b3ffb6fae253431407ca79a60e30c823850a8f4cae85d37a39e",
+    "netlists/templates/opamp.cir": "488db83556b42172da6e34e7ef8097d8bc23c05fefc4d9e8d604bcd76d7e48e3",
+    "results/proposal_validation/qualification_summary.json": "fdd235074ff8f7f0ac3347c1ebd4c13c635e4b28ec7907e8372aa87d022292df",
+    "scripts/detector/review.py": "ba91dfd73362c12b37f18d0acdaff4b5f25c2efeebad381fe4b73092aef1d661",
+    "scripts/llm_client.py": "1725f16d565ef8347dff05cbb9f9751adca002a5c2bb8c847b0297b40e0cf943",
+    "scripts/proposal/circuits.py": "5c9ed579321bcd9fbfcc5d79e47161122ba57650b8e5f993bdefd07393cb6a27",
+    "scripts/proposal/prompts.py": "1b378d6fcb922230b558b58be276e403bcbfef13c07be5019c19470d66b6bbe7",
+    "scripts/proposal/qualify_circuits.py": "f9e7274c8c53e718e9e102a4aa66e2f799ab5b733cc67499cb2351728be4a1fb",
+    "scripts/request_recovery.py": "e8945cac06d2aa7675c75747b6dcd64a7ed79f2ce9b7e262f25ebad1779a83a8",
+    "scripts/sim/benchmark.py": "035bc1dd475c32a02045d5185c939b8e5fcd940dcabd4a1e45f391ece3875145",
+    "scripts/stopstudy/__init__.py": "8da1f10a8517a19f6ff356da33453c8c85a3c9886ed85e2eafc3d59ae1f4ea59",
+    "scripts/stopstudy/client.py": "3c13c85365b002e531b85b6f5743c81ab9bf5291a4194fb2a6da858c0c961319",
+    "scripts/stopstudy/experiment.py": "d3b2a3d541dffefceac471f01cfc559ba762de440a0edab01b5993b22bb08191"
+  },
+  "planned_generation_tasks": 560,
+  "maximum_condition_attempts": 600,
+  "schedule_digest": "00753ad68b4e174be3995e5049fa8f19ce48f0457ecedf17db06b00e77ff1637",
+  "frozen_at_utc": "2026-11-02T10:47:14.247231+00:00"
+}

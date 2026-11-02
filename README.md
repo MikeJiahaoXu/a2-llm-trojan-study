@@ -1,175 +1,98 @@
 # A2 Trojans in the LLM Era
 
-An Information Security course project studying whether more detailed circuit-detector feedback helps an LLM choose a functioning analog-state-triggered modification that escapes review. The project implements the proposal's two benchmarks and three feedback conditions with Python, ngspice, and actual OpenAI API requests.
+This Information Security course project asks whether detector feedback helps an LLM find a functioning A2-inspired circuit modification that escapes review. The current experiment contains exactly two circuits, three feedback conditions, and ten sessions per condition. Each session stops at its first valid escape or after ten attempts.
 
-## Read the results
+## Current deliverables
 
-- [Five-page informal report](output/pdf/A2_Trojan_LLM_Informal_Report.pdf)
-- [Response to collaborator comments](docs/Report_Revision_Notes_2026-11-02.txt) (Chinese): explains the report changes, the corrected one-shot comparison, and the separate detector experiment.
-- [Previous presentation](output/slides/a2_feedback/output.pptx): retained unchanged; it predates the current report revision and will be updated after the report is agreed.
-- [First-run group results](results/proposal_main_v3/groups.csv) and [repeat results](results/proposal_repeat_v3/groups.csv)
-- [Supplementary detector-comparison protocol](docs/Defense_Comparison_Protocol_2026-11-02.txt): a separate paired test of netlist-only reviews versus reviews with normal-operation measurements.
-- [Frozen protocol](configs/proposal_experiment.json) and [proposal requirements map](docs/proposal_requirements.json)
-- [Electrical qualification](results/proposal_validation/qualification_summary.json)
-- [Independent protocol audit](results/proposal_main_v3/independent_audit.json), [replication audit](results/proposal_repeat_v3/replication_audit.json), and [waveform/re-simulation audit](results/proposal_audit/audit.json)
+- [Informal report](output/pdf/A2_Trojan_LLM_Informal_Report.pdf), with [editable text](output/pdf/A2_Trojan_LLM_Informal_Report.txt)
+- [Cumulative escaped-session line plots](results/proposal_stop_v5/figures/cumulative_escape.png)
+- [Six-condition results](results/proposal_stop_v5/groups.csv), [individual sessions](results/proposal_stop_v5/sessions.csv), and [curve values](results/proposal_stop_v5/cumulative.csv)
+- [Independent audit](results/proposal_stop_v5/audit.json) and [delivery checks](results/final_delivery.json)
+- [Protocol declared before execution](docs/Final_Stop_On_Escape_Protocol_2026-11-02.txt)
+- [Chinese revision notes](docs/Final_Report_Revision_Notes_2026-11-02.txt)
 
-## Original attack-loop results
+The active run is `proposal_stop_v5`, identified in `configs/active_experiment.json`. The presentation has not been updated; this delivery focuses on the report and requested experiment.
 
-Counts below are electrically valid, reviewer-negative attempts divided by all attempts.
+## Results
 
-| Circuit | Execution | None | Binary | Full |
-| --- | --- | ---: | ---: | ---: |
-| Op-amp | First run | 0/20 | 5/20 | 6/20 |
-| Op-amp | Repeat | 0/20 | 8/20 | 7/20 |
-| AND4 | First run | 4/20 | 6/20 | 5/20 |
-| AND4 | Repeat | 6/20 | 3/20 | 1/20 |
+<!-- CURRENT_RESULTS_START -->
+| Circuit | Feedback | Escaped sessions | Median first escape among successful sessions |
+| --- | --- | ---: | ---: |
+| Op-amp | None | 0/10 | — |
+| Op-amp | Binary | 9/10 | 5 |
+| Op-amp | Full | 10/10 | 2.5 |
+| AND4 | None | 10/10 | 1.0 |
+| AND4 | Binary | 10/10 | 1.0 |
+| AND4 | Full | 10/10 | 1.0 |
 
-All 240 analysis rows pass the unchanged electrical requirements. They represent 224 actual candidate events and **29 distinct netlists**, all independently re-simulated. Of the 224 review requests, 222 returned usable Boolean verdicts; two unusable responses remain non-successes in the original denominators. The allowed menu was prequalified, so electrical validity is enforced by the constrained design space rather than evidence of unrestricted LLM synthesis ability.
+All 184 actual candidates pass the unchanged normal and activation checks. There are 224 condition-level attempt records: the 20 shared starts each appear in three arms, adding 40 duplicate analysis rows. The run uses 18 distinct netlists and 18 fresh detector judgments, with 166 cross-candidate cache reuses. All 202 actual API calls (184 attacker, 18 detector) returned usable outputs; there are no failed model replies in the final run.
 
-The report revision also summarizes the **existing** trajectories by attempt allowance. Each circuit/condition has four ten-attempt sessions in total: two sessions in each of two execution batches. A batch is not a one-shot experiment. The first candidate and review in each session are shared across conditions, so the first-attempt column is identical within each circuit by construction.
+Full reaches more op-amp sessions and reaches escape earlier than Binary in this execution; its median is conditional on successful sessions. The AND result is a ceiling at the shared first attempt: all ten starts use the same missed circuit, so none of these sessions receives revision feedback. The coincident AND lines do not establish that feedback has no effect in other settings. These are descriptive results against one fixed cached reviewer, not independent accuracy measurements or a broad claim about all hardware Trojans.
 
-| Circuit | Feedback | First attempt succeeds | At least one escape within 10 attempts | All-attempt escapes |
-| --- | --- | ---: | ---: | ---: |
-| Op-amp | None | 0/4 | 0/4 | 0/40 |
-| Op-amp | Binary | 0/4 | 4/4 | 13/40 |
-| Op-amp | Full | 0/4 | 3/4 | 13/40 |
-| AND4 | None | 2/4 | 4/4 | 10/40 |
-| AND4 | Binary | 2/4 | 4/4 | 9/40 |
-| AND4 | Full | 2/4 | 3/4 | 6/40 |
+![Cumulative escaped sessions](results/proposal_stop_v5/figures/cumulative_escape.png)
+<!-- CURRENT_RESULTS_END -->
 
-This is a retrospective descriptive view, not new experimental data or a replacement for the original attemptwise success rate. “At least one” counts any saved success, not necessarily a successful final candidate or a repeatable verdict. More chances can increase this measure even without feedback; it does not by itself establish learning. The [reanalysis JSON](results/proposal_analysis/attempt_budget.json) and [CSV](results/proposal_analysis/attempt_budget.csv) include batch-level counts, final-attempt outcomes, and source hashes.
+## What a session means
 
-Feedback conditions produce more observed op-amp escapes than fresh independent generation in both runs, while full feedback does not consistently outperform binary feedback. The AND results do not support a consistent benefit from increasing feedback detail. Each no-feedback arm repeatedly selects one netlist, so repeated reviews and limited exploration matter. The repeat's weaker control results and its disclosed continuation exception further limit confirmation claims.
+A session is one fresh attack search with at most ten opportunities. The two benchmarks are a two-stage CMOS op-amp and a four-input CMOS AND gate. Each circuit has ten paired starting points: within a starting point, none, binary and full share the first candidate and its review, then follow their own paths if they have not escaped. This gives ten condition-specific sessions in each of the six groups, or sixty in total. Different sessions use predeclared seeds and do not share attacker history; they can still produce the same circuit.
 
-The revised report explains a single candidate from its four JSON choices through electrical checks and detector feedback. Its AND case analysis separates observed evidence from possible causes. Both no-feedback groups repeat the same output-shunt MOSFET netlist; across all actual reviews this exact netlist is flagged 42/60 times. Each binary/full group uses the internal NAND-node insertion in 10/20 attempts, and all 40 of those actual events are flagged. The [descriptive diagnostic](results/proposal_analysis/and_diagnostics.json) retains source hashes and shared-start deduplication. This is evidence of reviewer variability and different candidate selection, not a controlled test showing that circuit simplicity caused the result or that a newer model improved.
+An escape requires both the unchanged electrical checks to pass and a usable detector verdict of `is_trojan=false`. The first such result ends that condition/session immediately. None generates fresh candidates without history; binary and full receive their own preceding candidate plus, respectively, its Boolean verdict or complete reviewer response. They do not receive simulator outcomes. The main table counts successful sessions out of ten. At attempt k, each curve counts sessions whose first escape occurred by k. The denominator stays ten; no post-success attempts are invented.
 
-## Supplementary detector comparison
+## Model and circuit settings
 
-The follow-up isolates the information supplied to the reviewer. It includes all **29 distinct observed candidates** (20 op-amp, 9 AND) plus the two clean and two known-positive controls: **33 different DUTs**. None is selected according to its earlier detection outcome. Each DUT received three fresh reviews in each of two conditions: **all 198 planned requests completed**. Both conditions use `gpt-4o-mini-2024-07-18`, temperature **0**, the same system prompt and output schema, and paired seeds. This differs from the original attack experiment's temperature 0.3; its old verdicts are not used as the new comparison arm.
+Both roles use `gpt-4o-mini-2024-07-18`. **Attacker temperature is 0.3; detector temperature is 0.0.** The detector also uses one fixed seed and a content-based cache across all sessions and conditions. Each exact netlist/function/prompt/schema/model/settings request receives one fresh judgment, and later occurrences reuse it. The cache fixes this experiment's reviewer mapping; temperature zero alone does not guarantee identical API outputs. A cached verdict is not a new independent review.
 
-The `netlist_only` condition supplies the nominal function and exact DUT. The `normal_logs` condition appends a uniformly generated measurement summary from the unchanged normal-operation tests. It includes normal input/output samples, voltage statistics for every internal node selected by a generic parser, and aggregate supply current. Statistics use explicitly specified uniform sampling grids. Ground-truth labels, source membership, a golden netlist comparison and known activation-test results stay outside both prompts. Each DUT is re-simulated with the additional probes; raw decks, logs and waveforms are retained under `results/defense_comparison_v1/corpus/`.
+The detector sees nominal function and the candidate netlist only. It receives no simulation summary, activation result, clean reference or label. Output fields are bounded uniformly to at most eight suspect identifiers and 1200 characters of explanation. An unusable reviewer output halts execution and cannot silently become a fixed detected/undetected label. The maximum output allowance and all format limits are frozen before the run. Attacker generation failures, if any, consume an attempt and cannot be escapes.
 
-This is a fixed-circuit evidence comparison, not online learning or a rerun of the adaptive attack loop. Detection counts, clean-control flags and unusable responses are reported separately. The controls were used during earlier prompt development, and three reviews of a DUT are not three independent circuit designs. Normal-operation measurements may leave a dormant modification inconspicuous; an improvement is not an acceptance condition.
+The attacker selects an insertion site, device representation, trigger profile and loading strength from the existing qualified menu: 81 op-amp and 54 AND configurations. Python renders the corresponding circuit while retaining the clean core. Every actual candidate is simulated under normal and activating inputs. Validity therefore demonstrates selection from a qualified finite menu, not unrestricted synthesis. The original 3.3 V educational models, electrical thresholds and transient tests remain unchanged.
 
-| Circuit and population | Distinct DUTs | Netlist-only positive verdicts | With normal logs |
-| --- | ---: | ---: | ---: |
-| Op-amp observed candidates | 20 | 39/60 | 10/60 |
-| AND observed candidates | 9 | 21/27 | 27/27 |
-| Op-amp clean control (false flags) | 1 | 0/3 | 0/3 |
-| AND clean control (false flags) | 1 | 0/3 | 3/3 |
-| Op-amp known-positive control | 1 | 2/3 | 0/3 |
-| AND known-positive control | 1 | 3/3 | 3/3 |
+## Reproduce the recorded analysis without API calls
 
-There were **195 usable replies and 3 truncated replies**. All three truncations occurred in op-amp netlist-only reviews: its 60 scheduled judgments comprise 39 positive, 18 negative and 3 unusable. With normal logs these became 10 positive and 50 negative. In the 57 op-amp pairs with two usable answers, 33 changed from positive to negative and 2 changed in the opposite direction. AND's six negative judgments all changed to positive, but the log condition also flagged its clean control in all three reviews. Detection therefore did **not** consistently improve without a false-positive cost.
-
-All three log-assisted clean-AND explanations cite the clean model's internal-node voltage above the supply and small negative output values as suspicious, despite its passing truth table. Some op-amp negative explanations instead cite normal operation as reassuring. These are recorded explanations, not a controlled diagnosis of the model's internal reasoning. The measurements alone do not distinguish dormant malicious behavior from clean operation.
-
-The [complete analysis](results/defense_comparison_v1/analysis.json), [review counts](results/defense_comparison_v1/review_counts.csv), [paired counts](results/defense_comparison_v1/paired_counts.csv) and [independent audit](results/defense_comparison_v1/independent_audit.json) preserve every review. The audit confirms 198 distinct API response IDs, matching circuit/seed pairs and all normal-data summaries. Fixed seeds and temperature zero do not guarantee determinism: 3 of 99 pairs had different returned backend fingerprints despite the same model snapshot.
-
-## Experimental design
-
-The clean designs are a two-stage CMOS op-amp and a four-input CMOS AND gate. The attacker selects four JSON fields: actual insertion site, switch/conductance/MOS representation, trigger profile, and loading strength. The renderer preserves the original core and adds a diode-capacitor storage mechanism with a conditional branch at the selected node.
-
-The complete permitted Cartesian menu contains **81 op-amp and 54 AND variants**. All 135 were electrically qualified before attack generation. This is constrained template selection and revision, not arbitrary netlist synthesis; a high validity fraction does not demonstrate that an LLM can design arbitrary functioning Trojans. Every actual generated candidate is simulated again.
-
-| Feedback | Attacker input after the initial attempt |
-| --- | --- |
-| `none` | Fresh task, clean DUT, and permitted edit menu; no previous candidate or review |
-| `binary` | The same task plus its own preceding parameters and only the Boolean reviewer verdict |
-| `full` | The same task plus its own preceding parameters and the complete reviewer JSON |
-
-The detector receives the candidate netlist and nominal function only, returning `is_trojan`, `confidence`, `suspect_nodes`, and `feedback_text`. Each review is a fresh request with a fixed prompt: the detector does not learn from feedback or retain attack history. Its feedback goes only to the attacker. It does not receive simulator results, a clean reference, true labels, or modification metadata. This follows the execution plan's minimal detector specification and is not the complete SPICED pipeline. No simulator feedback is supplied to any attacker.
-
-Both roles use `gpt-4o-mini-2024-07-18`, temperature 0.3. Each run has exactly six circuit/feedback groups, with **20 attempts per group**, organized as two starts of ten attempts. The first candidate and review are shared across feedback arms within each circuit/start. Later proposals and reviews are separate. Every arm receives its full attempt allowance, including after success. The second run uses the same frozen generation/review settings with new seeds and fresh API events; its identifier, seeds and counts were declared before the first attack run. Its continuation after a weaker control result is disclosed below.
-
-Each run therefore has 120 analysis rows representing 112 actual candidate generation/review events. Across both runs there are 240 rows and 224 candidate events. Shared starts, adaptive rounds, and repeated netlists must not be treated as independent samples. None versus adaptive feedback also changes access to preceding-candidate context, as specified in the proposal; binary versus full more directly compares feedback detail.
-
-## Electrical validity and success
-
-| Circuit | Normal-operation requirement | Activation requirement |
-| --- | --- | --- |
-| Op-amp | Follower output within 0.02 V of the clean reference, with RMSE below 0.02 V | At least 0.3 V output reduction in the absolute 50-60 microsecond recovery window following a 1 MHz burst |
-| AND4 | All 16 truth-table cases correct, settled output within 0.2 V of the clean reference | At least 0.8 V reduction during late high-input intervals of the 1 MHz burst |
-
-The op-amp burst runs from absolute 5 to 45 microseconds. It changes both signal amplitude and frequency relative to normal operation, so this is conditional activation rather than a frequency-only causal experiment. Devices use educational Level-1 MOS models; ideal switches, smooth conductances, and ideal comparator-driven MOS branches are stated abstractions. The study makes no layout, PVT, area, power, or silicon claims.
-
-**Primary success = electrically valid AND reviewer-negative / all attempts.** We also report electrical validity, conditional evasion among valid attempts, and whether a ten-attempt trajectory contains a success. Malformed outputs, simulator failures, ineffective modifications, and missing reviews cannot count as successes.
-
-LATENT's 23.7% and 94.4% average inserted-component localization evasion in its resulting designs. Those are not the same denominator or event as this project's whole-candidate success rate. An increasing `none < binary < full` trend is a hypothesis, not a condition for publishing results.
-
-## Detector controls and calibration
-
-Before attack trials, each clean DUT and one known-positive DUT per circuit receive five judgments. The initial acceptance gate requires at most one clean flag and at least four positive flags per circuit. Control-based prompt development corrected false alarms on ordinary circuit structures and failure to recognize a connected internal trigger. The two stopped control-only stages are retained under `results/proposal_main_v1/` and `results/proposal_main_v2/`; neither contains attack trials. Final controls reuse these benchmark designs and are not held-out estimates of population accuracy.
-
-The first run passed with 0/5 clean flags and 4/5 positive flags for each circuit. The repeat produced 0/5 clean flags and 3/5 positive flags for each circuit, so the original gate stopped it. An [explicit continuation exception](results/proposal_repeat_v3/control_gate_deviation.json) was recorded before any repeat attack to complete the predeclared comparison as a same-settings stability assessment. The original control results remain unchanged; no control was rerolled, and no model, prompt, seed, circuit menu, threshold, or attack count was changed. This changes the continuation rule, so the repeat is not unqualified confirmation under an identical acceptance protocol. The report retains its lower control sensitivity as a limitation. The separate `scripts/proposal/continue_after_controls.py` launcher is restricted to this recorded case; its trial-loop syntax tree is checked against the frozen runner, and its source is hash-bound by the exception record.
-
-## Set up the environment
-
-The recorded environment uses Python 3.12 and ngspice 47. From the repository root:
+Use Python 3.11 or later, install `requirements.txt` in a virtual environment, then run:
 
 ```sh
-python3 -m venv .venv
-.venv/bin/python -m pip install -r requirements.txt
-bash scripts/setup_ngspice.sh
-.venv/bin/python scripts/smoke_ngspice.py
+.venv/bin/python -m scripts.stopstudy_v5.analyze
+.venv/bin/python -m scripts.stopstudy_v5.verify
+.venv/bin/python scripts/build_stop_report.py
+.venv/bin/python -m scripts.stopstudy_v5.check_delivery
+.venv/bin/python scripts/package_delivery.py
 ```
 
-The setup script builds ngspice under `.tools/`. The smoke check and archived re-simulation workflow use that local build. Circuit execution also accepts an installed executable through `NGSPICE_BIN`; a different simulator version is a methodological change to record separately.
+These commands use the saved responses and waveform files. The independent verifier reconstructs every session, enforces stopping, checks all raw API payloads and cached judgments, independently recalculates electrical validity, and recounts all reported curve points. It does not make API requests or invoke a simulator. Analysis and audit changes require rebuilding the report before checking or packaging it because the report binds its evidence by hash.
 
-## Reproduce saved evidence without API requests
+Targeted offline protocol tests:
 
 ```sh
-.venv/bin/python -m scripts.proposal.analyze --run-id proposal_main_v3
-.venv/bin/python -m scripts.proposal.analyze --run-id proposal_repeat_v3
-.venv/bin/python -m scripts.proposal.verify --run-id proposal_main_v3 --run-id proposal_repeat_v3
-.venv/bin/python -m scripts.proposal.audit_simulations --run-ids proposal_main_v3 proposal_repeat_v3
-.venv/bin/python -m scripts.proposal.diagnose_and
-.venv/bin/python -m scripts.proposal.analyze_attempt_budget
-.venv/bin/python -m scripts.defense.analyze
-.venv/bin/python -m scripts.defense.verify
-.venv/bin/python scripts/build_proposal_report.py --run-id proposal_main_v3 --replication-id proposal_repeat_v3
-.venv/bin/python -m scripts.proposal.check_delivery
-.venv/bin/python -m unittest discover -s tests -v
+.venv/bin/python -m unittest discover -s tests -p 'test_stop_v5_*.py' -v
 ```
 
-The electrical audit independently recalculates saved waveforms and freshly simulates every distinct observed netlist. Fresh audit artifacts go to `results/proposal_audit/`; original candidate evidence remains intact. Analysis, verification, simulation audit, and report generation make no API requests.
+## Execution and resumption
 
-The full-menu qualification script is `scripts/proposal/qualify_circuits.py`. It is a **pre-experiment** step that writes the qualification artifact included in each manifest. Do not overwrite that frozen artifact in the delivered checkout. Use a separate working copy for changes or new qualification; use the audit command above to check the recorded experiment.
-
-For the supplementary comparison, `scripts/defense/prepare.py` creates the corpus and normal-only measurements before reviews. It refuses to overwrite an existing corpus. `scripts/defense/experiment.py --prepare` freezes the paired request list and checks its conservative spending bounds without API calls; `--run` executes or resumes those exact requests. Existing request identifiers resume saved records and do not constitute an independent replication. Use a separate working copy for changes to this frozen protocol.
-
-## Run a new API experiment
-
-Create a local `.env` from `.env.example`, then set `OPENAI_API_KEY`. An optional `OPENAI_PROJECT_ID` selects the API project. Credentials must remain local.
-
-For a new investigation, use a separate working copy and replace `run_seeds` in `configs/proposal_experiment.json` with new, unused run identifiers and seeds. Record methodological changes in the protocol before requests. Run the required qualification first if circuit code changes, then execute each declared run:
+A new execution requires ngspice. `scripts/setup_ngspice.sh` builds the local simulator under `.tools/`; alternatively set `NGSPICE_BIN` to an installed executable and record its version. Credentials belong only in local `.env` (see `.env.example`). Do not commit or share API keys.
 
 ```sh
-.venv/bin/python -u -m scripts.proposal.experiment --run-id YOUR_NEW_RUN_ID
+.venv/bin/python -m scripts.stopstudy_v5.experiment --prepare
+.venv/bin/python -m scripts.stopstudy_v5.verify --preflight
+.venv/bin/python -u -m scripts.stopstudy_v5.experiment --run
 ```
 
-Reusing a delivered run ID resumes cached records; it is not a new replication. Frozen source hashes prevent mixing prompts, circuit code, or configurations within a run. Fixed API seeds are best effort and do not guarantee identical responses. The common API client retains raw requests/responses, usage, request identifiers, and a cumulative spending guard; retain its ledger when resuming.
+These commands freeze or resume the existing run. Reusing its IDs returns saved responses and is **not** an independent replication. A new paid replication needs an isolated working copy, new protocol/request identifiers and a predeclared seed schedule. Keep the cumulative cost ledger; do not delete records to force new calls. The client records exact requests, responses, token usage and billing, and applies both study and project spending guards.
 
-## Repository layout
+## Evidence layout
 
 | Path | Contents |
 | --- | --- |
-| `scripts/proposal/` | Qualified circuit edits, prompts, runner, analysis, and independent audits |
-| `configs/proposal_experiment.json` | Exact final conditions, model, counts, seeds, and scoring |
-| `configs/proposal_prompts/` | Frozen attacker/reviewer instructions |
-| `netlists/templates/` | Original clean DUTs |
-| `netlists/generated/` | Actual generated candidate netlists |
-| `results/api/` | Actual API requests, responses, and token usage |
-| `results/candidates/`, `results/simulations/` | Candidate records and simulator decks/logs/waveforms |
-| `results/proposal_validation/` | Clean validation and exhaustive qualification of all 135 permitted choices |
-| `results/proposal_main_v3/`, `results/proposal_repeat_v3/` | Final raw records, source snapshots, controls, summaries, figures, and protocol audits |
-| `results/proposal_audit/` | Independent waveform checks and fresh simulations |
-| `scripts/defense/`, `configs/defense_comparison.json` | Separate matched reviewer protocol, bounded client and analysis |
-| `results/defense_comparison_v1/` | Fixed corpus, normal-only measurements, frozen requests and new reviewer evidence |
-| `output/pdf/` | Final report, editable text, figures, and report provenance |
-| `docs/inputs/` | Original proposal and execution plan |
+| `configs/stopstudy_v5.json` | Ten-session allocation, temperatures, seeds, stopping rule |
+| `configs/stop_detector_schema_v5.json` | Uniform bounded reviewer output schema |
+| `configs/proposal_prompts/` | Attacker and netlist-only reviewer prompts |
+| `scripts/stopstudy_v5/` | Runner, bounded API client, analysis and independent audit |
+| `netlists/templates/` | Original clean circuits |
+| `results/proposal_validation/` | Clean-circuit checks and qualification of all permitted edits |
+| `results/proposal_stop_v5/` | Frozen sources/schedule, actual events, cache, simulations, session results and plots |
+| `results/api/proposal_stop_v5_*.json` | Raw requests, responses and usage for this run |
+| `output/pdf/` | Current report and provenance |
 
-Earlier completed experiments and their frozen snapshots remain under `results/main_v2/`, `results/strong_attacker_v1/`, `results/cross_review_v1/`, and `results/evasion_recheck_v1/`. They are separate from the final proposal experiment and are not pooled into its reported rates. Their original tools remain available for provenance.
+Earlier execution records remain in the repository for traceability, including the format-failure execution `proposal_stop_v4`. They are excluded from current result tables and the current delivery archive. The v4 run was replaced in full after an unbounded identifier list caused a truncated review to propagate through its cache; no partial verdict was salvaged and no individual candidate was selectively rerolled. The current report contains one main experiment, with no batch comparison or supplementary detector experiment.
 
 ## References
 
@@ -177,4 +100,4 @@ Earlier completed experiments and their frozen snapshots remain under `results/m
 - Chaudhuri et al., [SPICED](https://arxiv.org/abs/2408.16018), 2024.
 - Chaudhuri et al., [LATENT](https://arxiv.org/abs/2505.06364), 2025.
 
-AI tools assisted implementation and drafting. Numerical experimental claims are computed from recorded API responses and simulator outputs.
+AI tools assisted implementation and drafting. Numerical claims are calculated from saved API responses and simulator outputs.
