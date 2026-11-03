@@ -2,7 +2,8 @@
 
 报告：output/pdf/A2_Trojan_LLM_Informal_Report.pdf
 可编辑文本：output/pdf/A2_Trojan_LLM_Informal_Report.txt
-5分钟PPT：output/slides/a2_feedback/output.pptx（7页，附英文讲稿和中文答辩提醒）
+合作者11月3日报告：docs/inputs/Collaborator_Final_Report_2026-11-03.pdf（原样保存，未修改）
+5分钟PPT：output/slides/a2_feedback/output.pptx（6页，按合作者报告重点更新，附英文讲稿和中文答辩提醒）
 累计逃逸折线图：results/proposal_stop_v6/figures/cumulative_escape.png
 详细修改说明：docs/Final_Report_Revision_Notes_2026-11-02.txt
 仓库：https://github.com/MikeJiahaoXu/a2-llm-trojan-study
@@ -18,4 +19,4 @@ Full达到十个成功session的次数：运放第5次、AND第3次；Binary分�
 
 当前压缩包仅包含本次主实验及其复现依赖，不混入旧batch或补充实验。旧实验仍在GitHub保留以便追溯。新旧运行的首次检测判定可能不同，不能仅凭结果变化声称起点改进的因果效应或模型进步；具体例子见修改说明。
 
-当前PPT与报告使用相同结果和原始折线图，已纳入交付包。密钥、虚拟环境和本地ngspice构建目录不打包。离线复算步骤见README.md，不会产生API调用。
+当前PPT使用合作者报告中提取的折线图和相同实验结果，示例页已加入真实反馈内容；其PDF原件与先前生成的报告均未修改。PPT已纳入交付包。密钥、虚拟环境和本地ngspice构建目录不打包。离线复算步骤见README.md，不会产生API调用。

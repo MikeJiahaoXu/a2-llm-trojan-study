@@ -1,8 +1,8 @@
 {
   "run_id": "proposal_stop_v6",
-  "slides": 7,
+  "slides": 6,
   "planned_seconds": 300,
-  "spoken_words": 616,
+  "spoken_words": 571,
   "model": "gpt-4o-mini-2024-07-18",
   "attacker_temperature": 0.3,
   "detector_temperature": 0,
@@ -32,23 +32,39 @@
       "full": 3
     }
   },
+  "presentation_report": "docs/inputs/Collaborator_Final_Report_2026-11-03.pdf",
+  "presentation_report_sha256": "89c091c8477b1b6beaa8ab2fa4d085492cb0033d3c7d989fc56d7629167ae970",
+  "report_modified": false,
   "native_charts": 0,
   "reused_report_figures": [
     {
-      "path": "output/pdf/stop_report_figures/cumulative_escape.png",
-      "sha256": "a41f97dca3a58e3f98ba854219c73308970ec161cb3e665d5dbdab33355e7076",
-      "slide": 5
+      "path": "scripts/presentation/assets/collaborator_report_figure_2026-11-03.png",
+      "sha256": "6a703883db41a88754ec04e8ff923917aaf93363a9921c5f30eb3e690a16cc6a",
+      "slide": 4,
+      "source_pdf": "docs/inputs/Collaborator_Final_Report_2026-11-03.pdf",
+      "source_pdf_page": 2,
+      "source_xref": 9
     }
   ],
-  "editable_textboxes": 105,
+  "editable_textboxes": 87,
+  "feedback_example": {
+    "circuit": "and4",
+    "condition": "full",
+    "session": 2,
+    "feedback_after_attempt": 2,
+    "used_by_attempt": 3,
+    "summary": "The added components could alter the output based on the voltage at n31,\nindicating a potential Trojan mechanism.",
+    "attacker_record": "results/api/proposal_stop_v6_and4_s02_full_a03_a-8f249136cd8b.json"
+  },
   "source_sha256": {
     "configs/active_experiment.json": "0371166739813d9ae7985908d8f454f2de1483bc037724cb9f3ac142900c645f",
     "configs/stopstudy_v6.json": "8168158c936b061536ae10a33fca56e638d187016b1553b587bbae4da20f221c",
-    "scripts/presentation/build_slides.mjs": "0397d28bd93925d41a0100649ab54fc1d76a198c1e4b92a038cdc2d5747155f2",
+    "scripts/presentation/build_slides.mjs": "046c368089eccd1afe735d12b598d0c6117fb75a27ef5e22b377948b7c1f33c6",
     "output/pdf/A2_Trojan_LLM_Informal_Report.pdf": "e73579fd1b4ce5aa247e1bbb50e8a00346d80f6409479b162f7fca5e7980c763",
+    "docs/inputs/Collaborator_Final_Report_2026-11-03.pdf": "89c091c8477b1b6beaa8ab2fa4d085492cb0033d3c7d989fc56d7629167ae970",
     "output/pdf/A2_Trojan_LLM_Informal_Report.txt": "ce21567c68b99d2c69b0c658aa416f66ac01db962003f0db6a3c96bd7e81d917",
     "output/pdf/A2_Trojan_LLM_Informal_Report.provenance.json": "9f7cce13d7756dfe5ea87b0554df867162a65a523bd21eb386a2aa7d9feb366d",
-    "output/pdf/stop_report_figures/cumulative_escape.png": "a41f97dca3a58e3f98ba854219c73308970ec161cb3e665d5dbdab33355e7076",
+    "scripts/presentation/assets/collaborator_report_figure_2026-11-03.png": "6a703883db41a88754ec04e8ff923917aaf93363a9921c5f30eb3e690a16cc6a",
     "results/proposal_stop_v6/summary.json": "fa590a5bf27b8665db376b45d4b4d526ec805e552920bef16f192ba646b27442",
     "results/proposal_stop_v6/attempts.json": "0a5559375742298c47bb6fa9bdb872145c2524e1ab59fb7db6cf607545c476ed",
     "results/proposal_stop_v6/design.json": "a2c295704e34a46c9c4b51ab771941cd005f7769d14f16aa587a55f754f13b5c",
@@ -56,7 +72,9 @@
     "results/proposal_stop_v6/controls_gate.json": "228524cc62c2e347f3760df66f93858ff8495956361f625b487590747c4296f5",
     "results/proposal_stop_v6/completion.json": "5d45d245a2add174cc3ea3127477370ff05781be7fd3b9799042a47946bc0176",
     "results/proposal_stop_v6/audit.json": "f9ec5e958ba0a19fca90f9a0260061e510b334dc4d881082315c73334393d0a4",
-    "results/proposal_stop_v6/cumulative.csv": "4f3c3968c8eff92e1721108226c04f4be86fbb7ae1bd031d33811c1582a547a9"
+    "results/proposal_stop_v6/cumulative.csv": "4f3c3968c8eff92e1721108226c04f4be86fbb7ae1bd031d33811c1582a547a9",
+    "results/api/proposal_stop_v6_and4_s02_full_a03_a-8f249136cd8b.json": "de1998e124a28389b503cf06f941f557158de69b8a491544a6a94cd751ff5e18",
+    "results/api/proposal_stop_v6_d_fb9a6fcf2713f34a6b514dd6f6912e3f3c1ecf37f81102d277b26cad86bdb921-dedb38a451fb.json": "4a183831b86479de358ed52e8f099d2b2f4e3bbe6ea0696ab7708c671e60cc78"
   },
-  "pptx_sha256": "684c32bc97714bc976a6d32beec8eda6856357f58477d815fe181f3635cbd456"
+  "pptx_sha256": "cdebc34dd87b83306535c73d25a953b4d3d848ab4ef23232751c7e8bf9b2cac8"
 }

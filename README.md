@@ -4,15 +4,15 @@ This Information Security course project asks whether detector feedback helps an
 
 ## Current deliverables
 
-- [Informal report](output/pdf/A2_Trojan_LLM_Informal_Report.pdf), with [editable text](output/pdf/A2_Trojan_LLM_Informal_Report.txt)
-- [Five-minute presentation](output/slides/a2_feedback/output.pptx), seven slides with English speaking notes and Chinese Q&A reminders
+- [Collaborator's revised report](docs/inputs/Collaborator_Final_Report_2026-11-03.pdf), supplied unchanged; [earlier generated report](output/pdf/A2_Trojan_LLM_Informal_Report.pdf) and its [editable text](output/pdf/A2_Trojan_LLM_Informal_Report.txt) remain intact
+- [Five-minute presentation](output/slides/a2_feedback/output.pptx), six slides following the revised report, with English speaking notes and Chinese Q&A reminders
 - [Cumulative escaped-session line plots](results/proposal_stop_v6/figures/cumulative_escape.png)
 - [Six-condition results](results/proposal_stop_v6/groups.csv), [individual sessions](results/proposal_stop_v6/sessions.csv), and [curve values](results/proposal_stop_v6/cumulative.csv)
 - [Independent audit](results/proposal_stop_v6/audit.json) and [delivery checks](results/final_delivery.json)
 - [Protocol declared before execution](docs/Stratified_Stop_On_Escape_Protocol_2026-11-02.txt)
 - [Chinese revision notes](docs/Final_Report_Revision_Notes_2026-11-02.txt)
 
-The active run is `proposal_stop_v6`, identified in `configs/active_experiment.json`. The report and presentation use these results. The presentation reuses the report's cumulative escape plot and explains the preset starts, immediate stopping, fixed reviewer, and the difference between final success and search speed.
+The active run is `proposal_stop_v6`, identified in `configs/active_experiment.json`. The presentation follows the collaborator's November 3 report and uses these recorded results. It embeds the figure extracted directly from that PDF, explains the actual feedback before the successful AND example, and closes with the report's three untested questions: detector learning, designer use, and newer models. The supplied PDF has not been edited.
 
 ## Results
 
@@ -64,7 +64,7 @@ Use Python 3.11 or later, install `requirements.txt` in a virtual environment, t
 
 These commands use the saved responses and waveform files. The independent verifier reconstructs every session, enforces stopping, checks all raw API payloads and cached judgments, independently recalculates electrical validity, and recounts all reported curve points. It does not make API requests or invoke a simulator. Analysis and audit changes require rebuilding the report before checking or packaging it because the report binds its evidence by hash.
 
-The saved presentation can be edited directly in PowerPoint. Its English speaker notes total 616 words, with separate Chinese Q&A reminders. `scripts/presentation/verify_slides.py` checks the exported slides against their recorded sources and verifies that the embedded plot is the exact report image. Rebuilding the report also requires rebuilding the presentation before packaging, because the slide provenance binds the report and results by hash. The slide source is `scripts/presentation/build_slides.mjs`, using the installed Codex presentation runtime. Once the report and slides match, `scripts/package_delivery.py` creates the combined delivery archive.
+The saved presentation can be edited directly in PowerPoint. Its English speaker notes total 571 words, with separate Chinese Q&A reminders. `scripts/presentation/verify_slides.py` checks the exported slides, the actual feedback passed to the attacker, and the image extracted from the supplied PDF. The slide provenance binds both its narrative source and numerical evidence by hash; changing those sources requires rebuilding the slides before packaging. The slide source is `scripts/presentation/build_slides.mjs`, using the installed Codex presentation runtime. Once the recorded sources and slides match, `scripts/package_delivery.py` creates the combined delivery archive.
 
 Targeted offline protocol tests:
 
